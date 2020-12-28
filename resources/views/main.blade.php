@@ -130,7 +130,7 @@
                 <img src="assets/img/SOCIALMOB.svg" alt="">
                 <p>Social Mobile</p>
             </div>
-            <div  class="grid__nominations_2">
+            <div class="grid__nominations_2">
                 <img src="assets/img/SOCIALSMARTCITY.svg" alt="">
                 <p>Social Smart City</p>
             </div>
@@ -154,7 +154,7 @@
             </div>
         </div>
         <div class="start__btn">
-            <p>Станьте участником конкурса SOCIAL IDEA  2021 </p>
+            <p>Станьте участником конкурса SOCIAL IDEA 2021 </p>
             <a class="btn btn-primary" href="#" role="button">ПОДАТЬ ЗАЯВКУ <img src="assets/img/right-arrow_si.svg" alt=""></a>
         </div>
     </div>
@@ -162,7 +162,382 @@
 
 <section id="history">
     <div class="container">
-        <p>ИСТОРИИ УСПЕХА</p>
+        <p class="history__title">ИСТОРИИ УСПЕХА</p>
+        <div class="swiper-container swiper-container-history">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="history__slide">
+                        <img src="assets/img/Intersect.png" alt="">
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">Проект Familypass</p>
+                                <p class="history__items_untitle">Победитель конкурса «Телеком Идея-2018» в номинации CSR Tech.</p>
+                                <p class="history__items_body">Familypass – это социальный сервис и платформа-агрегатор для родителей и поставщиков услуг для детей (развивающие кружки и занятия, спортивные секции, развлекательные мероприятия, музеи, лагеря и т.д.), иными словами – единая платформа для поиска лучших детских занятий в городе.
+
+                                    Сервис единого абонемента появился в США в 2012 году. Он позволяет клиенту получать безлимитный доступ в клубы, студии и секции, которые входят в партнерскую сеть.</p>
+
+                            </div>
+                            <div class="btn__modal_history">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn__modal_history_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                    </svg></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="history__slide">
+                        <img src="assets/img/Intersect.png" alt="">
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">Проект Familypass</p>
+                                <p class="history__items_untitle">Победитель конкурса «Телеком Идея-2018» в номинации CSR Tech.</p>
+                                <p class="history__items_body">Familypass – это социальный сервис и платформа-агрегатор для родителей и поставщиков услуг для детей (развивающие кружки и занятия, спортивные секции, развлекательные мероприятия, музеи, лагеря и т.д.), иными словами – единая платформа для поиска лучших детских занятий в городе.
+
+                                    Сервис единого абонемента появился в США в 2012 году. Он позволяет клиенту получать безлимитный доступ в клубы, студии и секции, которые входят в партнерскую сеть.</p>
+
+                            </div>
+                            <div class="btn__modal_history">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn__modal_history_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                    </svg></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="history__slide">
+                        <img src="assets/img/Intersect.png" alt="">
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">Проект Familypass</p>
+                                <p class="history__items_untitle">Победитель конкурса «Телеком Идея-2018» в номинации CSR Tech.</p>
+                                <p class="history__items_body">Familypass – это социальный сервис и платформа-агрегатор для родителей и поставщиков услуг для детей (развивающие кружки и занятия, спортивные секции, развлекательные мероприятия, музеи, лагеря и т.д.), иными словами – единая платформа для поиска лучших детских занятий в городе.
+
+                                    Сервис единого абонемента появился в США в 2012 году. Он позволяет клиенту получать безлимитный доступ в клубы, студии и секции, которые входят в партнерскую сеть.</p>
+
+                            </div>
+                            <div class="btn__modal_history">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn__modal_history_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                    </svg></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="history__slide">
+                        <img src="assets/img/Intersect.png" alt="">
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">Проект Familypass</p>
+                                <p class="history__items_untitle">Победитель конкурса «Телеком Идея-2018» в номинации CSR Tech.</p>
+                                <p class="history__items_body">Familypass – это социальный сервис и платформа-агрегатор для родителей и поставщиков услуг для детей (развивающие кружки и занятия, спортивные секции, развлекательные мероприятия, музеи, лагеря и т.д.), иными словами – единая платформа для поиска лучших детских занятий в городе.
+
+                                    Сервис единого абонемента появился в США в 2012 году. Он позволяет клиенту получать безлимитный доступ в клубы, студии и секции, которые входят в партнерскую сеть.</p>
+
+                            </div>
+                            <div class="btn__modal_history">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn__modal_history_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                    </svg></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</section>
+<section id="experts">
+    <div class="container">
+        <p class="experts__title">ЭКСПЕРТНЫЙ СОВЕТ КОНКУРСА <br>МТС "SOCIAL IDEA 2021"</p>
+        <div class="swiper-container swiper-container-experts">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <img src="assets/img/Moskvina_photo.png" alt="Moskvina_photo.png">
+                        <p class="experts__slide_items_title">Анастасия Москвина</p>
+                        <p class="experts__slide_items_body">Эксперт Центра социального предпринимательства и социальных инноваций НИУ ВШЭ, тренер-консультант Центра развития некоммерческих организаций.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <img src="assets/img/19113823_1914991125443351_5968746490866631655_n.png" alt="">
+                        <p class="experts__slide_items_title">Марина Кузнецова</p>
+                        <p class="experts__slide_items_body">Управляющий директор агентства по фандрайзингу Social Projects Group.
+                            В течение двух лет руководила Социальным акселератором Центра развития некоммерческих организаций.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <img src="assets/img/moiseeva_inga_nikolaevna.png" alt="">
+                        <p class="experts__slide_items_title">Анастасия Москвина</p>
+                        <p class="experts__slide_items_body">Исполнительный директор D-Group.Social.
+                            Волонтёр с более чем 20-летним стажем. Последние 10 лет Инга активно занимается наставничеством для волонтёров, консультирует по вопросам творческой...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>
+
+<section id="news">
+    <div class="container">
+        <p class="news__title">Новости</p>
+        <div class="news__main_items">
+            <a href="">
+                <div>
+                    <img src="assets/img/news1.png" alt="">
+                </div>
+                <div class="text__news">
+                    <p class="news__date_items">11.11.2020</p>
+                    <p class="news__title_items">Определены победители
+                        международного конкурса социальных
+                        проектов с применением цифровых
+                        технологий «Social Idea-2020»</p>
+                    <div class="btn__modal_news">
+                        <!-- Button trigger modal -->
+                        <a type="button" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                            </svg></a>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="swiper-container swiper-container-news">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="">
+                        <div class="news__swiper_item">
+                            <div class="news__swiper_img">
+                                <img src="assets/img/newssmall.png" alt="">
+                            </div>
+                            <div>
+                                <p class="news__swiper_title">
+                                    МТС победила в рейтинге компаний, работающих с инновациями
+                                </p>
+                                <div class="btn__modal_news">
+                                    <!-- Button trigger modal -->
+                                    <a type="button" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                        </svg></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <div class="news__swiper_item">
+                            <div class="news__swiper_img">
+                                <img src="assets/img/newssmall.png" alt="">
+                            </div>
+                            <div>
+                                <p class="news__swiper_title">
+                                    МТС победила в рейтинге компаний, работающих с инновациями
+                                </p>
+                                <div class="btn__modal_news">
+                                    <!-- Button trigger modal -->
+                                    <a type="button" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                        </svg></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <div class="news__swiper_item">
+                            <div class="news__swiper_img">
+                                <img src="assets/img/newssmall.png" alt="">
+                            </div>
+                            <div>
+                                <p class="news__swiper_title">
+                                    МТС победила в рейтинге компаний, работающих с инновациями
+                                </p>
+                                <div class="btn__modal_news">
+                                    <!-- Button trigger modal -->
+                                    <a type="button" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                        </svg></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <div class="news__swiper_item">
+                            <div class="news__swiper_img">
+                                <img src="assets/img/newssmall.png" alt="">
+                            </div>
+                            <div>
+                                <p class="news__swiper_title">
+                                    МТС победила в рейтинге компаний, работающих с инновациями
+                                </p>
+                                <div class="btn__modal_news">
+                                    <!-- Button trigger modal -->
+                                    <a type="button" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                        </svg></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</section>
+<section id="partners">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="row">
+                <p>ПАРТНЕРЫ</p>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://www.mtsbank.ru/"><img src="assets/img/article23123.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://sistema.ru/domashyaya-stranica/"><img src="assets/img/article (4).png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://medsi.ru/"><img src="assets/img/article (9).png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://startup.mts.ru/"><img src="assets/img/article (12).png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://bf.sistema.ru/"><img src="assets/img/article (8).png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://impacthubmoscow.net/"><img src="assets/img/article (7).png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://fundsp.ru/"><img src="assets/img/article (1).png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://www.soc-invest.ru/"><img src="assets/img/FSII.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://fasie.ru/"><img src="assets/img/head_logo_fasie.png" class="img_partners"></a>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://reo.ru/"><img src="assets/img/Logo-reo-color.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://rb.ru/"><img src="assets/img/article (5).png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://www.nb-fund.ru/"><img src="assets/img/article (6).png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://changellenge.com/"><img src="assets/img/article (10).png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://rusinnovations.com/"><img src="assets/img/article (11).png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://msbinfo.ru/"><img src="assets/img/article.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://gotech.vc/"><img src="assets/img/fda.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://asi.ru/"><img src="assets/img/das1.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://www.sberbank-ast.ru/Content.aspx?tid=1"><img src="assets/img/fda1.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://apply.innopolis.ru/"><img src="assets/img/_Ciu0Sy-0PA.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://opora.ru/"><img src="assets/img/Logo_with_Text_300dpi.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href=""><img src="assets/img/1.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href=""><img src="assets/img/hse_inc_main.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://dobrofiz.ru/"><img src="assets/img/Доброфиз_лого-цвет-синий.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://dobrofiz.ru/dobropoezd"><img src="assets/img/Logo-11.jpg" class="img_partners"></a>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://www.facebook.com/youngroupsocial/"><img src="assets/img/123123.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://cpp-group.ru/"><img src="assets/img/6634634634.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://te-st.ru/"><img src="assets/img/Teplitsa_mainLogo_rus.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://fondgarant.ru/evaluation"><img src="assets/img/Garant_ЂЃ£Ѓ_ж•≠ва_бЃж®†Ђм≠ле_в•е≠ЃЂЃ£®©-1.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://kislorod.io/"><img src="assets/img/kislorod_logo-landscape-1.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://netology.ru/"><img src="assets/img/logo-full-color-black.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://probusinesstv.ru"><img src="assets/img/PRObusiness-logo-002-CMYK(1)-01.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://bizdrom.com/"><img src="assets/img/logo_new2222.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://www.trinet.ru/"><img src="assets/img/image_5.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://s-ol.ru/ru/"><img src="assets/img/CZSIO-SOL.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://socialweekend.by/"><img src="assets/img/000022_1546256336_331246_big.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://startupheart.by/"><img src="assets/img/74887114_112304683523635_118921824745553920_o.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="http://social.d-group.ru/"><img src="assets/img/D-group.social_logo-01.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://rgsu.net/"><img src="assets/img/Gorizontal'naya sokraschennaya komponovka.png" class="img_partners"></a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 @endsection
