@@ -79,15 +79,15 @@
                 </div>
             </div>
             <div class="navigations__header">
-                <a href="">о конкурсе</a>
-                <a href="">номинации</a>
+                <a href="#about__tender">о конкурсе</a>
+                <a href="#nominations">номинации</a>
                 <!-- <a href="">этапы конкурса</a> -->
-                <a href="">истории успеха</a>
-                <a href="">эксперты</a>
-                <a href="">новости</a>
+                <a href="#history">истории успеха</a>
+                <a href="#experts">эксперты</a>
+                <a href="#news">новости</a>
                 <!-- <a href="">галерея</a> -->
-                <a href="">партнеры</a>
-                <a href="">контакты</a>
+                <a href="#partners">партнеры</a>
+                <a href="#footer">контакты</a>
             </div>
         </div>
     </div>

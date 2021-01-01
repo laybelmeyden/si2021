@@ -7,9 +7,10 @@
         <div class="si__logo_items">
             <img src="assets/img/si_logo.svg" alt="">
             <img src="assets/img/mts_logo.svg" alt="">
-        </div>
-        <h1>SOCIAL IDEA 2021</h1>
-        <h2>Международный конкурс социальных <br> проектов с применением цифровых технологий</h2>
+            </div>
+            <h1>SOCIAL IDEA 2021</h1>
+            <div id="about__tender"></div>
+            <h2>Международный конкурс социальных <br> проектов с применением цифровых технологий</h2>
         <a class="btn btn-primary btn__si_banners" href="#" role="button">
             СТАНЬ ПЕРВЫМ
             <img src="assets/img/right-arrow_si.svg" alt="">
@@ -319,6 +320,7 @@
                 </div>
             </a>
         </div>
+        <div class="news__swiper__items_all">
         <div class="swiper-container swiper-container-news">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -406,8 +408,11 @@
                     </a>
                 </div>
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper__navigations">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        </div>
         </div>
     </div>
 </section>

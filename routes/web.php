@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'MainController@index')->name('main');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
