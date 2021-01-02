@@ -7,11 +7,10 @@ var mySwiper = new Swiper('.swiper-container.swiper-container-history', {
         el: '.swiper-pagination',
         clickable: true,
     },
-    loop: true,
     slidesPerView: 1,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        prevEl: '.history-prev',
+        nextEl: '.history-next',
     },
 
 
@@ -19,14 +18,46 @@ var mySwiper = new Swiper('.swiper-container.swiper-container-history', {
 var mySwiper2 = new Swiper('.swiper-container.swiper-container-experts', {
     slidesPerView: 3,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.experts-next',
+        prevEl: '.experts-prev',
     },
 })
-var mySwiper2 = new Swiper('.swiper-container.swiper-container-news', {
+var mySwiper3 = new Swiper('.swiper-container.swiper-container-news', {
     slidesPerView: 3,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        prevEl: '.news-prev',
+        nextEl: '.news-next',
     },
 })
+
+window.onload = () => {
+    const navbar_active = document.querySelectorAll('.nav__content_years a');
+    navbar_active.forEach(
+        e => {
+            const child_a = e.querySelector('div')
+            if (window.location.pathname == '/years2011') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            } else if (window.location.pathname == '/years2012') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            } else if (window.location.pathname == '/years2013') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            } else if (window.location.pathname == '/years2014') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            } else if (window.location.pathname == '/years2015') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            } else if (window.location.pathname == '/years2016') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            } else if (window.location.pathname == '/years2017') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            } else if (window.location.pathname == '/years2018') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            } else if (window.location.pathname == '/years2019') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            } else if (window.location.pathname == '/years2020') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            } else if (window.location.pathname == '/') {
+                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            }
+        }
+    )
+}

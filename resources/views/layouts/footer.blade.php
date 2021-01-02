@@ -4,10 +4,10 @@
         <div class="social__links">
             <p>Присоединяйтесь к<br> конкурсу в соцсетях!</p>
             <div>
-                <a href=""><img src="assets/img/sc1.svg" alt=""></a>
-                <a href=""><img src="assets/img/sc2.svg" alt=""></a>
-                <a href=""><img src="assets/img/sc3.svg" alt=""></a>
-                <a href=""><img src="assets/img/sc4.svg" alt=""></a>
+                <a href=""><img src="/assets/img/sc1.svg" alt=""></a>
+                <a href=""><img src="/assets/img/sc2.svg" alt=""></a>
+                <a href=""><img src="/assets/img/sc3.svg" alt=""></a>
+                <a href=""><img src="/assets/img/sc4.svg" alt=""></a>
             </div>
         </div>
         <div>

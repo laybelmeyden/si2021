@@ -256,8 +256,8 @@
                 </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev history-prev"></div>
+            <div class="swiper-button-next history-next"></div>
         </div>
     </div>
 </section>
@@ -290,8 +290,8 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next experts-next"></div>
+            <div class="swiper-button-prev experts-prev"></div>
         </div>
     </div>
 </section>
@@ -410,8 +410,8 @@
             </div>
         </div>
         <div class="swiper__navigations">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev news-prev"></div>
+        <div class="swiper-button-next news-next"></div>
         </div>
         </div>
     </div>
