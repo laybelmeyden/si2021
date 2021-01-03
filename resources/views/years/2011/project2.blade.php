@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('title', 'ТЕЛЕКОМ ИДЕЯ 2011')
 @section('content')
 </section>
 <section id="years__sections">

@@ -35,6 +35,10 @@ class YearsController extends Controller
     {
         return view('years.2013.year2013');
     }
+    public function telekom_hit_2013()
+    {
+        return view('years.2013.project1');
+    }
     public function years2014()
     {
         return view('years.2014.year2014');

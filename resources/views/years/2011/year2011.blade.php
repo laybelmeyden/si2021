@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+@section('title', 'Архив 2011 года')
 @section('content')
 
 </section>

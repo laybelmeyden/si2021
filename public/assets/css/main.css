@@ -923,13 +923,16 @@ nav .nav__content_language a:hover {
   margin-right: 65px;
   min-width: 557px;
   min-height: 350px;
+  max-height: 350px;
   width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
 .about__tender_modal_container .about__tender_modal_items_1 img {
   width: 100%;
   border-radius: 20px;
+  max-height: 350px;
 }
 
 .about__tender_modal_container .about__tender_modal_items_2 {

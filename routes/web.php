@@ -31,6 +31,7 @@ Route::get('/years2012', 'YearsController@years2012')->name('main12');
 Route::get('/years2012/telekom_hit', 'YearsController@telekom_hit_2012');
 Route::get('/years2012/telekom_idea', 'YearsController@telekom_idea_2012');
 Route::get('/years2013', 'YearsController@years2013')->name('main13');
+Route::get('/years2013/telekom_hit', 'YearsController@telekom_hit_2013');
 Route::get('/years2014', 'YearsController@years2014')->name('main14');
 Route::get('/years2015', 'YearsController@years2015')->name('main15');
 Route::get('/years2016', 'YearsController@years2016')->name('main15');
