@@ -39,14 +39,61 @@ class YearsController extends Controller
     {
         return view('years.2013.project1');
     }
+    public function telekom_idea_2013()
+    {
+        return view('years.2013.project2');
+    }
     public function years2014()
     {
         return view('years.2014.year2014');
     }
+    public function telekom_hit_2014()
+    {
+        return view('years.2014.project1');
+    }
+    public function telekom_idea_2014()
+    {
+        return view('years.2014.project2');
+    }
+    public function telekom_unior_2014()
+    {
+        return view('years.2014.project3');
+    }
+
     public function years2015()
     {
         return view('years.2015.year2015');
     }
+    public function telekom_idea_2015()
+    {
+        return view('years.2015.project1');
+    }
+    public function telekom_hit_2015()
+    {
+        return view('years.2015.project2');
+    }
+    public function telekom_it_2015()
+    {
+        return view('years.2015.project3');
+    }
+    public function telekom_legal_2015()
+    {
+        return view('years.2015.project4');
+    }
+    public function telekom_belarus_2015()
+    {
+        return view('years.2015.project5');
+    }
+    public function telekom_unior_2015()
+    {
+        return view('years.2015.project6');
+    }
+    public function telekom_center_2015()
+    {
+        return view('years.2015.project7');
+    }
+
+    
     public function years2016()
     {
         return view('years.2016.year2016');

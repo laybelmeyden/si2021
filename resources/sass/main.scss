@@ -219,6 +219,8 @@ nav {
             width: 100%;
             border-radius: 20px;
             max-height: 350px;
+            min-height: 350px;
+            height: 100%;
         }
     }
     .about__tender_modal_items_2 {
@@ -956,6 +958,9 @@ nav {
 #years__sections {
     margin-top: 70px;
     margin-bottom: 120px;
+    li {
+        padding-bottom: 10px;
+    }
     .years__project_grid {
         display: grid;
         grid-template-columns: 20% 70%;
