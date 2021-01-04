@@ -129,6 +129,28 @@ class YearsController extends Controller
     {
         return view('years.2017.year2017');
     }
+    public function telekom_rostov_2017()
+    {
+        return view('years.2017.project1');
+    }
+    public function telekom_yarik_2017()
+    {
+        return view('years.2017.project2');
+    }
+    public function telekom_spirit_2017()
+    {
+        return view('years.2017.project3');
+    }
+    public function telekom_cup_2017()
+    {
+        return view('years.2017.project4');
+    }
+    public function telekom_idea_2017()
+    {
+        return view('years.2017.project5');
+    }
+
+
     public function years2018()
     {
         return view('years.2018.year2018');
