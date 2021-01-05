@@ -78,4 +78,10 @@ Route::get('/years2018/telekom_it_2018', 'YearsController@telekom_it_2018');
 
 
 Route::get('/years2019', 'YearsController@years2019')->name('main19');
+Route::get('/years2019/telekom_si_2019', 'YearsController@telekom_si_2019');
+Route::get('/years2019/telekom_school_2019', 'YearsController@telekom_school_2019');
+Route::get('/years2019/telekom_cup_2019', 'YearsController@telekom_cup_2019');
+Route::get('/years2019/telekom_raise_2019', 'YearsController@telekom_raise_2019');
+
+
 Route::get('/years2020', 'YearsController@years2020')->name('main20');
