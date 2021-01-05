@@ -69,5 +69,13 @@ Route::get('/years2017/telekom_idea_2017', 'YearsController@telekom_idea_2017');
 
 
 Route::get('/years2018', 'YearsController@years2018')->name('main18');
+Route::get('/years2018/telekom_amur_2018', 'YearsController@telekom_amur_2018');
+Route::get('/years2018/telekom_hub_2018', 'YearsController@telekom_hub_2018');
+Route::get('/years2018/telekom_unior_2018', 'YearsController@telekom_unior_2018');
+Route::get('/years2018/telekom_idea_2018', 'YearsController@telekom_idea_2018');
+Route::get('/years2018/telekom_hack_2018', 'YearsController@telekom_hack_2018');
+Route::get('/years2018/telekom_it_2018', 'YearsController@telekom_it_2018');
+
+
 Route::get('/years2019', 'YearsController@years2019')->name('main19');
 Route::get('/years2020', 'YearsController@years2020')->name('main20');
