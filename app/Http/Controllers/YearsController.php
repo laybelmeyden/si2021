@@ -206,4 +206,8 @@ class YearsController extends Controller
     {
         return view('years.2020.year2020');
     }
+    public function telekom_si_2020()
+    {
+        return view('years.2020.project1');
+    }
 }

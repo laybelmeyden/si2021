@@ -1777,6 +1777,22 @@ nav .nav__content_language a:hover {
   width: 100%;
 }
 
+#years__sections .main_text_item a {
+  color: #E30510 !important;
+}
+
+#years__sections .project_ul .project_main_li_item {
+  color: #E30510;
+}
+
+#years__sections .project_ul .project_main_li_item .main_text_span {
+  color: black;
+}
+
+#years__sections .project_ul .li_item {
+  color: black;
+}
+
 #years__sections .title__years_solo {
   font-weight: bold;
   font-size: 48px;

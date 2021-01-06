@@ -967,6 +967,20 @@ nav {
         grid-column-gap: 120px;
         width: 100%;
     }
+    .main_text_item a {
+        color: #E30510 !important;
+    }
+    .project_ul {
+        .project_main_li_item {
+            color: #E30510;
+            .main_text_span {
+                color: black;
+            }
+        }
+        .li_item {
+            color: black;
+        }
+    }
     .title__years_solo {
         font-weight: bold;
         font-size: 48px;
