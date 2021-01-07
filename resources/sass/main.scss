@@ -228,7 +228,7 @@ nav {
         flex-direction: column;
         justify-content: space-around;
         width: 100%;
-        margin-right: 70px;
+        padding-right: 70px;
         p:first-child {
             font-style: normal;
             font-weight: 300;
@@ -919,9 +919,10 @@ nav {
         }
     }
     .links__more_2 {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
         a {
-            margin-right: 44px;
             margin-top: 50px;
             border: 1px solid #FFFFFF;
             box-sizing: border-box;
@@ -1044,6 +1045,78 @@ nav {
 }
 
 // media
+@media screen and (max-width:1200px) {
+    .about__section .about__tender .grid__tender .grid__tender_about p:first-child {
+        font-size: 60px;
+    }
+    .about__section .about__tender .grid__tender .grid__tender_about p {
+        font-size: 25px;
+    }
+    .about__section .about__tender .grid__tender .grid__tender_main .tender__items p {
+        font-size: 40px;
+    }
+    .about__section .about__tender .grid__tender .grid__tender_main .tender__items p:first-child {
+        font-size: 20px;
+    }
+    .about__section .about__tender .grid__tender .grid__tender_main .tender__items p:last-child {
+        font-size: 20px;
+    }
+    .about__tender_modal_container .about__tender_modal_items {
+        flex-direction: column;
+    }
+    .about__tender_modal_container .about__tender_modal_items_1 img {
+        width: 100%;
+        border-radius: 20px;
+        max-height: 100%;
+        min-height: auto;
+        height: 100%;
+    }
+    .about__tender_modal_container .about__tender_modal_items {
+        background: linear-gradient(-0deg, #FFFFFF 51.71%, rgba(255, 255, 255, 0) 71.25%);
+        border-radius: 20px;
+    }
+    .about__tender_modal_container .about__tender_modal_items_1 {
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+    }
+    .about__tender_modal_container .about__tender_modal_items_2 {
+        justify-content: space-around;
+        width: 100%;
+        padding-right: 70px;
+        padding-left: 70px;
+        padding-bottom: 30px;
+    }
+    #start .start__grid p {
+        font-size: 24px;
+    }
+    #start .start__btn p {
+        font-size: 26px;
+    }
+    #footer .social__links img {
+        margin-right: 10px;
+    }
+    #footer .links__more p {
+        margin-right: 25px;
+        font-size: 20px;
+    }
+    #footer .social__links p {
+        font-size: 20px;
+    }
+    #years__sections .years__project_grid {
+        grid-template-columns: 23% 70%;
+        grid-column-gap: 40px;
+    }
+    #news .text__news .news__title_items {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    #news .text__news .news__date_items {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
 @media screen and (max-width:992px) {
     .nav__content {
         width: 100%;
