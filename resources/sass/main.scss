@@ -153,6 +153,71 @@ nav {
         justify-content: flex-end;
         align-items: center;
         height: 72px;
+        .auth__btn_items {
+            display: flex;
+            align-items: center;
+        }
+        .auth__btn__burger_menu {
+            display: none;
+            .mobile-menu__btn {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 30px;
+                cursor: pointer;
+                transition: .4s;
+            }
+            .mobile-menu__icon {
+                display: block;
+                position: relative;
+                background: #E30510;
+                width: 90%;
+                height: 4px;
+                transition: .4s;
+            }
+            .mobile-menu__icon::after,
+            .mobile-menu__icon::before {
+                content: "";
+                display: block;
+                position: absolute;
+                background: #E30510;
+                width: 100%;
+                height: 4px;
+                transition: .4s;
+            }
+            .mobile-menu__icon::after {
+                top: 8px;
+            }
+            .mobile-menu__icon::before {
+                top: -8px;
+            }
+            .mobile-menu__checkbox {
+                display: none;
+            }
+            .mobile-menu__checkbox:checked~.mobile-menu__nav {
+                opacity: 1;
+            }
+            .mobile-menu__checkbox:checked~.mobile-menu__container {
+                height: 100%;
+            }
+            .mobile-menu__checkbox:checked~.mobile-menu__btn .mobile-menu__icon {
+                background: transparent;
+            }
+            .mobile-menu__checkbox:checked~.mobile-menu__btn .mobile-menu__icon::before,
+            .mobile-menu__checkbox:checked~.mobile-menu__btn .mobile-menu__icon::after {
+                top: 0;
+            }
+            .mobile-menu__checkbox:checked~.mobile-menu__btn .mobile-menu__icon::after {
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+            }
+            .mobile-menu__checkbox:checked~.mobile-menu__btn .mobile-menu__icon::before {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+        }
         img {
             margin-right: 10px;
         }
@@ -1137,9 +1202,12 @@ nav {
                 margin: 0;
             }
             div:hover {
-                height: 40px;
-                top: -7px;
+                height: 48px;
+                top: -8px;
             }
+        }
+        .active_years {
+            top: -8px !important;
         }
         .nav__content_language {
             width: 25%;
@@ -1168,7 +1236,7 @@ nav {
         display: grid;
         grid-template-columns: 1fr;
         margin-top: 70px;
-        justify-items: baseline;
+        justify-items: center;
     }
     .about__section .about__tender .grid__tender .grid__tender_main {
         display: grid;
@@ -1176,6 +1244,8 @@ nav {
         grid-row-gap: 30px;
         grid-column-gap: 100px;
         grid-template-rows: 103px;
+        margin-top: 40px;
+        width: 100%;
     }
     .about__tender_modal_items_1 img {
         width: 100%;
@@ -1188,5 +1258,169 @@ nav {
         background-image: url(/images/img.png?bb36b8d…);
         background-repeat: no-repeat;
         background-position: top;
+    }
+    .active__small_scroll {
+        position: fixed;
+        background: white;
+        top: 0;
+        width: 100%;
+        transition: .5s;
+        z-index: 999;
+    }
+    .banners__si_2021 {
+        .navigations__header {
+            transform: translate(0, -1500px);
+            background: #E30510;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 0;
+            a {
+                color: white;
+                margin-right: 0;
+                margin-bottom: 20px;
+                &:hover {
+                    color: white;
+                    text-decoration: underline !important;
+                }
+            }
+        }
+        .active__menu_items {
+            transition: 1s;
+            transform: translate(0, 0px);
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            right: 0;
+            left: 0;
+            top: 0;
+            z-index: 999;
+        }
+        .auth__btn {
+            justify-content: space-between;
+            .auth__btn__burger_menu {
+                display: flex !important;
+                .active_mobile_menu__btn {
+                    z-index: 9999;
+                    .mobile-menu__icon::before {
+                        background: white;
+                    }
+                    .mobile-menu__icon::after {
+                        background: white;
+                    }
+                }
+            }
+        }
+    }
+    .no_scrolled {
+        overflow: hidden;
+    }
+    .about__section .info__si_items .si__logo_items img:first-child {
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+    .about__section .info__si_items .si__logo_items {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .about__tender_modal_container .about__tender_modal_items_1 {
+        min-width: auto;
+    }
+    .about__tender_modal_container .about__tender_modal_items_2 p {
+        font-size: 18px;
+    }
+    .about__tender_modal_container .about__tender_modal_items_2 p:first-child {
+        font-size: 24px;
+        word-break: break-all;
+    }
+    .about__tender_modal_container .about__tender_modal_items_2 {
+        justify-content: space-around;
+        width: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+        padding-bottom: 30px;
+    }
+    .about__tender_modal_container .about__tender_modal_items_2 .btn__modal_tender {
+        margin-top: 20px;
+    }
+    #nominations .grid__nominations {
+        flex-direction: column;
+    }
+    #start .start__grid p {
+        font-size: 18px;
+    }
+    #start .start__btn {
+        flex-direction: column;
+    }
+    #start .start__btn p {
+        font-size: 20px;
+    }
+    .start__btn a {
+        margin-top: 30px;
+    }
+    #start .start__btn a {
+        width: 100%;
+        margin-left: 0;
+    }
+    .history__slide img {
+        display: none;
+    }
+    #history .swiper-container {
+        height: 100%;
+        padding-bottom: 60px;
+    }
+    .tender__items div {
+        min-width: 150px;
+    }
+    .history-prev,
+    .history-next {
+        display: none;
+    }
+    #news .news__main_items {
+        flex-direction: column;
+        img {
+            width: 100%;
+            border-radius: 20px;
+        }
+        .text__news .news__date_items {
+            font-size: 16px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+    }
+    #footer .grid__footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 40px;
+        justify-items: center;
+        .links__more_2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 30px;
+            justify-items: center;
+        }
+        .links__more {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    #years__sections {
+        .years__project_grid {
+            grid-template-columns: 1fr;
+            grid-column-gap: 40px;
+            grid-row-gap: 40px;
+        }
+        .years__project_sticky {
+            order: 0 !important;
+        }
+        div {
+            order: -1;
+        }
     }
 }

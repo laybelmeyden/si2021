@@ -72,10 +72,16 @@
     <div class="banners__si_2021">
         <div class="container">
             <div class="auth__btn">
+                <div class="auth__btn__burger_menu">
+                <input type="checkbox" id="checkbox" class="mobile-menu__checkbox">
+    <label for="checkbox" class="mobile-menu__btn"><div class="mobile-menu__icon"></div></label>
+                </div>
+                <div class="auth__btn_items">
                 <img src="/assets/img/auth_img.svg" alt="">
                 <div>
                     <a href="">войти</a>
                     <a href="">Регистрация</a>
+                </div>
                 </div>
             </div>
             <div class="navigations__header">

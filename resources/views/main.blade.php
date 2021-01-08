@@ -320,7 +320,7 @@
                 </div>
             </a>
         </div>
-        <div class="news__swiper__items_all">
+        <!-- <div class="news__swiper__items_all">
         <div class="swiper-container swiper-container-news">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -334,7 +334,6 @@
                                     МТС победила в рейтинге компаний, работающих с инновациями
                                 </p>
                                 <div class="btn__modal_news">
-                                    <!-- Button trigger modal -->
                                     <a type="button" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
                                         </svg></a>
@@ -355,7 +354,6 @@
                                     МТС победила в рейтинге компаний, работающих с инновациями
                                 </p>
                                 <div class="btn__modal_news">
-                                    <!-- Button trigger modal -->
                                     <a type="button" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
                                         </svg></a>
@@ -376,7 +374,6 @@
                                     МТС победила в рейтинге компаний, работающих с инновациями
                                 </p>
                                 <div class="btn__modal_news">
-                                    <!-- Button trigger modal -->
                                     <a type="button" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
                                         </svg></a>
@@ -397,7 +394,6 @@
                                     МТС победила в рейтинге компаний, работающих с инновациями
                                 </p>
                                 <div class="btn__modal_news">
-                                    <!-- Button trigger modal -->
                                     <a type="button" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
                                         </svg></a>
@@ -413,7 +409,7 @@
         <div class="swiper-button-prev news-prev"></div>
         <div class="swiper-button-next news-next"></div>
         </div>
-        </div>
+        </div> -->
     </div>
 </section>
 <section id="partners">

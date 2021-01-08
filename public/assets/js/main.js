@@ -1,6 +1,11 @@
 window.addEventListener('scroll', () => {
-    const nav__fixed = document.querySelector('.banners__si_2021')
-    pageYOffset >= 134 ? nav__fixed.classList.add('fixed__nav') : nav__fixed.classList.remove('fixed__nav')
+    const nav__fixed = document.querySelector('.banners__si_2021'),
+        body = document.querySelector('body')
+    if (body.clientWidth >= 993) {
+        pageYOffset >= 134 ? nav__fixed.classList.add('fixed__nav') : nav__fixed.classList.remove('fixed__nav')
+    } else if (body.clientWidth <= 993) {
+        pageYOffset >= 134 ? nav__fixed.classList.add('active__small_scroll') : nav__fixed.classList.remove('active__small_scroll')
+    }
 })
 var mySwiper = new Swiper('.swiper-container.swiper-container-history', {
     pagination: {
@@ -16,7 +21,12 @@ var mySwiper = new Swiper('.swiper-container.swiper-container-history', {
 
 })
 var mySwiper2 = new Swiper('.swiper-container.swiper-container-experts', {
-    slidesPerView: 3,
+    slidesPerView: 1,
+    breakpoints: {
+        992: {
+            slidesPerView: 3
+        }
+    },
     navigation: {
         nextEl: '.experts-next',
         prevEl: '.experts-prev',
@@ -61,3 +71,31 @@ window.onload = () => {
         }
     )
 }
+
+nav_bar_toggle = () => {
+    const burger__items = document.querySelector('.mobile-menu__btn'),
+        burger__items_menu = document.querySelector('.navigations__header'),
+        body = document.querySelector('body'),
+        mobile_menu__btn = document.querySelector('.mobile-menu__btn'),
+        mobile_menu__checkbox = document.querySelector('.mobile-menu__checkbox')
+
+
+    burger__items.addEventListener('click', () => {
+        burger__items_menu.classList.toggle('active__menu_items')
+        body.classList.toggle('no_scrolled')
+        mobile_menu__btn.classList.toggle('active_mobile_menu__btn')
+    })
+    const active_menu_offers = document.querySelectorAll('.navigations__header a')
+    if (body.clientWidth <= 993) {
+        active_menu_offers.forEach(e => {
+            e.addEventListener('click', () => {
+                burger__items_menu.classList.toggle('active__menu_items')
+                body.classList.toggle('no_scrolled')
+                mobile_menu__btn.classList.toggle('active_mobile_menu__btn')
+                mobile_menu__checkbox.checked = false;
+            })
+        })
+    }
+
+}
+nav_bar_toggle()
