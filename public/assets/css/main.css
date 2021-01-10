@@ -1628,6 +1628,7 @@ nav .nav__content_language a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 #news .text__news .news__date_items {

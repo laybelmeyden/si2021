@@ -297,22 +297,21 @@
 </section>
 
 <section id="news">
-    <div class="container">
+    <div id="app" class="container">
         <p class="news__title">Новости</p>
+        @foreach ($news as $new)
+        @if($new['values_op'] === 'option1')
         <div class="news__main_items">
-            <a href="">
+            <a href="/news{{ $new->id }}">
                 <div class="news__main_items_img">
-                    <img src="https://cdn.fishki.net/upload/post/2016/09/08/2067506/desktopwallpapers.jpg" alt="">
+                    <img src="/storage/{{ $new -> img}}" alt="">
                 </div>
                 <div class="text__news">
-                    <p class="news__date_items">11.11.2020</p>
-                    <p class="news__title_items">Определены победители
-                        международного конкурса социальных
-                        проектов с применением цифровых
-                        технологий «Social Idea-2020»</p>
+                    <p class="news__date_items">{{$new -> date}}</p>
+                    <p class="news__title_items">{{$new -> title_ru}}</p>
                     <div class="btn__modal_news">
                         <!-- Button trigger modal -->
-                        <a type="button" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <a href="/news{{ $new->id }}" class="btn btn__modal_news_item">ПОДРОБНЕЕ <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
                             </svg></a>
 
@@ -320,9 +319,9 @@
                 </div>
             </a>
         </div>
-        <div id="app">
+        @endif
+        @endforeach
         <news_component></news_component>
-        </div>
     </div>
 </section>
 <section id="partners">

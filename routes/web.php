@@ -22,7 +22,9 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-
+//news
+Route::get('/api/news', 'MainController@news');
+Route::get('/news{id}', 'MainController@newssolo');
 // years
 Route::get('/years2011', 'YearsController@years2011')->name('main11');
 Route::get('/years2011/telekom_hit', 'YearsController@telekom_hit_2011');

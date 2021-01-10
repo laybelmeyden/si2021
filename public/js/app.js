@@ -1992,75 +1992,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      news: []
+    };
+  },
+  methods: {
+    loadNews: function loadNews() {
+      var _this = this;
+
+      axios.get('api/news').then(function (_ref) {
+        var data = _ref.data;
+        return _this.news = data.data;
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.loadNews();
+  }
+});
 
 /***/ }),
 
@@ -37705,162 +37656,77 @@ var render = function() {
     _c("div", { staticClass: "news__components" }, [
       _vm._m(0),
       _vm._v(" "),
-      _c("div", { staticClass: "news__components__items_clone" }, [
-        _c("div", { staticClass: "news__components_items" }, [
-          _c("a", { attrs: { href: "" } }, [
-            _c("div", { staticClass: "news__swiper_item" }, [
-              _vm._m(1),
-              _vm._v(" "),
-              _c("div", { staticClass: "news__card_title" }, [
-                _c("p", { staticClass: "news__swiper_title" }, [
-                  _vm._v(
-                    "\n                МТС победила в рейтинге компаний, работающих с инновациями\n              "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "btn__modal_news" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn__modal_news_item",
-                      attrs: { type: "button" }
-                    },
-                    [
-                      _vm._v("ПОДРОБНЕЕ\n                  "),
-                      _c(
-                        "svg",
-                        {
-                          staticClass: "bi bi-arrow-right",
-                          attrs: {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            width: "16",
-                            height: "16",
-                            fill: "currentColor",
-                            viewBox: "0 0 16 16"
-                          }
-                        },
-                        [
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-                            }
-                          })
-                        ]
-                      )
-                    ]
-                  )
-                ])
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "news__components_items" }, [
-          _c("a", { attrs: { href: "" } }, [
-            _c("div", { staticClass: "news__swiper_item" }, [
-              _vm._m(2),
-              _vm._v(" "),
-              _c("div", { staticClass: "news__card_title" }, [
-                _c("p", { staticClass: "news__swiper_title" }, [
-                  _vm._v(
-                    "\n                МТС победила в рейтинге компаний, работающих с инновациями\n              "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "btn__modal_news" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn__modal_news_item",
-                      attrs: { type: "button" }
-                    },
-                    [
-                      _vm._v("ПОДРОБНЕЕ\n                  "),
-                      _c(
-                        "svg",
-                        {
-                          staticClass: "bi bi-arrow-right",
-                          attrs: {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            width: "16",
-                            height: "16",
-                            fill: "currentColor",
-                            viewBox: "0 0 16 16"
-                          }
-                        },
-                        [
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-                            }
-                          })
-                        ]
-                      )
-                    ]
-                  )
-                ])
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "news__components_items" }, [
-          _c("a", { attrs: { href: "" } }, [
-            _c("div", { staticClass: "news__swiper_item" }, [
-              _vm._m(3),
-              _vm._v(" "),
-              _c("div", { staticClass: "news__card_title" }, [
-                _c("p", { staticClass: "news__swiper_title" }, [
-                  _vm._v(
-                    "\n                МТС победила в рейтинге компаний, работающих с инновациями\n              "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "btn__modal_news" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btn__modal_news_item",
-                      attrs: { type: "button" }
-                    },
-                    [
-                      _vm._v("ПОДРОБНЕЕ\n                  "),
-                      _c(
-                        "svg",
-                        {
-                          staticClass: "bi bi-arrow-right",
-                          attrs: {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            width: "16",
-                            height: "16",
-                            fill: "currentColor",
-                            viewBox: "0 0 16 16"
-                          }
-                        },
-                        [
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-                            }
-                          })
-                        ]
-                      )
-                    ]
-                  )
-                ])
-              ])
-            ])
-          ])
-        ])
-      ]),
+      _c(
+        "div",
+        { staticClass: "news__components__items_clone" },
+        _vm._l(_vm.news, function(item) {
+          return _c(
+            "div",
+            { key: item.id, staticClass: "news__components_items" },
+            [
+              item.values_op === "option2"
+                ? _c("a", { attrs: { href: "/news" + item.id } }, [
+                    _c("div", { staticClass: "news__swiper_item" }, [
+                      _c("div", { staticClass: "news__swiper_img" }, [
+                        _c("img", {
+                          attrs: { src: "/storage/" + item.img, alt: "" }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "news__card_title" }, [
+                        _c("p", { staticClass: "news__swiper_title" }, [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(item.title_ru) +
+                              "\n              "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "btn__modal_news" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "btn btn__modal_news_item",
+                              attrs: { href: "/news" + item.id }
+                            },
+                            [
+                              _vm._v("ПОДРОБНЕЕ\n                  "),
+                              _c(
+                                "svg",
+                                {
+                                  staticClass: "bi bi-arrow-right",
+                                  attrs: {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    width: "16",
+                                    height: "16",
+                                    fill: "currentColor",
+                                    viewBox: "0 0 16 16"
+                                  }
+                                },
+                                [
+                                  _c("path", {
+                                    attrs: {
+                                      "fill-rule": "evenodd",
+                                      d:
+                                        "M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ])
+                  ])
+                : _vm._e()
+            ]
+          )
+        }),
+        0
+      ),
       _vm._v(" "),
-      _vm._m(4)
+      _vm._m(1)
     ])
   ])
 }
@@ -37871,42 +37737,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "navigation__news" }, [
       _c("div", { staticClass: "navigation__news_btn_prev" })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news__swiper_img" }, [
-      _c("img", {
-        attrs: {
-          src:
-            "https://cdn.fishki.net/upload/post/2016/09/08/2067506/desktopwallpapers.jpg",
-          alt: ""
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news__swiper_img" }, [
-      _c("img", { attrs: { src: "/assets/img/newssmall.png", alt: "" } })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "news__swiper_img" }, [
-      _c("img", {
-        attrs: {
-          src:
-            "https://cdn.fishki.net/upload/post/2016/09/08/2067506/desktopwallpapers.jpg",
-          alt: ""
-        }
-      })
     ])
   },
   function() {
