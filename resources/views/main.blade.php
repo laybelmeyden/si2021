@@ -295,7 +295,6 @@
         </div>
     </div>
 </section>
-
 <section id="news">
     <div id="app" class="container">
         <p class="news__title">Новости</p>

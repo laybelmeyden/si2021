@@ -1,23 +1,32 @@
 <template>
   <div id="news__components">
     <div class="news__components">
-      <div class="navigation__news">
+      <div
+        class="navigation__news"
+        :class="{ disabled: !pagination.prev_page_url }"
+        @click.prevent="getNews(pagination.prev_page_url), getNewsPage()"
+      >
         <div class="navigation__news_btn_prev"></div>
       </div>
-
-      <div class="news__components__items_clone">
+      <div v-if="loading">
+        <div class="heart__container">
+          <img
+            src="assets/img/heart_loader.png"
+            alt="heart_loader"
+            class="animated__loader"
+          />
+        </div>
+      </div>
+      <div v-else class="news__components__items_clone">
         <div class="news__components_items" v-for="item in news" :key="item.id">
           <a :href="`/news${item.id}`" v-if="item.values_op === 'option2'">
             <div class="news__swiper_item">
               <div class="news__swiper_img">
-                <img
-                  :src="`/storage/${ item.img }`"
-                  alt=""
-                />
+                <img :src="`/storage/${item.img}`" alt="" />
               </div>
               <div class="news__card_title">
                 <p class="news__swiper_title">
-                  {{ item.title_ru}}
+                  {{ item.title_ru }}
                 </p>
                 <div class="btn__modal_news">
                   <a :href="`/news${item.id}`" class="btn btn__modal_news_item"
@@ -42,7 +51,11 @@
         </div>
       </div>
 
-      <div class="navigation__news">
+      <div
+        class="navigation__news"
+        :class="{ disabled: !pagination.next_page_url }"
+        @click.prevent="getNews(pagination.next_page_url), getNewsPage()"
+      >
         <div class="navigation__news_btn_next"></div>
       </div>
     </div>
@@ -51,21 +64,42 @@
 
 <script>
 export default {
-       data() {
-           return {
-               news: []
-           }
-       },
-       methods: {
-           loadNews(){
-               axios.get('api/news')
-               .then(({data}) => (this.news = data.data));
-           }
-       },
-       mounted(){
-           this.loadNews();
-       }
-}
+  data() {
+    return {
+      news: [],
+      loading: true,
+      pagination: {},
+    };
+  },
+  methods: {
+    getNews(page_url) {
+      page_url = page_url || "api/news";
+      axios
+        .get(page_url)
+        .then((response) => {
+          this.news = response.data.data;
+          this.makePagination(response.data);
+        })
+        .finally(() => (this.loading = false));
+    },
+    makePagination(response) {
+      let pagination = {
+        current_page: response.current_page,
+        last_page: response.last_page,
+        prev_page_url: response.prev_page_url,
+        next_page_url: response.next_page_url,
+      };
+      this.pagination = pagination;
+    },
+    getNewsPage() {
+      this.loading = true;
+    },
+  },
+  created() {
+    this.getNews();
+    this.getNewsPage();
+  },
+};
 </script>
 
 <style>

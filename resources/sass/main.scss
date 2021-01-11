@@ -1126,11 +1126,38 @@ nav {
     cursor: pointer;
 }
 
+.heart__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    .animated__loader {
+        width: 100px;
+        animation: heartbeat 1s infinite;
+    }
+    @keyframes heartbeat {
+        0% {
+            transform: scale( 1);
+        }
+        50% {
+            transform: scale( 1.5);
+        }
+        100% {
+            transform: scale( 1);
+        }
+    }
+}
+
 #news__components {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    .disabled {
+        opacity: 0;
+        z-index: -1;
+    }
     .news__components {
         display: grid;
         grid-template-columns: 70px 1fr 70px;
