@@ -210,4 +210,10 @@ class YearsController extends Controller
     {
         return view('years.2020.project1');
     }
+
+
+    public function social_idea_2021()
+    {
+        return view('years.2021.project1');
+    }
 }

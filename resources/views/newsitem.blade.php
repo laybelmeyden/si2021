@@ -4,7 +4,7 @@
 </section>
 <section id="years__sections">
 <div class="container">
-        <div>
+        <div class="solo__news">
             <p class="title__years_solo">{{$id -> title_ru}}</p>
             <p>
                 {!! $id -> body_ru !!}

@@ -79,8 +79,8 @@
                 <div class="auth__btn_items">
                 <img src="/assets/img/auth_img.svg" alt="">
                 <div>
-                    <a href="">войти</a>
-                    <a href="">Регистрация</a>
+                    <a href="https://usersocialidea.ru/login">войти</a>
+                    <a href="https://usersocialidea.ru/register">Регистрация</a>
                 </div>
                 </div>
             </div>
