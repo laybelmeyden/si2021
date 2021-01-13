@@ -1,5 +1,5 @@
-@extends('layouts.app')
-
+@extends('profile.master')
+@section('title', 'SOCIAL IDEA 2021')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

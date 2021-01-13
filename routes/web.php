@@ -14,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/', 'MainController@index')->name('main');
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

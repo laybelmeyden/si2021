@@ -1,12 +1,10 @@
-@extends('layouts.app')
-
+@extends('layouts.master')
+@section('title', 'SOCIAL IDEA 2021 - Восстановление пароля')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
+</section>
+<div class="container" id="auth__form">
+            <div class="card__auth">
+            <p>Восстановление пароля</p>
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.update') }}">
                         @csrf
@@ -59,7 +57,5 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
 </div>
 @endsection
