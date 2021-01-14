@@ -15,11 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes(['verify' => true]);
-
+//pages
 Route::get('/', 'MainController@index')->name('main');
-
+//profile
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/setting_profile{id}', 'UserController@setting_profile')->name('setting_user')->middleware('verified');
 
+
+//voyager
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

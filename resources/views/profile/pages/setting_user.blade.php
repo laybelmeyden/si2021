@@ -1,5 +1,5 @@
 @extends('profile.master')
-@section('title', 'SOCIAL IDEA 2021')
+@section('title', 'Настройки профиля')
 @section('content')
 <div id="app" class="nav__items">
 <div>
@@ -7,10 +7,7 @@
 </div>
 <div id="contants" class="container">
 <div class="card__project">
-    <b>
-    Конкурс завершен!
-    </b> 
-    <p>Ожидайте начала нового конкурса. Спасибо!</p>
+    <input type="text" placeholder="{{$user -> name}}">
 </div>
 </div>
 </div>

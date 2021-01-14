@@ -117,6 +117,10 @@ nav {
     border-bottom: 1px solid #C9C9C9;
 }
 
+.no_scrolled {
+    overflow: hidden;
+}
+
 .fixed__nav {
     position: fixed;
     transition: .5s;
@@ -1270,6 +1274,20 @@ nav {
     margin-top: 90px;
     margin-bottom: 90px;
     .card__auth {
+        .verify__email_p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 110%;
+            letter-spacing: 0;
+            color: black;
+        }
+        .btn__verify {
+            width: 100%;
+            .btn-primary-forms-submit {
+                width: 100%;
+            }
+        }
         p {
             font-style: normal;
             font-weight: 300;
@@ -1346,6 +1364,90 @@ nav {
     }
 }
 
+//preloader
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    div {
+        display: flex;
+        p {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 110%;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: #595959;
+            margin-top: 10px;
+        }
+    }
+    $color: #F0F0F0,
+    #E1E1E1,
+    #C9C9C9,
+    #999999,
+    #E30510;
+    $circle-size: 20px;
+    $circle-margin: 7px;
+    .circle {
+        width: $circle-size;
+        height: $circle-size;
+        border-radius: 50%;
+        margin: $circle-margin;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:before {
+            content: "";
+            width: $circle-size;
+            height: $circle-size;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+        }
+    }
+    @for $i from 1 through 5 {
+        .circle-#{$i} {
+            background-color: nth($color, $i);
+            &:before {
+                background-color: nth($color, $i);
+                animation-delay: 200ms * $i;
+            }
+        }
+    }
+    @keyframes scale {
+        0% {
+            transform: scale(1);
+        }
+        50%,
+        75% {
+            transform: scale(2.5);
+        }
+        78%,
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+//preloader end
 // media
 @media screen and (max-width:1399px) {
     #news .text__news .news__date_items {

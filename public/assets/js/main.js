@@ -1,3 +1,11 @@
+window.onload = () => {
+    const body = document.querySelector('body')
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function() {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+    }, 500);
+}
 window.addEventListener('scroll', () => {
     const nav__fixed = document.querySelector('.banners__si_2021'),
         body = document.querySelector('body')
@@ -40,7 +48,7 @@ var mySwiper3 = new Swiper('.swiper-container.swiper-container-news', {
     },
 })
 
-window.onload = () => {
+navbar_active = () => {
     const navbar_active = document.querySelectorAll('.nav__content_years a');
     navbar_active.forEach(
         e => {
@@ -71,8 +79,8 @@ window.onload = () => {
         }
     )
 }
-
-nav_bar_toggle = () => {
+navbar_active();
+window.addEventListener('scroll', nav_bar_toggle = () => {
     const burger__items = document.querySelector('.mobile-menu__btn'),
         burger__items_menu = document.querySelector('.navigations__header'),
         body = document.querySelector('body'),
@@ -97,5 +105,4 @@ nav_bar_toggle = () => {
         })
     }
 
-}
-nav_bar_toggle()
+})
