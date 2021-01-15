@@ -10,11 +10,11 @@
       </div>
       <div v-if="loading">
         <div class="heart__container">
-          <img
-            src="assets/img/heart_loader.png"
-            alt="heart_loader"
-            class="animated__loader"
-          />
+          <div class="circle circle-1"></div>
+          <div class="circle circle-2"></div>
+          <div class="circle circle-3"></div>
+          <div class="circle circle-4"></div>
+          <div class="circle circle-5"></div>
         </div>
       </div>
       <div v-else class="news__components__items_clone">

@@ -80,7 +80,7 @@ navbar_active = () => {
     )
 }
 navbar_active();
-window.addEventListener('scroll', nav_bar_toggle = () => {
+nav_bar_toggle = () => {
     const burger__items = document.querySelector('.mobile-menu__btn'),
         burger__items_menu = document.querySelector('.navigations__header'),
         body = document.querySelector('body'),
@@ -105,4 +105,5 @@ window.addEventListener('scroll', nav_bar_toggle = () => {
         })
     }
 
-})
+}
+nav_bar_toggle();
