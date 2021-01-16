@@ -62,8 +62,8 @@
                     </div>
                     <div class="nav__content_language">
                         <div>
-                            <a href="">ru</a>
-                            <a href="">en</a>
+                            <a id="ru_lan" href="locale/ru">ru</a>
+                            <a id="en_lan" href="locale/en">en</a>
                         </div>
                     </div>
                 </div>
@@ -82,8 +82,8 @@
                         @guest
                         <img src="/assets/img/auth_img.svg" alt="">
                         <div>
-                            <a href="{{ route('login') }}">войти</a>
-                            <a href="{{ route('register') }}">Регистрация</a>
+                            <a href="{{ route('login') }}">@lang('words.login')</a>
+                            <a href="{{ route('register') }}">@lang('words.register')</a>
                         </div>
                         @else
                         <img src="/assets/img/auth_img.svg" alt="">
@@ -93,7 +93,7 @@
                             </a>
                             <a href="{{ route('logout') }}" 
                             onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">Выход</a>
+                            document.getElementById('logout-form').submit();">@lang('words.exit')</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
@@ -102,15 +102,15 @@
                     </div>
                 </div>
                 <div class="navigations__header">
-                    <a href="/#about__tender">о конкурсе</a>
-                    <a href="/#nominations">номинации</a>
-                    <!-- <a href="">этапы конкурса</a> -->
-                    <a href="/#history">истории успеха</a>
-                    <a href="/#experts">эксперты</a>
-                    <a href="/#news">новости</a>
+                    <a href="/#about__tender">@lang('words.about')</a>
+                    <a href="/#nominations">@lang('words.nomina')</a>
+                    <a href="/#timeline__sections">@lang('words.stages')</a>
+                    <a href="/#history">@lang('words.history')</a>
+                    <a href="/#experts">@lang('words.expert')</a>
+                    <a href="/#news">@lang('words.news')</a>
                     <!-- <a href="">галерея</a> -->
-                    <a href="/#partners">партнеры</a>
-                    <a href="/#footer">контакты</a>
+                    <a href="/#partners">@lang('words.parts')</a>
+                    <a href="/#footer">@lang('words.contacts')</a>
                 </div>
             </div>
         </div>

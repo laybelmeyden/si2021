@@ -21,7 +21,11 @@ Route::get('/', 'MainController@index')->name('main');
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/setting_profile{id}', 'UserController@setting_profile')->name('setting_user')->middleware('verified');
 
-
+//locale
+Route::get('locale/{locale}', function ($locale) {
+    Session::put('locale',$locale);
+    return redirect()-> back();
+});
 //voyager
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

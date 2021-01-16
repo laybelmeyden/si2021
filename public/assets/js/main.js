@@ -80,6 +80,17 @@ navbar_active = () => {
     )
 }
 navbar_active();
+const language__switcher = () => {
+    const html = document.querySelector('html'),
+        ru_lang = document.querySelector('#ru_lan'),
+        en_lang = document.querySelector('#en_lan');
+    if (html.lang === 'ru') {
+        ru_lang.classList.add('lang__active')
+    } else if (html.lang === 'en') {
+        en_lang.classList.add('lang__active')
+    }
+}
+language__switcher();
 nav_bar_toggle = () => {
     const burger__items = document.querySelector('.mobile-menu__btn'),
         burger__items_menu = document.querySelector('.navigations__header'),

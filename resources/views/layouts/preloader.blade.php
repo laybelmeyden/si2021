@@ -7,6 +7,6 @@
   <div class="circle circle-5"></div>
   </div>
   <div>
-  <p>Загрузка...</p>
+  <p>@lang('words.loader')...</p>
   </div>
 </div>
