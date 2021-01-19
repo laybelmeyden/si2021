@@ -7,13 +7,22 @@
         <div class="years__project_grid">
             <div class="years__project_sticky">
                 <div class="years__project_date">
+                    @if(App::isLocale('ru'))
                     <div class="years__project_date_items">
                         <p>40 регионов России</p>
                         <p>Сентябрь 2019 – апрель 2020</p>
                         <p></p>
                     </div>
+                    @else
+                    <div class="years__project_date_items">
+                        <p> 40 regions of Russia </p>
+                        <p> September 2019 - April 2020 </p>
+                        <p> </p>
+                    </div>
+                    @endif
                 </div>
             </div>
+            @if(App::isLocale('ru'))
             <div>
                 <p class="title__years_solo">RAISE</p>
                 <p class="undotitle__years_solo">Что такое всероссийский акселератор социальных инициатив RAISE?</p>
@@ -32,6 +41,26 @@
 
                 </p>
             </div>
+            @else
+            <div>
+                <p class="title__years_solo"> RAISE </p>
+                <p class="undotitle__years_solo"> What is the all-Russian accelerator of social initiatives RAISE? </p>
+                <p class="podundotitle__years_solo">
+                    RAISE is a large-scale educational project with a competitive component, within the framework of which student teams develop and implement projects in the field of social entrepreneurship.
+                </p>
+                <p>
+                    Each of the projects is aimed at solving the most acute social problems of the region, such as: socialization of children with disabilities, preservation of national identity, information security, employment of various population groups and the like.
+                    <br> <br> Participants of the Accelerator, developing their entrepreneurial thinking, apply an innovative approach to solving social problems. The duration of the season of the acceleration program is 9 months, starting with the formation of teams in September and until the competition in late April.
+                    <br> <br> Scale
+                    <br> <br> The RAISE Social Initiatives Accelerator is held in 40 regions of Russia, on the basis of 46 universities. Over 7 seasons, 3000 students took part in it, who submitted 430 projects to the competition.
+                    <br> <br> Who conducts
+                    <br> <br> The organizer of the Accelerator of Social Initiatives is the RANEPA, the Russian Academy of National Economy and Public Administration under the President of the Russian Federation
+                    <br> <br> How to get to the Social Idea competition
+                    <br> <br> Winners of the All-Russian accelerator of social initiatives RAISE in the special nomination of MTS PJSC will be invited to the semifinals.
+
+                </p>
+            </div>
+            @endif
         </div>
     </div>
 </section>

@@ -25,12 +25,20 @@
                 <img :src="`/storage/${item.img}`" alt="" />
               </div>
               <div class="news__card_title">
-                <p class="news__swiper_title">
+                <p class="news__swiper_title" v-if="getUrl() === 'ru'">
                   {{ item.title_ru }}
+                </p>
+                <p class="news__swiper_title" v-else>
+                  {{ item.title_en }}
                 </p>
                 <div class="btn__modal_news">
                   <a :href="`/news${item.id}`" class="btn btn__modal_news_item"
-                    >ПОДРОБНЕЕ
+                    ><span v-if="getUrl() === 'ru'">
+                      Побробнее
+                    </span>
+                    <span v-else>
+                      READ MORE
+                    </span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
@@ -94,10 +102,14 @@ export default {
     getNewsPage() {
       this.loading = true;
     },
+    getUrl(){
+      return document.querySelector('html').lang;
+    }
   },
   created() {
     this.getNews();
     this.getNewsPage();
+    this.getUrl()
   },
 };
 </script>

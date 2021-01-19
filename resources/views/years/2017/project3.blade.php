@@ -6,6 +6,7 @@
     <div class="container">
         <div class="years__project_grid">
             <div class="years__project_sticky">
+                @if(App::isLocale('ru'))
                 <div class="years__project_date">
                     <div class="years__project_date_items">
                         <p>1 этап</p>
@@ -23,7 +24,27 @@
                         <p>Проведение хакатона на площадке Deworkacy</p>
                     </div>
                 </div>
+                @else
+                <div class="years__project_date">
+                    <div class="years__project_date_items">
+                        <p> Stage 1 </p>
+                        <p> April 26 - May 29, 2017 </p>
+                        <p> Collection of applications for participation </p>
+                    </div>
+                    <div class="years__project_date_items">
+                        <p> Stage 2 </p>
+                        <p> May 29, 2017 </p>
+                        <p> Announcement of 25 teams participating in the hackathon </p>
+                    </div>
+                    <div class="years__project_date_items">
+                        <p> MTS Hackathon </p>
+                        <p> June 9 - 11, 2017 </p>
+                        <p> Holding a hackathon at the Deworkacy site </p>
+                    </div>
+                </div>
+                @endif
             </div>
+            @if(App::isLocale('ru'))
             <div>
                 <p class="title__years_solo">SOCIAL SPIRIT</p>
                 <p class="undotitle__years_solo"></p>
@@ -43,6 +64,27 @@
 
                 </p>
             </div>
+            @else
+            <div>
+                <p class="title__years_solo"> SOCIAL SPIRIT </p>
+                <p class="undotitle__years_solo"> </p>
+                <p class="podundotitle__years_solo">
+                    MTS and Deworkacy invite authors of software products in the social sphere, as well as developers, designers and product managers for a 48-hour hackathon on June 9-11, 2017.
+                </p>
+                <p>
+                    If you are already developing or want to develop software products that improve the overall quality of life of people, solve social problems through a software product (application, website, etc.) and are applicable in the business of the MTS group, then we are waiting for you!
+                    <br> <br> Hackathon is an opportunity to offer MTS your product and receive a job offer or test development on the company's client base!
+                    <br> <br> Cash and other nice prizes, 48 ​​hours of coding, 100 developers, nice atmosphere and delicious food!
+
+                    <br> <br> Hackathon program
+                    <br> <br> June 9 - Teams meet with experts and get acquainted in more detail with the goals of the hackathon and the tasks they face. In the evening, teams start working on their projects.
+                    <br> <br> June 10 - During the day, teams are engaged in the development and testing of prototypes of their products. Experts provide consulting support for teams.
+                    <br> <br> June 11 - Teams complete work on products and present the result to experts. Based on the results of the presentations, the jury will determine the finalists and an award ceremony for the winners and participants of the hackathon will take place.
+
+
+                </p>
+            </div>
+            @endif
         </div>
     </div>
 </section>

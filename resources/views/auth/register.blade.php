@@ -4,7 +4,7 @@
 </section>
 <div class="container" id="auth__form">
     <div class="card__auth">
-        <p>Регистрация</p>
+        <p>@lang('words.register')</p>
         <form method="POST" action="{{ route('register') }}">
             @csrf
             <div>
@@ -70,7 +70,7 @@
             </div>
             <div  class="btn__submit_container_register">
                 <button type="submit" class="btn btn-primary-forms-submit">
-                    Регистрация
+                @lang('words.register')
                 </button>
             </div>
         </form>

@@ -14,7 +14,7 @@
             <div class="links__more">
                 <p><a href="https://drive.google.com/file/d/1QL3w69QheGDkCAQM1D2j92n6O1RxkhwJ/view" target="_blank">@lang('words.footer_2')</a></p>
                 <p><a href="https://drive.google.com/file/d/1COO5BTJJYJAibVaZ7tu8v9TG_GlBVAhA/view" target="_blank">@lang('words.footer_3')</a></p>
-                <p><a href="https://usersocialidea.ru/login">@lang('words.footer_4')</a></p>
+                <p><a href="/login">@lang('words.footer_4')</a></p>
             </div>
             <div class="links__more_2">
                 <div>

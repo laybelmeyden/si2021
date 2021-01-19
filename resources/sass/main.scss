@@ -341,12 +341,30 @@ nav {
 
 // end nav
 .about__section {
-    background-image: url(../assets/img/img.png);
+    background-image: url(../assets/img/back_heart_1.svg);
     background-repeat: no-repeat;
     background-position: right;
     background-position-y: 40px;
     .info__si_items {
         margin-top: 100px;
+        .animation__hearts {
+            position: absolute;
+            z-index: 0;
+            right: calc(0% - -10%);
+            animation: hearts 2s infinite;
+            margin-top: -95px;
+        }
+        @keyframes hearts {
+            0% {
+                transform: scale(.7);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(.7);
+            }
+        }
         .si__logo_items {
             img:first-child {
                 margin-right: 40px;
@@ -362,6 +380,7 @@ nav {
             text-transform: uppercase;
             color: #474747;
             margin-bottom: 30px;
+            z-index: 1;
         }
         h2 {
             font-style: normal;
@@ -372,6 +391,7 @@ nav {
             margin-bottom: 60px;
             width: 100%;
             max-width: 500px;
+            z-index: 1;
         }
         .btn__si_banners {
             width: 272px;
@@ -388,6 +408,7 @@ nav {
             display: flex;
             align-items: center;
             justify-content: space-around;
+            z-index: 1;
             &:hover {
                 opacity: 0.7;
             }
@@ -1696,6 +1717,15 @@ nav {
     }
 }
 
+@media screen and (max-width:1305px) {
+    body {
+        overflow-x: hidden;
+    }
+    .animation__hearts {
+        right: calc(0% - 15%) !important;
+    }
+}
+
 @media screen and (max-width:1200px) {
     #news__components {
         display: none;
@@ -1778,6 +1808,9 @@ nav {
 }
 
 @media screen and (max-width:992px) {
+    body {
+        overflow-x: none;
+    }
     .tender__items {
         justify-content: center;
     }
@@ -1879,9 +1912,12 @@ nav {
         flex-direction: column;
     }
     .about__section {
-        background-image: url(/images/img.png?bb36b8d…);
+        background-image: url(/images/img.png);
         background-repeat: no-repeat;
         background-position: top;
+        .animation__hearts {
+            display: none;
+        }
     }
     .active__small_scroll {
         position: fixed;

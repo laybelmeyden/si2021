@@ -7,13 +7,22 @@
         <div class="years__project_grid">
             <div class="years__project_sticky">
                 <div class="years__project_date">
+                    @if(App::isLocale('ru'))
                     <div class="years__project_date_items">
                         <p>Москва</p>
                         <p>22 апреля 2019</p>
                         <p></p>
                     </div>
+                    @else
+                    <div class="years__project_date_items">
+                        <p> Moscow </p>
+                        <p> 22 April 2019 </p>
+                        <p> </p>
+                    </div>
+                    @endif
                 </div>
             </div>
+            @if(App::isLocale('ru'))
             <div>
                 <p class="title__years_solo">CUP RUSSIA</p>
                 <p class="undotitle__years_solo">Что такое Changellenge >> Cup Russia</p>
@@ -28,6 +37,22 @@
 
                 </p>
             </div>
+            @else
+            <div>
+                <p class="title__years_solo"> CUP RUSSIA </p>
+                <p class="undotitle__years_solo"> What is Changellenge >> Cup Russia </p>
+                <p class="podundotitle__years_solo">
+                    The case championship is a team competition for solving business problems (cases) from the practice of large world companies, and Changellenge >> Cup Russia is one of the largest competitions in Russia and the CIS. So, in 2018 more than 5,000 students and recent graduates from all over the country took part in the championship.
+                </p>
+                <p>
+                    This year, Russia is hosting four regional case championships of the Changellenge Case League: in St. Petersburg, Novosibirsk, Yekaterinburg and Kazan. Changellenge >> Cup Russia will be held in Moscow on April 22. The most talented participants will demonstrate their solutions to the business case to an expert jury.
+                    <br> <br> Apply to participate in Changellenge >> Cup Russia
+                    <br> <br> How to get to the Social Idea competition
+                    <br> <br> Winners of Changellenge >> Cup Russia will be invited to the semifinals.
+
+                </p>
+            </div>
+            @endif
         </div>
     </div>
 </section>

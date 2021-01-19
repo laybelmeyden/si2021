@@ -6,6 +6,7 @@
     <div class="container">
         <div class="years__project_grid">
             <div class="years__project_sticky">
+                @if(App::isLocale('ru'))
                 <div class="years__project_date">
                     <div class="years__project_date_items">
                         <p>1 ЭТАП</p>
@@ -23,7 +24,27 @@
                         <p>Приветственное слово, выступление организаторов и партнеров, презентация проектов, подведение итогов, награждение, завершение хакатона.</p>
                     </div>
                 </div>
+                @else
+                <div class="years__project_date">
+                    <div class="years__project_date_items">
+                        <p> STAGE 1 </p>
+                        <p> October 12 </p>
+                        <p> Registration of participants, presentation of organizers and partners, presentation, formation and seating of teams, midterm check No. 1, night work on projects. </p>
+                    </div>
+                    <div class="years__project_date_items">
+                        <p> STAGE 2 </p>
+                        <p> October 13 </p>
+                        <p> Interim check # 2, working with experts, intermediate check # 3, night work on projects. </p>
+                    </div>
+                    <div class="years__project_date_items">
+                        <p> STAGE 3 </p>
+                        <p> October 14 </p>
+                        <p> Welcome speech, speeches by organizers and partners, presentation of projects, summing up, rewarding, completion of the hackathon. </p>
+                    </div>
+                </div>
+                @endif
             </div>
+            @if(App::isLocale('ru'))
             <div>
                 <p class="title__years_solo">HAHATHON AMURDIGITALHACK</p>
                 <p class="undotitle__years_solo"></p>
@@ -43,6 +64,27 @@
 
                 </p>
             </div>
+            @else
+            <div>
+                <p class="title__years_solo"> HAHATHON AMURDIGITALHACK </p>
+                <p class="undotitle__years_solo"> </p>
+                <p class="podundotitle__years_solo">
+                    On October 12-14, 2018, in Blagoveshchensk, at the Amur State University, the HACKATHON AmurDigitalHack developers forum will be held, organized by MTS.
+                </p>
+                <p>
+                    Any resident of Russia over 14 years old can take part. If you are interested in startups, tech entrepreneurship, and coding, sign up now!
+                    <br> <br>
+                    Programmers, developers, designers, marketers, managers and all those who are interested in the field of technology entrepreneurship and startup communities are invited. We invite everyone, both with project ideas and without them.
+                    <br> <br> Nominations:
+                    <br> <br> • Smart City is a city for everyone. Prize fund - 100,000 rubles
+                    <br> <br> • Campus Activities - open university. Prize fund - 75,000 rubles
+                    <br> <br> • Creation of services for tourism and leisure. Prize fund - 75,000 rubles
+                    <br> <br> • Free nomination. Prize fund - 50,000 rubles
+                    <br> <br> The most promising projects presented at HACKATHON AmurDigitalHack will be included in the MTS business accelerator.
+
+                </p>
+            </div>
+            @endif
         </div>
     </div>
 </section>

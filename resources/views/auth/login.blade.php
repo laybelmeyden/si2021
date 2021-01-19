@@ -5,7 +5,7 @@
 <div class="container" id="auth__form">
 
     <div class="card__auth">
-    <p>Вход</p>
+    <p>@lang('words.login')</p>
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div>
@@ -41,11 +41,11 @@
             <div class="btn__submit_container">
                 @if (Route::has('password.request'))
                 <a class="btn btn-forms-remembe" href="{{ route('password.request') }}">
-                    Забыли пароль ?
+                    @lang('words.remembe')
                 </a>
                 @endif
                 <button type="submit" class="btn btn-primary-forms-submit">
-                    Войти
+                @lang('words.login')
                 </button>
             </div>
         </form>

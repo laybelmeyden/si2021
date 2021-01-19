@@ -1,11 +1,16 @@
 @extends('layouts.master')
+@if(App::isLocale('ru'))
 @section('title', 'ТЕЛЕКОМ ИДЕЯ 2014')
+@else
+@section('title', 'TELECOM IDEA 2014')
+@endif
 @section('content')
 </section>
 <section id="years__sections">
     <div class="container">
         <div class="years__project_grid">
             <div class="years__project_sticky">
+            @if(App::isLocale('ru'))
                 <div class="years__project_date">
                     <div class="years__project_date_items">
                         <p>1 ЭТАП</p>
@@ -23,7 +28,27 @@
                         <p>Подготовка участниками презентации с помощью менторов, публичная защита проектов перед Экспертным советом, определение победителей</p>
                     </div>
                 </div>
+            @else
+            <div class = "years__project_date">
+                    <div class = "years__project_date_items">
+                        <p> STAGE 1 </p>
+                        <p> </p>
+                        <p> Collection of participant questionnaires, voting of the Expert Council, determination of semi-finalists </p>
+                    </div>
+                    <div class = "years__project_date_items">
+                        <p> STAGE 2 </p>
+                        <p> </p>
+                        <p> Collection of extended descriptions and video presentations, educational program of the Higher School of Marketing and Business Development of the Higher School of Economics, determination of the finalists. </p>
+                    </div>
+                    <div class = "years__project_date_items">
+                        <p> STAGE 3 </p>
+                        <p> </p>
+                        <p> Preparation of presentation by participants with the help of mentors, public defense of projects before the Expert Council, determination of winners </p>
+                    </div>
+                </div>
+            @endif
             </div>
+            @if(App::isLocale('ru'))
             <div>
                 <p class="title__years_solo">ТЕЛЕКОМ ИДЕЯ 2014</p>
                 <p class="undotitle__years_solo"></p>
@@ -121,6 +146,107 @@
                 <b>Для участия в конкурсе необходимо зарегистрироваться и заполнить анкету.</b>
                 </p>
             </div>
+            @else
+            <div>
+                <p class = "title__years_solo"> TELECOM IDEA 2014 </p>
+                <p class = "undotitle__years_solo"> </p>
+                <p class = "podundotitle__years_solo">
+                    Within the framework of the Lift to the Future program of AFK Sistema for the search, support and development of talented youth from March to June 2014, the IV competition of youth innovative projects in the field of telecommunications "Telecom Idea" will be held.
+                    The Telecom Idea competition was organized by Mobile TeleSystems (MTS OJSC), a leading telecommunications operator in Russia and the CIS countries, with the support of the Ministry of Communications and Mass Media of the Russian Federation, the Ministry of Economic Development of the Russian Federation, the Higher School of Economics (NRU HSE), Torgovo - the Industrial Chamber of the Russian Federation, the Federal Agency for Youth Affairs and OPORA Russia.
+                </p>
+                <p>
+                    The competition is aimed at finding, supporting and promoting innovative youth projects on the market, involving the use of information and communication technologies in commercial, social and state spheres and contributing to the improvement of the quality of life of society.
+                    <br> <br>
+                    In the next Telecom Idea 2014 competition, it was decided to pay special attention to projects that contribute to the development of a comfortable, environmentally friendly and accessible to all categories of citizens (including children, people of mature age and persons with disabilities) urban environment using smart IT solutions based on high-speed mobile data transmission networks, which is of particular relevance in connection with the deployment of 4G communication infrastructure in Russia. The main theme of the competition will be the development and application of "smart" and "green" information and communication technologies (ICT) to create favorable conditions for the development of urban economy and management, improve the quality and convenience of life of the population and business development.
+                    <br> <br>
+                    By 2050, 80% of the world's population will live in cities. The growth of cities is accompanied by the emergence of many problems: an increase in crime, traffic collapse, environmental accidents and disasters, alienation of people, territorial differentiation along social lines, higher prices and poor availability of vital resources.
+                    One of the most effective ways of solving urban problems in the 21st century is the development of ICT. What topical problems of the urban environment can be solved using these technologies?
+
+                    <br>
+                    <br>
+                    More about the areas of application of technological solutions of the "smart city"
+                    1. Transport problem.
+                    Intelligent transport systems are emerging, which use ICT in the field of vehicle infrastructure and road transport regulation, as well as allow vehicles to interact with each other, with other modes of transport and with direct users. Thanks to this, it becomes possible to increase the throughput of roads by at least 10-15%, reduce accidents by 20-40%, the number of traffic violations by 1.5-2 times.
+
+                    <br> <br>
+                    2. Security problem.
+                    The use of ICT makes it possible to achieve a reduction in the level of crime in cities, thanks to the use of video surveillance systems, geolocation, automatic identification by image and behavior, and the introduction of electronic passports. The consequences of natural disasters, environmental and man-made disasters are minimized due to the use of continuous monitoring systems for buildings, structures and the environment, forecasting and warning systems. At the same time, the massive introduction of ICT into the urban environment requires attention to the issues of combating cybercrime and protecting against viruses, and the corresponding solutions are becoming an integral part of the "smart city".
+                    <br> <br>
+                    3. Problems of housing and communal services.
+                    The introduction of various electronic sensors and meters and their integration into the Smart Grid system ("intelligent" energy distribution network) will reduce electricity losses by 20-30%, save 34-35 billion kWh per year. The annual savings will amount to over 50 billion rubles. The combination of Smart Grid systems with automated control systems for energy-consuming devices (for example, with variable frequency motors) is especially effective.
+
+                    <br> <br>
+                    4. Access to public services.
+                    ICT frees our citizens from going to various government agencies for certificates, allows them to keep abreast of the activities of administrations, to receive information about existing fines, debts, and upcoming payments. Entrepreneurs get the opportunity to speed up the workflow and the passage of payments. On the territory of Russia, about 45 billion paper documents circulate annually: contracts, acts,
+                    bottom, etc. According to international studies, the introduction of electronic document management can reduce the processing time of documents by 70%, and the total savings from the use of accounting and financial documents in electronic form is 2-3% of the company's gross turnover.
+                    <br> <br>
+                    5. Improving the quality of life.
+                    The "Internet of things" has entered our life, when more and more things around us are supplied with identifiers and communication systems. As a result, they can be recognized, controlled and communicated with each other over the Internet or another network. Here are just a few examples of already implemented IoT capabilities. A service has appeared such as public-private cars, the location of the nearest of which can be found on the Internet and, using a smart card, open the car, make a trip and leave it where it is no longer needed. The car can also find parking for itself, thanks to the sensors built into the asphalt. During the journey, cars can “recognize” each other and elements of road infrastructure and exchange information to avoid accidents and make optimal routes to avoid traffic jams. According to forecasts, 25 billion devices will be connected to the Internet by 2015, and 50 billion by 2020.
+                    <br> <br>
+                    6. Socialization of citizens.
+                    ICT makes it possible to overcome the alienation between the inhabitants of large cities and the isolation of various social groups. Social networks allow their users to form interest groups and organize them for joint activities, including those aimed at improving the urban environment. Augmented reality devices allow citizens to better navigate the city, find places and events of interest to them, and highlight people close to them. People with disabilities and the elderly do not feel abandoned, lonely and helpless thanks to various sensors that determine their well-being and keep in touch with doctors, as well as thanks to services that allow them to communicate with the world around them. A person does not feel lost in an unfamiliar city thanks to geolocation services, electronic guides and translators.
+                    <br>
+                    <br>
+                    All innovative solutions to these and other urban problems can be proposed during the "Telecom Idea 2014" competition. The proposed projects can be at any stage of implementation: from exploratory developments to products already on the market. A qualified expert council will evaluate these proposals and, in the course of a three-stage examination, will determine the winners of the competition.
+                    <br> <br>
+                    <b> Elena Nechay, MTS Director for Marketing and Business Market Products </b>
+                    <br> <br>
+                    <i> “The launch of high-speed mobile 4G networks in Russia, the development of the GPON fiber-optic data transmission infrastructure in Moscow creates the necessary platform for the creation and implementation of a wide range of innovative solutions that in the near future can radically change many areas of urban life, such as housing and communal services, transport, medicine, education, retail, banking, government services and many others. We already have in our arsenal a variety of services that form a "smart" environment for life and business, based on mobile and fixed data transmission, M2M and NFC technologies. We welcome fresh innovative ideas and expect to attract partners from universities, research teams and technology startups to develop new and useful services, including social ones, for the townspeople. ”</i>
+                    <br> <br>
+                    <b> Vladimir Rudashevsky,
+                        Deputy Chairman of the Committee of the Chamber of Commerce and Industry of Russia for Technical Innovations and High Technologies, Advisor to the Chairman of the Board of Directors of JSFC Sistema
+                    </b>
+                    <br> <br>
+                    <i> “Smart city is for smart people! Who would not consider himself smart? Someone who does not know how to calculate costs. Unfortunately, our generous soul has never thought about what all the benefits of civilization are worth - finally, this time has come. And although we do not come to an empty field - it is sown and gives a good harvest like many Western technologies. But this means only one thing - we do not need to repeat "backs", but boldly go forward, only forward, not catching up, but looking back. I am confident that our innovations can significantly complement the overall picture of a smart city, making, if not all, then many of our cities smart. ”</i>
+                    <br> <br>
+                    How to participate <br>
+                    Adult citizens of the Russian Federation, Armenia, Belarus and Ukraine under the age of 35 can take part in the competition: students, young scientists, researchers, developers, entrepreneurs - both individually and collectively.
+                    The competition accepts innovative projects at all stages of development (from an idea to a pilot model) with reasonable economic efficiency that can increase operators' revenues from data transmission and bring tangible benefits to society and the state, including in the field of telemedicine, distance education, security, production management. processes, urban, housing and communal and road transport systems, mobile banking, etc.
+                    <br> <br>
+                    The winners are determined in the following main nominations:
+                    <br>
+                <ul>
+                    <li> Innovation in service and content
+                        New cross-platform mobile apps. Electronic and mobile commerce, finance, payments. Digital multimedia content. Additional services based on augmented reality technologies, geolocation and positioning (LBS / GPS / GLONASS), messaging, interactive services and web services. M2M and NFC based solutions.
+                    </li>
+                    <li> Innovation in software products
+                        New approaches to the use of information technologies and software by telecom operators for traffic management and analysis of large data arrays (Big Data). Cloud computing solutions and services.
+                    </li>
+                    <li> Innovative technical solutions for communication systems
+                        New ways to improve the efficiency of planning, building and using network resources, including next generation mobile networks (4G). Fixed-Mobile Convergence (FMC). Interaction of communication networks and navigation systems. Expansion of functionality and improvement of user characteristics of subscriber devices.
+                    </li>
+                    <li> Marketing and management innovations New solutions to improve business processes, sales systems, distribution and market promotion of Internet access services and smartphones, customer relationship management (CRM). Mobile marketing and advertising. </li>
+                </ul>
+                <br>
+                In addition to the main nominations, the competition partners proposed their thematic tasks:
+                <br>
+                <ul>
+                    <li> "The best socially-oriented projects in the field of telecommunications", OPORA Russia; </li>
+                    <li> “Innovations in the field of urban mobile services”, Moscow Department of Information Technologies; </li>
+                    <li> “Accessible city for the deaf”, Autonomous non-profit organization of Social support of the family “Kid and family”. </li>
+                </ul>
+                <br>
+                Within the framework of Telecom Idea, there will also be a video presentation competition and a competition for the best startup blog, participation in which will allow young innovators to prove themselves in using modern methods of positioning and promoting their projects.
+                <br> <br>
+                Competition entries are evaluated by an Expert Council consisting of representatives of MTS, key partners of the competition, leading experts in the field of telecommunications, innovation and the venture capital market. The collection and examination of projects is organized by the Institute of Innovation Management of the National Research University of the Higher School of Economics.
+                <br> <br>
+                For the participants of the competition who have passed the qualifying round, there is a special educational online program (webinars) on the market "packaging" of innovative projects from the Higher School of Marketing and Business Development of the Higher School of Economics, and the finalists will receive qualified consulting support from mentors, which will reveal the marketing advantages of projects from the standpoint their innovative component, the use of advanced technologies, the availability of competitive advantages, the potential for market penetration.
+                <br> <br>
+                In addition, with the entry into the second round of the Telecom Idea competition, participating projects have an additional opportunity to attract the attention of potential investors and business angels - they will be able to pass the procedure for assigning an investment attractiveness rating to the Russian Startup Rating, compiled by the Innovation Commercialization Center, GreenfieldProjec and Future Biotech with the support of Russian Venture Company OJSC.
+                The finalists of Telecom Idea will have the right to apply for the status of residents of the Moscow State University Business Incubator, which provides opportunities for the development of innovative business ideas on the basis of the largest university in Russia: the participants who passed the additional selection will be able to get their own office and the first investments for the development of their project within the Business -incubator of Moscow State University.
+                <br> <br>
+                As a result of the competition, the authors of ideas that best meet the business objectives of MTS will be able to take part in a unique internal corporate agreement for the first time
+                lecture program together with the company's employees in order to finalize projects and present them to the top management of MTS for further implementation. The main prize for the winners of Telecom Idea will be a travel grant for participation in a foreign educational seminar-tour, during which young innovators will get acquainted with the advanced achievements of the global telecommunications and IT industry, exchange their experience of working on innovative projects with foreign colleagues and be able to present their ideas internationally.
+                <br> <br>
+                Along with this, a project with the greatest market potential with the best study of the marketing component will be determined, the author of which will receive the right to mentor support from specialists from the Higher School of Marketing and Business Development of the Higher School of Economics.
+                The main prize for the winners of the competition is a foreign seminar tour, during which they will get acquainted with the advanced achievements and innovative practices of the leading players in the global telecom and IT industry.
+                <br> <br>
+                If you are young, active, talented, just gnawing the granite of science or are already starting your own innovative business and you have ideas on how to successfully monetize the mobile Internet, we are waiting for your projects for the Telecom Idea competition. And, perhaps, it is your idea that will get a unique chance to be implemented in partnership with the leaders of the ICT market.
+                <br> <br>
+                <b> To participate in the competition, you must register and fill out a form. </b>
+                </p>
+            </div>
+            @endif
         </div>
     </div>
 </section>

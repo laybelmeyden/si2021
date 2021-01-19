@@ -20,9 +20,9 @@ Route::get('/', 'MainController@index')->name('main');
 //profile
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/setting_profile{id}', 'UserController@setting_profile')->name('setting_user')->middleware('verified');
-
+Route::get('/statistics', 'MainController@stats')->name('stats');
 //locale
-Route::get('locale/{locale}', function ($locale) {
+Route::get('/locale/{locale}', function ($locale) {
     Session::put('locale',$locale);
     return redirect()-> back();
 });

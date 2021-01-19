@@ -62,8 +62,8 @@
                     </div>
                     <div class="nav__content_language">
                         <div>
-                            <a id="ru_lan" href="locale/ru">ru</a>
-                            <a id="en_lan" href="locale/en">en</a>
+                            <a id="ru_lan" href="/locale/ru">ru</a>
+                            <a id="en_lan" href="/locale/en">en</a>
                         </div>
                     </div>
                 </div>

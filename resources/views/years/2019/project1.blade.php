@@ -6,6 +6,7 @@
     <div class="container">
         <div class="years__project_grid">
             <div class="years__project_sticky">
+                @if(App::isLocale('ru'))
                 <div class="years__project_date">
                     <div class="years__project_date_items">
                         <p>1 ЭТАП</p>
@@ -23,7 +24,27 @@
                         <p>Менторская часть проекта. Определение финалистов. Финал конкурса</p>
                     </div>
                 </div>
+                @else
+                <div class="years__project_date">
+                    <div class="years__project_date_items">
+                        <p> STAGE 1 </p>
+                        <p> April 19 - June 30, 2019 </p>
+                        <p> Project start, applications acceptance, organization of regional qualifying events </p>
+                    </div>
+                    <div class="years__project_date_items">
+                        <p> STAGE 2 </p>
+                        <p> July 2019 </p>
+                        <p> Examination of applications. Definition of semi-finalists </p>
+                    </div>
+                    <div class="years__project_date_items">
+                        <p> STAGE 3 </p>
+                        <p> August - September 2019 </p>
+                        <p> Mentoring part of the project. Determination of the finalists. Final of the competition </p>
+                    </div>
+                </div>
+                @endif
             </div>
+            @if(App::isLocale('ru'))
             <div>
                 <p class="title__years_solo">SOCIAL IDEA 2019</p>
                 <p class="undotitle__years_solo"></p>
@@ -59,6 +80,43 @@
 
                 </p>
             </div>
+            @else
+            <div>
+                <p class="title__years_solo"> SOCIAL IDEA 2019 </p>
+                <p class="undotitle__years_solo"> </p>
+                <p class="podundotitle__years_solo">
+                </p>
+                <p>
+                    Who is this competition for?
+                    <br> <br> If you are over 18 years old, you are an inventor or programmer, you have an idea for a project in the field of digital technologies and you want to save the world or at least contribute to solving important social problems of society - we are waiting for you at the competition "Social Idea"!
+                    <br> <br> Main nominations
+                    <br> <br> The collection of applications is held in three nominations:
+                    <br> <br> • Social Mobile (Mobile technologies in the social sphere)
+                    <br> <br> • Social Big Data (Big data in the social sphere)
+                    <br> <br> • Social Smart City (Smart city in the social sphere)
+                    <br> <br> Choose a suitable nomination for yourself and participate!
+                    <br> <br> Submitting an application
+                    <br> <br> Submit your application for participation in the competition from April 19 to June 30, 2019.
+                    <br> <br> On the application page you will find detailed video instructions on how to fill it out correctly.
+                    <br> <br> The main stages of the competition:
+                    <br> <br> • April 19 - June 30, 2019 Start of the project, accepting applications, organizing regional qualifying events
+                    <br> <br> • July 2019 Examination of applications. Definition of semi-finalists
+                    <br> <br> • August - September 2019 Mentoring part of the project. Determination of the finalists. Final of the competition
+                    <br> <br> Regional stages of the competition will be held in Moscow, Krasnodar, Tolyatti, Chelyabinsk, Obninsk and Ryazan in partnership with the national league of cases Changellenge and the Agency for Innovative Development.
+                    <br> <br> Award to winners
+                    <br> <br> Winners will be determined by the decision of the expert council of the competition, which included representatives of MTS, AFK Sistema, key partners of the competition, leading experts in the field of telecommunications, innovation and social entrepreneurship.
+                    <br> <br> • Authors of the best projects will receive expertise, mentoring and technological support from MTS and the competition partners.
+                    <br> <br> • Projects will have an increased chance of promotion and development.
+                    <br> <br> • The winners of the competition will go to the foreign educational Social tour
+                    <br> <br> • The most effective teams will have the opportunity to undergo an internship with subsequent employment in MTS PJSC and the competition partner companies.
+                    <br> <br> Competition partners
+                    <br> <br> The competition is held with the support of Sistema, the Sistema Charitable Foundation and subsidiaries of the corporation, including Detsky Mir, Medsi Group of Companies, MTS-Bank PJSC.
+                    <br> <br> Competition organizer
+                    <br> <br> International competition "Social idea" is held by MTS. Public Joint Stock Company "Mobile TeleSystems" (PJSC "MTS") is a leading company in Russia and the CIS in the provision of services of mobile and fixed communications, Internet access, cable and satellite TV broadcasting, digital services and mobile applications, financial services and services e-commerce, as well as converged IT solutions in the field of system integration, the Internet of things, monitoring, data processing and cloud computing. By providing innovative services and solutions, MTS makes a significant contribution to economic growth and improving the quality of life of tens of millions of people in the countries of operation.
+
+                </p>
+            </div>
+            @endif
         </div>
     </div>
 </section>

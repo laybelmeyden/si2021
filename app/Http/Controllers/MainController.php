@@ -23,4 +23,7 @@ class MainController extends Controller
     public function newssolo(News $id){
         return view ('newsitem', compact('id'));
     }
+    public function stats(){
+        return view ('statistics');
+    }
 }

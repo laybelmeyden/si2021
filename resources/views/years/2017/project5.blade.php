@@ -1,11 +1,16 @@
 @extends('layouts.master')
+@if(App::isLocale('ru'))
 @section('title', 'ТЕЛЕКОМ ИДЕЯ 2017')
+@else
+@section('title', 'TELECOM IDEA 2017')
+@endif
 @section('content')
 </section>
 <section id="years__sections">
     <div class="container">
         <div class="years__project_grid">
             <div class="years__project_sticky">
+                @if(App::isLocale('ru'))
                 <div class="years__project_date">
                     <div class="years__project_date_items">
                         <p>1 этап</p>
@@ -28,7 +33,32 @@
                         <p>Акселерационная программа финалистов конкурса. Определение победителей.</p>
                     </div>
                 </div>
+                @else
+                <div class="years__project_date">
+                    <div class="years__project_date_items">
+                        <p> Stage 1 </p>
+                        <p> February 13 - August 28 </p>
+                        <p> Start of the project, acceptance of applications, organization of selection events. </p>
+                    </div>
+                    <div class="years__project_date_items">
+                        <p> Stage 2 </p>
+                        <p> August 14 - September 15 </p>
+                        <p> Multi-stage examination of applications. Definition of semi-finalists. </p>
+                    </div>
+                    <div class="years__project_date_items">
+                        <p> STAGE 3 </p>
+                        <p> September 18 - September 29 </p>
+                        <p> Educational and mentoring part of the project. Definition of finalists. </p>
+                    </div>
+                    <div class="years__project_date_items">
+                        <p> STAGE 4 </p>
+                        <p> October 9 - October 24 </p>
+                        <p> Acceleration program for the finalists of the competition. Determination of winners. </p>
+                    </div>
+                </div>
+                @endif
             </div>
+            @if(App::isLocale('ru'))
             <div>
                 <p class="title__years_solo">ТЕЛЕКОМ ИДЕЯ 2017</p>
                 <p class="undotitle__years_solo"></p>
@@ -62,6 +92,41 @@
 
                 </p>
             </div>
+            @else
+            <div>
+                <p class="title__years_solo"> TELECOM IDEA 2017 </p>
+                <p class="undotitle__years_solo"> </p>
+                <p class="podundotitle__years_solo">
+                    Projects using innovative IT solutions based on high-speed mobile and fixed data transmission networks are invited to participate in the "Telecom Idea 2017" competition. Winners will be determined in twelve nominations related to cloud products and services for business, financial and banking services, educational projects, projects dedicated to retail and e-commerce, as well as scalable web services and mobile applications designed for a wide range of users.
+                </p>
+                <p>
+                    Applications for participation in the competition can be submitted from February 13 to August 28, 2017 at http://telecomideas.com/2017/telecomidea/anketa
+                    <br> <br> Applications are collected in twelve nominations:
+                    <br> <br> • RetailTech (increasing the efficiency of retail outlets)
+                    <br> <br> • TechTech (high technology solutions and microelectronics)
+                    <br> <br> • FinTech (financial products / services)
+                    <br> <br> • EduTech (educational products / services)
+                    <br> <br> • MassTech (products / services for the mass market)
+                    <br> <br> • BusinessTech (cloud products / services for business)
+                    <br> <br> • iHR (HR-processes automation)
+                    <br> <br> • E-Health (products / services for health and medicine)
+                    <br> <br> • Supply chainLogistics services and procurement management
+                    <br> <br> • VR / AR (virtual / augmented reality)
+                    <br> <br> • loT (Internet of Things)
+                    <br> <br> • CSRTech (social service innovation)
+                    <br> <br> The competition is organized by MTS with the support of the AFK Sistema project for the search, support and development of talented youth "Elevator to the Future", the Ministry of Communications and Mass Media of the Russian Federation, the Department of Science, Industrial Policy and Entrepreneurship of Moscow, the Chamber of Commerce of the Russian Federation and the National Research University Higher School of Economics (NRU HSE).
+                    <br> <br> The "Telecom Idea" competition is held in the IV stage.
+                    Newsletter 13.02.2017 - 28.08.2017 Start of the project, acceptance of applications, organization of selection events.
+                    Newsletter 08/14/2017 - 09/08/2017 Multi-stage examination of applications. Definition of semi-finalists.
+                    Newsletter 09/11/2017 - 09/29/2017 Educational and mentoring part of the project. Determination of the finalists.
+                    Newsletter 9.10.2017 - 24.10.2017 Acceleration program for the finalists of the competition. Determination of the winners.
+                    <br> <br> Regional stages of the competition will be held with the support of IT Start, IIDF and Changellenge at venues in St. Petersburg, Kazan, Nizhny Novgorod, Ulyanovsk, Kaliningrad, Yaroslavl, Novosibirsk, Tomsk and Yekaterinburg.
+                    <br> <br> Experienced experts from MTS, MGTS, MTS Retail Network, Medsi, Stream, MTS-Bank and Intellect Telecom will choose the best of the best in twelve nominations.
+
+
+                </p>
+            </div>
+            @endif
         </div>
     </div>
 </section>

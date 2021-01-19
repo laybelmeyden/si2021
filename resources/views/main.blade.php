@@ -4,6 +4,7 @@
 
 <div class="container">
     <div class="info__si_items">
+        <img class="animation__hearts" src="assets/img/heart_1.png" alt="">
         <div class="si__logo_items">
             <img src="assets/img/si_logo.svg" alt="">
             <img src="assets/img/mts_logo.svg" alt="">
@@ -193,7 +194,7 @@
             @else
             <p>Become a SOCIAL IDEA 2021 Competitor</p>
             @endif
-            <a class="btn btn-primary" href="https://usersocialidea.ru/login" role="button">@lang('words.btn_2') <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+            <a class="btn btn-primary" href="/login" role="button">@lang('words.btn_2') <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                     <g clip-path="url(#clip0)">
                         <path d="M24.4065 11.7577C24.4846 11.5772 24.4411 11.3696 24.2965 11.2318L15.2106 2.54755C15.0101 2.36242 14.6905 2.36776 14.4968 2.5594C14.3079 2.74638 14.3079 3.04277 14.4968 3.22971L22.7216 11.0909H0.720609C0.441832 11.0909 0.21582 11.3069 0.21582 11.5734C0.21582 11.8398 0.441832 12.0559 0.720609 12.0559H22.7216L14.4979 19.916C14.2974 20.1011 14.2918 20.4065 14.4855 20.5982C14.6792 20.7899 14.9987 20.7952 15.1992 20.6101C15.2034 20.6062 15.2076 20.6022 15.2116 20.5982L24.2975 11.914C24.3442 11.8692 24.3813 11.8161 24.4065 11.7577Z" />
                         <path d="M14.8543 20.74C14.5755 20.7405 14.3492 20.5248 14.3486 20.2584C14.3484 20.1299 14.4018 20.0067 14.4969 19.9159L23.2265 11.5733L14.4969 3.23071C14.3033 3.03907 14.3088 2.73363 14.5093 2.54851C14.705 2.36795 15.0151 2.36795 15.2107 2.54851L24.2966 11.2327C24.4936 11.4211 24.4936 11.7265 24.2966 11.9149L15.2107 20.5991C15.1161 20.6893 14.988 20.74 14.8543 20.74Z" />
@@ -370,10 +371,9 @@
                             </div>
                             @endif
                             <div class="btn__modal_history">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn__modal_history_item">@lang('words.more_info') <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <!-- <button type="button" class="btn btn__modal_history_item">@lang('words.more_info') <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg></button>
+                                    </svg></button> -->
 
                             </div>
                         </div>
