@@ -9,8 +9,7 @@ use App\News;
 class MainController extends Controller
 {
     public function index() {
-        $news = News::latest()
-        ->limit(1)
+        $news = News::where('values_op', 'option1')->latest()->limit(1)
         ->get();
 
         return view('main', compact('news'));
