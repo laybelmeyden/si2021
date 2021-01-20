@@ -1699,6 +1699,76 @@ nav {
 }
 
 //preloader end
+//statisticks
+.statiscticks {
+    margin-top: 120px;
+    .card-list {
+        .blue {
+            background-color: #2298F1;
+        }
+        .green {
+            background-color: #66B92E;
+        }
+        .orange {
+            background-color: #DA932C;
+        }
+        .red {
+            background-color: #D65B4A;
+        }
+        .card-list {
+            width: 100%;
+        }
+        .card {
+            border-radius: 8px;
+            color: white;
+            padding: 10px;
+            position: relative;
+            min-height: 200px;
+            display: flex;
+            justify-content: space-between;
+            .title {
+                display: inline-block;
+                font-size: 16px;
+                padding: 10px 10px 0;
+                text-transform: uppercase;
+            }
+            svg {
+                color: white;
+                font-size: 30px;
+                opacity: 0.3;
+                position: absolute;
+                right: 13px;
+                top: 13px;
+                width: 30px;
+                height: 30px;
+            }
+            .value {
+                font-size: 38px;
+                padding: 0 10px;
+            }
+            .stat {
+                border-top: 1px solid rgba(255, 255, 255, 0.3);
+                font-size: 12px;
+                margin-top: 25px;
+                padding: 10px 10px 0;
+                text-transform: uppercase;
+            }
+        }
+    }
+    #charts {
+        .first_stats,
+        .second_stats {
+            margin-top: 60px !important;
+            width: 70%;
+            margin: 0 auto;
+        }
+        .second_stats {
+            margin-bottom: 120px;
+        }
+    }
+}
+
+//endstats
 // media
 @media screen and (max-width:1399px) {
     #news .text__news .news__date_items {
