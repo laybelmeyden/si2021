@@ -58,6 +58,3 @@ $response = $kernel->handle(
 $response->send();
 
 $kernel->terminate($request, $response);
-if (!defined('JSON_INVALID_UTF8_SUBSTITUTE')) {
-    define('JSON_INVALID_UTF8_SUBSTITUTE', 0);
-}
