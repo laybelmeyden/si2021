@@ -1322,16 +1322,19 @@ nav {
         font-weight: bold;
         font-size: 48px;
         padding-bottom: 30px;
+        word-break: break-all;
     }
     .undotitle__years_solo {
         font-weight: bold;
         font-size: 24px;
         padding-bottom: 10px;
+        word-break: break-all;
     }
     .podundotitle__years_solo {
         font-weight: bold;
         font-size: 16px;
         padding-bottom: 10px;
+        word-break: break-all;
     }
     .years__project_date {
         position: sticky;
@@ -1702,6 +1705,16 @@ nav {
 //statisticks
 .statiscticks {
     margin-top: 120px;
+    h1 {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 110%;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #595959;
+        margin-bottom: 50px;
+    }
     .card-list {
         .blue {
             background-color: #2298F1;
@@ -1756,14 +1769,19 @@ nav {
         }
     }
     #charts {
-        .first_stats,
-        .second_stats {
+        h1 {
+            margin-top: 50px;
+        }
+        .first_stats {
             margin-top: 60px !important;
-            width: 70%;
+            width: 85%;
             margin: 0 auto;
         }
-        .second_stats {
+        .charts__pole__city {
+            display: grid;
+            grid-template-columns: 60% 40%;
             margin-bottom: 120px;
+            .second_stats {}
         }
     }
 }
@@ -2161,5 +2179,18 @@ nav {
         div {
             order: -1;
         }
+    }
+}
+
+@media screen and (max-width:765px) {
+    .statiscticks #charts .charts__pole__city {
+        grid-template-columns: 1fr;
+    }
+    .first_stats,
+    .yaers {
+        display: none;
+    }
+    #myChart2 {
+        margin-bottom: 40px;
     }
 }

@@ -44,23 +44,50 @@
         <div class="about__tender_modal_container">
             <div class="about__tender_modal_items">
                 <div class="about__tender_modal_items_1">
-                    <img src="assets/img/years/krediidipoliitika-pilt-1-1024x683.jpg" alt="">
+                    <img src="assets/img/years/H9mDLU4Kzr4.jpg" alt="">
                 </div>
                 <div class="about__tender_modal_items_2">
-                    <a href="/years2019/telekom_school_2019">
+                    <a href="/years2020/regional_it_hack_2020">
                         <div>
                             @if(App::isLocale('ru'))
-                            <p>ШКОЛЫ СОЦИАЛЬНОГО ПРЕДПРИНИМАТЕЛЬСТВА</p>
-                            <p>В рамках программы ИТ-старт</p>
+                            <p>ОТКРЫТА РЕГИСТРАЦИЯ НА SOCIAL REGIONAL IT HACK!</p>
+                            <p></p>
                             @else
-                            <p>SOCIAL ENTREPRENEURSHIP SCHOOLS</p>
-                            <p>Within the framework of the IT start program</p>
+                            <p>REGISTRATION FOR SOCIAL REGIONAL IT HACK IS OPEN!</p>
+                            <p></p>
                             @endif
                         </div>
                     </a>
                     <div class="btn__modal_tender">
                         <!-- Button trigger modal -->
-                        <a href="/years2019/telekom_school_2019" class="btn btn__modal_tender">@lang('words.more_info') <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <a href="/years2020/regional_it_hack_2020" class="btn btn__modal_tender">@lang('words.more_info') <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                            </svg></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about__tender_modal_container">
+            <div class="about__tender_modal_items">
+                <div class="about__tender_modal_items_1">
+                    <img src="assets/img/years/7S9AiDtGVlqCLHRa5ghP.jpg" alt="">
+                </div>
+                <div class="about__tender_modal_items_2">
+                    <a href="/years2020/it_start_2020">
+                        <div>
+                            @if(App::isLocale('ru'))
+                            <p>ПРОГРАММА “IT-START” КОНКУРСА «SOCIAL IDEA»</p>
+                            <p></p>
+                            @else
+                            <p>PROGRAM "IT-START" COMPETITION "SOCIAL IDEA"</p>
+                            <p></p>
+                            @endif
+                        </div>
+                    </a>
+                    <div class="btn__modal_tender">
+                        <!-- Button trigger modal -->
+                        <a href="/years2020/it_start_2020" class="btn btn__modal_tender">@lang('words.more_info') <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
                             </svg></a>
 

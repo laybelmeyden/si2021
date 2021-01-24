@@ -78,10 +78,10 @@
                         <div>
                             @if(App::isLocale('ru'))
                             <p>Я IT-БЛОГЕР</p>
-                            <p>Конкурс для школьников 12-17 классов на лучшие блоги и статьи </p>
+                            <p>Конкурс для школьников 12-17 лет на лучшие блоги и статьи </p>
                             @else
                             <p>I AM IT BLOGGER</p>
-                            <p>Competition for students in grades 12-17 for the best blogs and articles</p>
+                            <p>Competition for students in years 12-17 for the best blogs and articles</p>
                             @endif
                         </div>
                     </a>

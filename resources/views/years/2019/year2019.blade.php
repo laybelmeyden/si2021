@@ -105,7 +105,7 @@
                         <div>
                             @if(App::isLocale('ru'))
                             <p>RAISE</p>
-                            <p>Образовательнйы проект</p>
+                            <p>Образовательный проект</p>
                             @else
                             <p>RAISE</p>
                             <p>Educational project</p>
