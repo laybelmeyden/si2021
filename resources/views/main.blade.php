@@ -470,7 +470,7 @@
                 <div class="text__news">
                     <p class="news__date_items">{{$new -> date}}</p>
                     @if(App::isLocale('ru'))
-                    <p class="news__title_items">{{$new -> title_ru}}</p>
+                    <p class="news__title_items">{{Str::limit($new -> title_ru, 50)}}</p>
                     @else
                     <p class="news__title_items">{{$new -> title_en}}</p>
                     @endif

@@ -50,6 +50,7 @@
                 <p class="undotitle__years_solo"></p>
                 <p class="podundotitle__years_solo">
                 </p>
+                <a href="https://socialidea.ru//storage/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%BE_%D1%84%D0%B8%D0%BD%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%B0%D1%853009.pdf" target="_blank" class="btn btn__collapse">Книга о финалистах</a>
                 <p>
                     Для кого этот конкурс?
                     <br><br>Если вам уже исполнилось 18 лет, вы изобретатель или программист, у вас есть идея проекта в сфере цифровых технологий и вы хотите спасти мир или, как минимум, внести вклад в решение важных социальных проблем общества – ждем вас на конкурсе «Social Idea»!
@@ -86,6 +87,7 @@
                 <p class="undotitle__years_solo"> </p>
                 <p class="podundotitle__years_solo">
                 </p>
+                <a href="https://socialidea.ru//storage/%D0%BA%D0%BD%D0%B8%D0%B3%D0%B0_%D0%BE_%D1%84%D0%B8%D0%BD%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%B0%D1%853009.pdf" target="_blank" class="btn btn__collapse">Book about the finalists</a>
                 <p>
                     Who is this competition for?
                     <br> <br> If you are over 18 years old, you are an inventor or programmer, you have an idea for a project in the field of digital technologies and you want to save the world or at least contribute to solving important social problems of society - we are waiting for you at the competition "Social Idea"!

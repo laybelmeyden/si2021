@@ -26,7 +26,8 @@
               </div>
               <div class="news__card_title">
                 <p class="news__swiper_title" v-if="getUrl() === 'ru'">
-                  {{ item.title_ru }}
+                  <!-- {{`${item.title_ru.split('').filter((el, i) => i <= 55).join('')}...` || items.title_ru}} -->
+                {{ getSlice(item.title_ru) }}
                 </p>
                 <p class="news__swiper_title" v-else>
                   {{ item.title_en }}
@@ -104,6 +105,9 @@ export default {
     },
     getUrl(){
       return document.querySelector('html').lang;
+    },
+    getSlice(e){
+      return e.length <= 55 ? e : e.split('').filter((_, i) => i <= 55).join('') + '...'
     }
   },
   created() {
