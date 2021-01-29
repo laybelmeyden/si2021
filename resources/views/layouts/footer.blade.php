@@ -4,9 +4,9 @@
         <div class="social__links">
             <p>@lang('words.footer_1')</p>
             <div>
-                <!-- <a href=""><img src="/assets/img/sc1.svg" alt=""></a> -->
-                <a href="https://vk.com/socialideamsk" target="_blank"><img src="/assets/img/sc2.svg" alt=""></a>
-                <a href="https://twitter.com/Socialidea3" target="_blank"><img src="/assets/img/sc3.svg" alt=""></a>
+                <a href="https://www.facebook.com/socialideamoscow/"><img src="/assets/img/sc1.svg" alt=""></a>
+                <!-- <a href="https://vk.com/socialideamsk" target="_blank"><img src="/assets/img/sc2.svg" alt=""></a> -->
+                <!-- <a href="https://twitter.com/Socialidea3" target="_blank"><img src="/assets/img/sc3.svg" alt=""></a> -->
                 <a href="https://www.instagram.com/social___idea/?igshid=1j75pob2cwpde" target="_blank"><img src="/assets/img/sc4.svg" alt=""></a>
             </div>
         </div>

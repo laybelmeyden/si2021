@@ -29,24 +29,24 @@ var mySwiper = new Swiper('.swiper-container.swiper-container-history', {
 
 })
 var mySwiper2 = new Swiper('.swiper-container.swiper-container-experts', {
-    slidesPerView: 1,
-    breakpoints: {
-        992: {
-            slidesPerView: 3
-        }
-    },
-    navigation: {
-        nextEl: '.experts-next',
-        prevEl: '.experts-prev',
-    },
-})
-var mySwiper3 = new Swiper('.swiper-container.swiper-container-news', {
-    slidesPerView: 3,
-    navigation: {
-        prevEl: '.news-prev',
-        nextEl: '.news-next',
-    },
-})
+        slidesPerView: 1,
+        breakpoints: {
+            992: {
+                slidesPerView: 3
+            }
+        },
+        navigation: {
+            nextEl: '.experts-next',
+            prevEl: '.experts-prev',
+        },
+    })
+    // var mySwiper3 = new Swiper('.swiper-container.swiper-container-news', {
+    //     slidesPerView: 3,
+    //     navigation: {
+    //         prevEl: '.news-prev',
+    //         nextEl: '.news-next',
+    //     },
+    // })
 
 navbar_active = () => {
     const navbar_active = document.querySelectorAll('.nav__content_years a');
