@@ -52,33 +52,35 @@ navbar_active = () => {
     const navbar_active = document.querySelectorAll('.nav__content_years a');
     navbar_active.forEach(
         e => {
-            const child_a = e.querySelector('div')
-            if (window.location.pathname == '/years2011') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
-            } else if (window.location.pathname == '/years2012') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
-            } else if (window.location.pathname == '/years2013') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
-            } else if (window.location.pathname == '/years2014') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
-            } else if (window.location.pathname == '/years2015') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
-            } else if (window.location.pathname == '/years2016') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
-            } else if (window.location.pathname == '/years2017') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
-            } else if (window.location.pathname == '/years2018') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
-            } else if (window.location.pathname == '/years2019') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
-            } else if (window.location.pathname == '/years2020') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
-            } else if (window.location.pathname == '/') {
-                e.pathname === window.location.pathname ? child_a.classList.toggle('active_years') : false
+            const child_a = e.querySelector('div'),
+                pathSlice = window.location.pathname.split('').filter((_, i) => i < 10).join('');
+            if (pathSlice == '/years2011') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
+            } else if (pathSlice == '/years2012') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
+            } else if (pathSlice == '/years2013') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
+            } else if (pathSlice == '/years2014') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
+            } else if (pathSlice == '/years2015') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
+            } else if (pathSlice == '/years2016') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
+            } else if (pathSlice == '/years2017') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
+            } else if (pathSlice == '/years2018') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
+            } else if (pathSlice == '/years2019') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
+            } else if (pathSlice == '/years2020') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
+            } else if (pathSlice == '/') {
+                e.pathname === pathSlice ? child_a.classList.toggle('active_years') : false
             }
         }
     )
 }
+
 navbar_active();
 const language__switcher = () => {
     const html = document.querySelector('html'),
