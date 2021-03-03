@@ -9,11 +9,22 @@
             <img loading="lazy" src="assets/img/si_logo.svg" alt="">
             <img loading="lazy" src="assets/img/mts_logo.svg" alt="">
         </div>
+        <section class="timer">
+            <p class="main_p3">до приема заявок осталось</p>
+            <div id="clockdiv">
+                <div id="countdown" class="countdown">
+                    <div class="countdown-number">
+                        <span class="days countdown-time"></span><br>
+                        <span class="countdown-text">Дней</span>
+                    </div>
+                </div>
+            </div>
+        </section>
         <h1>SOCIAL IDEA 2021</h1>
         <div id="about__tender"></div>
         <h2>@lang('words.title')</h2>
         <a class="btn btn-primary btn__si_banners" href="/social_idea_2021" role="button">
-            @lang('words.btn_1')
+            @lang('words.participate')
             <img loading="lazy" src="assets/img/right-arrow_si.svg" alt="">
         </a>
     </div>
@@ -21,7 +32,7 @@
         <p class="ltr">@lang('words.about')</p>
         <div class="grid__tender">
             <div class="grid__tender_about">
-                <p>10 @lang('words.years')</p>
+                <p>11 @lang('words.years')</p>
                 <p class="no__upper">@lang('words.IT')</p>
             </div>
             <div class="grid__tender_main">
@@ -31,7 +42,7 @@
                     </div>
                     <div>
                         <p>@lang('words.more')</p>
-                        <p>3000</p>
+                        <p>3500</p>
                         <p>@lang('words.proj')</p>
                     </div>
                 </div>
@@ -70,12 +81,96 @@
     </div>
 </div>
 </section>
-<section>
+
+<section id="nominations">
+    <div class="container">
+        <p>@lang('words.nominations_con') 2021</p>
+        <div class="grid__nominations">
+            <div class="grid__nominations_1">
+                <div>
+                    <img loading="lazy" src="assets/img/incl.svg" alt="">
+                </div>
+                <p>ЭКОЛОГИЯ</p>
+                <span>Синергия цифровых проектов в сфере экологии. Эта номинация для разработчиков экологических решений: каждый регион и каждый уголок планеты должны стать лучше</span>
+            </div>
+            <div class="grid__nominations_2">
+                <div>
+                    <img loading="lazy" src="assets/img/ecol.svg" alt="">
+                </div>
+                <p>ИНКЛЮЗИЯ</p>
+                <span>Экосистема цифровых решений по обеспечению социальной поддержки населения. Эта номинация для разработчиков мобильных приложений и систем в сфере инклюзивных технологий</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="start">
+    <div class="container">
+        @if(App::isLocale('ru'))
+        <div class="start__grid">
+            <div>
+                <img loading="lazy" src="assets/img/ok.svg" alt="">
+                <p>У вас есть идея или готовый проект ?</p>
+            </div>
+            <div>
+                <img loading="lazy" src="assets/img/ok.svg" alt="">
+                <p><b>Вы хотите получить Грант на пилот проекта до 1 500 000 рублей?</b></p>
+            </div>
+            <div>
+                <img loading="lazy" src="assets/img/ok.svg" alt="">
+                <p>Вы хотите получить экспертную оценку от топ-менеджмента и поддержку в реализации?</p>
+            </div>
+            <div>
+                <img loading="lazy" src="assets/img/ok.svg" alt="">
+                <p>Вы хотите пилотировать свой продукт совместно с МТС Гараж, инкубатором и акселератором MTS StartUp Hub и другими программами социальных инноваций МТС ?</p>
+            </div>
+        </div>
+        @else
+        <div class="start__grid">
+            <div>
+                <img loading="lazy" src="assets / img / ok.svg" alt="">
+                <p> Do you have an idea or a finished project? </p>
+            </div>
+            <div>
+                <img loading="lazy" src="assets / img / ok.svg" alt="">
+                <p> <b> Do you want to receive a Grant for the pilot of the project up to 1,500,000 rubles? </b> </p>
+            </div>
+            <div>
+                <img loading="lazy" src="assets / img / ok.svg" alt="">
+                <p> Would you like to receive expert advice from top management and support in implementation? </p>
+            </div>
+            <div>
+                <img loading="lazy" src="assets / img / ok.svg" alt="">
+                <p> Do you want to pilot your product together with MTS Garage, the MTS StartUp Hub incubator and accelerator and other MTS social innovation programs? </p>
+            </div>
+        </div>
+        @endif
+        <div class="start__btn">
+            @if(App::isLocale('ru'))
+            <p>Станьте участником конкурса SOCIAL IDEA 2021</p>
+            @else
+            <p>Become a SOCIAL IDEA 2021 Competitor</p>
+            @endif
+            <a class="btn btn-primary" href="/login" role="button">@lang('words.btn_2') <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <g clip-path="url(#clip0)">
+                        <path d="M24.4065 11.7577C24.4846 11.5772 24.4411 11.3696 24.2965 11.2318L15.2106 2.54755C15.0101 2.36242 14.6905 2.36776 14.4968 2.5594C14.3079 2.74638 14.3079 3.04277 14.4968 3.22971L22.7216 11.0909H0.720609C0.441832 11.0909 0.21582 11.3069 0.21582 11.5734C0.21582 11.8398 0.441832 12.0559 0.720609 12.0559H22.7216L14.4979 19.916C14.2974 20.1011 14.2918 20.4065 14.4855 20.5982C14.6792 20.7899 14.9987 20.7952 15.1992 20.6101C15.2034 20.6062 15.2076 20.6022 15.2116 20.5982L24.2975 11.914C24.3442 11.8692 24.3813 11.8161 24.4065 11.7577Z" />
+                        <path d="M14.8543 20.74C14.5755 20.7405 14.3492 20.5248 14.3486 20.2584C14.3484 20.1299 14.4018 20.0067 14.4969 19.9159L23.2265 11.5733L14.4969 3.23071C14.3033 3.03907 14.3088 2.73363 14.5093 2.54851C14.705 2.36795 15.0151 2.36795 15.2107 2.54851L24.2966 11.2327C24.4936 11.4211 24.4936 11.7265 24.2966 11.9149L15.2107 20.5991C15.1161 20.6893 14.988 20.74 14.8543 20.74Z" />
+                        <path d="M23.9401 12.0557H0.720608C0.441832 12.0557 0.21582 11.8397 0.21582 11.5733C0.21582 11.3068 0.441832 11.0908 0.720608 11.0908H23.9402C24.2189 11.0908 24.4449 11.3068 24.4449 11.5733C24.4449 11.8397 24.2189 12.0557 23.9401 12.0557Z" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <rect width="24.2291" height="23.1579" fill="white" transform="translate(0.21582 -0.000244141)" />
+                        </clipPath>
+                    </defs>
+                </svg></a>
+        </div>
+    </div>
+</section>
+<section id="tenders">
     <div class="container">
         <div class="about__tender_modal_container">
             <div class="about__tender_modal_items">
                 <div class="about__tender_modal_items_1">
-                    <img loading="lazy" src="assets/img/stock-photo-team-meeting-presentation-hand-businessman-working-with-new-start-up-project-in-modern-office-432344563 1.png" alt="">
+                    <img loading="lazy" src="assets/img/shutterstock_1209641593.jpg" alt="">
                 </div>
                 <div class="about__tender_modal_items_2">
                     <div>
@@ -108,107 +203,49 @@
                 </a>
             </div>
             @if(App::isLocale('ru'))
-            <div class="modal-body">
-                <p>К рассмотрению принимаются заявки:</p>
-                <div>
-                    <img loading="lazy" src="assets/img/modal1.svg" alt="">
-                    <p>на стадии “идеи”- 2-ой трек</p>
+            <div class="modal-body tenders__modal">
+                <p>На конкурс 2021 принимаются заявки:</p>
+                <div class="modal-body__infotender_1">
+                    <div class="modal-body__infotender_1_div">
+                        <img loading="lazy" src="assets/img/modal1.svg" alt="">
+                        <p>на стадии «ИДЕИ»</p>
+                    </div>
+                    <span>У команды есть отличная идея! Выбрав данную стадию, участники будут заполнять проект, который находится на стартовом этапе, без готового прототипа / продукта. Ваша идея – это способ решить проблему, пока еще без расчетов, прояснений и четких формулировок. В идее заложена энергия проекта. С неё все начинается!</span>
                 </div>
-                <div>
-                    <img loading="lazy" src="assets/img/modal2.svg" alt="">
-                    <p>на стадии реализации - 1-ый трек</p>
+                <div class="modal-body__infotender_2">
+                    <div class="modal-body__infotender_2_div">
+                        <img loading="lazy" src="assets/img/modal2.svg" alt="">
+                        <p>на стадии «ПРОДУКТ»</p>
+                    </div>
+                    <span>Продукт готов! Выбрав данную стадию, участники будут заполнять проект, который находится на продвинутом уровне: стадия пилота или уже готовый бизнес-продукт / прототип.</span>
                 </div>
                 <p>Менторство МТС: возможность войти
                     во все направления бизнеса внутри корпорации</p>
             </div>
             @else
-            <div class="modal-body">
-                <p>Applications are accepted for consideration:</p>
-                <div>
-                    <img loading="lazy" src="assets/img/modal1.svg" alt="">
-                    <p>at the “idea” stage - 2nd track</p>
+            <div class="modal-body tenders__modal">
+                <p> Applications for the 2021 competition are accepted: </p>
+                <div class="modal-body__infotender_1">
+                    <div class="modal-body__infotender_1_div">
+                        <img loading="lazy" src="assets / img / modal1.svg" alt="">
+                        <p> at the stage "IDEAS" </p>
+                    </div>
+                    <span> The team has a great idea! By choosing this stage, participants will fill out a project that is at the start-up stage, without a ready-made prototype / product. Your idea is a way to solve a problem, without calculations, clarifications and clear formulations yet. The idea is the energy of the project. It all starts with her! </span>
                 </div>
-                <div>
-                    <img loading="lazy" src="assets/img/modal2.svg" alt="">
-                    <p>underway - 1st track</p>
+                <div class="modal-body__infotender_2">
+                    <div class="modal-body__infotender_2_div">
+                        <img loading="lazy" src="assets / img / modal2.svg" alt="">
+                        <p> at the "PRODUCT" stage </p>
+                    </div>
+                    <span> The product is ready! By choosing this stage, participants will fill out a project that is at an advanced level: the pilot stage or a ready-made business product / prototype. </span>
                 </div>
-                <p>MTS mentoring: an opportunity to enter
-                    in all areas of business within the corporation</p>
+                <p> MTS mentoring: the ability to enter
+                    in all areas of business within the corporation </p>
             </div>
             @endif
         </div>
     </div>
 </div>
-
-<section id="nominations">
-    <div class="container">
-        <p>@lang('words.nominations_con') 2021</p>
-        <div class="grid__nominations">
-            <div class="grid__nominations_1">
-                <img loading="lazy" src="assets/img/SOCIALMOB.svg" alt="">
-                <p>Social Mobile</p>
-            </div>
-            <div class="grid__nominations_2">
-                <img loading="lazy" src="assets/img/SOCIALSMARTCITY.svg" alt="">
-                <p>Social Smart City</p>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="start">
-    <div class="container">
-        @if(App::isLocale('ru'))
-        <div class="start__grid">
-            <div>
-                <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p>У вас есть идея или готовый проект ?</p>
-            </div>
-            <div>
-                <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p>Вы готовы улучшить и масштабировать его?</p>
-            </div>
-            <div>
-                <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p>Вы хотите получить экспертную оценку от топ-менеджмента МТС и поддержку в реализации?</p>
-            </div>
-        </div>
-        @else
-        <div class="start__grid">
-            <div>
-                <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p>Do you have an idea or a finished project?</p>
-            </div>
-            <div>
-                <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p>Are you ready to improve and scale it?</p>
-            </div>
-            <div>
-                <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p>Do you want to get an expert assessment from the top management of MTS and support in implementation?</p>
-            </div>
-        </div>
-        @endif
-        <div class="start__btn">
-            @if(App::isLocale('ru'))
-            <p>Станьте участником конкурса SOCIAL IDEA 2021</p>
-            @else
-            <p>Become a SOCIAL IDEA 2021 Competitor</p>
-            @endif
-            <a class="btn btn-primary" href="/login" role="button">@lang('words.btn_2') <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                    <g clip-path="url(#clip0)">
-                        <path d="M24.4065 11.7577C24.4846 11.5772 24.4411 11.3696 24.2965 11.2318L15.2106 2.54755C15.0101 2.36242 14.6905 2.36776 14.4968 2.5594C14.3079 2.74638 14.3079 3.04277 14.4968 3.22971L22.7216 11.0909H0.720609C0.441832 11.0909 0.21582 11.3069 0.21582 11.5734C0.21582 11.8398 0.441832 12.0559 0.720609 12.0559H22.7216L14.4979 19.916C14.2974 20.1011 14.2918 20.4065 14.4855 20.5982C14.6792 20.7899 14.9987 20.7952 15.1992 20.6101C15.2034 20.6062 15.2076 20.6022 15.2116 20.5982L24.2975 11.914C24.3442 11.8692 24.3813 11.8161 24.4065 11.7577Z" />
-                        <path d="M14.8543 20.74C14.5755 20.7405 14.3492 20.5248 14.3486 20.2584C14.3484 20.1299 14.4018 20.0067 14.4969 19.9159L23.2265 11.5733L14.4969 3.23071C14.3033 3.03907 14.3088 2.73363 14.5093 2.54851C14.705 2.36795 15.0151 2.36795 15.2107 2.54851L24.2966 11.2327C24.4936 11.4211 24.4936 11.7265 24.2966 11.9149L15.2107 20.5991C15.1161 20.6893 14.988 20.74 14.8543 20.74Z" />
-                        <path d="M23.9401 12.0557H0.720608C0.441832 12.0557 0.21582 11.8397 0.21582 11.5733C0.21582 11.3068 0.441832 11.0908 0.720608 11.0908H23.9402C24.2189 11.0908 24.4449 11.3068 24.4449 11.5733C24.4449 11.8397 24.2189 12.0557 23.9401 12.0557Z" />
-                    </g>
-                    <defs>
-                        <clipPath id="clip0">
-                            <rect width="24.2291" height="23.1579" fill="white" transform="translate(0.21582 -0.000244141)" />
-                        </clipPath>
-                    </defs>
-                </svg></a>
-        </div>
-    </div>
-</section>
 <section id="timeline__sections">
     <div class="container">
         <p class="timlime__title">@lang('words.stages') 2021</p>
@@ -224,10 +261,10 @@
                         </div>
                         <div>
                             @if(App::isLocale('ru'))
-                            <p>1 марта – 20 июня</p>
+                            <p>10 марта – 31 мая</p>
                             <p>Прием заявок</p>
                             @else
-                            <p>March 1 - June 20</p>
+                            <p>March 10 - May 31</p>
                             <p>Acceptance of applications</p>
                             @endif
                         </div>
@@ -239,10 +276,10 @@
                     <div class="timeline-content">
                         <div>
                             @if(App::isLocale('ru'))
-                            <p>1 — 31 июля</p>
+                            <p>Апрель</p>
                             <p>Обучающий онлайн-курс для участников конкурса</p>
                             @else
-                            <p>July 1 - 31</p>
+                            <p>April</p>
                             <p>Online training course for contest participants</p>
                             @endif
                         </div>
@@ -261,11 +298,11 @@
                         </div>
                         <div>
                             @if(App::isLocale('ru'))
-                            <p>1 – 15 августа</p>
-                            <p>Экспертная оценка и выбор полуфиналистов</p>
+                            <p>Апрель/Май</p>
+                            <p>региональная программа Social Idea 2021</p>
                             @else
-                            <p>1 - 15 August</p>
-                            <p>Expert judgment and selection of semi-finalists</p>
+                            <p>April / May</p>
+                            <p>regional program Social Idea 2021</p>
                             @endif
                         </div>
                     </div>
@@ -276,11 +313,11 @@
                     <div class="timeline-content">
                         <div>
                             @if(App::isLocale('ru'))
-                            <p>15 августа — 30 сентября</p>
-                            <p>Акселерация проектов (менторинг)</p>
+                            <p>Май/Июнь</p>
+                            <p>многоступенчатая экспертиза и отбор финалистов</p>
                             @else
-                            <p>August 15 - September 30</p>
-                            <p>Acceleration of projects (mentoring)</p>
+                            <p>May / June</p>
+                            <p>multistage examination and selection of finalists</p>
                             @endif
                         </div>
                         <div>
@@ -297,11 +334,11 @@
                         </div>
                         <div>
                             @if(App::isLocale('ru'))
-                            <p>1 – 15 октября</p>
-                            <p>Экспертная оценка и выбор финалистов</p>
+                            <p>20 июня</p>
+                            <p>объявление списка финалистов</p>
                             @else
-                            <p>October 1 - 15</p>
-                            <p>Expert judgment and selection of finalists</p>
+                            <p>June 20</p>
+                            <p>announcement of the list of finalists</p>
                             @endif
                         </div>
                     </div>
@@ -312,11 +349,11 @@
                     <div class="timeline-content">
                         <div>
                             @if(App::isLocale('ru'))
-                            <p>20 — 30 октября</p>
-                            <p>Подготовка финалистов к финальным питчам</p>
+                            <p>25 июня – 6 июля</p>
+                            <p>менторинг финалистов / подготовка к финальным питчам</p>
                             @else
-                            <p>October 20 - 30</p>
-                            <p>Preparing finalists for final pitches</p>
+                            <p>June 25 - July 6</p>
+                            <p>mentoring of finalists / preparation for final pitches</p>
                             @endif
                         </div>
                         <div>
@@ -333,10 +370,10 @@
                         </div>
                         <div>
                             @if(App::isLocale('ru'))
-                            <p>1 ноября</p>
+                            <p>7 июля</p>
                             <p>ФИНАЛ КОНКУРСА</p>
                             @else
-                            <p>November 1st</p>
+                            <p>7 july</p>
                             <p>FINAL OF THE COMPETITION</p>
                             @endif
                         </div>
@@ -454,6 +491,9 @@
             </div>
             <div class="swiper-button-next experts-next"></div>
             <div class="swiper-button-prev experts-prev"></div>
+        </div>
+        <div class="experts__all_btn">
+            <a href="/allspeakers" class="btn btn-primary btn__si_experts">Все эксперты<img loading="lazy" src="assets/img/right-arrow_si.svg" alt=""></a>
         </div>
     </div>
 </section>

@@ -15,17 +15,29 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes(['verify' => true]);
+
 //pages
 Route::get('/', 'MainController@index')->name('main');
+Route::get('/statistics', 'MainController@stats')->name('stats');
+Route::get('/allspeakers', 'MainController@allspeakers');
+
 //profile
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
-Route::get('/setting_profile{id}', 'UserController@setting_profile')->name('setting_user')->middleware('verified');
-Route::get('/statistics', 'MainController@stats')->name('stats');
+Route::get('/setting_profile/{id}', 'UserController@setting_profile')->name('setting_user')->middleware('verified');
+Route::put('/setting_profile/{id}', 'UserController@updateCurrentUser')->name('updateCurrentUser')->middleware('verified');
+
+//AllUsers
+Route::get('/allUsers', 'UserController@allUsers')->name('allUsers')->middleware('verified');
+Route::get('/allUsers/show/{id}', 'UserController@allUsersShow')->name('allUserShow')->middleware('verified');
+Route::get('/allUsers/edit/{id}', 'UserController@allUsersShowEdit')->name('allUsersShowEdit')->middleware('verified');
+Route::put('/allUsers/edit/{id}', 'UserController@allUsersEdit')->name('allUsersEdit')->middleware('verified');
+Route::delete('/allUsers/delete/{id}', 'UserController@allUsersDelete')->name('allUsersDelete')->middleware('verified');
 //locale
 Route::get('/locale/{locale}', function ($locale) {
     Session::put('locale',$locale);
     return redirect()-> back();
 });
+
 //voyager
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
@@ -34,6 +46,7 @@ Route::group(['prefix' => 'admin'], function () {
 //news
 Route::get('/api/news', 'MainController@news');
 Route::get('/news{id}', 'MainController@newssolo');
+
 // years
 Route::get('/years2011', 'YearsController@years2011')->name('main11');
 Route::get('/years2011/telekom_hit', 'YearsController@telekom_hit_2011');

@@ -12,11 +12,11 @@
                 type="text" 
                 class="form-control @error('name') is-invalid @enderror" 
                 name="name" 
-                value="{{ old('name') }}" 
-                required 
+                value="unname" 
                 autocomplete="name" 
                 autofocus
                 placeholder="Логин"
+                hidden
                 >
 
                 @error('name')
