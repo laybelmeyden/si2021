@@ -1153,9 +1153,17 @@ strong {
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        div {
+            width: 169px;
+            height: 169px;
+            border-radius: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
         img {
-            max-width: 169px;
-            width: 100%;
+            width: 120%;
         }
     }
     .swiper-button-prev,
@@ -2252,7 +2260,7 @@ strong {
     .about__section {
         background-image: url(/images/img.png);
         background-repeat: no-repeat;
-        background-position: top;
+        background-position: 42% -10%;
         .animation__hearts {
             display: none;
         }
@@ -2335,7 +2343,6 @@ strong {
     }
     .about__tender_modal_container .about__tender_modal_items_2 p:first-child {
         font-size: 24px;
-        word-break: break-all;
     }
     .about__tender_modal_container .about__tender_modal_items_2 {
         justify-content: space-around;

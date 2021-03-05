@@ -430,70 +430,305 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
-                        <img loading="lazy" src="assets/img/Dama1.svg" alt="Moskvina_photo.png">
-                        @if(App::isLocale('ru'))
-                        <p class="experts__slide_items_title">Анастасия Москвина</p>
-                        <p class="experts__slide_items_body">Эксперт Центра социального предпринимательства и социальных инноваций НИУ ВШЭ, тренер-консультант Центра развития некоммерческих организаций.</p>
-                        @else
-                        <p class="experts__slide_items_title">Anastasia Moskvina</p>
-                        <p class="experts__slide_items_body">Expert at the Center for Social Entrepreneurship and Social Innovation at the Higher School of Economics, trainer and consultant at the Center for the Development of Non-Profit Organizations.</p>
-                        @endif
+                        <div><img loading="lazy" src="assets/img/speakers/Курин Дмитрий.jpg" alt="Moskvina_photo.png"></div>
+                        <p class="experts__slide_items_title">Курин Дмитрий</p>
+                        <p class="experts__slide_items_body">Директор инновационной площадки для развития технологических проектов MTS StartUp Hub</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
-                        <img loading="lazy" src="assets/img/Dama2.png" alt="">
-                        @if(App::isLocale('ru'))
-                        <p class="experts__slide_items_title">Марина Кузнецова</p>
-                        <p class="experts__slide_items_body">Управляющий директор агентства по фандрайзингу Social Projects Group</p>
-                        @else
-                        <p class="experts__slide_items_title">Marina Kuznetsova</p>
-                        <p class="experts__slide_items_body">Managing Director of the Social Projects Group fundraising agency</p>
-                        @endif
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Татьяна Чернышева.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Чернышева Татьяна</p>
+                        <p class="experts__slide_items_body">Член Правления-Вице-президент по управлению персоналом ПАО "МТС"</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
-                        <img loading="lazy" src="assets/img/Dama3.png" alt="">
-                        @if(App::isLocale('ru'))
-                        <p class="experts__slide_items_title">Инга Моисеева</p>
-                        <p class="experts__slide_items_body">Исполнительный директор D-Group.Social</p>
-                        @else
-                        <p class="experts__slide_items_title">Inga Moiseeva</p>
-                        <p class="experts__slide_items_body">Executive Director of D-Group.Social</p>
-                        @endif
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Кольчугин_фото.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Кольчугин Дмитрий</p>
+                        <p class="experts__slide_items_body">Директор по внешним коммуникациям АФК "Система"</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
-                        <img loading="lazy" src="assets/img/Dama4.png" alt="">
-                        @if(App::isLocale('ru'))
-                        <p class="experts__slide_items_title">Анастасия Попова</p>
-                        <p class="experts__slide_items_body">Генеральный директор ООО «Один за всех»</p>
-                        @else
-                        <p class="experts__slide_items_title">Anastasia Popova</p>
-                        <p class="experts__slide_items_body">General Director of One for All LLC</p>
-                        @endif
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Калиновский.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Калиновский Никита</p>
+                        <p class="experts__slide_items_body">Генеральный директор INTEC Group</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
-                        <img loading="lazy" src="assets/img/Dama5.png" alt="">
-                        @if(App::isLocale('ru'))
-                        <p class="experts__slide_items_title">Михаил Перевозов</p>
-                        <p class="experts__slide_items_body">Независимый консультант по Impact & Sustainability</p>
-                        @else
-                        <p class="experts__slide_items_title">Mikhail Perevozov</p>
-                        <p class="experts__slide_items_body">Independent Impact & Sustainability Consultant</p>
-                        @endif
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Гетц.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Гетц Евгений</p>
+                        <p class="experts__slide_items_body">Эксперт рабочей группы «Аэронет» главный судья квалификационных и финальных испытаний</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Афонькин.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Афонькин Виталий</p>
+                        <p class="experts__slide_items_body">Директор проекта "Лифт в будущее"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Кожуховская.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Кожуховская Ольга</p>
+                        <p class="experts__slide_items_body">Менеджер инженерной Академии</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/ggghr.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Максим Гашков</p>
+                        <p class="experts__slide_items_body">Руководитель направления внутренних инноваций ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Мартемьянов.JPG" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Мартемьянов Дмитрий</p>
+                        <p class="experts__slide_items_body">Главный эксперт отдела развития финансовых технологий Департамента финансовых технологий ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Доспеева.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Доспеева Надежда</p>
+                        <p class="experts__slide_items_body">Начальник отдела,
+                            Отдел планирования, анализа и операционной поддержки,
+                            Блок по облачным и цифровым решениям ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Цуриченко.JPG" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Цуриченко Максим</p>
+                        <p class="experts__slide_items_body">Руководитель направления стратегических проектов, к.э.н.,
+                            Департамент стратегического планирования ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/People_3.png" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Фролова Елена</p>
+                        <p class="experts__slide_items_body">Руководитель проектов департамента КСО ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Серегина.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Серегина Елена</p>
+                        <p class="experts__slide_items_body">Директор департамента КСО ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Тузбеков Артур.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Тузбеков Артур</p>
+                        <p class="experts__slide_items_body">Руководитель портфеля продуктов "Умный офис/дом", Департамент IoT ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Руслан Шекуров1.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Шекуров Руслан</p>
+                        <p class="experts__slide_items_body">Основатель и руководитель Сообщества доноров крови DonorSearch.org</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Оксана Фетисова.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Фетисова Оксана</p>
+                        <p class="experts__slide_items_body">Директора Корпоративного университета ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Терентьева Елизавета .jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Терентьева Елизавета</p>
+                        <p class="experts__slide_items_body">Начальник отдела специальных проектов, Департамент информационных технологий г. Москвы</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/ROB_2400.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Зиборова Ольга</p>
+                        <p class="experts__slide_items_body">Директор департамента маркетинга ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/People_2.png" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Гурылин Артем</p>
+                        <p class="experts__slide_items_body">Руководитель направления Департамент финансовых технологий ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Хлевтова Анна.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Хлевтова Анна</p>
+                        <p class="experts__slide_items_body">Директор филиала ПАО "МТС" в г. Калининград</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Лысенко.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Лысенко Алексей</p>
+                        <p class="experts__slide_items_body">Руководитель Major IT Института опережающих технологий ДГТУ. Кандидат технических наук, доцент каф. "Робототехника и мехатроника" ДГТУ"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Перевозов.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Перевозов Михаил</p>
+                        <p class="experts__slide_items_body">Импакт инвестирование, Corporate social responsibility</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Балахнин фото.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Балахнин Илья</p>
+                        <p class="experts__slide_items_body">Генеральный директор и управляющий партнер консалтингового агентства Paper Planes</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/ShmatovMax.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Шматов Максим</p>
+                        <p class="experts__slide_items_body">Преподаватель в РЭУ им ГВ Плеханова на факультете Бизнеса (Социальный маркетинг и КСО, Саморазвитие и личностный рост предпринимателя)</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Gorskikh_Igor.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Горских Игорь</p>
+                        <p class="experts__slide_items_body">Советник Губернатора Рязанской области, научный руководитель АНО "Цифровой регион"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Kucherenko_T_V.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Кучеренко Татьяна</p>
+                        <p class="experts__slide_items_body">Заведующий сектором отдела ДОиСВР Алтайского филиала Финуниверситета</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Moskvina_photo.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Москвина Анастасия</p>
+                        <p class="experts__slide_items_body">Эксперт Центра развития некоммерческих организаций и Центра социального предпринимательства и социальных инноваций НИУ ВШЭ (Москва)</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Solomatin_Evgeniy.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Соломатин Евгений</p>
+                        <p class="experts__slide_items_body">Руководитель программы МИРБИС "MBA – Телеком"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Халимов Ренат.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Халимов Ренат</p>
+                        <p class="experts__slide_items_body">Генеральный директор АО "ОЭЗ "Иннополис"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/M.Bеbenin.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Бебенин Матвей</p>
+                        <p class="experts__slide_items_body">Product Manager в Medpoint24</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/People_1.png" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Калашникова Ирина</p>
+                        <p class="experts__slide_items_body">CEO, Co-Founder GoTech Innovation</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Bizhoev_Betal.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Бижоев Бетал</p>
+                        <p class="experts__slide_items_body">Директор проектов, Руководитель Электронного Университета - ЗАО "Сбербанк АСТ"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Ляк Александр.JPG" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Ляк Александр</p>
+                        <p class="experts__slide_items_body">Директор филиала ПАО "МТС" в г. Рязань</p>
                     </div>
                 </div>
             </div>
             <div class="swiper-button-next experts-next"></div>
             <div class="swiper-button-prev experts-prev"></div>
-        </div>
-        <div class="experts__all_btn">
-            <a href="/allspeakers" class="btn btn-primary btn__si_experts">Все эксперты<img loading="lazy" src="assets/img/right-arrow_si.svg" alt=""></a>
         </div>
     </div>
 </section>
