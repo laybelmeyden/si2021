@@ -10,7 +10,7 @@
             <img loading="lazy" src="assets/img/mts_logo.svg" alt="">
         </div>
         <section class="timer">
-            <p class="main_p3">до приема заявок осталось</p>
+            <p class="main_p3">до конца приема заявок осталось</p>
             <div id="clockdiv">
                 <div id="countdown" class="countdown">
                     <div class="countdown-number">

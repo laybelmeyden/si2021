@@ -1,65 +1,52 @@
 @extends('profile.master')
 @section('title', 'Настройки профиля')
 @section('content')
-<div id="app" class="nav__items">
-<div>
-@include('profile.left_navbar')
-</div>
-<div>
-    <h1>Настройки профиля</h1>
-    <form action="{{ route('updateCurrentUser',$user->id) }}" method="POST">
-        @csrf
-        @method('PUT')
+<section id="setting__profile">
+    <div class="profile__left_navbar">
+        @include('profile.left_navbar')
+    </div>
+    <div id="app" class="nav__items">
+        <div>
+            <h1>МОЙ ПРОФИЛЬ</h1>
+            <form action="{{ route('updateCurrentUser',$user->id) }}" method="POST">
+                @csrf
+                @method('PUT')
 
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Имя:{{ $user -> user_name}}</strong>
-                    <input type="text" name="user_name" value="" class="form-control" placeholder="{{ $user -> user_name}}">
+                <div class="settings__form">
+                    <div class="item">
+                        <label for="user_name">Имя и Фамилия</label>
+                        <input type="text" name="user_name" id="user_name" value="{{ $user -> user_name}}" class="form-control" placeholder="Иванов Иван" required>
+                    </div>
+                    <div class="item">
+                        <label for="user_phone">Мобильный телефон</label>
+                        <input type="text" name="user_phone" id="user_phone" value="{{ $user -> user_phone}}" class="form-control" placeholder="+7 988 888 88 88" required>
+                    </div>
+                    <div class="item">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" value="{{ $user -> email}}" class="form-control" placeholder="example@gmail.com" required>
+                    </div>
+                    <div class="item">
+                        <label for="user_city">Город (место проживания страна/город)</label>
+                        <input type="text" name="user_city" id="user_city" value="{{ $user -> user_city}}" class="form-control" placeholder="Москва" required>
+                    </div>
+                    <div class="item">
+                        <div class="checkboxes">
+                            <input id="a" type="checkbox"/><label class="green-background" for="a">Участник региональной программы <a href="">Social Idea 2021 «IT-Start»</a></label>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p>Выбирая данное поле, вы подтверждаете, что являетесь участником региональной программы Social Idea 2021 «IT-Start».</p>
+                        <p>
+                            <span>!Если вы не участник региональной программы, оставьте поле незаполненным!</span>
+                        </p>
+                        <p>Подробности о региональной программе смотри на <a href="/">сайте</a> конкурса.</p>
+                    </div>
+                    <div class="item">
+                        <button type="submit" class="btn btn__setting">СОхРАНИТЬ</button>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Фамилия:{{ $user -> user_surname}}</strong>
-                    <input type="text" name="user_surname" value="" class="form-control" placeholder="{{ $user -> user_surname}}">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Отчество:{{ $user -> user_middlename}}</strong>
-                    <input type="text" name="user_middlename" value="" class="form-control" placeholder="{{ $user -> user_middlename}}">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Телефон:{{ $user -> user_phone}}</strong>
-                    <input type="text" name="user_phone" value="" class="form-control" placeholder="{{ $user -> user_phone}}">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Город:{{ $user -> user_city}}</strong>
-                    <input type="text" name="user_city" value="" class="form-control" placeholder="{{ $user -> user_city}}">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Образование:{{ $user -> user_education}}</strong>
-                    <input type="text" name="user_education" value="" class="form-control" placeholder="{{ $user -> user_education}}">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Доп инфо:{{ $user -> user_moreinfo}}</strong>
-                    <input type="text" name="user_moreinfo" value="" class="form-control" placeholder="{{ $user -> user_moreinfo}}">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+            </form>
         </div>
-
-    </form>
-</div>
-</div>
+    </div>
+</section>
 @endsection
