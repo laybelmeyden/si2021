@@ -138,7 +138,7 @@
                                                                                     <tr>
                                                                                         <td align='left'>
                                                                                             <a href='https://socialidea.ru/'>
-                                                                                                <img align='left' alt='Logo' height='33' padding='5px' src='assets/img/si_logo.svg' width='250' />
+                                                                                                <img align='left' alt='Logo' height='33' padding='5px' src='https://socialidea.ru/assets/img/Group.png' width='250' />
                                                                                             </a>
                                                                                         </td>
                                                                                         <td align='right' style='vertical-align:bottom;' width='34px'>
