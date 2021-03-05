@@ -138,7 +138,7 @@
                                                                                     <tr>
                                                                                         <td align='left'>
                                                                                             <a href='#'>
-                                                                                                <img align='left' alt='Logo' height='33' padding='5px' src='https://swu-cs-assets.s3.amazonaws.com/OSET/oxy-logo.png' width='120' />
+                                                                                                <img align='left' alt='Logo' height='33' padding='5px' src='https://socialidea.ru/assets/img/si_logo.svg' width='120' />
                                                                                             </a>
                                                                                         </td>
                                                                                         <td align='right' style='vertical-align:bottom;' width='34px'>
@@ -199,14 +199,16 @@
                                                     <tr>
                                                         <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                             <div style='color:#4d4d4d;font-family:Oxygen, Helvetica neue, sans-serif;font-size:32px;font-weight:700;line-height:37px;text-align:center;'>
-                                                            {{ $actionUrl }}
+                                                            Добро пожаловать!
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                             <div style='color:#777777;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;line-height:21px;text-align:center;'>
-                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed nulla nibh. Ut hendrerit pellentesque justo, semper accumsan nisl venenatis ut.
+                                                            Поздравляем, вы успешно зарегистрировались на сайте socialidea.ru
+
+Осталось только подтвердить ваш email, и вы получите доступ к личному кабинету нашего сайта и сможете отправить проект на конкурс до 31 мая.
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -246,13 +248,13 @@
                                                                         <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                                             <div style='color:#777777;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;line-height:21px;text-align:center;'>
                                                                                 <span>
-                                            As a token of our appreciation, please accept this coupon code for
+                                            
                                           </span>
                                                                                 <span style='font-weight:700; color: #ff6f6f; font-size: 18px;'>
-                                            40% off
+                                            
                                           </span>
                                                                                 <span>
-                                                                                {{ $actionUrl }}
+                                                                                
                                           </span>
                                                                             </div>
                                                                         </td>
@@ -261,7 +263,7 @@
                                                                         <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                                             <div style='color:#777777;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;line-height:21px;text-align:center;'>
                                                                                 <p style='padding: 10px 0; border: 1px solid #cccccc; color: #4d4d4d; font-weight: bold; font-size: 18px; text-align: center;'>
-                                                                                    фцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцвфцв
+                                                                                Нажмите на кнопку ниже, чтобы перейти в личный кабинет
                                                                                 </p>
                                                                             </div>
                                                                         </td>
@@ -271,8 +273,8 @@
                                                                             <table border='0' cellpadding='0' cellspacing='0' role='presentation' style='border-collapse:separate;line-height:100%;'>
                                                                                 <tr>
                                                                                     <td align='center' bgcolor='#ff6f6f' role='presentation' style='background-color:#ff6f6f;border:none;border-radius:5px;cursor:auto;padding:10px 25px;' valign='middle'>
-                                                                                        <a href='# Coupon' style='background:#ff6f6f;color:#ffffff;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;font-weight:400;line-height:21px;margin:0;text-decoration:none;text-transform:none;' target='_blank'>
-                                                Shop Now
+                                                                                        <a href='{{ $actionUrl }}' style='background:#ff6f6f;color:#ffffff;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;font-weight:400;line-height:21px;margin:0;text-decoration:none;text-transform:none;' target='_blank'>
+                                                Подтвердить
                                               </a>
                                                                                     </td>
                                                                                 </tr>
@@ -313,14 +315,14 @@
                                     <tr>
                                         <td align='center' style='font-size:0px;padding:10px 25px;padding-bottom:5px;word-break:break-word;'>
                                             <div style='color:#4d4d4d;font-family:Oxygen, Helvetica neue, sans-serif;font-size:24px;font-weight:700;line-height:30px;text-align:center;'>
-                                                Lorem ipsum dolor
+                                                Это письмо сформированно автоматически. Пожалуйста! Не отвечайте на него !
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td align='center' style='font-size:0px;padding:10px 25px;padding-top:0px;word-break:break-word;'>
                                             <div style='color:#777777;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;line-height:21px;text-align:center;'>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed nulla nibh. Ut hendrerit pellentesque justo, semper accumsan nisl venenatis ut.
+                                                Если кнопка не нажимается - {{ $actionUrl }}
                                             </div>
                                         </td>
                                     </tr>

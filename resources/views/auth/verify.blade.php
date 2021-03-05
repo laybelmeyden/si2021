@@ -4,7 +4,7 @@
 </section>
 <div class="container" id="auth__form">
             <div class="card__auth">
-            <p>Подтвердите свой E-mail адрес</p>
+            <p>Успешная регистрация !</p>
 
                     <!-- @if (session('resent'))
                         <div class="alert alert-success" role="alert">
@@ -12,7 +12,7 @@
                         </div>
                     @endif -->
                     <p class="verify__email_p">
-                    Прежде чем продолжить, пожалуйста, проверьте свою электронную почту.
+                    Осталось только подтвердить Ваш email и вы получите доступ к личному кабинету, ссылка для подтверждения отправлена на Ваш email.
                     </p>
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
