@@ -137,8 +137,8 @@
                                                                                 <table border='0' cellpadding='0' cellspacing='0' style='cellpadding:0;cellspacing:0;color:#000000;font-family:Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;' width='100%'>
                                                                                     <tr>
                                                                                         <td align='left'>
-                                                                                            <a href='#'>
-                                                                                                <img align='left' alt='Logo' height='33' padding='5px' src='https://socialidea.ru/assets/img/si_logo.svg' width='120' />
+                                                                                            <a href='https://socialidea.ru/'>
+                                                                                                <img align='left' alt='Logo' height='33' padding='5px' src='assets/img/si_logo.svg' width='250' />
                                                                                             </a>
                                                                                         </td>
                                                                                         <td align='right' style='vertical-align:bottom;' width='34px'>
