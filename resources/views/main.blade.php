@@ -42,7 +42,7 @@
                     </div>
                     <div>
                         <p>@lang('words.more')</p>
-                        <p>3500</p>
+                        <p>3000</p>
                         <p>@lang('words.proj')</p>
                     </div>
                 </div>
@@ -91,14 +91,14 @@
                     <img loading="lazy" src="assets/img/incl.svg" alt="">
                 </div>
                 <p>ЭКОЛОГИЯ</p>
-                <span>Синергия цифровых проектов в сфере экологии. Эта номинация для разработчиков экологических решений: каждый регион и каждый уголок планеты должны стать лучше</span>
+                <span>«умные» системы управления, основанные на принципах энерго- и ресурсосбережения, инновационные разработки, нацеленные на сокращение объема отходов и выбросов, повторное использование ресурсов, программные продукты, направленные на формирование ответственного подхода к охране окружающей среды etc</span>
             </div>
             <div class="grid__nominations_2">
                 <div>
                     <img loading="lazy" src="assets/img/ecol.svg" alt="">
                 </div>
                 <p>ИНКЛЮЗИЯ</p>
-                <span>Экосистема цифровых решений по обеспечению социальной поддержки населения. Эта номинация для разработчиков мобильных приложений и систем в сфере инклюзивных технологий</span>
+                <span>инновационные идеи и продукты, раздвигающие границы и разрушающие барьеры, делающие окружающий мир доступнее и толерантнее, устраняющие социальное неравенство и улучшающие качество жизни людей и общества</span>
             </div>
         </div>
     </div>
@@ -113,7 +113,7 @@
             </div>
             <div>
                 <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p><b>Вы хотите получить Грант на пилот проекта до 1 500 000 рублей?</b></p>
+                <p><b>Вы хотите получить до 1 500 000 рублей на реализацию идеи и проекта ?</b></p>
             </div>
             <div>
                 <img loading="lazy" src="assets/img/ok.svg" alt="">
@@ -121,7 +121,7 @@
             </div>
             <div>
                 <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p>Вы хотите пилотировать свой продукт совместно с МТС Гараж, инкубатором и акселератором MTS StartUp Hub и другими программами социальных инноваций МТС ?</p>
+                <p>Вы хотите пилотировать свой продукт совместно с цифровыми направлениями МТС: телеком, cloud, финтех, медиа, аналитика Big Data, решения на основе Al, маркетинговые инструменты, сквозные программы лояльности и CRM ?</p>
             </div>
         </div>
         @else
@@ -261,7 +261,7 @@
                         </div>
                         <div>
                             @if(App::isLocale('ru'))
-                            <p>10 марта – 31 мая</p>
+                            <p>10 марта – 15 мая</p>
                             <p>Прием заявок</p>
                             @else
                             <p>March 10 - May 31</p>
@@ -430,9 +430,9 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
-                        <div><img loading="lazy" src="assets/img/speakers/Курин Дмитрий.jpg" alt="Moskvina_photo.png"></div>
-                        <p class="experts__slide_items_title">Курин Дмитрий</p>
-                        <p class="experts__slide_items_body">Директор инновационной площадки для развития технологических проектов MTS StartUp Hub</p>
+                        <div><img loading="lazy" src="assets/img/speakers/homchenko.jpg" alt="Moskvina_photo.png"></div>
+                        <p class="experts__slide_items_title">Дмитрий Хомченко</p>
+                        <p class="experts__slide_items_body">Вице-президент по информационным технологиям ПАО «МТС»</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -442,6 +442,21 @@
                         </div>
                         <p class="experts__slide_items_title">Чернышева Татьяна</p>
                         <p class="experts__slide_items_body">Член Правления-Вице-президент по управлению персоналом ПАО "МТС"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div><img loading="lazy" src="assets/img/speakers/galaktionova_b.jpg" alt="Moskvina_photo.png"></div>
+                        <p class="experts__slide_items_title">Галактионова Инесса</p>
+                        <p class="experts__slide_items_body">Член Правления, первый вице-президент по телекоммуникационному
+                            бизнесу ПАО «МТС»</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div><img loading="lazy" src="assets/img/speakers/Курин Дмитрий.jpg" alt="Moskvina_photo.png"></div>
+                        <p class="experts__slide_items_title">Курин Дмитрий</p>
+                        <p class="experts__slide_items_body">Директор инновационной площадки для развития технологических проектов MTS StartUp Hub</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -774,7 +789,7 @@
         <div class="col-lg-12">
             <div class="row">
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://www.mtsbank.ru/"><img loading="lazy" src="assets/img/article23123.png" class="img_partners"></a>
+                    <a href="https://startup.mts.ru/"><img loading="lazy" src="assets/img/article (12).png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="http://sistema.ru/domashyaya-stranica/"><img loading="lazy" src="assets/img/article (4).png" class="img_partners"></a>
@@ -783,7 +798,7 @@
                     <a href="https://medsi.ru/"><img loading="lazy" src="assets/img/article (9).png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://startup.mts.ru/"><img loading="lazy" src="assets/img/article (12).png" class="img_partners"></a>
+                    <a href="https://www.mtsbank.ru/"><img loading="lazy" src="assets/img/article23123.png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="http://bf.sistema.ru/"><img loading="lazy" src="assets/img/article (8).png" class="img_partners"></a>
@@ -800,27 +815,14 @@
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="http://fasie.ru/"><img loading="lazy" src="assets/img/head_logo_fasie.png" class="img_partners"></a>
                 </div>
-
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://reo.ru/"><img loading="lazy" src="assets/img/Logo-reo-color.jpg" class="img_partners"></a>
-                </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="http://rb.ru/"><img loading="lazy" src="assets/img/article (5).png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="http://www.nb-fund.ru/"><img loading="lazy" src="assets/img/article (6).png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://changellenge.com/"><img loading="lazy" src="assets/img/article (10).png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://rusinnovations.com/"><img loading="lazy" src="assets/img/article (11).png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="http://msbinfo.ru/"><img loading="lazy" src="assets/img/article.jpg" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://gotech.vc/"><img loading="lazy" src="assets/img/fda.jpg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://asi.ru/"><img loading="lazy" src="assets/img/das1.jpg" class="img_partners"></a>
@@ -838,16 +840,6 @@
                     <a href=""><img loading="lazy" src="assets/img/1.png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href=""><img loading="lazy" src="assets/img/hse_inc_main.png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://dobrofiz.ru/"><img loading="lazy" src="assets/img/Доброфиз_лого-цвет-синий.png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://dobrofiz.ru/dobropoezd"><img loading="lazy" src="assets/img/Logo-11.jpg" class="img_partners"></a>
-                </div>
-
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://www.facebook.com/youngroupsocial/"><img loading="lazy" src="assets/img/123123.jpg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
@@ -857,22 +849,7 @@
                     <a href="https://te-st.ru/"><img loading="lazy" src="assets/img/Teplitsa_mainLogo_rus.jpg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="http://fondgarant.ru/evaluation"><img loading="lazy" src="assets/img/Garant_ЂЃ£Ѓ_ж•≠ва_бЃж®†Ђм≠ле_в•е≠ЃЂЃ£®©-1.png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://kislorod.io/"><img loading="lazy" src="assets/img/kislorod_logo-landscape-1.png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://netology.ru/"><img loading="lazy" src="assets/img/logo-full-color-black.png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="http://probusinesstv.ru"><img loading="lazy" src="assets/img/PRObusiness-logo-002-CMYK(1)-01.jpg" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://bizdrom.com/"><img loading="lazy" src="assets/img/logo_new2222.png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://www.trinet.ru/"><img loading="lazy" src="assets/img/image_5.png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://s-ol.ru/ru/"><img loading="lazy" src="assets/img/CZSIO-SOL.jpg" class="img_partners"></a>
@@ -882,9 +859,6 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://startupheart.by/"><img loading="lazy" src="assets/img/74887114_112304683523635_118921824745553920_o.jpg" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="http://social.d-group.ru/"><img loading="lazy" src="assets/img/D-group.social_logo-01.png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://rgsu.net/"><img loading="lazy" src="assets/img/Gorizontal'naya sokraschennaya komponovka.png" class="img_partners"></a>

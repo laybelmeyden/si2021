@@ -649,16 +649,16 @@ strong {
         margin-bottom: 50px;
     }
     .grid__nominations {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         .grid__nominations_1 {
             div {
                 display: flex;
-                min-height: 300px;
+                min-height: 330px;
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                bottom: -25.5px;
+                top: 11.5px;
             }
             padding-right: 25px;
             text-align: center;
@@ -666,7 +666,7 @@ strong {
         .grid__nominations_2 {
             div {
                 display: flex;
-                min-height: 300px;
+                min-height: 330px;
                 align-items: center;
                 justify-content: center;
             }
@@ -1163,6 +1163,7 @@ strong {
             justify-content: center;
         }
         img {
+            filter: grayscale(1);
             width: 120%;
         }
     }
@@ -2355,7 +2356,7 @@ strong {
         margin-top: 20px;
     }
     #nominations .grid__nominations {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
     #start .start__grid p {
         font-size: 18px;
