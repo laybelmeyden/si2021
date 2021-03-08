@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\User;
+use App\Project;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -31,7 +32,9 @@ class UserController extends Controller
 
         $user->save();
 
-        return back();
+        session()->flash('status_title', 'Сохранено');
+        session()->flash('status_body', 'Ваш профиль успешно сохранен !');
+        return redirect()->back();
     }
     public function allUsers()
     {

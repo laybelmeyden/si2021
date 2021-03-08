@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Project;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -28,6 +29,8 @@ class HomeController extends Controller
     {
 
         $user = Auth::user();
-        return view('home', compact('user'));
+        $projects = Project::where('user_id', $user -> id)-> get();
+
+        return view('home', compact('user', 'projects'));
     }
 }

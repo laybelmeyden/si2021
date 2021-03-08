@@ -1,6 +1,8 @@
 @extends('profile.master')
 @section('title', 'Настройки профиля')
 @section('content')
+
+@include('profile.alerts')
 <section id="setting__profile">
     <div class="profile__left_navbar">
         @include('profile.left_navbar')

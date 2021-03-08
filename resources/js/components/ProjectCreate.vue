@@ -9,25 +9,29 @@
         <div class="circle circle-5"></div>
       </div>
       <div>
-        <p>Загрузка...</p>
+        <p>Создание проекта...</p>
       </div>
     </div>
   </div>
-  <div v-else>HI</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      loading: false,
+      loading: true,
     };
   },
-  methods: {
-  },
-  mounted() {
-      
-      },
+  created() {
+    axios.post('/createProject', this.fields)
+      .then(response =>{
+        this.fields = {}
+        window.location = `/home`
+      })
+      .catch(error =>{
+        alert('errors')
+      })
+  }
 };
 </script>
 

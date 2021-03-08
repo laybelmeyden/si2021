@@ -32,6 +32,12 @@ Route::get('/allUsers/show/{id}', 'UserController@allUsersShow')->name('allUserS
 Route::get('/allUsers/edit/{id}', 'UserController@allUsersShowEdit')->name('allUsersShowEdit')->middleware('verified');
 Route::put('/allUsers/edit/{id}', 'UserController@allUsersEdit')->name('allUsersEdit')->middleware('verified');
 Route::delete('/allUsers/delete/{id}', 'UserController@allUsersDelete')->name('allUsersDelete')->middleware('verified');
+
+//project 
+Route::resource('projects','ProjectController');
+Route::post('/createProject', 'ProjectController@createProject')->name('createProject')->middleware('verified');
+Route::post('/updateProject', 'ProjectController@updateProject')->name('updateProject')->middleware('verified');
+Route::get('/showProject', 'ProjectController@showProject')->name('showProject')->middleware('verified');
 //locale
 Route::get('/locale/{locale}', function ($locale) {
     Session::put('locale',$locale);
