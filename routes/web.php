@@ -20,6 +20,7 @@ Auth::routes(['verify' => true]);
 Route::get('/', 'MainController@index')->name('main');
 Route::get('/statistics', 'MainController@stats')->name('stats');
 Route::get('/allspeakers', 'MainController@allspeakers');
+Route::get('/photos', 'MainController@photos');
 
 //profile
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
@@ -52,6 +53,7 @@ Route::group(['prefix' => 'admin'], function () {
 //news
 Route::get('/api/news', 'MainController@news');
 Route::get('/news{id}', 'MainController@newssolo');
+
 
 // years
 Route::get('/years2011', 'YearsController@years2011')->name('main11');

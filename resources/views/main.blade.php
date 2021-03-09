@@ -121,7 +121,7 @@
             </div>
             <div>
                 <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p>Вы хотите пилотировать свой продукт совместно с цифровыми направлениями МТС: телеком, cloud, финтех, медиа, аналитика Big Data, решения на основе Al, маркетинговые инструменты, сквозные программы лояльности и CRM ?</p>
+                <p>Вы хотите пилотировать свой проект в цифровой экосистеме МТС ?</p>
             </div>
         </div>
         @else
@@ -261,7 +261,7 @@
                         </div>
                         <div>
                             @if(App::isLocale('ru'))
-                            <p>10 марта – 15 мая</p>
+                            <p>10 марта – 25 мая</p>
                             <p>Прием заявок</p>
                             @else
                             <p>March 10 - May 31</p>
@@ -471,42 +471,6 @@
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
                         <div>
-                            <img loading="lazy" src="assets/img/speakers/Калиновский.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Калиновский Никита</p>
-                        <p class="experts__slide_items_body">Генеральный директор INTEC Group</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
-                            <img loading="lazy" src="assets/img/speakers/Гетц.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Гетц Евгений</p>
-                        <p class="experts__slide_items_body">Эксперт рабочей группы «Аэронет» главный судья квалификационных и финальных испытаний</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
-                            <img loading="lazy" src="assets/img/speakers/Афонькин.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Афонькин Виталий</p>
-                        <p class="experts__slide_items_body">Директор проекта "Лифт в будущее"</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
-                            <img loading="lazy" src="assets/img/speakers/Кожуховская.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Кожуховская Ольга</p>
-                        <p class="experts__slide_items_body">Менеджер инженерной Академии</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
                             <img loading="lazy" src="assets/img/speakers/ggghr.jpg" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Максим Гашков</p>
@@ -627,15 +591,6 @@
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
                         <div>
-                            <img loading="lazy" src="assets/img/speakers/Лысенко.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Лысенко Алексей</p>
-                        <p class="experts__slide_items_body">Руководитель Major IT Института опережающих технологий ДГТУ. Кандидат технических наук, доцент каф. "Робототехника и мехатроника" ДГТУ"</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
                             <img loading="lazy" src="assets/img/speakers/Перевозов.jpg" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Перевозов Михаил</p>
@@ -694,6 +649,25 @@
                         </div>
                         <p class="experts__slide_items_title">Соломатин Евгений</p>
                         <p class="experts__slide_items_body">Руководитель программы МИРБИС "MBA – Телеком"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/andreeva.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Андреева Ирина</p>
+                        <p class="experts__slide_items_body">Соучредитель DistingTec - трудоустройство людей с РАС в сфере ИТ, бизнес-коуч и профессиональный
+                            трекер в компаниях и стартерах, преподаватель в ВШЭ и Университете Нетология</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/nikhaychik.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Нихайчик Ольга</p>
+                        <p class="experts__slide_items_body">Руководитель маркетинга Авито для работодателей</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -777,6 +751,30 @@
         @endif
         @endforeach
         <news_component></news_component>
+    </div>
+</section>
+<section id="photos">
+    <div class="container">
+        <p>ГаЛЕРЕЯ</p>
+        <!-- <a href="/photos"> -->
+            <div class="grid-container">
+                <div>
+                    <img src="assets/img/5LB1CtQjEG0.png" alt="">
+                </div>
+                <div>
+                    <img src="assets/img/5tVefUWKR8I.png" alt="">
+                </div>
+                <div class="photos1">
+                    <img src="assets/img/IkV4mZEABp8.png" alt="">
+                </div>
+                <div class="photos2">
+                    <img src="assets/img/photos/IMG_1270.jpg" alt="">
+                </div>
+                <div class="photos3">
+                    <img src="assets/img/gQ25jEORyO4 1.png" alt="">
+                </div>
+            </div>
+        <!-- </a> -->
     </div>
 </section>
 <section id="partners">

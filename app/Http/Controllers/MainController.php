@@ -28,4 +28,7 @@ class MainController extends Controller
     public function allspeakers(){
         return view ('allspeakers');
     }
+    public function photos(){
+        return view ('photos');
+    }
 }

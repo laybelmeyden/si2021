@@ -30,6 +30,7 @@ var mySwiper = new Swiper('.swiper-container.swiper-container-history', {
 })
 var mySwiper2 = new Swiper('.swiper-container.swiper-container-experts', {
         slidesPerView: 1,
+        loop: true,
         breakpoints: {
             992: {
                 slidesPerView: 3
