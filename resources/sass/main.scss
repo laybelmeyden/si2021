@@ -1784,6 +1784,15 @@ strong {
     margin-top: 90px;
     margin-bottom: 90px;
     .card__auth {
+        .title__register {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 21px;
+            line-height: 150%;
+            color: #000000;
+            width: 100%;
+            z-index: 1;
+        }
         .verify__email_p {
             font-style: normal;
             font-weight: normal;

@@ -5,6 +5,7 @@
 <div class="container" id="auth__form">
     <div class="card__auth">
         <p>@lang('words.register')</p>
+        <p class="title__register">Пройдите регистрацию для доступа к личному кабинету и заполнению заявки</p>
         <form method="POST" action="{{ route('register') }}">
             @csrf
             <div>
