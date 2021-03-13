@@ -162,8 +162,8 @@ class ProjectController extends Controller
         );
           \Mail::send('email.sendproject', $data, function($message) use ($data, $user, $to_email, $to_name)
           {
-            $message->from($to_email);
-            $message->to($user->email)->subject('Уведомление');
+            $message->from($to_email, $user->email);
+            $message->to($to_email)->subject('Уведомление');
          });
 
         return redirect('/home');
