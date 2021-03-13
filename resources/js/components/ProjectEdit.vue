@@ -1309,6 +1309,7 @@ export default {
       .get("/showProject", this.project)
       .then((response) => {
         this.project = response.data[0];
+    // console.log(this.project = response.data.id)
       })
       .finally(() => (this.loading = false));
   },
