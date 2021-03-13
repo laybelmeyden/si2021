@@ -18,7 +18,7 @@
       modalflat.classList.toggle('hiddens__modal');
       body.classList.remove('no_scroll')
     }
-  }, 3500)
+  }, 15500)
   btn_ok.addEventListener('click', () => {
     document.querySelector(".modal_alert").classList.add('hiddens__modal');
     body.classList.remove('no_scroll')

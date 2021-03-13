@@ -19,20 +19,32 @@
             </p>
         </div>
         @else
-        @if($projects -> isEmpty() && Auth::user()->email === 'trycollens@gmail.com')
+        @if($projects -> isEmpty())
         <a class="btn btn_create_project" href="{{ route('projects.create') }}">
             Создать проект <img loading="lazy" src="/assets/img/right-arrow_si.svg" alt="">
         </a>
         @else
         @foreach ($projects as $project)
         <div class="statuses">
+            @if($project->statuses === 'draft')
             <div class="item {{ $project->statuses }}">
-                @if($project->statuses === 'draft')
                 Черновик
-                @endif
             </div>
+            @endif
+            @if($project->statuses === 'moderate')
+            <div class="item {{ $project->statuses }}">
+                На модерации
+            </div>
+            @endif
         </div>
-        <a href="{{ route('projects.edit',$project->id) }}">
+        <a href="
+        @if($project->statuses === 'draft')
+        {{ route('projects.edit',$project->id) }}
+        @endif
+        @if($project->statuses === 'moderate')
+        
+        @endif
+        ">
             <div class="card__project_show">
                     <span>Номер проекта {{$project -> id}}</span>
                     @if($project -> project_name === null)
@@ -43,7 +55,7 @@
                     @if($project -> project_body === null)
                     <p class="project__body">Нет описания проекта</p>
                     @else
-                    <p  class="project__body">{{ Str::limit($project -> project_body, 50) }}</p>
+                    <p  class="project__body">{{ Str::limit($project -> project_body, 300) }}</p>
                     @endif
             </div>
         </a>

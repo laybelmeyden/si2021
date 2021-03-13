@@ -994,6 +994,17 @@ strong {
         margin-bottom: 60px;
     }
     .history__slide {
+        .img__history {
+            width: 360px;
+            height: 343px;
+            min-width: 360px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            img {
+                width: 100%;
+            }
+        }
         display: flex;
         width: 90%;
         margin: 0 auto;
@@ -2057,7 +2068,6 @@ strong {
             display: grid;
             grid-template-columns: 60% 40%;
             margin-bottom: 120px;
-            .second_stats {}
         }
     }
 }

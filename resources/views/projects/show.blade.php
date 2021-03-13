@@ -1,6 +1,7 @@
 @extends('profile.master')
 @section('title', 'Просмотр проекта')
 @section('content')
+@include('profile.alerts')
 <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -16,13 +17,12 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name:</strong>
-                {{ $product->name }}
+                {{ $project->name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Details:</strong>
-                {{ $product->detail }}
             </div>
         </div>
     </div>

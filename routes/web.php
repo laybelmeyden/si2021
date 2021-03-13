@@ -39,6 +39,7 @@ Route::resource('projects','ProjectController');
 Route::post('/createProject', 'ProjectController@createProject')->name('createProject')->middleware('verified');
 Route::post('/updateProject', 'ProjectController@updateProject')->name('updateProject')->middleware('verified');
 Route::get('/showProject', 'ProjectController@showProject')->name('showProject')->middleware('verified');
+Route::post('/sendProject', 'ProjectController@sendProject')->name('sendProject')->middleware('verified');
 //locale
 Route::get('/locale/{locale}', function ($locale) {
     Session::put('locale',$locale);

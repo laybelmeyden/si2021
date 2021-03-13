@@ -15,24 +15,68 @@
   </div>
   <div v-else>
     <h1>МОЙ ПРОЕКТ</h1>
-    <form @submit.prevent="updateProject" id="project__form">
-    <input type="text" v-model.number="project.stages" hidden>
+     <div id="modalflat__save" class="modal_alert" v-if="isAlertVisible">
+      <div class="modal_alert__container">
+        <h4 class="alert_title">Сохранено</h4>
+        <p class="alert_down">Ваш проект успешно сохранен</p>
+        <a class="btn btn-primary btn_ok" role="button" @click="alertsModalClose">
+          Хорошо
+          <img loading="lazy" src="/assets/img/right-arrow_si.svg" alt="" />
+        </a>
+      </div>
+    </div>
+    <div id="modalflat__save" class="modal_alert" v-if="isSendProjectVisible">
+      <div class="modal_alert__container">
+        <h4 class="alert_title">Вы точно хотите отправить проект на конкурс?</h4>
+        <p class="alert_down">Отправка заявки на конкурс возможна до 25.06.21 года и только после того, как заполнены все обязательные поля!
+        <br><br>
+        Внимание: после нажатия кнопки "Отправить" отредактировать заявку будет невозможно!</p>
+        <div class="form__item_btns">
+        <a
+          class="btn btn-primary btn__next btn_prev"
+          @click.prevent="modalSendProjectClose"
+        >
+          Назад
+          <img
+            loading="lazy"
+            class="prev"
+            src="/assets/img/right-arrow_si.svg"
+            alt=""
+          />
+        </a>
+        <a
+          class="btn btn-primary btn__next"
+          @click.prevent="multiSendProject"
+        >
+          Отправить
+          <img loading="lazy" src="/assets/img/right-arrow_si.svg" alt="" />
+        </a>
+      </div>
+      </div>
+    </div>
+    <form
+      @submit.prevent="updateProject"
+      id="project__form"
+      enctype="multipart/form-data"
+    >
+      <input type="text" v-model.number="project.stages" hidden />
       <section id="stages_1" v-if="project.stages === 1">
         <div class="form__item">
           <label for="about_source"
             >Откуда вы узнали о конкурсе Social Idea?</label
           >
-          <select
+          <input
+            type="text"
             name="about_source"
             id="about_source"
-            class="form-select form-select-lg"
-            aria-label=".form-select-lg example"
             v-model="project.about_source"
-          >
-            <option value="Социальные сети">Социальные сети</option>
-            <option value="Реклама">Реклама</option>
-            <option value="Другое">Другое</option>
-          </select>
+            placeholder="Социальные сети"
+            maxlength="50"
+          />
+          <span class="maxlength__inp">{{
+            project.about_source &&
+            `Осталось символов - ${50 - project.about_source.length}`
+          }}</span>
         </div>
         <div class="form__item">
           <p class="warning_item">
@@ -68,56 +112,72 @@
                 value="Экология"
               />
               <label for="nominations_eco"
-                >Экология<svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 30 30"
-                  fill="none"
-                >
-                  <g filter="url(#filter0_d)">
-                    <circle cx="15" cy="15" r="11" fill="white" />
-                  </g>
-                  <path
-                    d="M14.4404 17.1973C14.4495 16.6549 14.5111 16.2266 14.625 15.9121C14.7389 15.5977 14.9714 15.249 15.3223 14.8662L16.2178 13.9434C16.6006 13.5104 16.792 13.0456 16.792 12.5488C16.792 12.0703 16.6667 11.6966 16.416 11.4277C16.1654 11.1543 15.8008 11.0176 15.3223 11.0176C14.8574 11.0176 14.4837 11.1406 14.2012 11.3867C13.9186 11.6328 13.7773 11.9632 13.7773 12.3779H12.5127C12.5218 11.6396 12.7839 11.0449 13.2988 10.5938C13.8184 10.138 14.4928 9.91016 15.3223 9.91016C16.1836 9.91016 16.8535 10.1426 17.332 10.6074C17.8151 11.0677 18.0566 11.7012 18.0566 12.5078C18.0566 13.3053 17.6875 14.0915 16.9492 14.8662L16.2041 15.6045C15.8714 15.9736 15.7051 16.5046 15.7051 17.1973H14.4404ZM14.3857 19.3643C14.3857 19.1592 14.4473 18.9883 14.5703 18.8516C14.6979 18.7103 14.8848 18.6396 15.1309 18.6396C15.377 18.6396 15.5638 18.7103 15.6914 18.8516C15.819 18.9883 15.8828 19.1592 15.8828 19.3643C15.8828 19.5693 15.819 19.7402 15.6914 19.877C15.5638 20.0091 15.377 20.0752 15.1309 20.0752C14.8848 20.0752 14.6979 20.0091 14.5703 19.877C14.4473 19.7402 14.3857 19.5693 14.3857 19.3643Z"
-                    fill="#AAA9A9"
-                  />
-                  <defs>
-                    <filter
-                      id="filter0_d"
-                      x="0"
-                      y="0"
-                      width="30"
-                      height="30"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="2" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs></svg
-              ></label>
+                >Экология
+                <div class="nominations_eco">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                  >
+                    <g filter="url(#filter0_d)">
+                      <circle cx="15" cy="15" r="11" fill="white" />
+                    </g>
+                    <path
+                      d="M14.4404 17.1973C14.4495 16.6549 14.5111 16.2266 14.625 15.9121C14.7389 15.5977 14.9714 15.249 15.3223 14.8662L16.2178 13.9434C16.6006 13.5104 16.792 13.0456 16.792 12.5488C16.792 12.0703 16.6667 11.6966 16.416 11.4277C16.1654 11.1543 15.8008 11.0176 15.3223 11.0176C14.8574 11.0176 14.4837 11.1406 14.2012 11.3867C13.9186 11.6328 13.7773 11.9632 13.7773 12.3779H12.5127C12.5218 11.6396 12.7839 11.0449 13.2988 10.5938C13.8184 10.138 14.4928 9.91016 15.3223 9.91016C16.1836 9.91016 16.8535 10.1426 17.332 10.6074C17.8151 11.0677 18.0566 11.7012 18.0566 12.5078C18.0566 13.3053 17.6875 14.0915 16.9492 14.8662L16.2041 15.6045C15.8714 15.9736 15.7051 16.5046 15.7051 17.1973H14.4404ZM14.3857 19.3643C14.3857 19.1592 14.4473 18.9883 14.5703 18.8516C14.6979 18.7103 14.8848 18.6396 15.1309 18.6396C15.377 18.6396 15.5638 18.7103 15.6914 18.8516C15.819 18.9883 15.8828 19.1592 15.8828 19.3643C15.8828 19.5693 15.819 19.7402 15.6914 19.877C15.5638 20.0091 15.377 20.0752 15.1309 20.0752C14.8848 20.0752 14.6979 20.0091 14.5703 19.877C14.4473 19.7402 14.3857 19.5693 14.3857 19.3643Z"
+                      fill="#AAA9A9"
+                    />
+                    <defs>
+                      <filter
+                        id="filter0_d"
+                        x="0"
+                        y="0"
+                        width="30"
+                        height="30"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="2" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                  <div class="ecol__popup">
+                    идеи и решения, в том числе «умные» системы управления,
+                    основанные на принципах энерго- и ресурсосбережения,
+                    инновационные разработки, нацеленные на сокращение объема
+                    отходов и выбросов, повторное использование ресурсов,
+                    программные продукты, направленные на формирование
+                    ответственного подхода к охране окружающей среды и многое
+                    другое
+                  </div>
+                </div>
+              </label>
             </div>
 
             <div class="form_radio_btn">
@@ -129,56 +189,69 @@
                 v-model="project.nominations"
               />
               <label for="nominations_incl"
-                >Инклюзия<svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 30 30"
-                  fill="none"
-                >
-                  <g filter="url(#filter0_d)">
-                    <circle cx="15" cy="15" r="11" fill="white" />
-                  </g>
-                  <path
-                    d="M14.4404 17.1973C14.4495 16.6549 14.5111 16.2266 14.625 15.9121C14.7389 15.5977 14.9714 15.249 15.3223 14.8662L16.2178 13.9434C16.6006 13.5104 16.792 13.0456 16.792 12.5488C16.792 12.0703 16.6667 11.6966 16.416 11.4277C16.1654 11.1543 15.8008 11.0176 15.3223 11.0176C14.8574 11.0176 14.4837 11.1406 14.2012 11.3867C13.9186 11.6328 13.7773 11.9632 13.7773 12.3779H12.5127C12.5218 11.6396 12.7839 11.0449 13.2988 10.5938C13.8184 10.138 14.4928 9.91016 15.3223 9.91016C16.1836 9.91016 16.8535 10.1426 17.332 10.6074C17.8151 11.0677 18.0566 11.7012 18.0566 12.5078C18.0566 13.3053 17.6875 14.0915 16.9492 14.8662L16.2041 15.6045C15.8714 15.9736 15.7051 16.5046 15.7051 17.1973H14.4404ZM14.3857 19.3643C14.3857 19.1592 14.4473 18.9883 14.5703 18.8516C14.6979 18.7103 14.8848 18.6396 15.1309 18.6396C15.377 18.6396 15.5638 18.7103 15.6914 18.8516C15.819 18.9883 15.8828 19.1592 15.8828 19.3643C15.8828 19.5693 15.819 19.7402 15.6914 19.877C15.5638 20.0091 15.377 20.0752 15.1309 20.0752C14.8848 20.0752 14.6979 20.0091 14.5703 19.877C14.4473 19.7402 14.3857 19.5693 14.3857 19.3643Z"
-                    fill="#AAA9A9"
-                  />
-                  <defs>
-                    <filter
-                      id="filter0_d"
-                      x="0"
-                      y="0"
-                      width="30"
-                      height="30"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="2" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs></svg
-              ></label>
+                >Инклюзия
+                <div class="nominations_incl">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                  >
+                    <g filter="url(#filter0_d)">
+                      <circle cx="15" cy="15" r="11" fill="white" />
+                    </g>
+                    <path
+                      d="M14.4404 17.1973C14.4495 16.6549 14.5111 16.2266 14.625 15.9121C14.7389 15.5977 14.9714 15.249 15.3223 14.8662L16.2178 13.9434C16.6006 13.5104 16.792 13.0456 16.792 12.5488C16.792 12.0703 16.6667 11.6966 16.416 11.4277C16.1654 11.1543 15.8008 11.0176 15.3223 11.0176C14.8574 11.0176 14.4837 11.1406 14.2012 11.3867C13.9186 11.6328 13.7773 11.9632 13.7773 12.3779H12.5127C12.5218 11.6396 12.7839 11.0449 13.2988 10.5938C13.8184 10.138 14.4928 9.91016 15.3223 9.91016C16.1836 9.91016 16.8535 10.1426 17.332 10.6074C17.8151 11.0677 18.0566 11.7012 18.0566 12.5078C18.0566 13.3053 17.6875 14.0915 16.9492 14.8662L16.2041 15.6045C15.8714 15.9736 15.7051 16.5046 15.7051 17.1973H14.4404ZM14.3857 19.3643C14.3857 19.1592 14.4473 18.9883 14.5703 18.8516C14.6979 18.7103 14.8848 18.6396 15.1309 18.6396C15.377 18.6396 15.5638 18.7103 15.6914 18.8516C15.819 18.9883 15.8828 19.1592 15.8828 19.3643C15.8828 19.5693 15.819 19.7402 15.6914 19.877C15.5638 20.0091 15.377 20.0752 15.1309 20.0752C14.8848 20.0752 14.6979 20.0091 14.5703 19.877C14.4473 19.7402 14.3857 19.5693 14.3857 19.3643Z"
+                      fill="#AAA9A9"
+                    />
+                    <defs>
+                      <filter
+                        id="filter0_d"
+                        x="0"
+                        y="0"
+                        width="30"
+                        height="30"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="2" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                  <div class="incl__popup">
+                    идеи и решения, которые расширяют границы и разрушают
+                    барьеры, делают окружающий мир доступнее и толерантнее,
+                    устраняют социальное неравенство и улучшают качество жизни
+                    людей и общества
+                  </div>
+                </div></label
+              >
             </div>
           </div>
         </div>
@@ -202,56 +275,72 @@
                 v-model="project.project_ready"
               />
               <label for="project_ready_idea"
-                >ИДЕЯ<svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 30 30"
-                  fill="none"
-                >
-                  <g filter="url(#filter0_d)">
-                    <circle cx="15" cy="15" r="11" fill="white" />
-                  </g>
-                  <path
-                    d="M14.4404 17.1973C14.4495 16.6549 14.5111 16.2266 14.625 15.9121C14.7389 15.5977 14.9714 15.249 15.3223 14.8662L16.2178 13.9434C16.6006 13.5104 16.792 13.0456 16.792 12.5488C16.792 12.0703 16.6667 11.6966 16.416 11.4277C16.1654 11.1543 15.8008 11.0176 15.3223 11.0176C14.8574 11.0176 14.4837 11.1406 14.2012 11.3867C13.9186 11.6328 13.7773 11.9632 13.7773 12.3779H12.5127C12.5218 11.6396 12.7839 11.0449 13.2988 10.5938C13.8184 10.138 14.4928 9.91016 15.3223 9.91016C16.1836 9.91016 16.8535 10.1426 17.332 10.6074C17.8151 11.0677 18.0566 11.7012 18.0566 12.5078C18.0566 13.3053 17.6875 14.0915 16.9492 14.8662L16.2041 15.6045C15.8714 15.9736 15.7051 16.5046 15.7051 17.1973H14.4404ZM14.3857 19.3643C14.3857 19.1592 14.4473 18.9883 14.5703 18.8516C14.6979 18.7103 14.8848 18.6396 15.1309 18.6396C15.377 18.6396 15.5638 18.7103 15.6914 18.8516C15.819 18.9883 15.8828 19.1592 15.8828 19.3643C15.8828 19.5693 15.819 19.7402 15.6914 19.877C15.5638 20.0091 15.377 20.0752 15.1309 20.0752C14.8848 20.0752 14.6979 20.0091 14.5703 19.877C14.4473 19.7402 14.3857 19.5693 14.3857 19.3643Z"
-                    fill="#AAA9A9"
-                  />
-                  <defs>
-                    <filter
-                      id="filter0_d"
-                      x="0"
-                      y="0"
-                      width="30"
-                      height="30"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="2" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs></svg
-              ></label>
+                >ИДЕЯ
+
+                <div class="project_ready_idea">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                  >
+                    <g filter="url(#filter0_d)">
+                      <circle cx="15" cy="15" r="11" fill="white" />
+                    </g>
+                    <path
+                      d="M14.4404 17.1973C14.4495 16.6549 14.5111 16.2266 14.625 15.9121C14.7389 15.5977 14.9714 15.249 15.3223 14.8662L16.2178 13.9434C16.6006 13.5104 16.792 13.0456 16.792 12.5488C16.792 12.0703 16.6667 11.6966 16.416 11.4277C16.1654 11.1543 15.8008 11.0176 15.3223 11.0176C14.8574 11.0176 14.4837 11.1406 14.2012 11.3867C13.9186 11.6328 13.7773 11.9632 13.7773 12.3779H12.5127C12.5218 11.6396 12.7839 11.0449 13.2988 10.5938C13.8184 10.138 14.4928 9.91016 15.3223 9.91016C16.1836 9.91016 16.8535 10.1426 17.332 10.6074C17.8151 11.0677 18.0566 11.7012 18.0566 12.5078C18.0566 13.3053 17.6875 14.0915 16.9492 14.8662L16.2041 15.6045C15.8714 15.9736 15.7051 16.5046 15.7051 17.1973H14.4404ZM14.3857 19.3643C14.3857 19.1592 14.4473 18.9883 14.5703 18.8516C14.6979 18.7103 14.8848 18.6396 15.1309 18.6396C15.377 18.6396 15.5638 18.7103 15.6914 18.8516C15.819 18.9883 15.8828 19.1592 15.8828 19.3643C15.8828 19.5693 15.819 19.7402 15.6914 19.877C15.5638 20.0091 15.377 20.0752 15.1309 20.0752C14.8848 20.0752 14.6979 20.0091 14.5703 19.877C14.4473 19.7402 14.3857 19.5693 14.3857 19.3643Z"
+                      fill="#AAA9A9"
+                    />
+                    <defs>
+                      <filter
+                        id="filter0_d"
+                        x="0"
+                        y="0"
+                        width="30"
+                        height="30"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="2" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                  <div class="idea__popup">
+                    У команды есть отличная идея! Выбрав данную стадию,
+                    участники будут заполнять проект, который находится на
+                    стартовом этапе, без готового прототипа / продукта. Ваша
+                    идея – это способ решить проблему, пока еще без расчетов,
+                    прояснений и четких формулировок. В идее заложена энергия
+                    проекта. С неё все начинается!
+                  </div>
+                </div>
+              </label>
             </div>
 
             <div class="form_radio_btn">
@@ -263,56 +352,68 @@
                 v-model="project.project_ready"
               />
               <label for="project_ready_product"
-                >ПРОДУКТ<svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 30 30"
-                  fill="none"
-                >
-                  <g filter="url(#filter0_d)">
-                    <circle cx="15" cy="15" r="11" fill="white" />
-                  </g>
-                  <path
-                    d="M14.4404 17.1973C14.4495 16.6549 14.5111 16.2266 14.625 15.9121C14.7389 15.5977 14.9714 15.249 15.3223 14.8662L16.2178 13.9434C16.6006 13.5104 16.792 13.0456 16.792 12.5488C16.792 12.0703 16.6667 11.6966 16.416 11.4277C16.1654 11.1543 15.8008 11.0176 15.3223 11.0176C14.8574 11.0176 14.4837 11.1406 14.2012 11.3867C13.9186 11.6328 13.7773 11.9632 13.7773 12.3779H12.5127C12.5218 11.6396 12.7839 11.0449 13.2988 10.5938C13.8184 10.138 14.4928 9.91016 15.3223 9.91016C16.1836 9.91016 16.8535 10.1426 17.332 10.6074C17.8151 11.0677 18.0566 11.7012 18.0566 12.5078C18.0566 13.3053 17.6875 14.0915 16.9492 14.8662L16.2041 15.6045C15.8714 15.9736 15.7051 16.5046 15.7051 17.1973H14.4404ZM14.3857 19.3643C14.3857 19.1592 14.4473 18.9883 14.5703 18.8516C14.6979 18.7103 14.8848 18.6396 15.1309 18.6396C15.377 18.6396 15.5638 18.7103 15.6914 18.8516C15.819 18.9883 15.8828 19.1592 15.8828 19.3643C15.8828 19.5693 15.819 19.7402 15.6914 19.877C15.5638 20.0091 15.377 20.0752 15.1309 20.0752C14.8848 20.0752 14.6979 20.0091 14.5703 19.877C14.4473 19.7402 14.3857 19.5693 14.3857 19.3643Z"
-                    fill="#AAA9A9"
-                  />
-                  <defs>
-                    <filter
-                      id="filter0_d"
-                      x="0"
-                      y="0"
-                      width="30"
-                      height="30"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="2" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs></svg
-              ></label>
+                >ПРОДУКТ
+                <div class="project_ready_product">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    fill="none"
+                  >
+                    <g filter="url(#filter0_d)">
+                      <circle cx="15" cy="15" r="11" fill="white" />
+                    </g>
+                    <path
+                      d="M14.4404 17.1973C14.4495 16.6549 14.5111 16.2266 14.625 15.9121C14.7389 15.5977 14.9714 15.249 15.3223 14.8662L16.2178 13.9434C16.6006 13.5104 16.792 13.0456 16.792 12.5488C16.792 12.0703 16.6667 11.6966 16.416 11.4277C16.1654 11.1543 15.8008 11.0176 15.3223 11.0176C14.8574 11.0176 14.4837 11.1406 14.2012 11.3867C13.9186 11.6328 13.7773 11.9632 13.7773 12.3779H12.5127C12.5218 11.6396 12.7839 11.0449 13.2988 10.5938C13.8184 10.138 14.4928 9.91016 15.3223 9.91016C16.1836 9.91016 16.8535 10.1426 17.332 10.6074C17.8151 11.0677 18.0566 11.7012 18.0566 12.5078C18.0566 13.3053 17.6875 14.0915 16.9492 14.8662L16.2041 15.6045C15.8714 15.9736 15.7051 16.5046 15.7051 17.1973H14.4404ZM14.3857 19.3643C14.3857 19.1592 14.4473 18.9883 14.5703 18.8516C14.6979 18.7103 14.8848 18.6396 15.1309 18.6396C15.377 18.6396 15.5638 18.7103 15.6914 18.8516C15.819 18.9883 15.8828 19.1592 15.8828 19.3643C15.8828 19.5693 15.819 19.7402 15.6914 19.877C15.5638 20.0091 15.377 20.0752 15.1309 20.0752C14.8848 20.0752 14.6979 20.0091 14.5703 19.877C14.4473 19.7402 14.3857 19.5693 14.3857 19.3643Z"
+                      fill="#AAA9A9"
+                    />
+                    <defs>
+                      <filter
+                        id="filter0_d"
+                        x="0"
+                        y="0"
+                        width="30"
+                        height="30"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="2" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                  <div class="product__popup">
+                    Продукт готов! Выбрав данную стадию, участники будут
+                    заполнять проект, который находится на продвинутом уровне:
+                    стадия пилота или уже готовый бизнес-продукт / прототип.
+                  </div>
+                </div>
+              </label>
             </div>
           </div>
         </div>
@@ -336,10 +437,15 @@
             v-model="project.project_name"
             id="project_name"
             placeholder="Молоды сердцем"
+            maxlength="150"
           />
+          <span class="maxlength__inp">{{
+            project.project_name &&
+            `Осталось символов - ${150 - project.project_name.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Краткое описание проекта</label>
+          <label for="project_body">Краткое описание проекта</label>
           <p class="item__tile_form">
             Описание, отражающее основную идею проекта, целевую аудиторию,
             содержание проекта и наиболее значимые ожидаемые результаты. Для
@@ -348,43 +454,61 @@
             предназначен проект?».
           </p>
           <textarea
-            name=""
-            id=""
+            name="project_body"
+            id="project_body"
+            v-model="project.project_body"
             cols="30"
             rows="10"
             placeholder="Основная идея проекта заключается в "
+            maxlength="1000"
           ></textarea>
+          <span class="maxlength__inp">{{
+            project.project_body &&
+            `Осталось символов - ${1000 - project.project_body.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Социальная значимость проекта</label>
+          <label for="project_social">Социальная значимость проекта</label>
           <p class="item__tile_form">
             Расскажите, на решение какой именно проблемы направлен проект, и
             обозначьте ее социальную значимость.
           </p>
           <textarea
-            name=""
-            id=""
+            name="project_social"
+            id="project_social"
+            v-model="project.project_social"
             cols="30"
             rows="10"
             placeholder="Наш проект направлен на решение "
+            maxlength="1000"
           ></textarea>
+          <span class="maxlength__inp">{{
+            project.project_social &&
+            `Осталось символов - ${1000 - project.project_social.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Цели проекта</label>
+          <label for="project_target">Цели проекта</label>
           <p class="item__tile_form">
             Укажите не более трех целей проекта. Каждая цель должна отражать
             назначение проекта и прогнозируемый результат.
           </p>
           <textarea
-            name=""
-            id=""
+            name="project_target"
+            id="project_target"
+            v-model="project.project_target"
             cols="30"
             rows="10"
             placeholder="Осноная цель проекта"
+            maxlength="1000"
           ></textarea>
+          <span class="maxlength__inp">{{
+            project.project_target &&
+            `Осталось символов - ${1000 - project.project_target.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Презентация проекта</label>
+          <label for="project_presentations">Презентация проекта</label>
           <p class="item__tile_form">
             Приложите не более 5 слайдов. Можно прикрепить документы в формате
             PDF. Презентация может содержать описание проекта (технологическую
@@ -392,9 +516,40 @@
             необходимые визуальные материалы (структура проекта, эскизы
             интерфейса и пр.).
           </p>
+          <div class="btn__file">
+            <div class="fileUploadInput">
+              <input
+                type="file"
+                name="project_presentations"
+                id="project_presentations"
+                @change="(e) => setProjectFile(e, 1)"
+              />
+              <button>ВЫБРАТЬ</button>
+            </div>
+            <div class="progress prg1" :val="fileProgress" v-if="fileProgress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                :style="{ width: fileProgress + '%' }"
+              >
+                <p>{{ fileProgress + "%" }}</p>
+              </div>
+            </div>
+            <div
+              class="maxlength__inp"
+              v-if="
+                project.project_presentations || fileProgress || fileCurrent
+              "
+            >
+              {{
+                fileCurrent ||
+                "Загруженный файл - " + project.project_presentations
+              }}
+            </div>
+          </div>
         </div>
         <div class="form__item">
-          <label for="">Видео о проекте</label>
+          <label for="project_video">Видео о проекте</label>
           <p class="item__tile_form">
             В качестве дополнительной информации можно привести ссылку на снятый
             командой проекта и размещенный в открытом доступе ролик об идеи
@@ -402,20 +557,65 @@
             руководителя и команды, репортаж или исследование о целевой
             аудитории, проблеме и попытках ее решения и пр.
           </p>
-          <input type="text" name="" id="" />
+          <input
+            type="text"
+            name="project_video"
+            id="project_video"
+            v-model="project.project_video"
+          />
         </div>
         <div class="form__item">
-          <label for="">Логотип проекта</label>
+          <label for="project_logo">Логотип проекта</label>
           <p class="item__tile_form">
             Рекомендуем прикрепить файл с логотипом в формате .png с прозрачным
             фоном
           </p>
+          <div class="btn__file">
+            <div class="fileUploadInput">
+              <input
+                type="file"
+                name="project_logo"
+                id="project_logo"
+                @change="(e) => setProjectFile(e, 3)"
+              />
+              <button>ВЫБРАТЬ</button>
+            </div>
+            <div
+              class="progress prg1"
+              :val="fileProgress_project_logo"
+              v-if="fileProgress_project_logo"
+            >
+              <div
+                class="progress-bar"
+                role="progressbar"
+                :style="{ width: fileProgress_project_logo + '%' }"
+              >
+                <p>{{ fileProgress_project_logo + "%" }}</p>
+              </div>
+            </div>
+            <div
+              class="maxlength__inp"
+              v-if="
+                project.project_logo ||
+                fileProgress_project_logo ||
+                fileCurrent_project_logo
+              "
+            >
+              {{
+                fileCurrent_project_logo ||
+                "Загруженный файл - " + project.project_logo
+              }}
+            </div>
+          </div>
         </div>
         <div class="form__item">
           <div class="checkboxes">
-            <input id="a" type="checkbox" /><label
-              class="green-background"
-              for="a"
+            <input
+              id="	project_mts"
+              type="checkbox"
+              name="project_mts"
+              v-model="project.project_mts"
+            /><label class="green-background" for="	project_mts"
               >Участник региональной программы
               <a href="">Social Idea 2021 «IT-Start»</a></label
             >
@@ -435,11 +635,24 @@
         <p class="item__team_title">Команда проекта и роли</p>
         <p class="item__team_title_2">Руководитель проекта</p>
         <div class="form__item">
-          <label for="">ФИО руководителя проекта</label>
-          <input type="text" name="" id="" placeholder="Иванов Иван Иванович" />
+          <label for="project_main_fio">ФИО руководителя проекта</label>
+          <input
+            type="text"
+            name="project_main_fio"
+            id="project_main_fio"
+            v-model="project.project_main_fio"
+            placeholder="Иванов Иван Иванович"
+            maxlength="150"
+          />
+          <span class="maxlength__inp">{{
+            project.project_main_fio &&
+            `Осталось символов - ${150 - project.project_main_fio.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Информация о руководителе проекта</label>
+          <label for="project_main_info"
+            >Информация о руководителе проекта</label
+          >
           <p class="item__tile_form">
             Здесь необходимо указать образовательный и профессиональный опыт и
             квалификацию, организаторские способности, реализованные кейсы, опыт
@@ -447,44 +660,96 @@
             в сфере IT.
           </p>
           <textarea
-            name=""
-            id=""
+            name="project_main_info"
+            id="project_main_info"
+            v-model="project.project_main_info"
             cols="30"
             rows="10"
             placeholder="Руководитель проекта - Иванов Иван..."
+            maxlength="1000"
           ></textarea>
+          <span class="maxlength__inp">{{
+            project.project_main_info &&
+            `Осталось символов - ${1000 - project.project_main_info.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Мобильный телефон руководителя проекта</label>
-          <input type="text" name="" id="" placeholder="+7 988 888 88 88" />
+          <label for="project_main_phone"
+            >Мобильный телефон руководителя проекта</label
+          >
+          <input
+            type="text"
+            name="project_main_phone"
+            id="project_main_phone"
+            v-model="project.project_main_phone"
+            placeholder="+7 988 888 88 88"
+            maxlength="100"
+          />
+          <span class="maxlength__inp">{{
+            project.project_main_phone &&
+            `Осталось символов - ${100 - project.project_main_phone.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Возраст руководителя проекта</label>
-          <input type="number" name="" id="" placeholder="33" />
+          <label for="project_main_years">Возраст руководителя проекта</label>
+          <input
+            type="number"
+            name="project_main_years"
+            v-model="project.project_main_years"
+            id="project_main_years"
+            placeholder="33"
+          />
         </div>
         <div class="form__item">
           <label for="">Ссылки на социальные сети</label>
-          <input type="text" name="" id="" placeholder="ссылка 1" />
+          <input
+            type="text"
+            name="project_main_social_links_1"
+            id="project_main_social_links_1"
+            v-model="project.project_main_social_links_1"
+            placeholder="ссылка 1"
+          />
           <br />
-          <input type="text" name="" id="" placeholder="ссылка 2" />
+          <input
+            type="text"
+            name="project_main_social_links_2"
+            id="project_main_social_links_2"
+            v-model="project.project_main_social_links_2"
+            placeholder="ссылка 2"
+          />
           <br />
-          <input type="text" name="" id="" placeholder="ссылка 3" />
+          <input
+            type="text"
+            name="project_main_social_links_3"
+            id="project_main_social_links_3"
+            v-model="project.project_main_social_links_3"
+            placeholder="ссылка 3"
+          />
         </div>
         <div class="form__item">
-          <label for="">Участники команды</label>
+          <label for="project_main_teams">Участники команды</label>
           <textarea
-            name=""
-            id=""
+            name="project_main_teams"
+            id="project_main_teams"
+            v-model="project.project_main_teams"
             cols="30"
             rows="10"
             placeholder="Участник команды - Иванов Иван..."
+            maxlength="2000"
           ></textarea>
+          <span class="maxlength__inp">{{
+            project.project_main_teams &&
+            `Осталось символов - ${2000 - project.project_main_teams.length}`
+          }}</span>
         </div>
         <div class="form__item">
           <div class="checkboxes">
-            <input id="bb" type="checkbox" /><label
-              class="green-background"
-              for="bb"
+            <input
+              id="project_main_security1"
+              type="checkbox"
+              name="project_main_security"
+              v-model="project.project_main_security"
+            /><label class="green-background" for="project_main_security1"
               >Я даю свое согласие на обработку персональных данных</label
             >
           </div>
@@ -499,7 +764,7 @@
         v-if="project.stages === 2 && project.project_ready === 'product'"
       >
         <div class="form__item">
-          <label for="">Название проекта</label>
+          <label for="project_name">Название проекта</label>
           <p class="item__tile_form">
             Название проекта следует писать без кавычек с заглавной буквы и без
             точки в конце.
@@ -507,10 +772,21 @@
           <p class="item__title__alert">
             ! После подачи заявки название проекта не подлежит изменению.
           </p>
-          <input type="text" name="" id="" placeholder="Молоды сердцем" />
+          <input
+            type="text"
+            name="project_name"
+            id="project_name"
+            v-model="project.project_name"
+            placeholder="Молоды сердцем"
+            maxlength="150"
+          />
+          <span class="maxlength__inp">{{
+            project.project_name &&
+            `Осталось символов - ${150 - project.project_name.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Краткое описание проекта</label>
+          <label for="project_body">Краткое описание проекта</label>
           <p class="item__tile_form">
             Описание, отражающее основную идею проекта, целевую аудиторию,
             содержание проекта и наиболее значимые ожидаемые результаты. Для
@@ -519,43 +795,61 @@
             предназначен проект?».
           </p>
           <textarea
-            name=""
-            id=""
+            name="project_body"
+            id="project_body"
+            v-model="project.project_body"
             cols="30"
             rows="10"
             placeholder="Основная идея проекта заключается в "
+            maxlength="1000"
           ></textarea>
+          <span class="maxlength__inp">{{
+            project.project_body &&
+            `Осталось символов - ${1000 - project.project_body.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Социальная значимость проекта</label>
+          <label for="project_social">Социальная значимость проекта</label>
           <p class="item__tile_form">
             Расскажите, на решение какой именно проблемы направлен проект, и
             обозначьте ее социальную значимость.
           </p>
           <textarea
-            name=""
-            id=""
+            name="project_social"
+            id="project_social"
+            v-model="project.project_social"
             cols="30"
             rows="10"
             placeholder="Наш проект направлен на решение "
+            maxlength="1000"
           ></textarea>
+          <span class="maxlength__inp">{{
+            project.project_social &&
+            `Осталось символов - ${1000 - project.project_social.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Цели проекта</label>
+          <label for="project_target">Цели проекта</label>
           <p class="item__tile_form">
             Укажите не более трех целей проекта. Каждая цель должна отражать
             назначение проекта и прогнозируемый результат.
           </p>
           <textarea
-            name=""
-            id=""
+            name="project_target"
+            id="project_target"
+            v-model="project.project_target"
             cols="30"
             rows="10"
             placeholder="Осноная цель проекта"
+            maxlength="1000"
           ></textarea>
+          <span class="maxlength__inp">{{
+            project.project_target &&
+            `Осталось символов - ${1000 - project.project_target.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Презентация проекта</label>
+          <label for="project_presentations">Презентация проекта</label>
           <p class="item__tile_form">
             Приложите не более 10 слайдов. Можно прикрепить документы в формате
             PDF. Презентация может содержать описание проекта, социальную
@@ -566,28 +860,136 @@
             договоренностей с потребителями продукта, необходимые визуальные
             материалы (структура проекта, эскизы интерфейса и пр.)
           </p>
+          <div class="btn__file">
+            <div class="fileUploadInput">
+              <input
+                type="file"
+                name="project_presentations"
+                id="project_presentations"
+                @change="(e) => setProjectFile(e, 1)"
+              />
+              <button>ВЫБРАТЬ</button>
+            </div>
+            <div class="progress prg1" :val="fileProgress" v-if="fileProgress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                :style="{ width: fileProgress + '%' }"
+              >
+                <p>{{ fileProgress + "%" }}</p>
+              </div>
+            </div>
+            <div
+              class="maxlength__inp"
+              v-if="
+                project.project_presentations || fileProgress || fileCurrent
+              "
+            >
+              {{
+                fileCurrent ||
+                "Загруженный файл - " + project.project_presentations
+              }}
+            </div>
+          </div>
         </div>
         <div class="form__item">
-          <label for="">Дополнительные материалы</label>
+          <label for="project_files_1">Дополнительные материалы</label>
           <p class="item__tile_form">
             При желании вы можете приложить до 5 документов, связанных с
             проектом. Это могут быть рекомендации и письма поддержки, грамоты и
             дипломы, исследования целевой аудитории и проблемы, публикации на
             тему проекта и пр.
           </p>
+          <div class="btn__file">
+            <div class="fileUploadInput">
+              <input
+                type="file"
+                name="project_files_1"
+                id="project_files_1"
+                @change="(e) => setProjectFile(e, 2)"
+              />
+              <button>ВЫБРАТЬ</button>
+            </div>
+            <div
+              class="progress prg1"
+              :val="fileProgress_project_files_1"
+              v-if="fileProgress_project_files_1"
+            >
+              <div
+                class="progress-bar"
+                role="progressbar"
+                :style="{ width: fileProgress_project_files_1 + '%' }"
+              >
+                <p>{{ fileProgress_project_files_1 + "%" }}</p>
+              </div>
+            </div>
+            <div
+              class="maxlength__inp"
+              v-if="
+                project.project_files_1 ||
+                fileProgress_project_files_1 ||
+                fileCurrent_project_files_1
+              "
+            >
+              {{
+                fileCurrent_project_files_1 ||
+                "Загруженный файл - " + project.project_files_1
+              }}
+            </div>
+          </div>
         </div>
         <div class="form__item">
-          <label for="">Логотип проекта</label>
+          <label for="project_logo">Логотип проекта</label>
           <p class="item__tile_form">
             Рекомендуем прикрепить файл с логотипом в формате .png с прозрачным
             фоном
           </p>
+          <div class="btn__file">
+            <div class="fileUploadInput">
+              <input
+                type="file"
+                name="project_logo"
+                id="project_logo"
+                @change="(e) => setProjectFile(e, 3)"
+              />
+              <button>ВЫБРАТЬ</button>
+            </div>
+            <div
+              class="progress prg1"
+              :val="fileProgress_project_logo"
+              v-if="fileProgress_project_logo"
+            >
+              <div
+                class="progress-bar"
+                role="progressbar"
+                :style="{ width: fileProgress_project_logo + '%' }"
+              >
+                <p>{{ fileProgress_project_logo + "%" }}</p>
+              </div>
+            </div>
+            <div
+              class="maxlength__inp"
+              v-if="
+                project.project_logo ||
+                fileProgress_project_logo ||
+                fileCurrent_project_logo
+              "
+            >
+              {{
+                fileCurrent_project_logo ||
+                "Загруженный файл - " + project.project_logo
+              }}
+            </div>
+          </div>
         </div>
         <div class="form__item">
           <div class="checkboxes">
-            <input id="h" type="checkbox" /><label
-              class="green-background"
-              for="h"
+            <input
+              id="project_mts2"
+              type="checkbox"
+              name="project_mts"
+              v-model="project.project_mts"
+            /><label class="green-background" for="project_mts2"
               >Проект соответствует бизнес-стратегии и стратегии корпоративной
               социальной ответственности Компании МТС</label
             >
@@ -600,7 +1002,7 @@
           </p>
         </div>
         <div class="form__item">
-          <label for="">Видео о проекте</label>
+          <label for="project_video">Видео о проекте</label>
           <p class="item__tile_form">
             В качестве дополнительной информации можно привести ссылку на снятый
             командой проекта и размещенный в открытом доступе ролик о проекте
@@ -608,7 +1010,13 @@
             команды, репортаж или исследование о целевой аудитории, проблеме и
             попытках ее решения и пр.
           </p>
-          <input type="text" name="" id="" placeholder="Ссылка" />
+          <input
+            type="text"
+            name="project_video"
+            id="project_video"
+            v-model="project.project_video"
+            placeholder="Ссылка"
+          />
         </div>
       </section>
       <section
@@ -618,11 +1026,24 @@
         <p class="item__team_title">Команда проекта и роли</p>
         <p class="item__team_title_2">Руководитель проекта</p>
         <div class="form__item">
-          <label for="">ФИО руководителя проекта</label>
-          <input type="text" name="" id="" placeholder="Иванов Иван Иванович" />
+          <label for="project_main_fio">ФИО руководителя проекта</label>
+          <input
+            type="text"
+            name="project_main_fio"
+            v-model="project.project_main_fio"
+            id="project_main_fio"
+            placeholder="Иванов Иван Иванович"
+            maxlength="150"
+          />
+          <span class="maxlength__inp">{{
+            project.project_main_fio &&
+            `Осталось символов - ${150 - project.project_main_fio.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Информация о руководителе проекта</label>
+          <label for="project_main_info"
+            >Информация о руководителе проекта</label
+          >
           <p class="item__tile_form">
             Здесь необходимо указать образовательный и профессиональный опыт и
             квалификацию, организаторские способности, реализованные кейсы, опыт
@@ -630,44 +1051,96 @@
             в сфере IT.
           </p>
           <textarea
-            name=""
-            id=""
+            name="project_main_info"
+            id="project_main_info"
+            v-model="project.project_main_info"
             cols="30"
             rows="10"
             placeholder="Руководитель проекта - Иванов Иван..."
+            maxlength="1000"
           ></textarea>
+          <span class="maxlength__inp">{{
+            project.project_main_info &&
+            `Осталось символов - ${1000 - project.project_main_info.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Мобильный телефон руководителя проекта</label>
-          <input type="text" name="" id="" placeholder="+7 988 888 88 88" />
+          <label for="project_main_phone"
+            >Мобильный телефон руководителя проекта</label
+          >
+          <input
+            type="text"
+            name="project_main_phone"
+            id="project_main_phone"
+            v-model="project.project_main_phone"
+            placeholder="+7 988 888 88 88"
+            maxlength="100"
+          />
+          <span class="maxlength__inp">{{
+            project.project_main_phone &&
+            `Осталось символов - ${100 - project.project_main_phone.length}`
+          }}</span>
         </div>
         <div class="form__item">
-          <label for="">Возраст руководителя проекта</label>
-          <input type="number" name="" id="" placeholder="33" />
+          <label for="project_main_years">Возраст руководителя проекта</label>
+          <input
+            type="number"
+            name="project_main_years"
+            v-model="project.project_main_years"
+            id="project_main_years"
+            placeholder="33"
+          />
         </div>
         <div class="form__item">
           <label for="">Ссылки на социальные сети</label>
-          <input type="text" name="" id="" placeholder="ссылка 1" />
+          <input
+            type="text"
+            name="project_main_social_links_1"
+            v-model="project.project_main_social_links_1"
+            id="project_main_social_links_1"
+            placeholder="ссылка 1"
+          />
           <br />
-          <input type="text" name="" id="" placeholder="ссылка 2" />
+          <input
+            type="text"
+            name="project_main_social_links_2"
+            v-model="project.project_main_social_links_2"
+            id="project_main_social_links_2"
+            placeholder="ссылка 2"
+          />
           <br />
-          <input type="text" name="" id="" placeholder="ссылка 3" />
+          <input
+            type="text"
+            name="project_main_social_links_3"
+            v-model="project.project_main_social_links_3"
+            id="project_main_social_links_3"
+            placeholder="ссылка 3"
+          />
         </div>
         <div class="form__item">
-          <label for="">Участники команады</label>
+          <label for="project_main_teams">Участники команады</label>
           <textarea
-            name=""
-            id=""
+            name="project_main_teams"
+            id="project_main_teams"
+            v-model="project.project_main_teams"
             cols="30"
             rows="10"
             placeholder="Участник команды - Иванов Иван..."
+            maxlength="2000"
           ></textarea>
+          <span class="maxlength__inp">{{
+            project.project_main_teams &&
+            `Осталось символов - ${2000 - project.project_main_teams.length}`
+          }}</span>
         </div>
         <div class="form__item">
           <div class="checkboxes">
-            <input id="j" type="checkbox" /><label
-              class="green-background"
-              for="j"
+            <input
+              id="project_main_security2"
+              type="checkbox"
+              name="project_main_security"
+              v-model="project.project_main_security"
+            /><label class="green-background" for="project_main_security2"
               >Я даю свое согласие на обработку персональных данных</label
             >
           </div>
@@ -684,7 +1157,12 @@
           @click.prevent="multiClickPrev"
         >
           Назад
-          <img loading="lazy" class="prev" src="/assets/img/right-arrow_si.svg" alt="" />
+          <img
+            loading="lazy"
+            class="prev"
+            src="/assets/img/right-arrow_si.svg"
+            alt=""
+          />
         </a>
         <a
           class="btn btn-primary btn__next"
@@ -695,9 +1173,10 @@
           <img loading="lazy" src="/assets/img/right-arrow_si.svg" alt="" />
         </a>
       </div>
-      <!-- <div>
-        <button type="submit">123</button>
-      </div> -->
+        <div class="main__btns">
+        <a @click.prevent="multiSend">Сохранить</a>
+        <a @click.prevent="modalSendProject" v-if="project.stages === 3">Отправить проект</a>
+        </div>
     </form>
   </div>
 </template>
@@ -710,6 +1189,14 @@ export default {
       totalStep: 3,
       loading: true,
       project: [],
+      fileProgress: 0,
+      fileCurrent: "",
+      fileProgress_project_files_1: 0,
+      fileCurrent_project_files_1: "",
+      fileProgress_project_logo: 0,
+      fileCurrent_project_logo: "",
+      isAlertVisible: false,
+      isSendProjectVisible:false,
     };
   },
   methods: {
@@ -721,6 +1208,10 @@ export default {
       this.prevStep();
       this.updateProject();
     },
+    multiSend() {
+      this.updateProject();
+      this.alertsModal();
+    },
     nextStep() {
       this.project.stages++;
       this.loading = true;
@@ -729,16 +1220,88 @@ export default {
       this.project.stages--;
       this.loading = true;
     },
+    alertsModal() {
+      this.isAlertVisible = true
+      setTimeout(()=>{
+        this.isAlertVisible = false
+      }, 5500)
+    },
+    alertsModalClose() {
+      this.isAlertVisible = false
+    },
+    modalSendProject() {
+      this.isSendProjectVisible = true
+    },
+    modalSendProjectClose() {
+      this.isSendProjectVisible = false
+    },
+    multiSendProject(){
+      this.sendProject();
+      window.location.href = '/home'
+    },
     updateProject() {
       axios
         .post("/updateProject", this.project)
+        .then((response) => {})
+        .catch((error) => {
+          alert("Возникла ошибка. Перезагрузите страницу и попробуйте снова!");
+        })
+        .finally(() => (this.loading = false));
+    },
+    sendProject() {
+      axios
+        .post("/sendProject", this.peoject)
+        .then((response) => {})
+        .catch((error) => {
+          alert("Возникла ошибка. Перезагрузите страницу и попробуйте снова!");
+        })
+        .finally(() => (this.loading = false));
+    },
+    setProjectFile(e, id) {
+      // const file = document.querySelector("#project_presentations").files[0];
+      const file = e.target.files[0];
+      const formData = new FormData();
+      formData.append(`file${id}`, file);
+      axios
+        .post("/updateProject", formData, {
+          onUploadProgress: (itemUpload) => {
+            if (`file${id}` === "file1") {
+              this.fileProgress = Math.round(
+                (itemUpload.loaded / itemUpload.total) * 100
+              );
+              this.fileCurrent = "Загрузка файла";
+            }
+            if (`file${id}` === "file2") {
+              this.fileProgress_project_files_1 = Math.round(
+                (itemUpload.loaded / itemUpload.total) * 100
+              );
+              this.fileCurrent_project_files_1 = "Загрузка файла";
+            }
+            if (`file${id}` === "file3") {
+              this.fileProgress_project_logo = Math.round(
+                (itemUpload.loaded / itemUpload.total) * 100
+              );
+              this.fileCurrent_project_logo = "Загрузка файла";
+            }
+          },
+        })
         .then((response) => {
+          if (`file${id}` === "file1") {
+            this.fileProgress = 0;
+            this.fileCurrent = "Загруженный файл - " + file.name;
+          }
+          if (`file${id}` === "file2") {
+            this.fileProgress_project_logo = 0;
+            this.fileCurrent_project_logo = "Загруженный файл - " + file.name;
+          }
+          if (`file${id}` === "file3") {
+            this.fileProgress_project_logo = 0;
+            this.fileCurrent_project_logo = "Загруженный файл - " + file.name;
+          }
         })
         .catch((error) => {
-         
-        })
-        .finally(() => (this.loading = false))
-        ;
+          alert("Возникла ошибка. Перезагрузите страницу и попробуйте снова!");
+        });
     },
   },
   mounted() {
