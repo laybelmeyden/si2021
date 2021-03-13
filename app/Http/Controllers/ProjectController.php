@@ -215,6 +215,9 @@ class ProjectController extends Controller
     }
     public function showProject(Project $project)
     {
-        return Project::first()->get();
+        $user = Auth::user();
+        $project = Project::where('user_id', $user->id)->first();
+
+        return $project;
     }
 }
