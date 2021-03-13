@@ -155,12 +155,11 @@ class ProjectController extends Controller
 
         $to_email = 'siberian-patriot@anoasi.com';
         $to_name = 'Social Idea 2021';
-        $data = array(
-            'email' => request('email'),
-        );
-        \Mail::send('email.sendproject', $data, function ($message) use ($data, $to_email, $to_name) {
+        $user_mail = $user->email;
+        dd($user_mail);
+        \Mail::send('email.sendproject', function ($message) use ($user_mail, $to_email, $to_name) {
             $message->from($to_email);
-            $message->to($data['email'], $to_name)->subject('Уведомление');
+            $message->to($user_mail, $to_name)->subject('Уведомление');
         });
 
         $project->save();
