@@ -156,12 +156,9 @@ class ProjectController extends Controller
 
         $to_email = 'notificationsocialidea@gmail.com';
         $to_name = 'Social Idea 2021';
-        $data = array(
-            'email' => request('email'),
-        );
-        \Mail::send('email.sendproject', $data, function ($message) use ($data, $to_email, $to_name) {
+        \Mail::send('email.sendproject', function ($message) use ($to_email, $to_name) {
             $message->from($to_email);
-            $message->to($data['email'], $to_name)->subject('Уведомление');
+            $message->to(Auth::user()->email, $to_name)->subject('Уведомление');
         });
 
         return redirect('/home');
