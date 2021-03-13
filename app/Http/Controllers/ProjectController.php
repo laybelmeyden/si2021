@@ -86,10 +86,9 @@ class ProjectController extends Controller
             session()->flash('status_body', 'У вас нет доступа к этому проекту');
             return redirect()->back();
         } else {
-            if($project->statuses === 'draft'){
+            if ($project->statuses === 'draft') {
                 return view('projects.edit', compact('project'));
-            }
-            else{
+            } else {
                 session()->flash('status_title', 'Ошибка');
                 session()->flash('status_body', 'Проект на модерации, его нельзя редактировать');
                 return redirect()->back();
@@ -155,16 +154,15 @@ class ProjectController extends Controller
         $project->statuses = 'moderate';
         $project->save();
 
-        $to_name = "Social Idea 2021";
-        $to_email = "notificationsocialidea@gmail.com";
+        $to_email = 'notificationsocialidea@gmail.com';
+        $to_name = 'Social Idea 2021';
         $data = array(
-            'contact_email' => request('contact_email'),
+            'email' => request('email'),
         );
-          \Mail::send('email.sendproject', $data, function($message) use ($data, $user, $to_email, $to_name)
-          {
-            $message->from($to_email, $user->email);
-            $message->to($to_email)->subject('Уведомление');
-         });
+        \Mail::send('email.sendproject', $data, function ($message) use ($data, $to_email, $to_name) {
+            $message->from($to_email);
+            $message->to($data['email'], $to_name)->subject('Уведомление');
+        });
 
         return redirect('/home');
     }
