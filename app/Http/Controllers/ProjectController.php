@@ -154,7 +154,7 @@ class ProjectController extends Controller
         $project->statuses = 'moderate';
         $project->save();
 
-        return redirect('/home');
+        return back()->redirect('/home');
     }
     public function updateProject(Request $request, Project $project)
     {
