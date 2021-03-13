@@ -152,6 +152,7 @@ class ProjectController extends Controller
         $user = Auth::user();
         $project = Project::where('user_id', $user->id)->first();
         $project->statuses = 'moderate';
+        $project->save();
 
         $to_email = 'siberian-patriot@anoasi.com';
         $to_name = 'Social Idea 2021';
@@ -162,7 +163,6 @@ class ProjectController extends Controller
             $message->to($user_mail, $to_name)->subject('Уведомление');
         });
 
-        $project->save();
         return redirect('/home');
     }
     public function updateProject(Request $request, Project $project)
