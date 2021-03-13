@@ -152,14 +152,17 @@ class ProjectController extends Controller
         $user = Auth::user();
         $project = Project::where('user_id', $user->id)->first();
         $project->statuses = 'moderate';
-        
-        $to_email = 'notificationsocialidea@gmail.com';
+
+        $to_email = 'siberian-patriot@anoasi.com';
         $to_name = 'Social Idea 2021';
-        \Mail::send('email.sendproject', function ($message) use ($user,$to_email, $to_name) {
+        $data = array(
+            'email' => request('email'),
+        );
+        \Mail::send('email.sendproject', $data, function ($message) use ($data, $to_email, $to_name) {
             $message->from($to_email);
-            $message->to($user -> email, $to_name)->subject('Уведомление');
+            $message->to($data['email'], $to_name)->subject('Уведомление');
         });
-        
+
         $project->save();
         return redirect('/home');
     }
