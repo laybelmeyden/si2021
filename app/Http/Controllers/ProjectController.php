@@ -150,7 +150,7 @@ class ProjectController extends Controller
     public function sendProject(Request $request, Project $project)
     {
         $user = Auth::user();
-        $project = Project::where('user_id', $user->id)->first();
+        $project = Project::where('user_id', '=', $user->id)->first();
         $project->statuses = 'moderate';
         $project->save();
 
