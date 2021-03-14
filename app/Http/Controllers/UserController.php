@@ -32,8 +32,8 @@ class UserController extends Controller
 
         $user->save();
 
-        session()->flash('status_title', 'начать заполнять проект вы сможете не позднее 15.03!');
-        session()->flash('status_body', 'А пока посмотрите положение конкурса и критерии оценок на сайте :)');
+        session()->flash('status_title', 'Сохранено');
+        session()->flash('status_body', 'Ваш профиль был успешно сохранен !');
         return redirect()->back();
     }
     public function allUsers()

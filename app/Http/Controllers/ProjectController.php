@@ -154,7 +154,7 @@ class ProjectController extends Controller
         $project->statuses = 'moderate';
         $project->save();
 
-        return redirect('/home');
+        return view('home');
     }
     public function updateProject(Request $request, Project $project)
     {
@@ -172,18 +172,20 @@ class ProjectController extends Controller
         if ($request->filled('project_social')) $project->project_social = $request->project_social;
         if ($request->filled('project_target')) $project->project_target = $request->project_target;
         if ($request->has('file1')) {
-            $fileName = $request->file('file1')->getClientOriginalName();
-            $path = $request->file('file1')->move(public_path('/storage/files__project'), $fileName);
+            $file = $request->file('file1');
+            $fileName = $file->store('/public/files__project');
+            // $fileName = $file->getClientOriginalName();
+            // $file->move(public_path('/storage/files__project'), $fileName);
             $project->project_presentations = $fileName;
         }
         if ($request->has('file2')) {
-            $fileName = $request->file('file2')->getClientOriginalName();
-            $path = $request->file('file2')->move(public_path('/storage/files__project'), $fileName);
+            $file = $request->file('file2');
+            $fileName = $file->store('/public/files__project');
             $project->project_files_1 = $fileName;
         }
         if ($request->has('file3')) {
-            $fileName = $request->file('file3')->getClientOriginalName();
-            $path = $request->file('file3')->move(public_path('/storage/files__project'), $fileName);
+            $file = $request->file('file3');
+            $fileName = $file->store('/public/files__project');
             $project->project_logo = $fileName;
         }
         if ($request->filled('project_video')) $project->project_video = $request->project_video;

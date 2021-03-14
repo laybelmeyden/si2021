@@ -15,11 +15,15 @@
   </div>
   <div v-else>
     <h1>МОЙ ПРОЕКТ</h1>
-     <div id="modalflat__save" class="modal_alert" v-if="isAlertVisible">
+    <div id="modalflat__save" class="modal_alert" v-if="isAlertVisible">
       <div class="modal_alert__container">
         <h4 class="alert_title">Сохранено</h4>
         <p class="alert_down">Ваш проект успешно сохранен</p>
-        <a class="btn btn-primary btn_ok" role="button" @click="alertsModalClose">
+        <a
+          class="btn btn-primary btn_ok"
+          role="button"
+          @click="alertsModalClose"
+        >
           Хорошо
           <img loading="lazy" src="/assets/img/right-arrow_si.svg" alt="" />
         </a>
@@ -27,31 +31,36 @@
     </div>
     <div id="modalflat__save" class="modal_alert" v-if="isSendProjectVisible">
       <div class="modal_alert__container">
-        <h4 class="alert_title">Вы точно хотите отправить проект на конкурс?</h4>
-        <p class="alert_down">Отправка заявки на конкурс возможна до 25.06.21 года и только после того, как заполнены все обязательные поля!
-        <br><br>
-        Внимание: после нажатия кнопки "Отправить" отредактировать заявку будет невозможно!</p>
+        <h4 class="alert_title">
+          Вы точно хотите отправить проект на конкурс?
+        </h4>
+        <p class="alert_down">
+          Отправка заявки на конкурс возможна до 25.06.21 года и только после
+          того, как заполнены все обязательные поля! <br /><br />
+          Внимание: после нажатия кнопки "Отправить" отредактировать заявку
+          будет невозможно!
+        </p>
         <div class="form__item_btns">
-        <a
-          class="btn btn-primary btn__next btn_prev"
-          @click.prevent="modalSendProjectClose"
-        >
-          Назад
-          <img
-            loading="lazy"
-            class="prev"
-            src="/assets/img/right-arrow_si.svg"
-            alt=""
-          />
-        </a>
-        <a
-          class="btn btn-primary btn__next"
-          @click.prevent="multiSendProject"
-        >
-          Отправить
-          <img loading="lazy" src="/assets/img/right-arrow_si.svg" alt="" />
-        </a>
-      </div>
+          <a
+            class="btn btn-primary btn__next btn_prev"
+            @click.prevent="modalSendProjectClose"
+          >
+            Назад
+            <img
+              loading="lazy"
+              class="prev"
+              src="/assets/img/right-arrow_si.svg"
+              alt=""
+            />
+          </a>
+          <a
+            class="btn btn-primary btn__next"
+            @click.prevent="multiSendProject"
+          >
+            Отправить
+            <img loading="lazy" src="/assets/img/right-arrow_si.svg" alt="" />
+          </a>
+        </div>
       </div>
     </div>
     <form
@@ -522,7 +531,7 @@
                 type="file"
                 name="project_presentations"
                 id="project_presentations"
-                @change="(e) => setProjectFile(e, 1)"
+                @change="setProjectFilePresent"
               />
               <button>ВЫБРАТЬ</button>
             </div>
@@ -543,7 +552,7 @@
             >
               {{
                 fileCurrent ||
-                "Загруженный файл - " + project.project_presentations
+                "Загруженный файл - " + project.project_presentations.slice(22)
               }}
             </div>
           </div>
@@ -576,34 +585,29 @@
                 type="file"
                 name="project_logo"
                 id="project_logo"
-                @change="(e) => setProjectFile(e, 3)"
+                @change="setProjectFileLogo"
               />
               <button>ВЫБРАТЬ</button>
             </div>
             <div
               class="progress prg1"
-              :val="fileProgress_project_logo"
-              v-if="fileProgress_project_logo"
+              :val="fileProgressLogo"
+              v-if="fileProgressLogo"
             >
               <div
                 class="progress-bar"
                 role="progressbar"
-                :style="{ width: fileProgress_project_logo + '%' }"
+                :style="{ width: fileProgressLogo + '%' }"
               >
-                <p>{{ fileProgress_project_logo + "%" }}</p>
+                <p>{{ fileProgressLogo + "%" }}</p>
               </div>
             </div>
             <div
               class="maxlength__inp"
-              v-if="
-                project.project_logo ||
-                fileProgress_project_logo ||
-                fileCurrent_project_logo
-              "
+              v-if="project.project_logo || fileProgressLogo || fileCurrentLogo"
             >
               {{
-                fileCurrent_project_logo ||
-                "Загруженный файл - " + project.project_logo
+                fileCurrentLogo || "Загруженный файл - " + project.project_logo.slice(22)
               }}
             </div>
           </div>
@@ -866,7 +870,7 @@
                 type="file"
                 name="project_presentations"
                 id="project_presentations"
-                @change="(e) => setProjectFile(e, 1)"
+                @change="setProjectFilePresent"
               />
               <button>ВЫБРАТЬ</button>
             </div>
@@ -887,7 +891,7 @@
             >
               {{
                 fileCurrent ||
-                "Загруженный файл - " + project.project_presentations
+                "Загруженный файл - " + project.project_presentations.slice(22)
               }}
             </div>
           </div>
@@ -906,34 +910,32 @@
                 type="file"
                 name="project_files_1"
                 id="project_files_1"
-                @change="(e) => setProjectFile(e, 2)"
+                @change="setProjectFileFile"
               />
               <button>ВЫБРАТЬ</button>
             </div>
             <div
               class="progress prg1"
-              :val="fileProgress_project_files_1"
-              v-if="fileProgress_project_files_1"
+              :val="fileProgressFile"
+              v-if="fileProgressFile"
             >
               <div
                 class="progress-bar"
                 role="progressbar"
-                :style="{ width: fileProgress_project_files_1 + '%' }"
+                :style="{ width: fileProgressFile + '%' }"
               >
-                <p>{{ fileProgress_project_files_1 + "%" }}</p>
+                <p>{{ fileProgressFile + "%" }}</p>
               </div>
             </div>
             <div
               class="maxlength__inp"
               v-if="
-                project.project_files_1 ||
-                fileProgress_project_files_1 ||
-                fileCurrent_project_files_1
+                project.project_files_1 || fileProgressFile || fileCurrentFile
               "
             >
               {{
-                fileCurrent_project_files_1 ||
-                "Загруженный файл - " + project.project_files_1
+                fileCurrentFile ||
+                "Загруженный файл - " + project.project_files_1.slice(22)
               }}
             </div>
           </div>
@@ -950,34 +952,29 @@
                 type="file"
                 name="project_logo"
                 id="project_logo"
-                @change="(e) => setProjectFile(e, 3)"
+                @change="setProjectFileLogo"
               />
               <button>ВЫБРАТЬ</button>
             </div>
             <div
               class="progress prg1"
-              :val="fileProgress_project_logo"
-              v-if="fileProgress_project_logo"
+              :val="fileProgressLogo"
+              v-if="fileProgressLogo"
             >
               <div
                 class="progress-bar"
                 role="progressbar"
-                :style="{ width: fileProgress_project_logo + '%' }"
+                :style="{ width: fileProgressLogo + '%' }"
               >
-                <p>{{ fileProgress_project_logo + "%" }}</p>
+                <p>{{ fileProgressLogo + "%" }}</p>
               </div>
             </div>
             <div
               class="maxlength__inp"
-              v-if="
-                project.project_logo ||
-                fileProgress_project_logo ||
-                fileCurrent_project_logo
-              "
+              v-if="project.project_logo || fileProgressLogo || fileCurrentLogo"
             >
               {{
-                fileCurrent_project_logo ||
-                "Загруженный файл - " + project.project_logo
+                fileCurrentLogo || "Загруженный файл - " + project.project_logo.slice(22)
               }}
             </div>
           </div>
@@ -1173,10 +1170,12 @@
           <img loading="lazy" src="/assets/img/right-arrow_si.svg" alt="" />
         </a>
       </div>
-        <div class="main__btns">
+      <div class="main__btns">
         <a @click.prevent="multiSend">Сохранить</a>
-        <a @click.prevent="modalSendProject" v-if="project.stages === 3">Отправить проект</a>
-        </div>
+        <a @click.prevent="modalSendProject" v-if="project.stages === 3"
+          >Отправить проект</a
+        >
+      </div>
     </form>
   </div>
 </template>
@@ -1191,12 +1190,12 @@ export default {
       project: [],
       fileProgress: 0,
       fileCurrent: "",
-      fileProgress_project_files_1: 0,
-      fileCurrent_project_files_1: "",
-      fileProgress_project_logo: 0,
-      fileCurrent_project_logo: "",
+      fileProgressFile: 0,
+      fileCurrentFile: "",
+      fileProgressLogo: 0,
+      fileCurrentLogo: "",
       isAlertVisible: false,
-      isSendProjectVisible:false,
+      isSendProjectVisible: false,
     };
   },
   methods: {
@@ -1221,23 +1220,23 @@ export default {
       this.loading = true;
     },
     alertsModal() {
-      this.isAlertVisible = true
-      setTimeout(()=>{
-        this.isAlertVisible = false
-      }, 5500)
+      this.isAlertVisible = true;
+      setTimeout(() => {
+        this.isAlertVisible = false;
+      }, 5500);
     },
     alertsModalClose() {
-      this.isAlertVisible = false
+      this.isAlertVisible = false;
     },
     modalSendProject() {
-      this.isSendProjectVisible = true
+      this.isSendProjectVisible = true;
     },
     modalSendProjectClose() {
-      this.isSendProjectVisible = false
+      this.isSendProjectVisible = false;
     },
-    multiSendProject(){
+    multiSendProject() {
       this.sendProject();
-      window.location.href = '/home'
+      window.location.href = "/home";
     },
     updateProject() {
       axios
@@ -1252,56 +1251,85 @@ export default {
       axios
         .post("/sendProject", this.peoject)
         .then((response) => {})
-        .catch((error) => {
-          alert("Возникла ошибка. Перезагрузите страницу и попробуйте снова!");
-        })
+        .catch((error) => {})
         .finally(() => (this.loading = false));
     },
-    setProjectFile(e, id) {
-      // const file = document.querySelector("#project_presentations").files[0];
-      const file = e.target.files[0];
+    setProjectFilePresent() {
+      const file = document.querySelector("#project_presentations").files[0];
       const formData = new FormData();
-      formData.append(`file${id}`, file);
-      axios
-        .post("/updateProject", formData, {
-          onUploadProgress: (itemUpload) => {
-            if (`file${id}` === "file1") {
+      formData.append("file1", file);
+      formData.append("_method", "post");
+      // console.log(file.name);
+      if (file != undefined) {
+        axios
+          .post("/updateProject", formData, {
+            onUploadProgress: (itemUpload) => {
               this.fileProgress = Math.round(
                 (itemUpload.loaded / itemUpload.total) * 100
               );
               this.fileCurrent = "Загрузка файла";
-            }
-            if (`file${id}` === "file2") {
-              this.fileProgress_project_files_1 = Math.round(
-                (itemUpload.loaded / itemUpload.total) * 100
-              );
-              this.fileCurrent_project_files_1 = "Загрузка файла";
-            }
-            if (`file${id}` === "file3") {
-              this.fileProgress_project_logo = Math.round(
-                (itemUpload.loaded / itemUpload.total) * 100
-              );
-              this.fileCurrent_project_logo = "Загрузка файла";
-            }
-          },
-        })
-        .then((response) => {
-          if (`file${id}` === "file1") {
+            },
+          })
+          .then((response) => {
             this.fileProgress = 0;
             this.fileCurrent = "Загруженный файл - " + file.name;
-          }
-          if (`file${id}` === "file2") {
-            this.fileProgress_project_logo = 0;
-            this.fileCurrent_project_logo = "Загруженный файл - " + file.name;
-          }
-          if (`file${id}` === "file3") {
-            this.fileProgress_project_logo = 0;
-            this.fileCurrent_project_logo = "Загруженный файл - " + file.name;
-          }
-        })
-        .catch((error) => {
-          alert("Возникла ошибка. Перезагрузите страницу и попробуйте снова!");
-        });
+          })
+          .catch((error) => {
+            alert(
+              "Возникла ошибка. Перезагрузите страницу и попробуйте снова!"
+            );
+          });
+      }
+    },
+    setProjectFileFile() {
+      const file = document.querySelector("#project_files_1").files[0];
+      const formData = new FormData();
+      formData.append("file2", file);
+      if (file != undefined) {
+        axios
+          .post("/updateProject", formData, {
+            onUploadProgress: (itemUpload) => {
+              this.fileProgressFile = Math.round(
+                (itemUpload.loaded / itemUpload.total) * 100
+              );
+              this.fileCurrentFile = "Загрузка файла";
+            },
+          })
+          .then((response) => {
+            this.fileProgressFile = 0;
+            this.fileCurrentFile = "Загруженный файл - " + file.name;
+          })
+          .catch((error) => {
+            alert(
+              "Возникла ошибка. Перезагрузите страницу и попробуйте снова!"
+            );
+          });
+      }
+    },
+    setProjectFileLogo() {
+      const file = document.querySelector("#project_logo").files[0];
+      const formData = new FormData();
+      formData.append("file3", file);
+      if (file != undefined) {
+        axios
+          .post("/updateProject", formData, {
+            onUploadProgress: (itemUpload) => {
+              this.fileProgressLogo = Math.round(
+                (itemUpload.loaded / itemUpload.total) * 100
+              );
+              this.fileCurrentLogo = "Загрузка файла";
+            },
+          })
+          .then((response) => {
+            this.fileProgressLogo = 0;
+            this.fileCurrentLogo = "Загруженный файл - " + file.name;
+          })
+          .catch((error) => {
+            alert(
+              "Возникла ошибка. Перезагрузите страницу и попробуйте снова!"
+            );
+          });
+      }
     },
   },
   mounted() {
@@ -1309,7 +1337,6 @@ export default {
       .get("/showProject", this.project)
       .then((response) => {
         this.project = response.data[0];
-    // console.log(this.project = response.data.id)
       })
       .finally(() => (this.loading = false));
   },
