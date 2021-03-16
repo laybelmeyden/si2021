@@ -968,7 +968,6 @@ strong {
     .swiper-container {
         max-width: 1205px;
         width: 100%;
-        height: 400px;
     }
     .swiper-button-prev,
     .swiper-button-next {
@@ -980,6 +979,7 @@ strong {
     .swiper-pagination-bullet {
         width: 12px;
         height: 12px;
+        margin-right: 5px;
     }
     .history__title {
         font-style: normal;
@@ -993,10 +993,18 @@ strong {
         padding-top: 75px;
         margin-bottom: 60px;
     }
+    .paginatins__circle {
+        width: 100%;
+        height: 24px;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .history__slide {
         .img__history {
-            width: 360px;
-            height: 343px;
+            width: 100%;
+            // height: 343px;
             min-width: 360px;
             overflow: hidden;
             display: flex;
@@ -1035,6 +1043,7 @@ strong {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        padding-bottom: 40px;
     }
     .btn__modal_history_item {
         font-style: normal;
@@ -2459,9 +2468,6 @@ strong {
         width: 100%;
         margin-left: 0;
     }
-    .history__slide img {
-        display: none;
-    }
     #history .swiper-container {
         height: 100%;
         padding-bottom: 60px;
@@ -2472,6 +2478,16 @@ strong {
     .history-prev,
     .history-next {
         display: none;
+    }
+    #history .history__slide {
+        flex-direction: column;
+    }
+    #history .history__slide .img__history {
+        width: 100%;
+        min-width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
     }
     #news .text__news {
         margin-left: 0;

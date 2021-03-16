@@ -20,14 +20,14 @@
                     <div>
                         <h3>Для партнеров:</h3>
                         <p>Елена Фролова - координатор конкурса «Social Idea»</p>
-                        <a href="mailto:SOCIALIDEA.MTS@YANDEX.RU">SOCIALIDEA.MTS@YANDEX.RU</a>
+                        <a href="mailto:fev@mts.ru">fev@mts.ru</a>
                         <a href="tel:8 (916) 514-01-40">8 (916) 514-01-40</a>
                     </div>
                     <div>
                         <h3>Для участников:</h3>
-                        <p>Владимир Шульгин – менеджер конкурса «Social Idea»</p>
-                        <a href="mailto:vs@rusinnovations.com">vs@rusinnovations.com</a>
-                        <a href="tel:8 (915) 275-69-69">8 (915) 275-69-69</a>
+                        <p>Анастасия Иванова – менеджер конкурса «Social Idea»</p>
+                        <a href="mailto:socialidea.mts@yandex.ru">socialidea.mts@yandex.ru</a>
+                        <a href="tel:+7 (904) 184 17 64">+7 (904) 184 17 64</a>
                     </div>
                 </div>
             </div>

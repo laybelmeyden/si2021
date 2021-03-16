@@ -20,6 +20,8 @@ var mySwiper = new Swiper('.swiper-container.swiper-container-history', {
         el: '.swiper-pagination',
         clickable: true,
     },
+    loop: true,
+    autoHeight: true,
     slidesPerView: 1,
     navigation: {
         prevEl: '.history-prev',

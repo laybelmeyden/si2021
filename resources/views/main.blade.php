@@ -385,113 +385,115 @@
 <section id="history">
     <div class="container">
         <p class="history__title">@lang('words.history')</p>
-        <div class="swiper-container swiper-container-history">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="history__slide">
-                        <div class="img__history">
-                        <img loading="lazy" src="assets/img/Intersect.png" alt="">
-                        </div>
-                        <div class="history__items">
-                            @if(App::isLocale('ru'))
-                            <div>
-                                <p class="history__items_title">Проект Familypass</p>
-                                <p class="history__items_untitle">Победитель конкурса «Телеком Идея-2018» в номинации CSR Tech.</p>
-                                <p class="history__items_body">Familypass – это социальный сервис и платформа-агрегатор для родителей и поставщиков услуг для детей (развивающие кружки и занятия, спортивные секции, развлекательные мероприятия, музеи, лагеря и т.д.), иными словами – единая платформа для поиска лучших детских занятий в городе.
-
-                                    Сервис единого абонемента появился в США в 2012 году. Он позволяет клиенту получать безлимитный доступ в клубы, студии и секции, которые входят в партнерскую сеть.</p>
-
+            <div class="swiper-container swiper-container-history">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="history__slide">
+                            <div class="img__history">
+                                <img loading="lazy" src="assets/img/Intersect.png" alt="">
                             </div>
-                            @else
-                            <div>
-                                <p class="history__items_title">Project Familypass</p>
-                                <p class="history__items_untitle">Winner of the Telecom Idea-2018 competition in the CSR Tech nomination.</p>
-                                <p class="history__items_body">Familypass is a social service and aggregator platform for parents and providers of services for children (educational circles and activities, sports clubs, entertainment events, museums, camps, etc.), in other words, a single platform for finding the best children's activities in the city The one-stop service was launched in the United States in 2012. It allows the client to get unlimited access to clubs, studios and sections that are part of the partner network.</p>
-                            </div>
-                            @endif
-                            <div class="btn__modal_history">
-                                <!-- <button type="button" class="btn btn__modal_history_item">@lang('words.more_info') <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <div class="history__items">
+                                @if(App::isLocale('ru'))
+                                <div>
+                                    <p class="history__items_title">Проект Familypass</p>
+                                    <p class="history__items_untitle">Победитель конкурса «Телеком Идея-2018» в номинации CSR Tech.</p>
+                                    <p class="history__items_body">Familypass – это социальный сервис и платформа-агрегатор для родителей и поставщиков услуг для детей (развивающие кружки и занятия, спортивные секции, развлекательные мероприятия, музеи, лагеря и т.д.), иными словами – единая платформа для поиска лучших детских занятий в городе.
+
+                                        Сервис единого абонемента появился в США в 2012 году. Он позволяет клиенту получать безлимитный доступ в клубы, студии и секции, которые входят в партнерскую сеть.</p>
+
+                                </div>
+                                @else
+                                <div>
+                                    <p class="history__items_title">Project Familypass</p>
+                                    <p class="history__items_untitle">Winner of the Telecom Idea-2018 competition in the CSR Tech nomination.</p>
+                                    <p class="history__items_body">Familypass is a social service and aggregator platform for parents and providers of services for children (educational circles and activities, sports clubs, entertainment events, museums, camps, etc.), in other words, a single platform for finding the best children's activities in the city The one-stop service was launched in the United States in 2012. It allows the client to get unlimited access to clubs, studios and sections that are part of the partner network.</p>
+                                </div>
+                                @endif
+                                <div class="btn__modal_history">
+                                    <!-- <button type="button" class="btn btn__modal_history_item">@lang('words.more_info') <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
                                     </svg></button> -->
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="history__slide">
-                        <div  class="img__history">
-                        <img loading="lazy" src="assets/img/photos/IMG_1270.jpg" alt="">
-                        </div>
-                        <div class="history__items">
-                            <div>
-                                <p class="history__items_title">DONORSEARCH.ORG — ИТ-ПЛАТФОРМА СООБЩЕСТВА ДОНОРОВ КРОВИ В РУНЕТЕ</p>
-                                <p class="history__items_untitle">Победитель конкурса "Social Idea 2019" в номинации Social Mobile</p>
-                                <p class="history__items_body">
-                                DONORSEARCH.ORG является IT-платформой, которая объединяет всех участников сферы донорства для совершенствования процессов вовлечения и управления потоками доноров: как действующих, так и потенциальных, а также центры крови, НКО и Бизнес.
-Проект видит своей миссией обеспечение каждого центра кровью на каждый день, необходимым количеством доноров с определён- ными параметрами крови, а значит, полностью обеспечить потреб- ности здравоохранения в донорской крови.
-                                </p>
+                    <div class="swiper-slide">
+                        <div class="history__slide">
+                            <div class="img__history">
+                                <img loading="lazy" src="assets/img/photos/IMG_1270.jpg" alt="">
+                            </div>
+                            <div class="history__items">
+                                <div>
+                                    <p class="history__items_title">DONORSEARCH.ORG — ИТ-ПЛАТФОРМА СООБЩЕСТВА ДОНОРОВ КРОВИ В РУНЕТЕ</p>
+                                    <p class="history__items_untitle">Победитель конкурса "Social Idea 2019" в номинации Social Mobile</p>
+                                    <p class="history__items_body">
+                                        DONORSEARCH.ORG является IT-платформой, которая объединяет всех участников сферы донорства для совершенствования процессов вовлечения и управления потоками доноров: как действующих, так и потенциальных, а также центры крови, НКО и Бизнес.
+                                        Проект видит своей миссией обеспечение каждого центра кровью на каждый день, необходимым количеством доноров с определён- ными параметрами крови, а значит, полностью обеспечить потреб- ности здравоохранения в донорской крови.
+                                    </p>
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="history__slide">
-                        <div  class="img__history">
-                        <img loading="lazy" src="assets/img/otkryty_gorod.png" alt="">
-                        </div>
-                        <div class="history__items">
-                            <div>
-                                <p class="history__items_title">ОТКРЫТЫЙ ГОРОД - навигационная система социальных проектов и организаций Приморского края</p>
-                                <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Mobile</p>
-                                <p class="history__items_body">
-                                «Открытый город» это веб-карта, мобильное приложение и городская офлайн навигация, которая информирует жителей о деятельности, событиях и социальных проектах некоммерческих организаций. Пользователи могут предлагать новые точки и социальные сервисы на карту. Это навигационная система, позволяющая сформировать здоровое гражданское общество за счет целевой благотворительности. У горожан формируется доверие друг к другу и желание сотрудничать и выручать не только близких, но и незнакомых людей.
-                                </p>
+                    <div class="swiper-slide">
+                        <div class="history__slide">
+                            <div class="img__history">
+                                <img loading="lazy" src="assets/img/otkryty_gorod.png" alt="">
+                            </div>
+                            <div class="history__items">
+                                <div>
+                                    <p class="history__items_title">ОТКРЫТЫЙ ГОРОД - навигационная система социальных проектов и организаций Приморского края</p>
+                                    <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Mobile</p>
+                                    <p class="history__items_body">
+                                        «Открытый город» это веб-карта, мобильное приложение и городская офлайн навигация, которая информирует жителей о деятельности, событиях и социальных проектах некоммерческих организаций. Пользователи могут предлагать новые точки и социальные сервисы на карту. Это навигационная система, позволяющая сформировать здоровое гражданское общество за счет целевой благотворительности. У горожан формируется доверие друг к другу и желание сотрудничать и выручать не только близких, но и незнакомых людей.
+                                    </p>
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="history__slide">
-                        <div  class="img__history">
-                        <img loading="lazy" src="assets/img/WinBin_logo_final_ne.png" alt="">
-                        </div>
-                        <div class="history__items">
-                            <div>
-                                <p class="history__items_title">WinBin - сервис и технологии для раздельного сбора и вывоза вторсырья</p>
-                                <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Region Project</p>
-                                <p class="history__items_body">
-                                Электронные баки и приложение с кэшбэком за правильную сортировку вторсырья. Это уникальная система сортировки отходов и сбора вторсырья через «умные» контейнеры – они открываются с помощью приложения на смартфоне и учитывают вес сданных отходов, а в соответствии с весом пользователь получает кэшбек. Проект помогает сократить вывоз отходов на полигоны и их сжигание.
-                                </p>
+                    <div class="swiper-slide">
+                        <div class="history__slide">
+                            <div class="img__history">
+                                <img loading="lazy" src="assets/img/WinBin_logo_final_ne.png" alt="">
+                            </div>
+                            <div class="history__items">
+                                <div>
+                                    <p class="history__items_title">WinBin - сервис и технологии для раздельного сбора и вывоза вторсырья</p>
+                                    <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Region Project</p>
+                                    <p class="history__items_body">
+                                        Электронные баки и приложение с кэшбэком за правильную сортировку вторсырья. Это уникальная система сортировки отходов и сбора вторсырья через «умные» контейнеры – они открываются с помощью приложения на смартфоне и учитывают вес сданных отходов, а в соответствии с весом пользователь получает кэшбек. Проект помогает сократить вывоз отходов на полигоны и их сжигание.
+                                    </p>
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="history__slide">
-                        <div  class="img__history">
-                        <img loading="lazy" src="assets/img/govoryaschiy_gorod.jpg" alt="">
-                        </div>
-                        <div class="history__items">
-                            <div>
-                                <p class="history__items_title">ГОВОРЯЩИЙ ГОРОД - система радиоинформирования и звукового ориентирования незрячих и других МГН в городской среде</p>
-                                <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Smart City</p>
-                                <p class="history__items_body">
-                                Проект помогает слепым и другим МГН безопасно и комфортно передвигаться по городу с помощью специальных сигналов оповещения. Команда проекта создала систему аудиоинформирования людей с ограничениями по зрению об обстановке вокруг, потенциально опасных участках, а также полезных локациях: магазинах, больницах, местах отдыха.
-                                </p>
+                    <div class="swiper-slide">
+                        <div class="history__slide">
+                            <div class="img__history">
+                                <img loading="lazy" src="assets/img/govoryaschiy_gorod.jpg" alt="">
+                            </div>
+                            <div class="history__items">
+                                <div>
+                                    <p class="history__items_title">ГОВОРЯЩИЙ ГОРОД - система радиоинформирования и звукового ориентирования незрячих и других МГН в городской среде</p>
+                                    <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Smart City</p>
+                                    <p class="history__items_body">
+                                        Проект помогает слепым и другим МГН безопасно и комфортно передвигаться по городу с помощью специальных сигналов оповещения. Команда проекта создала систему аудиоинформирования людей с ограничениями по зрению об обстановке вокруг, потенциально опасных участках, а также полезных локациях: магазинах, больницах, местах отдыха.
+                                    </p>
 
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-button-prev history-prev"></div>
+                <div class="swiper-button-next history-next"></div>
             </div>
+            <div class="paginatins__circle">
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev history-prev"></div>
-            <div class="swiper-button-next history-next"></div>
-        </div>
+            </div>
     </div>
 </section>
 <section id="experts">
@@ -828,23 +830,23 @@
     <div class="container">
         <p>ГаЛЕРЕЯ</p>
         <!-- <a href="/photos"> -->
-            <div class="grid-container">
-                <div>
-                    <img src="assets/img/5LB1CtQjEG0.png" alt="">
-                </div>
-                <div>
-                    <img src="assets/img/5tVefUWKR8I.png" alt="">
-                </div>
-                <div class="photos1">
-                    <img src="assets/img/IkV4mZEABp8.png" alt="">
-                </div>
-                <div class="photos2">
-                    <img src="assets/img/photos/IMG_1270.jpg" alt="">
-                </div>
-                <div class="photos3">
-                    <img src="assets/img/gQ25jEORyO4 1.png" alt="">
-                </div>
+        <div class="grid-container">
+            <div>
+                <img src="assets/img/5LB1CtQjEG0.png" alt="">
             </div>
+            <div>
+                <img src="assets/img/5tVefUWKR8I.png" alt="">
+            </div>
+            <div class="photos1">
+                <img src="assets/img/IkV4mZEABp8.png" alt="">
+            </div>
+            <div class="photos2">
+                <img src="assets/img/photos/IMG_1270.jpg" alt="">
+            </div>
+            <div class="photos3">
+                <img src="assets/img/gQ25jEORyO4 1.png" alt="">
+            </div>
+        </div>
         <!-- </a> -->
     </div>
 </section>
