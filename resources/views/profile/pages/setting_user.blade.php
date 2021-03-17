@@ -33,7 +33,11 @@
                     </div>
                     <div class="item">
                         <div class="checkboxes">
-                            <input id="a" type="checkbox"/><label class="green-background" for="a">Участник региональной программы <a href="">Social Idea 2021 «IT-Start»</a></label>
+                            <input id="check__itstart" type="checkbox" name="check__itstart"
+                            @if($user -> check__itstart === 'on')
+                                checked
+                            @endif
+                            /><label class="green-background" for="check__itstart">Участник региональной программы <a href="/">Social Idea 2021 «IT-Start»</a></label>
                         </div>
                     </div>
                     <div class="item">

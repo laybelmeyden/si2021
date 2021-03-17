@@ -39,11 +39,11 @@
                 @enderror
             </div>
             <div class="btn__submit_container">
-                @if (Route::has('password.request'))
+                <!-- @if (Route::has('password.request'))
                 <a class="btn btn-forms-remembe" href="{{ route('password.request') }}">
                     @lang('words.remembe')
                 </a>
-                @endif
+                @endif -->
                 <button type="submit" class="btn btn-primary-forms-submit">
                 @lang('words.login')
                 </button>
