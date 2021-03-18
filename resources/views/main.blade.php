@@ -385,115 +385,115 @@
 <section id="history">
     <div class="container">
         <p class="history__title">@lang('words.history')</p>
-            <div class="swiper-container swiper-container-history">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="history__slide">
-                            <div class="img__history">
-                                <img loading="lazy" src="assets/img/Intersect.png" alt="">
+        <div class="swiper-container swiper-container-history">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="history__slide">
+                        <div class="img__history">
+                            <img loading="lazy" src="assets/img/Intersect.png" alt="">
+                        </div>
+                        <div class="history__items">
+                            @if(App::isLocale('ru'))
+                            <div>
+                                <p class="history__items_title">Проект Familypass</p>
+                                <p class="history__items_untitle">Победитель конкурса «Телеком Идея-2018» в номинации CSR Tech.</p>
+                                <p class="history__items_body">Familypass – это социальный сервис и платформа-агрегатор для родителей и поставщиков услуг для детей (развивающие кружки и занятия, спортивные секции, развлекательные мероприятия, музеи, лагеря и т.д.), иными словами – единая платформа для поиска лучших детских занятий в городе.
+
+                                    Сервис единого абонемента появился в США в 2012 году. Он позволяет клиенту получать безлимитный доступ в клубы, студии и секции, которые входят в партнерскую сеть.</p>
+
                             </div>
-                            <div class="history__items">
-                                @if(App::isLocale('ru'))
-                                <div>
-                                    <p class="history__items_title">Проект Familypass</p>
-                                    <p class="history__items_untitle">Победитель конкурса «Телеком Идея-2018» в номинации CSR Tech.</p>
-                                    <p class="history__items_body">Familypass – это социальный сервис и платформа-агрегатор для родителей и поставщиков услуг для детей (развивающие кружки и занятия, спортивные секции, развлекательные мероприятия, музеи, лагеря и т.д.), иными словами – единая платформа для поиска лучших детских занятий в городе.
-
-                                        Сервис единого абонемента появился в США в 2012 году. Он позволяет клиенту получать безлимитный доступ в клубы, студии и секции, которые входят в партнерскую сеть.</p>
-
-                                </div>
-                                @else
-                                <div>
-                                    <p class="history__items_title">Project Familypass</p>
-                                    <p class="history__items_untitle">Winner of the Telecom Idea-2018 competition in the CSR Tech nomination.</p>
-                                    <p class="history__items_body">Familypass is a social service and aggregator platform for parents and providers of services for children (educational circles and activities, sports clubs, entertainment events, museums, camps, etc.), in other words, a single platform for finding the best children's activities in the city The one-stop service was launched in the United States in 2012. It allows the client to get unlimited access to clubs, studios and sections that are part of the partner network.</p>
-                                </div>
-                                @endif
-                                <div class="btn__modal_history">
-                                    <!-- <button type="button" class="btn btn__modal_history_item">@lang('words.more_info') <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            @else
+                            <div>
+                                <p class="history__items_title">Project Familypass</p>
+                                <p class="history__items_untitle">Winner of the Telecom Idea-2018 competition in the CSR Tech nomination.</p>
+                                <p class="history__items_body">Familypass is a social service and aggregator platform for parents and providers of services for children (educational circles and activities, sports clubs, entertainment events, museums, camps, etc.), in other words, a single platform for finding the best children's activities in the city The one-stop service was launched in the United States in 2012. It allows the client to get unlimited access to clubs, studios and sections that are part of the partner network.</p>
+                            </div>
+                            @endif
+                            <div class="btn__modal_history">
+                                <!-- <button type="button" class="btn btn__modal_history_item">@lang('words.more_info') <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
                                     </svg></button> -->
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="history__slide">
-                            <div class="img__history">
-                                <img loading="lazy" src="assets/img/photos/IMG_1270.jpg" alt="">
-                            </div>
-                            <div class="history__items">
-                                <div>
-                                    <p class="history__items_title">DONORSEARCH.ORG — ИТ-ПЛАТФОРМА СООБЩЕСТВА ДОНОРОВ КРОВИ В РУНЕТЕ</p>
-                                    <p class="history__items_untitle">Победитель конкурса "Social Idea 2019" в номинации Social Mobile</p>
-                                    <p class="history__items_body">
-                                        DONORSEARCH.ORG является IT-платформой, которая объединяет всех участников сферы донорства для совершенствования процессов вовлечения и управления потоками доноров: как действующих, так и потенциальных, а также центры крови, НКО и Бизнес.
-                                        Проект видит своей миссией обеспечение каждого центра кровью на каждый день, необходимым количеством доноров с определён- ными параметрами крови, а значит, полностью обеспечить потреб- ности здравоохранения в донорской крови.
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="history__slide">
-                            <div class="img__history">
-                                <img loading="lazy" src="assets/img/otkryty_gorod.png" alt="">
-                            </div>
-                            <div class="history__items">
-                                <div>
-                                    <p class="history__items_title">ОТКРЫТЫЙ ГОРОД - навигационная система социальных проектов и организаций Приморского края</p>
-                                    <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Mobile</p>
-                                    <p class="history__items_body">
-                                        «Открытый город» это веб-карта, мобильное приложение и городская офлайн навигация, которая информирует жителей о деятельности, событиях и социальных проектах некоммерческих организаций. Пользователи могут предлагать новые точки и социальные сервисы на карту. Это навигационная система, позволяющая сформировать здоровое гражданское общество за счет целевой благотворительности. У горожан формируется доверие друг к другу и желание сотрудничать и выручать не только близких, но и незнакомых людей.
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="history__slide">
-                            <div class="img__history">
-                                <img loading="lazy" src="assets/img/WinBin_logo_final_ne.png" alt="">
-                            </div>
-                            <div class="history__items">
-                                <div>
-                                    <p class="history__items_title">WinBin - сервис и технологии для раздельного сбора и вывоза вторсырья</p>
-                                    <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Region Project</p>
-                                    <p class="history__items_body">
-                                        Электронные баки и приложение с кэшбэком за правильную сортировку вторсырья. Это уникальная система сортировки отходов и сбора вторсырья через «умные» контейнеры – они открываются с помощью приложения на смартфоне и учитывают вес сданных отходов, а в соответствии с весом пользователь получает кэшбек. Проект помогает сократить вывоз отходов на полигоны и их сжигание.
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="history__slide">
-                            <div class="img__history">
-                                <img loading="lazy" src="assets/img/govoryaschiy_gorod.jpg" alt="">
-                            </div>
-                            <div class="history__items">
-                                <div>
-                                    <p class="history__items_title">ГОВОРЯЩИЙ ГОРОД - система радиоинформирования и звукового ориентирования незрячих и других МГН в городской среде</p>
-                                    <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Smart City</p>
-                                    <p class="history__items_body">
-                                        Проект помогает слепым и другим МГН безопасно и комфортно передвигаться по городу с помощью специальных сигналов оповещения. Команда проекта создала систему аудиоинформирования людей с ограничениями по зрению об обстановке вокруг, потенциально опасных участках, а также полезных локациях: магазинах, больницах, местах отдыха.
-                                    </p>
-
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-prev history-prev"></div>
-                <div class="swiper-button-next history-next"></div>
+                <div class="swiper-slide">
+                    <div class="history__slide">
+                        <div class="img__history">
+                            <img loading="lazy" src="assets/img/photos/IMG_1270.jpg" alt="">
+                        </div>
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">DONORSEARCH.ORG — ИТ-ПЛАТФОРМА СООБЩЕСТВА ДОНОРОВ КРОВИ В РУНЕТЕ</p>
+                                <p class="history__items_untitle">Победитель конкурса "Social Idea 2019" в номинации Social Mobile</p>
+                                <p class="history__items_body">
+                                    DONORSEARCH.ORG является IT-платформой, которая объединяет всех участников сферы донорства для совершенствования процессов вовлечения и управления потоками доноров: как действующих, так и потенциальных, а также центры крови, НКО и Бизнес.
+                                    Проект видит своей миссией обеспечение каждого центра кровью на каждый день, необходимым количеством доноров с определён- ными параметрами крови, а значит, полностью обеспечить потреб- ности здравоохранения в донорской крови.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="history__slide">
+                        <div class="img__history">
+                            <img loading="lazy" src="assets/img/otkryty_gorod.png" alt="">
+                        </div>
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">ОТКРЫТЫЙ ГОРОД - навигационная система социальных проектов и организаций Приморского края</p>
+                                <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Mobile</p>
+                                <p class="history__items_body">
+                                    «Открытый город» это веб-карта, мобильное приложение и городская офлайн навигация, которая информирует жителей о деятельности, событиях и социальных проектах некоммерческих организаций. Пользователи могут предлагать новые точки и социальные сервисы на карту. Это навигационная система, позволяющая сформировать здоровое гражданское общество за счет целевой благотворительности. У горожан формируется доверие друг к другу и желание сотрудничать и выручать не только близких, но и незнакомых людей.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="history__slide">
+                        <div class="img__history">
+                            <img loading="lazy" src="assets/img/WinBin_logo_final_ne.png" alt="">
+                        </div>
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">WinBin - сервис и технологии для раздельного сбора и вывоза вторсырья</p>
+                                <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Region Project</p>
+                                <p class="history__items_body">
+                                    Электронные баки и приложение с кэшбэком за правильную сортировку вторсырья. Это уникальная система сортировки отходов и сбора вторсырья через «умные» контейнеры – они открываются с помощью приложения на смартфоне и учитывают вес сданных отходов, а в соответствии с весом пользователь получает кэшбек. Проект помогает сократить вывоз отходов на полигоны и их сжигание.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="history__slide">
+                        <div class="img__history">
+                            <img loading="lazy" src="assets/img/govoryaschiy_gorod.jpg" alt="">
+                        </div>
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">ГОВОРЯЩИЙ ГОРОД - система радиоинформирования и звукового ориентирования незрячих и других МГН в городской среде</p>
+                                <p class="history__items_untitle">Победитель конкурса «Social Idea 2020» в номинации Social Smart City</p>
+                                <p class="history__items_body">
+                                    Проект помогает слепым и другим МГН безопасно и комфортно передвигаться по городу с помощью специальных сигналов оповещения. Команда проекта создала систему аудиоинформирования людей с ограничениями по зрению об обстановке вокруг, потенциально опасных участках, а также полезных локациях: магазинах, больницах, местах отдыха.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="paginatins__circle">
+            <div class="swiper-button-prev history-prev"></div>
+            <div class="swiper-button-next history-next"></div>
+        </div>
+        <div class="paginatins__circle">
             <div class="swiper-pagination"></div>
-            </div>
+        </div>
     </div>
 </section>
 <section id="experts">
@@ -501,6 +501,14 @@
         <p class="experts__title">@lang('words.sovet') <br>МТС "SOCIAL IDEA 2021"</p>
         <div class="swiper-container swiper-container-experts">
             <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div><img loading="lazy" src="assets/img/speakers/galaktionova_b.jpg" alt="Moskvina_photo.png"></div>
+                        <p class="experts__slide_items_title">Галактионова Инесса</p>
+                        <p class="experts__slide_items_body">Член Правления, первый вице-президент по телекоммуникационному
+                            бизнесу ПАО «МТС»</p>
+                    </div>
+                </div>
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
                         <div><img loading="lazy" src="assets/img/speakers/homchenko.jpg" alt="Moskvina_photo.png"></div>
@@ -519,17 +527,9 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
-                        <div><img loading="lazy" src="assets/img/speakers/galaktionova_b.jpg" alt="Moskvina_photo.png"></div>
-                        <p class="experts__slide_items_title">Галактионова Инесса</p>
-                        <p class="experts__slide_items_body">Член Правления, первый вице-президент по телекоммуникационному
-                            бизнесу ПАО «МТС»</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
                         <div><img loading="lazy" src="assets/img/speakers/Курин Дмитрий.jpg" alt="Moskvina_photo.png"></div>
                         <p class="experts__slide_items_title">Курин Дмитрий</p>
-                        <p class="experts__slide_items_body">Директор инновационной площадки для развития технологических проектов MTS StartUp Hub</p>
+                        <p class="experts__slide_items_body">директор инновационной площадки для развития технологических проектов MTS StartUp Hub</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -547,7 +547,7 @@
                             <img loading="lazy" src="assets/img/speakers/ggghr.jpg" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Максим Гашков</p>
-                        <p class="experts__slide_items_body">Руководитель направления внутренних инноваций ПАО "МТС"</p>
+                        <p class="experts__slide_items_body">руководитель центра внутренних инноваций ПАО "МТС"</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -556,7 +556,7 @@
                             <img loading="lazy" src="assets/img/speakers/Мартемьянов.JPG" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Мартемьянов Дмитрий</p>
-                        <p class="experts__slide_items_body">Главный эксперт отдела развития финансовых технологий Департамента финансовых технологий ПАО "МТС"</p>
+                        <p class="experts__slide_items_body">руководитель направления по развитию партнерских сервисов, Команда развития транзакционного бизнеса ПАО “МТС”</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -565,9 +565,7 @@
                             <img loading="lazy" src="assets/img/speakers/Доспеева.jpg" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Доспеева Надежда</p>
-                        <p class="experts__slide_items_body">Начальник отдела,
-                            Отдел планирования, анализа и операционной поддержки,
-                            Блок по облачным и цифровым решениям ПАО "МТС"</p>
+                        <p class="experts__slide_items_body">начальник отдела планирования, анализа и операционной поддержки ПАО «МТС»</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -576,8 +574,7 @@
                             <img loading="lazy" src="assets/img/speakers/Цуриченко.JPG" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Цуриченко Максим</p>
-                        <p class="experts__slide_items_body">Руководитель направления стратегических проектов, к.э.н.,
-                            Департамент стратегического планирования ПАО "МТС"</p>
+                        <p class="experts__slide_items_body">руководитель направления стратегических проектов, к.э.н. ПАО «МТС»</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -604,7 +601,7 @@
                             <img loading="lazy" src="assets/img/speakers/Тузбеков Артур.jpg" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Тузбеков Артур</p>
-                        <p class="experts__slide_items_body">Руководитель портфеля продуктов "Умный офис/дом", Департамент IoT ПАО "МТС"</p>
+                        <p class="experts__slide_items_body">руководитель портфеля продуктов «Умный офис/дом» ПАО «МТС»</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -622,7 +619,7 @@
                             <img loading="lazy" src="assets/img/speakers/Оксана Фетисова.jpg" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Фетисова Оксана</p>
-                        <p class="experts__slide_items_body">Директора Корпоративного университета ПАО "МТС"</p>
+                        <p class="experts__slide_items_body">директор департамента привлечения и развития персонала ПАО «МТС»</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -631,7 +628,7 @@
                             <img loading="lazy" src="assets/img/speakers/Терентьева Елизавета .jpg" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Терентьева Елизавета</p>
-                        <p class="experts__slide_items_body">Начальник отдела специальных проектов, Департамент информационных технологий г. Москвы</p>
+                        <p class="experts__slide_items_body">начальник отдела спецпроектов Департамента информационных технологий г. Москва</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -640,7 +637,7 @@
                             <img loading="lazy" src="assets/img/speakers/ROB_2400.jpg" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Зиборова Ольга</p>
-                        <p class="experts__slide_items_body">Директор департамента маркетинга ПАО "МТС"</p>
+                        <p class="experts__slide_items_body">директор по маркетингу экосистемы, Блок по клиентскому опыту и маркетингу ПАО "МТС"</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -649,7 +646,7 @@
                             <img loading="lazy" src="assets/img/speakers/People_2.png" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Гурылин Артем</p>
-                        <p class="experts__slide_items_body">Руководитель направления Департамент финансовых технологий ПАО "МТС"</p>
+                        <p class="experts__slide_items_body">руководитель направления по стратегии и анализу продуктов, Кластер "Дэйли бэнкинг» ПАО "МТС""</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -659,51 +656,6 @@
                         </div>
                         <p class="experts__slide_items_title">Хлевтова Анна</p>
                         <p class="experts__slide_items_body">Директор филиала ПАО "МТС" в г. Калининград</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
-                            <img loading="lazy" src="assets/img/speakers/Перевозов.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Перевозов Михаил</p>
-                        <p class="experts__slide_items_body">Импакт инвестирование, Corporate social responsibility</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
-                            <img loading="lazy" src="assets/img/speakers/Балахнин фото.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Балахнин Илья</p>
-                        <p class="experts__slide_items_body">Генеральный директор и управляющий партнер консалтингового агентства Paper Planes</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
-                            <img loading="lazy" src="assets/img/speakers/ShmatovMax.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Шматов Максим</p>
-                        <p class="experts__slide_items_body">Преподаватель в РЭУ им ГВ Плеханова на факультете Бизнеса (Социальный маркетинг и КСО, Саморазвитие и личностный рост предпринимателя)</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
-                            <img loading="lazy" src="assets/img/speakers/Gorskikh_Igor.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Горских Игорь</p>
-                        <p class="experts__slide_items_body">Советник Губернатора Рязанской области, научный руководитель АНО "Цифровой регион"</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
-                            <img loading="lazy" src="assets/img/speakers/Kucherenko_T_V.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Кучеренко Татьяна</p>
-                        <p class="experts__slide_items_body">Заведующий сектором отдела ДОиСВР Алтайского филиала Финуниверситета</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -746,15 +698,6 @@
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
                         <div>
-                            <img loading="lazy" src="assets/img/speakers/Халимов Ренат.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Халимов Ренат</p>
-                        <p class="experts__slide_items_body">Генеральный директор АО "ОЭЗ "Иннополис"</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
                             <img loading="lazy" src="assets/img/speakers/M.Bеbenin.jpg" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Бебенин Матвей</p>
@@ -768,24 +711,6 @@
                         </div>
                         <p class="experts__slide_items_title">Калашникова Ирина</p>
                         <p class="experts__slide_items_body">CEO, Co-Founder GoTech Innovation</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
-                            <img loading="lazy" src="assets/img/speakers/Bizhoev_Betal.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Бижоев Бетал</p>
-                        <p class="experts__slide_items_body">Директор проектов, Руководитель Электронного Университета - ЗАО "Сбербанк АСТ"</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
-                            <img loading="lazy" src="assets/img/speakers/Ляк Александр.JPG" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Ляк Александр</p>
-                        <p class="experts__slide_items_body">Директор филиала ПАО "МТС" в г. Рязань</p>
                     </div>
                 </div>
             </div>
@@ -866,9 +791,6 @@
                     <a href="http://sistema.ru/domashyaya-stranica/"><img loading="lazy" src="assets/img/article (4).png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://medsi.ru/"><img loading="lazy" src="assets/img/article (9).png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://www.mtsbank.ru/"><img loading="lazy" src="assets/img/article23123.png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
@@ -887,9 +809,6 @@
                     <a href="http://fasie.ru/"><img loading="lazy" src="assets/img/head_logo_fasie.png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="http://rb.ru/"><img loading="lazy" src="assets/img/article (5).png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://changellenge.com/"><img loading="lazy" src="assets/img/article (10).png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
@@ -897,9 +816,6 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://asi.ru/"><img loading="lazy" src="assets/img/das1.jpg" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://www.sberbank-ast.ru/Content.aspx?tid=1"><img loading="lazy" src="assets/img/fda1.jpg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://apply.innopolis.ru/"><img loading="lazy" src="assets/img/_Ciu0Sy-0PA.jpg" class="img_partners"></a>
@@ -918,9 +834,6 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://te-st.ru/"><img loading="lazy" src="assets/img/Teplitsa_mainLogo_rus.jpg" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://netology.ru/"><img loading="lazy" src="assets/img/logo-full-color-black.png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://s-ol.ru/ru/"><img loading="lazy" src="assets/img/CZSIO-SOL.jpg" class="img_partners"></a>
