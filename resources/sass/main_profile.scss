@@ -17,6 +17,30 @@ a {
     text-decoration: none;
 }
 
+#projects__shows {
+    div {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        label {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 110%;
+            color: #595959;
+            padding-bottom: 10px;
+        }
+        p {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            letter-spacing: normal;
+            color: #595959;
+            margin: 0;
+        }
+    }
+}
+
 #admin_allusers {
     .nav__items {
         display: flex;

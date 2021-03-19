@@ -33,6 +33,11 @@
                     Все пользователи
                 </div>
             </a>
+            <a href="{{ route('projects.index') }}">
+                <div id="projects">
+                Все проекты
+                </div>
+            </a>
             @endif
         </div>
     </div>

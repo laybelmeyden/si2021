@@ -42,7 +42,7 @@
         {{ route('projects.edit',$project->id) }}
         @endif
         @if($project->statuses === 'moderate')
-        
+        {{ route('projects.show',$project->id) }}
         @endif
         ">
             <div class="card__project_show">

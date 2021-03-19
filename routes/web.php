@@ -35,7 +35,7 @@ Route::put('/allUsers/edit/{id}', 'UserController@allUsersEdit')->name('allUsers
 Route::delete('/allUsers/delete/{id}', 'UserController@allUsersDelete')->name('allUsersDelete')->middleware('verified');
 
 //project 
-Route::resource('projects','ProjectController');
+Route::resource('projects','ProjectController')->middleware('verified');
 Route::post('/createProject', 'ProjectController@createProject')->name('createProject')->middleware('verified');
 Route::post('/updateProject', 'ProjectController@updateProject')->name('updateProject')->middleware('verified');
 Route::get('/showProject', 'ProjectController@showProject')->name('showProject')->middleware('verified');

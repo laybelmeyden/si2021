@@ -1,7 +1,5 @@
-@extends('profile.master')
-@section('title', 'Все проекты')
-@section('content')
-<div class="row">
+
+<!-- <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('projects.create') }}"> Create New Product</a>
@@ -37,7 +35,55 @@
             </td>
         </tr>
         @endforeach
-    </table>
+    </table> -->
   
-    {!! $projects->links() !!}
-    @endsection
+@extends('profile.master')
+@section('title', 'SOCIAL IDEA 2021')
+@section('content')
+@include('profile.alerts')
+<section id="peoject__sections">
+    <div class="profile__left_navbar">
+        @include('profile.left_navbar')
+    </div>
+    <div class="card__project" id="app">
+        <h1>ВСЕ ПРОЕКТЫ</h1>
+        @foreach ($projects as $project)
+        <div class="statuses">
+            @if($project->statuses === 'draft')
+            <div class="item {{ $project->statuses }}">
+                Черновик
+            </div>
+            @endif
+            @if($project->statuses === 'moderate')
+            <div class="item {{ $project->statuses }}">
+                На модерации
+            </div>
+            @endif
+        </div>
+        <a href="
+        @if($project->statuses === 'draft')
+        {{ route('projects.edit',$project->id) }}
+        @endif
+        @if($project->statuses === 'moderate')
+        {{ route('projects.show',$project->id) }}
+        @endif
+        ">
+            <div class="card__project_show">
+                    <span>Номер проекта {{$project -> id}}</span>
+                    @if($project -> project_name === null)
+                    <p class="project__title">Нет названия проекта</p>
+                    @else
+                    <p class="project__title">{{ $project -> project_name }}</p>
+                    @endif
+                    @if($project -> project_body === null)
+                    <p class="project__body">Нет описания проекта</p>
+                    @else
+                    <p  class="project__body">{{ Str::limit($project -> project_body, 300) }}</p>
+                    @endif
+            </div>
+        </a>
+        @endforeach
+    </div>
+</section>
+@endsection
+ 

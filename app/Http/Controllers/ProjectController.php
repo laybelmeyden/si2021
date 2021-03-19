@@ -16,10 +16,13 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::latest()->paginate(5);
-
-        return view('projects.index', compact('projects'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        $user = Auth::user();
+        $projects = Project::latest();
+        if ($user->role_id === 1){
+            return view('projects.index', compact('projects'));
+        }else{
+            return redirect()->back();
+        }
     }
 
     /**
@@ -29,17 +32,14 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        // $user = Auth::user();
-        // // if (Project::where('user_id', '=', $user-> id)->count() >= 1) {
-        // //     session()->flash('status_title', 'Ошибка');
-        // //     session()->flash('status_body', 'Увас уже есть проект !');
-        // //     return redirect()->back();
-        // // }
-        // $project = new Project;
-        // $project->user_id = $user->id;
-        // $project->statuses = 'draft';
-        // $project->save();
-        return view('projects.create');
+        $user = Auth::user();
+        if (Project::where('user_id', '=', $user->id)->count() >= 1) {
+            session()->flash('status_title', 'Ошибка');
+            session()->flash('status_body', 'Увас уже есть проект !');
+            return redirect()->back();
+        }else{
+            return view('projects.create');
+        }
     }
 
     /**
@@ -55,10 +55,9 @@ class ProjectController extends Controller
         //     'detail' => 'required',
         // ]);
 
-        Project::create($request->all());
-
-        return redirect()->route('project.index')
-            ->with('success', 'Product created successfully.');
+        // Project::create($request->all());
+        // return redirect()->route('project.index')
+        //     ->with('success', 'Product created successfully.');
     }
 
     /**
@@ -69,6 +68,16 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
+
+        $user = Auth::user();
+        if ($user->role_id === 1){
+            return view('projects.show', compact('project'));
+        }
+        if ($project->user_id !== $user->id) {
+            session()->flash('status_title', 'Ошибка');
+            session()->flash('status_body', 'У вас нет доступа к этому проекту');
+            return redirect()->back();
+        }
         return view('projects.show', compact('project'));
     }
 
