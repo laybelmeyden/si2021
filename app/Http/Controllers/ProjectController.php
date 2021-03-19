@@ -17,9 +17,11 @@ class ProjectController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $projects = Project::latest();
+        $projects = Project::orderBy('statuses', 'desc')->get();
         if ($user->role_id === 1){
-            return view('projects.index', compact('projects'));
+            $projectsDraftCount = $projects->where('statuses', 'draft')->count();
+            $projectsModerateCount = $projects->where('statuses', 'moderate')->count();
+            return view('projects.index', compact('projects','projectsDraftCount','projectsModerateCount'));
         }else{
             return redirect()->back();
         }
