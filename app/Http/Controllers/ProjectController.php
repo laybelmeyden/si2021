@@ -235,7 +235,6 @@ class ProjectController extends Controller
           \Mail::send('email.mailDraft',$data, function($message) use ($to_email,$data, $to_name)
           {
             $message->from($to_email);
-            $message->attach('Статус проекта');
             $message->to($data['email'], $to_name)->subject('Статус проекта');
          });
 
