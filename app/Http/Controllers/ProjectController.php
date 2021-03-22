@@ -218,7 +218,27 @@ class ProjectController extends Controller
     {
         $user = Auth::user();
         $project = Project::where('user_id', '=', $user->id)->get();
-
         return $project;
+    }
+    public function draftProject(Project $project, $id)
+    {
+        $project = Project::find($id);
+        $user = User::find($project->user_id);
+        
+        $project->statuses = 'draft';
+        $project->save();
+
+        $to_email='socialidea.mts@yandex.ru';
+        $to_name='Social Idea 2021';
+          \Mail::send('email.mailDraft', function($message) use ($to_email, $user,$to_name)
+          {
+            $message->from($to_email);
+            $message->to($user, $to_name)->subject('Статус проекта');
+         });
+
+        session()->flash('status_title', 'Успешно');
+        session()->flash('status_body', 'Проект отклонен');
+
+        return redirect()->back();
     }
 }

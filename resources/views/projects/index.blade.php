@@ -6,7 +6,7 @@
     <div class="profile__left_navbar">
         @include('profile.left_navbar')
     </div>
-    <div class="card__project">
+    <div class="card__project" id='app'>
         <h1>ВСЕ ПРОЕКТЫ - {{ $projects -> count() }}</h1>
         <p class="projects__info_statuses">
         Проектов на модерации - {{$projectsModerateCount}}<br>
@@ -39,6 +39,15 @@
                     <p  class="project__body">{{ Str::limit($project -> project_body, 300) }}</p>
                     @endif
             </div>
+            @if(Auth::user() -> role_id === 1)
+            <form action="{{ route('draftProject',$project->id) }}" method="POST">
+                @csrf
+                @method('PUT')
+                <div class="item__admin_btn">
+                <button type="submit" class="btn btn__draft">Черновик</button>
+                </div>
+            </form>
+            @endif
         </a>
         @endforeach
     </div>
