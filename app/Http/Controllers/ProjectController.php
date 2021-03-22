@@ -230,10 +230,13 @@ class ProjectController extends Controller
 
         $to_email='socialidea.mts@yandex.ru';
         $to_name='Social Idea 2021';
-          \Mail::send('email.mailDraft', function($message) use ($to_email, $user,$to_name)
+        $data = array('email' => $user -> email);
+        // dd($data);
+          \Mail::send('email.mailDraft',$data, function($message) use ($to_email,$data, $to_name)
           {
             $message->from($to_email);
-            $message->to($user, $to_name)->subject('Статус проекта');
+            $message->attach('Статус проекта');
+            $message->to($data['email'], $to_name)->subject('Статус проекта');
          });
 
         session()->flash('status_title', 'Успешно');
