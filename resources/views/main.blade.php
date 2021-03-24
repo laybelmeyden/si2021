@@ -851,9 +851,6 @@
                     <a href="https://ict2go.ru/"><img loading="lazy" src="assets/img/logo_header_small.png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://ict2go.ru/"><img loading="lazy" src="assets/img/logo_header_small.png" class="img_partners"></a>
-                </div>
-                <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href=""><img loading="lazy" src="assets/img/Alpn03I3028.jpg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
