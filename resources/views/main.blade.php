@@ -847,6 +847,24 @@
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://rgsu.net/"><img loading="lazy" src="assets/img/Gorizontal'naya sokraschennaya komponovka.png" class="img_partners"></a>
                 </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://ict2go.ru/"><img loading="lazy" src="assets/img/logo_header_small.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://ict2go.ru/"><img loading="lazy" src="assets/img/logo_header_small.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href=""><img loading="lazy" src="assets/img/Alpn03I3028.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href=""><img loading="lazy" src="assets/img/HXOgix21XC8.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href=""><img loading="lazy" src="assets/img/wRRdxTy8S6Q.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href=""><img loading="lazy" src="assets/img/XJm9QU71Wbo.jpg" class="img_partners"></a>
+                </div>
             </div>
         </div>
     </div>
