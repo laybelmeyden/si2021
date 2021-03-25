@@ -2214,8 +2214,48 @@ strong {
         display: grid;
         grid-template-columns: 50% 50%;
     }
+    #photos .grid-container div {
+        max-height: 200px;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
     #partners .particul_part {
         min-height: 100px;
+    }
+    #photos .grid-container div img {
+        transition: 3s;
+        width: 100%;
+        height: auto;
+    }
+    #photos .photos1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: ".";
+        grid-area: auto;
+    }
+    #photos .photos2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: ".";
+        grid-area: auto;
+    }
+    #photos .photos3 {
+        grid-template-areas: ".";
+        grid-area: auto;
+    }
+    #photos .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px 15px;
+        grid-template-areas: none;
+        width: 100%;
+        justify-content: center;
     }
     #all_speakers_pages .speakers_img {
         width: 100px;
