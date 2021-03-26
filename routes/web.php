@@ -125,3 +125,4 @@ Route::get('/years2020/it_start_2020', 'YearsController@it_start_2020');
 
 
 Route::get('/social_idea_2021', 'YearsController@social_idea_2021')->name('main21');
+Route::get('/years2021/it_start_2021', 'YearsController@it_start_2021');

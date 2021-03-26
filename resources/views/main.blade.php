@@ -504,7 +504,7 @@
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
                         <div><img loading="lazy" src="assets/img/speakers/galaktionova_b.jpg" alt="Moskvina_photo.png"></div>
-                        <p class="experts__slide_items_title">Галактионова Инесса</p>
+                        <p class="experts__slide_items_title">Галактионова Инеса</p>
                         <p class="experts__slide_items_body">Член Правления, первый вице-президент по телекоммуникационному
                             бизнесу ПАО «МТС»</p>
                     </div>
@@ -861,6 +861,12 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href=""><img loading="lazy" src="assets/img/XJm9QU71Wbo.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href=""><img loading="lazy" src="assets/img/78M0SORaFkg.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href=""><img loading="lazy" src="assets/img/SITEkp_Identity_Logo_RGB_2_2018.png" class="img_partners"></a>
                 </div>
             </div>
         </div>

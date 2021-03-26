@@ -224,4 +224,8 @@ class YearsController extends Controller
     {
         return view('years.2021.project1');
     }
+    public function it_start_2021()
+    {
+        return view('years.2021.project2');
+    }
 }
