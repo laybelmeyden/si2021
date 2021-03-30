@@ -1236,13 +1236,13 @@ export default {
       formData.append("file1", file);
       formData.append("_method", "post");
       const fileType = file.name.split('.')[file.name.split('.').length-1];
-      // console.log(file.name.split('.')[file.name.split('.').length-1]);
+      console.log(file.name.split('.')[file.name.split('.').length-1]);
       if (file != undefined) {
         if(file.size > 10000001){
           this.errors = true,
           this.fileCurrent = "Размер файла слишком большой";
         }else 
-        if(fileType != 'ppt' || fileType != 'pptx' || fileType != 'odp' || fileType != 'pdf') {
+        if(fileType != 'ppt' && fileType != 'pptx' && fileType != 'odp' && fileType != 'pdf') {
           this.errors = true,
           this.fileCurrent = "Неверное расширение файла. Разрешенные форматы файлов - (ppt,pptx,odp,pdf)";
         }else{
