@@ -524,6 +524,7 @@
               />
               <button>ВЫБРАТЬ</button>
             </div>
+            <div class="file__sizes">Максимальный размер файла 10 Мб</div>
             <div class="progress prg1" :val="fileProgress" v-if="fileProgress">
               <div
                 class="progress-bar"
@@ -535,6 +536,7 @@
             </div>
             <div
               class="maxlength__inp"
+              :class="{danger:errors}"
               v-if="
                 project.project_presentations || fileProgress || fileCurrent
               "
@@ -574,6 +576,7 @@
               />
               <button>ВЫБРАТЬ</button>
             </div>
+            <div class="file__sizes">Максимальный размер файла 10 Мб</div>
             <div
               class="progress prg1"
               :val="fileProgressLogo"
@@ -589,6 +592,7 @@
             </div>
             <div
               class="maxlength__inp"
+              :class="{danger:errorsLogo}"
               v-if="project.project_logo || fileProgressLogo || fileCurrentLogo"
             >
               {{
@@ -844,6 +848,7 @@
               />
               <button>ВЫБРАТЬ</button>
             </div>
+            <div class="file__sizes">Максимальный размер файла 10 Мб</div>
             <div class="progress prg1" :val="fileProgress" v-if="fileProgress">
               <div
                 class="progress-bar"
@@ -855,6 +860,7 @@
             </div>
             <div
               class="maxlength__inp"
+              :class="{danger:errors}"
               v-if="
                 project.project_presentations || fileProgress || fileCurrent
               "
@@ -881,6 +887,7 @@
               />
               <button>ВЫБРАТЬ</button>
             </div>
+            <div class="file__sizes">Максимальный размер файла 10 Мб</div>
             <div
               class="progress prg1"
               :val="fileProgressFile"
@@ -896,6 +903,7 @@
             </div>
             <div
               class="maxlength__inp"
+              :class="{danger:errorsDop}"
               v-if="
                 project.project_files_1 || fileProgressFile || fileCurrentFile
               "
@@ -923,6 +931,7 @@
               />
               <button>ВЫБРАТЬ</button>
             </div>
+            <div class="file__sizes">Максимальный размер файла 10 Мб</div>
             <div
               class="progress prg1"
               :val="fileProgressLogo"
@@ -938,6 +947,7 @@
             </div>
             <div
               class="maxlength__inp"
+              :class="{danger:errorsLogo}"
               v-if="project.project_logo || fileProgressLogo || fileCurrentLogo"
             >
               {{
@@ -1159,6 +1169,9 @@ export default {
       fileCurrentLogo: "",
       isAlertVisible: false,
       isSendProjectVisible: false,
+      errors: false,
+      errorsLogo: false,
+      errorsDop:false,
     };
   },
   methods: {
@@ -1222,14 +1235,24 @@ export default {
       const formData = new FormData();
       formData.append("file1", file);
       formData.append("_method", "post");
-      // console.log(file.name);
+      const fileType = file.name.split('.')[file.name.split('.').length-1];
+      // console.log(file.name.split('.')[file.name.split('.').length-1]);
       if (file != undefined) {
-        axios
+        if(file.size > 10000001){
+          this.errors = true,
+          this.fileCurrent = "Размер файла слишком большой";
+        }else 
+        if(fileType != 'ppt' || fileType != 'pptx' || fileType != 'odp' || fileType != 'pdf') {
+          this.errors = true,
+          this.fileCurrent = "Неверное расширение файла. Разрешенные форматы файлов - (ppt,pptx,odp,pdf)";
+        }else{
+          axios
           .post("/updateProject", formData, {
             onUploadProgress: (itemUpload) => {
               this.fileProgress = Math.round(
                 (itemUpload.loaded / itemUpload.total) * 100
               );
+              this.errors = false,
               this.fileCurrent = "Загрузка файла";
             },
           })
@@ -1242,6 +1265,8 @@ export default {
               "Возникла ошибка. Перезагрузите страницу и попробуйте снова!"
             );
           });
+        }
+        
       }
     },
     setProjectFileFile() {
@@ -1249,24 +1274,30 @@ export default {
       const formData = new FormData();
       formData.append("file2", file);
       if (file != undefined) {
-        axios
-          .post("/updateProject", formData, {
-            onUploadProgress: (itemUpload) => {
-              this.fileProgressFile = Math.round(
-                (itemUpload.loaded / itemUpload.total) * 100
+        if(file.size > 10000001){
+          this.errorsDop = true,
+          this.fileCurrentFile = "Размер файла слишком большой";
+        }else{
+          axios
+            .post("/updateProject", formData, {
+              onUploadProgress: (itemUpload) => {
+                this.fileProgressFile = Math.round(
+                  (itemUpload.loaded / itemUpload.total) * 100
+                );
+                this.errorsDop = false,
+                this.fileCurrentFile = "Загрузка файла";
+              },
+            })
+            .then((response) => {
+              this.fileProgressFile = 0;
+              this.fileCurrentFile = "Загруженный файл - " + file.name;
+            })
+            .catch((error) => {
+              alert(
+                "Возникла ошибка. Перезагрузите страницу и попробуйте снова!"
               );
-              this.fileCurrentFile = "Загрузка файла";
-            },
-          })
-          .then((response) => {
-            this.fileProgressFile = 0;
-            this.fileCurrentFile = "Загруженный файл - " + file.name;
-          })
-          .catch((error) => {
-            alert(
-              "Возникла ошибка. Перезагрузите страницу и попробуйте снова!"
-            );
-          });
+            });
+        }
       }
     },
     setProjectFileLogo() {
@@ -1274,12 +1305,17 @@ export default {
       const formData = new FormData();
       formData.append("file3", file);
       if (file != undefined) {
+        if(file.size > 10000001){
+          this.errorsLogo = true,
+          this.fileCurrentLogo = "Размер файла слишком большой";
+        }else{
         axios
           .post("/updateProject", formData, {
             onUploadProgress: (itemUpload) => {
               this.fileProgressLogo = Math.round(
                 (itemUpload.loaded / itemUpload.total) * 100
               );
+              this.errorsLogo = false,
               this.fileCurrentLogo = "Загрузка файла";
             },
           })
@@ -1292,6 +1328,7 @@ export default {
               "Возникла ошибка. Перезагрузите страницу и попробуйте снова!"
             );
           });
+        }
       }
     },
   },

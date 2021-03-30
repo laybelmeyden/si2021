@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\News;
+use App\Oldnew;
 
 class MainController extends Controller
 {
@@ -31,4 +32,16 @@ class MainController extends Controller
     public function photos(){
         return view ('photos');
     }
+
+    public function oldnews(){
+
+        $news = Oldnew::latest()->get();
+
+        return view ('oldnews', compact('news'));
+    }
+    public function oldnews_in(Oldnew $id){
+
+        return view ('oldnews_in', compact('id'));
+    }
+
 }

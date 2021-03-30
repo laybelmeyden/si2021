@@ -70,8 +70,8 @@
                     <a href="https://drive.google.com/file/d/1fMyHUFTbYKGH3QC0ZiIfdRpKHmowz9Ad/view?usp=sharing" target="_blank" class="href_item_project">Критерии оценки социального проекта проекта в финале</a>
                 </p>
                 <br><br>
-                <a href="https://socialidea.ru//storage/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B0%20%D0%A4%D0%B8%D0%BD%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2%20%D0%9C%D0%A2%D0%A12910.pdf" target="_blank" class="btn btn__collapse">Книга о финалистах</a>
-                <a href="https://socialidea.ru//storage/%D0%9C%D0%A2%D0%A1%20SI_%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D1%84%D0%B8%D0%BD%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2%202020%20(1).pdf" target="_blank" class="btn btn__collapse">Список финалистов</a>
+                <a href="/assets/img/books2020.pdf" target="_blank" class="btn btn__collapse">Книга о финалистах</a>
+                <a href="/assets/img/final2020.pdf" target="_blank" class="btn btn__collapse">Список финалистов</a>
                 <a href="https://final2020.usersocialidea.ru/" target="_blank" class="btn btn__collapse">Трансляция финала</a>
                 
                 <p class="main_text_item"><b>Миссия конкурса -</b> <span class="main_text_span"> поиск, отбор и поддержка социальных проектов с применением цифровых технологий, которые влияют на позитивные изменения в обществе.</span></p>

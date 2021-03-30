@@ -679,19 +679,9 @@
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
                         <div>
-                            <img loading="lazy" src="assets/img/speakers/andreeva.jpg" alt="Moskvina_photo.png">
-                        </div>
-                        <p class="experts__slide_items_title">Андреева Ирина</p>
-                        <p class="experts__slide_items_body">Соучредитель DistingTec - трудоустройство людей с РАС в сфере ИТ, бизнес-коуч и профессиональный
-                            трекер в компаниях и стартерах, преподаватель в ВШЭ и Университете Нетология</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
-                        <div>
                             <img loading="lazy" src="assets/img/speakers/nikhaychik.jpg" alt="Moskvina_photo.png">
                         </div>
-                        <p class="experts__slide_items_title">Нихайчик Ольга</p>
+                        <p class="experts__slide_items_title">Нехайчик Ольга</p>
                         <p class="experts__slide_items_body">Руководитель маркетинга Авито для работодателей</p>
                     </div>
                 </div>
@@ -867,6 +857,9 @@
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href=""><img loading="lazy" src="assets/img/SITEkp_Identity_Logo_RGB_2_2018.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://berza.ru/"><img loading="lazy" src="assets/img/L5z4OkXPVEw.jpg" class="img_partners"></a>
                 </div>
             </div>
         </div>
