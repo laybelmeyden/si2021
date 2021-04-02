@@ -41,6 +41,7 @@ Route::post('/updateProject', 'ProjectController@updateProject')->name('updatePr
 Route::get('/showProject', 'ProjectController@showProject')->name('showProject')->middleware('verified');
 Route::post('/sendProject', 'ProjectController@sendProject')->name('sendProject')->middleware('verified');
 Route::put('project/draftProject/{id}', 'ProjectController@draftProject')->name('draftProject')->middleware('verified');
+Route::put('project/accepted/{id}', 'ProjectController@acceptedProject')->name('acceptedProject')->middleware('verified');
 //locale
 Route::get('/locale/{locale}', function ($locale) {
     Session::put('locale',$locale);

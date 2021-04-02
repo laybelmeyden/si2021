@@ -27,6 +27,11 @@
                     Настройки профиля
                 </div>
             </a>
+            <a href="https://disk.yandex.ru/d/9WRSlvX_hX3IpQ?w=1" target="_blank">
+                <div id="vebinar">
+                    Вебинар
+                </div>
+            </a>
             @if(Auth::user() -> role_id === 1)
             <a href="/allUsers">
                 <div id="allUsers">

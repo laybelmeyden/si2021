@@ -359,16 +359,27 @@
                 </p>
             </div>
             @endif
+        </section>
+        <div class="btns__statuses">
             @if(Auth::user() -> role_id === 1)
             <form action="{{ route('draftProject',$project->id) }}" method="POST">
                 @csrf
                 @method('PUT')
                 <div class="item__admin_btn">
-                <button type="submit" class="btn btn__draft">Черновик</button>
+                    <button type="submit" class="btn btn__draft">Черновик</button>
                 </div>
             </form>
             @endif
-        </section>
+            @if(Auth::user() -> role_id === 1)
+            <form action="{{ route('acceptedProject',$project->id) }}" method="POST">
+                @csrf
+                @method('PUT')
+                <div class="item__admin_btn">
+                    <button type="submit" class="btn btn__accepted">Принять</button>
+                </div>
+            </form>
+            @endif
+        </div>
     </div>
 </section>
 @endsection

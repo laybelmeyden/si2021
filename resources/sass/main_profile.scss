@@ -26,24 +26,45 @@ a {
     margin: 0;
 }
 
-.item__admin_btn {
-    margin-top: 20px;
-    .btn__draft {
-        width: 291px;
-        height: 66px;
-        background: gray;
-        border-radius: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 150%;
-        text-align: center;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: #FFFFFF;
+.btns__statuses {
+    display: flex;
+    gap: 30px;
+    .item__admin_btn {
+        margin-top: 20px;
+        .btn__draft {
+            width: 291px;
+            height: 66px;
+            background: gray;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 150%;
+            text-align: center;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        .btn__accepted {
+            width: 291px;
+            height: 66px;
+            background: rgb(76, 175, 80);
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 150%;
+            text-align: center;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
     }
 }
 
@@ -794,6 +815,11 @@ nav {
             }
             .moderate {
                 background: rgb(255, 145, 1);
+                color: white;
+            }
+            .accepted {
+                background-color: rgb(76, 175, 80);
+                border-color: rgb(76, 175, 80);
                 color: white;
             }
             .item {

@@ -36,12 +36,20 @@
                 На модерации
             </div>
             @endif
+            @if($project->statuses === 'accepted')
+            <div class="item {{ $project->statuses }}">
+                Принят на конкурс
+            </div>
+            @endif
         </div>
         <a href="
         @if($project->statuses === 'draft')
         {{ route('projects.edit',$project->id) }}
         @endif
         @if($project->statuses === 'moderate')
+        {{ route('projects.show',$project->id) }}
+        @endif
+        @if($project->statuses === 'accepted')
         {{ route('projects.show',$project->id) }}
         @endif
         ">

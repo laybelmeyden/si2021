@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Project;
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
@@ -17,11 +18,24 @@ class ProjectController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $projects = Project::orderBy('statuses', 'desc')->get();
+        $projects = Project::all();
+        $projectsAccepted = Project::where('statuses', 'accepted')->get();
+        $projectsModerate = Project::where('statuses', 'moderate')->get();
+        $projectsDraft = Project::where('statuses', 'draft')->get();
         if ($user->role_id === 1){
             $projectsDraftCount = $projects->where('statuses', 'draft')->count();
             $projectsModerateCount = $projects->where('statuses', 'moderate')->count();
-            return view('projects.index', compact('projects','projectsDraftCount','projectsModerateCount'));
+            $projectsAcceptedCount = $projects->where('statuses', 'accepted')->count();
+            return view('projects.index', 
+            compact(
+                'projects',
+                'projectsDraftCount',
+                'projectsModerateCount',
+                'projectsAcceptedCount',
+                'projectsAccepted',
+                'projectsDraft',
+                'projectsModerate',
+            ));
         }else{
             return redirect()->back();
         }
@@ -101,7 +115,7 @@ class ProjectController extends Controller
                 return view('projects.edit', compact('project'));
             } else {
                 session()->flash('status_title', 'Ошибка');
-                session()->flash('status_body', 'Проект на модерации, его нельзя редактировать');
+                session()->flash('status_body', 'Проект отправлен, его нельзя редактировать');
                 return redirect()->back();
             }
         }
@@ -240,6 +254,28 @@ class ProjectController extends Controller
 
         session()->flash('status_title', 'Успешно');
         session()->flash('status_body', 'Проект отклонен');
+
+        return redirect()->back();
+    }
+    public function acceptedProject(Project $project, $id)
+    {
+        $project = Project::find($id);
+        $user = User::find($project->user_id);
+        
+        $project->statuses = 'accepted';
+        $project->save();
+
+        $to_email='socialidea.mts@yandex.ru';
+        $to_name='Social Idea 2021';
+        $data = array('email' => $user -> email);
+          \Mail::send('email.mailAccepted',$data, function($message) use ($to_email,$data, $to_name)
+          {
+            $message->from($to_email);
+            $message->to($data['email'], $to_name)->subject('Статус проекта');
+         });
+
+        session()->flash('status_title', 'Успешно');
+        session()->flash('status_body', 'Проект принят на конкурс');
 
         return redirect()->back();
     }
