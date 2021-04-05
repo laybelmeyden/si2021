@@ -26,6 +26,17 @@ a {
     margin: 0;
 }
 
+.validations__msg {
+    color: #E30510;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 110%;
+    margin: 0;
+    text-align: right;
+    padding-top: 10px;
+}
+
 .btns__statuses {
     display: flex;
     gap: 30px;

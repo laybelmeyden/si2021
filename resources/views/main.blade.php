@@ -841,25 +841,31 @@
                     <a href="https://ict2go.ru/"><img loading="lazy" src="assets/img/logo_header_small.png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href=""><img loading="lazy" src="assets/img/Alpn03I3028.jpg" class="img_partners"></a>
+                    <a href="https://generation-startup.ru/"><img loading="lazy" src="assets/img/Alpn03I3028.jpg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href=""><img loading="lazy" src="assets/img/HXOgix21XC8.jpg" class="img_partners"></a>
+                    <a href="http://te-mipt.ru/accel"><img loading="lazy" src="assets/img/HXOgix21XC8.jpg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href=""><img loading="lazy" src="assets/img/wRRdxTy8S6Q.jpg" class="img_partners"></a>
+                    <a href="https://smallbusiness.ru/"><img loading="lazy" src="assets/img/wRRdxTy8S6Q.jpg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href=""><img loading="lazy" src="assets/img/XJm9QU71Wbo.jpg" class="img_partners"></a>
+                    <a href="https://digital174.ru/"><img loading="lazy" src="assets/img/XJm9QU71Wbo.jpg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href=""><img loading="lazy" src="assets/img/78M0SORaFkg.jpg" class="img_partners"></a>
+                    <a href="https://www.ruy.ru/"><img loading="lazy" src="assets/img/78M0SORaFkg.jpg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href=""><img loading="lazy" src="assets/img/SITEkp_Identity_Logo_RGB_2_2018.png" class="img_partners"></a>
+                    <a href="https://www.kp.ru/"><img loading="lazy" src="assets/img/SITEkp_Identity_Logo_RGB_2_2018.png" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://berza.ru/"><img loading="lazy" src="assets/img/L5z4OkXPVEw.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://ingria-startup.ru/"><img loading="lazy" src="assets/img/lRvqy5h1Fxk.jpg" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://platform.nti.work/"><img loading="lazy" src="assets/img/tnh14VpDMqg.jpg" class="img_partners"></a>
                 </div>
             </div>
         </div>

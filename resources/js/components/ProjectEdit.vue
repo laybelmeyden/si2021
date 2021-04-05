@@ -82,6 +82,7 @@
             placeholder="Социальные сети"
             maxlength="50"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.about_source &&
             `Осталось символов - ${50 - project.about_source.length}`
@@ -447,6 +448,7 @@
             placeholder="Молоды сердцем"
             maxlength="150"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_name &&
             `Осталось символов - ${150 - project.project_name.length}`
@@ -466,6 +468,7 @@
             placeholder="Основная идея проекта заключается в "
             maxlength="1000"
           ></textarea>
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_body &&
             `Осталось символов - ${1000 - project.project_body.length}`
@@ -485,6 +488,7 @@
             placeholder="Наш проект направлен на решение "
             maxlength="1000"
           ></textarea>
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_social &&
             `Осталось символов - ${1000 - project.project_social.length}`
@@ -504,6 +508,7 @@
             placeholder="Осноная цель проекта"
             maxlength="1000"
           ></textarea>
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_target &&
             `Осталось символов - ${1000 - project.project_target.length}`
@@ -636,6 +641,7 @@
             placeholder="Иванов Иван Иванович"
             maxlength="150"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_main_fio &&
             `Осталось символов - ${150 - project.project_main_fio.length}`
@@ -657,6 +663,7 @@
             placeholder="Руководитель проекта - Иванов Иван..."
             maxlength="1000"
           ></textarea>
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_main_info &&
             `Осталось символов - ${1000 - project.project_main_info.length}`
@@ -674,6 +681,7 @@
             placeholder="+7 988 888 88 88"
             maxlength="100"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_main_phone &&
             `Осталось символов - ${100 - project.project_main_phone.length}`
@@ -688,6 +696,7 @@
             id="project_main_years"
             placeholder="33"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
         </div>
         <div class="form__item">
           <label for="">Ссылки на социальные сети</label>
@@ -698,6 +707,7 @@
             v-model="project.project_main_social_links_1"
             placeholder="ссылка 1"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <br />
           <input
             type="text"
@@ -726,6 +736,7 @@
             placeholder="Участник команды - Иванов Иван..."
             maxlength="2000"
           ></textarea>
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_main_teams &&
             `Осталось символов - ${2000 - project.project_main_teams.length}`
@@ -769,6 +780,7 @@
             placeholder="Молоды сердцем"
             maxlength="150"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_name &&
             `Осталось символов - ${150 - project.project_name.length}`
@@ -788,6 +800,7 @@
             placeholder="Основная идея проекта заключается в "
             maxlength="1000"
           ></textarea>
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_body &&
             `Осталось символов - ${1000 - project.project_body.length}`
@@ -807,6 +820,7 @@
             placeholder="Наш проект направлен на решение "
             maxlength="1000"
           ></textarea>
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_social &&
             `Осталось символов - ${1000 - project.project_social.length}`
@@ -826,6 +840,7 @@
             placeholder="Осноная цель проекта"
             maxlength="1000"
           ></textarea>
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_target &&
             `Осталось символов - ${1000 - project.project_target.length}`
@@ -875,7 +890,7 @@
         <div class="form__item">
           <label for="project_files_1">Дополнительные материалы</label>
           <p class="item__tile_form">
-            При желании вы можете приложить до 5 документов, связанных с проектом. Это могут быть рекомендации и письма поддержки, грамоты и дипломы, исследования целевой аудитории и проблемы, публикации на тему проекта и пр
+            При желании вы можете приложить документ, связанный с проектом. Это могут быть рекомендации и письма поддержки, грамоты и дипломы, исследования целевой аудитории и проблемы, публикации на тему проекта и пр
           </p>
           <div class="btn__file">
             <div class="fileUploadInput">
@@ -1005,6 +1020,7 @@
             placeholder="Иванов Иван Иванович"
             maxlength="150"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_main_fio &&
             `Осталось символов - ${150 - project.project_main_fio.length}`
@@ -1029,6 +1045,7 @@
             placeholder="Руководитель проекта - Иванов Иван..."
             maxlength="1000"
           ></textarea>
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_main_info &&
             `Осталось символов - ${1000 - project.project_main_info.length}`
@@ -1046,6 +1063,7 @@
             placeholder="+7 988 888 88 88"
             maxlength="100"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_main_phone &&
             `Осталось символов - ${100 - project.project_main_phone.length}`
@@ -1060,6 +1078,7 @@
             id="project_main_years"
             placeholder="33"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
         </div>
         <div class="form__item">
           <label for="">Ссылки на социальные сети</label>
@@ -1070,6 +1089,7 @@
             id="project_main_social_links_1"
             placeholder="ссылка 1"
           />
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <br />
           <input
             type="text"
@@ -1098,6 +1118,7 @@
             placeholder="Участник команды - Иванов Иван..."
             maxlength="2000"
           ></textarea>
+          <p class="validations__msg">* поле обязательно для заполнения</p>
           <span class="maxlength__inp">{{
             project.project_main_teams &&
             `Осталось символов - ${2000 - project.project_main_teams.length}`
