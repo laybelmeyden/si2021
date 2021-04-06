@@ -300,6 +300,7 @@
                             @if(App::isLocale('ru'))
                             <p>Апрель/Май</p>
                             <p>региональная программа Social Idea 2021</p>
+                            <p><a href="/years2021/it_start_2021">Регистрация на региональную программу</a></p>
                             @else
                             <p>April / May</p>
                             <p>regional program Social Idea 2021</p>
@@ -701,6 +702,42 @@
                         </div>
                         <p class="experts__slide_items_title">Калашникова Ирина</p>
                         <p class="experts__slide_items_body">CEO, Co-Founder GoTech Innovation</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/lilen.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Лилеина Мария</p>
+                        <p class="experts__slide_items_body">Директор по персоналу МТС ИТ</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/vedro.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Ведерникова Дарья</p>
+                        <p class="experts__slide_items_body">руководитель Центра цифровых экосистемных продуктов для малого и микро бизнеса ПАО «МТС»</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/migun.png" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Мигунова Елена</p>
+                        <p class="experts__slide_items_body">Директор департамента организационного планирования и управления вознаграждением ПАО «МТС»</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/oleyasy.jpg" alt="Moskvina_photo.png">
+                        </div>
+                        <p class="experts__slide_items_title">Алексеева Олеся</p>
+                        <p class="experts__slide_items_body">Директор филиала МТС в Ивановской области</p>
                     </div>
                 </div>
             </div>

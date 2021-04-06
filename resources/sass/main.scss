@@ -872,6 +872,12 @@ strong {
                         padding-bottom: 10px;
                         padding-right: 20px;
                         text-align: right;
+                        a {
+                            color: #E30510;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
                     }
                     p:last-child {
                         font-weight: 300;
