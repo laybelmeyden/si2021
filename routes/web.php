@@ -57,6 +57,8 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/api/news', 'MainController@news');
 Route::get('/news{id}', 'MainController@newssolo');
 
+//mail
+
 
 // years
 Route::get('/years2011', 'YearsController@years2011')->name('main11');

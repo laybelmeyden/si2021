@@ -241,10 +241,7 @@ class ProjectController extends Controller
         
         $project->statuses = 'draft';
         $project->save();
-        $data = array(
-            'draft__msg' => request('draft__msg'),
-        );
-        // dd($data['draft__msg']);
+        $msg__experts = request('draft__msg');
         $to_email='socialidea.mts@yandex.ru';
         $to_name='Social Idea 2021';
         $data = array('email' => $user -> email);
