@@ -98,7 +98,7 @@
                                 @method('PUT')
                                 <div class="form__item">
                                     <label for="draft__msg">Проект - {{ $project -> project_name }}</label>
-                                    <textarea name="draft__msg" id="draft__msg" rows="10" placeholder="Введите сообщение для отправки пользователю..." maxlength="1000"></textarea>
+                                    <textarea name="draft__msg" id="draft__msg" rows="10" placeholder="Введите сообщение для отправки пользователю..." required></textarea>
                                 </div>
                                 <div class="item__admin_btn rigth__align">
                                     <button type="submit" class="btn btn__accepted">Отправить</button>
