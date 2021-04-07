@@ -241,11 +241,13 @@ class ProjectController extends Controller
         
         $project->statuses = 'draft';
         $project->save();
-
+        $data = array(
+            'draft__msg' => request('draft__msg'),
+        );
+        // dd($data['draft__msg']);
         $to_email='socialidea.mts@yandex.ru';
         $to_name='Social Idea 2021';
         $data = array('email' => $user -> email);
-        // dd($data);
           \Mail::send('email.mailDraft',$data, function($message) use ($to_email,$data, $to_name)
           {
             $message->from($to_email);

@@ -11,33 +11,33 @@
         #outlook a {
             padding: 0;
         }
-
+        
         .ReadMsgBody {
             width: 100%;
         }
-
+        
         .ExternalClass {
             width: 100%;
         }
-
+        
         .ExternalClass * {
             line-height: 100%;
         }
-
+        
         body {
             margin: 0;
             padding: 0;
             -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
         }
-
+        
         table,
         td {
             border-collapse: collapse;
             mso-table-lspace: 0pt;
             mso-table-rspace: 0pt;
         }
-
+        
         img {
             border: 0;
             height: auto;
@@ -46,7 +46,7 @@
             text-decoration: none;
             -ms-interpolation-mode: bicubic;
         }
-
+        
         p {
             display: block;
             margin: 13px 0;
@@ -58,7 +58,6 @@
             @-ms-viewport {
                 width: 320px;
             }
-
             @viewport {
                 width: 320px;
             }
@@ -85,21 +84,21 @@
                 max-width: 100.000000%;
             }
         }
-
+        
         @media only screen and (min-width:480px) {
             .dys-column-per-100 {
                 width: 100.000000% !important;
                 max-width: 100.000000%;
             }
         }
-
+        
         @media only screen and (min-width:480px) {
             .dys-column-per-90 {
                 width: 90% !important;
                 max-width: 90%;
             }
         }
-
+        
         @media only screen and (min-width:480px) {
             .dys-column-per-100 {
                 width: 100.000000% !important;
@@ -200,16 +199,14 @@
                                                     <tr>
                                                         <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                             <div style='color:#4d4d4d;font-family:Oxygen, Helvetica neue, sans-serif;font-size:32px;font-weight:700;line-height:37px;text-align:center;'>
-                                                                <!-- Добро пожаловать! -->
+                                                                Уведомление о смене статуса проекта: Черновик
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                             <div style='color:#777777;font-family:Oxygen, Helvetica neue, sans-serif;font-size:14px;line-height:21px;text-align:center;'>
-                                                                <!-- Поздравляем, вы успешно зарегистрировались на сайте socialidea.ru
-
-Осталось только подтвердить ваш email, и вы получите доступ к личному кабинету нашего сайта и сможете отправить проект на конкурс до 31 мая. -->
+                                                                Ниже представлен комментарий от эксперта
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -249,10 +246,7 @@
                                                                         <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                                             <div style='color:black;font-family:Oxygen, Helvetica neue, sans-serif;font-size:20px;line-height:21px;text-align:center;'>
                                                                                 <span>
-                                                                                    Статус вашего проекта - Черновик. <br><br>
-                                                                                    Это значит, что Ваш проект был проверен модераторами конкурса и он не прошел модерацию.<br><br>
-                                                                                    Пожалуйста, проверьте еще раз правильность заполнения Вашего проекта и отправьте его. <br><br>
-                                                                                    Спасибо!
+                                                                                     {{ $data['draft__msg'] }}
                                                                                 </span>
                                                                                 <span style='font-weight:700; color: #ff6f6f; font-size: 18px;'>
 
