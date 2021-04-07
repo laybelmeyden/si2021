@@ -360,7 +360,7 @@
             </div>
             @endif
         </section>
-        <div class="btns__statuses">
+        <!-- <div class="btns__statuses">
             @if(Auth::user() -> role_id === 1)
             <form action="{{ route('draftProject',$project->id) }}" method="POST">
                 @csrf
@@ -379,7 +379,7 @@
                 </div>
             </form>
             @endif
-        </div>
+        </div> -->
     </div>
 </section>
 @endsection
