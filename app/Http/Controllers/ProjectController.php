@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Project;
 use Illuminate\Http\Request;
 use App\User;
+use App\Mail\Mail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -245,7 +246,7 @@ class ProjectController extends Controller
         $to_email='socialidea.mts@yandex.ru';
         $to_name='Social Idea 2021';
         $data = array('email' => $user -> email);
-          \Mail::send('email.mailDraft',$data, function($message) use ($to_email,$data, $to_name,$msg__experts)
+          \Mail::send('email.mailDraft',$data, function($message) use ($to_email,$data, $to_name)
           {
             $message->from($to_email);
             $message->to($data['email'], $to_name)->subject('Статус проекта');
