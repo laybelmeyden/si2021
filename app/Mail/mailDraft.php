@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class Mail extends Mailable
+class mailDraft extends Mailable
 {
     use Queueable, SerializesModels;
     public $msg__experts;
@@ -16,7 +16,7 @@ class Mail extends Mailable
      *
      * @return void
      */
-    public function __construct($msg__experts)
+    public function __construct(String $msg__experts)
     {
         $this->msg__experts=$msg__experts;
     }
@@ -28,6 +28,6 @@ class Mail extends Mailable
      */
     public function build()
     {
-        return $this->view('email.mailDraft');
+        return $this->from('socialidea.mts@yandex.ru')->view('email.mailDraft');
     }
 }

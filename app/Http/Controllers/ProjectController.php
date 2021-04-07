@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use App\Project;
 use Illuminate\Http\Request;
 use App\User;
-use App\Mail\Mail;
+use App\Mail\mailDraft;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class ProjectController extends Controller
 {
@@ -240,17 +241,12 @@ class ProjectController extends Controller
         $project = Project::find($id);
         $user = User::find($project->user_id);
         
-        $project->statuses = 'draft';
+        // $project->statuses = 'draft';
         $project->save();
         $msg__experts = request('draft__msg');
-        $to_email='socialidea.mts@yandex.ru';
         $to_name='Social Idea 2021';
         $data = array('email' => $user -> email);
-          \Mail::send('email.mailDraft',$data, function($message) use ($to_email,$data, $to_name)
-          {
-            $message->from($to_email);
-            $message->to($data['email'], $to_name)->subject('Статус проекта');
-         });
+        Mail::to($data['email'], $to_name)->send((new mailDraft($msg__experts)));
 
         session()->flash('status_title', 'Успешно');
         session()->flash('status_body', 'Проект отклонен');
