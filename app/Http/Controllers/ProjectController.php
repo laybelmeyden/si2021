@@ -241,7 +241,7 @@ class ProjectController extends Controller
         $project = Project::find($id);
         $user = User::find($project->user_id);
         
-        // $project->statuses = 'draft';
+        $project->statuses = 'draft';
         $project->save();
         $msg__experts = request('draft__msg');
         $to_name='Social Idea 2021';
