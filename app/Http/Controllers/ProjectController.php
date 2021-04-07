@@ -246,7 +246,7 @@ class ProjectController extends Controller
         $msg__experts = request('draft__msg');
         $to_name='Social Idea 2021';
         $data = array('email' => $user -> email);
-        Mail::to($data['email'], $to_name)->send((new mailDraft($msg__experts)));
+        Mail::to($data['email'], $to_name)->send((new mailDraft($msg__experts || 'Комментариев нет')));
 
         session()->flash('status_title', 'Успешно');
         session()->flash('status_body', 'Проект отклонен');
