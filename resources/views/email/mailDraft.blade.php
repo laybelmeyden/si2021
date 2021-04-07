@@ -246,7 +246,7 @@
                                                                         <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                                             <div style='color:black;font-family:Oxygen, Helvetica neue, sans-serif;font-size:20px;line-height:21px;text-align:center;'>
                                                                                 <span>
-                                                                                     {{ $data['draft__msg'] }}
+                                                                                      $data['draft__msg'] 
                                                                                 </span>
                                                                                 <span style='font-weight:700; color: #ff6f6f; font-size: 18px;'>
 
