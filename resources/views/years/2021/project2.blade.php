@@ -33,12 +33,12 @@ table a:hover{
                     </div>
                     <div class="years__project_date_items">
                         <p>Нижний Новгород</p>
-                        <p>15-16 мая</p>
+                        <p>22-23 мая</p>
                         <p>IT-Школа в г. Нижний Новгород, тематика: экология, инклюзия</p>
                     </div>
                     <div class="years__project_date_items">
                         <p>Обнинск</p>
-                        <p>22-23 мая</p>
+                        <p>15-16 мая</p>
                         <p>г. Обнинск – Хакатон, тематика: «Интернет вещей»</p>
                     </div>
                     <div class="years__project_date_items">
@@ -89,13 +89,13 @@ table a:hover{
                         </tr>
                         <tr>
                             <th scope="row">Нижний Новгород</th>
-                            <td>15-16 мая</td>
+                            <td>22-23 мая</td>
                             <td colspan="2"></td>
                         </tr>
                         <tr>
                             <th scope="row">Обнинск</th>
-                            <td>22-23 мая</td>
-                            <td colspan="2"></td>
+                            <td>15-16 мая</td>
+                            <td colspan="2"><a href="https://leader-id.ru/events/197938">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
                         </tr>
                         <tr>
                             <th scope="row">Санкт-Петербург</th>
