@@ -5,7 +5,11 @@
         </div>
         <div class="left__navbar_title">
             <div class="img">
+                @if($user -> user_avatar == null)
                 <img src="/assets/img/user__logo.svg" alt="">
+                @else
+                <img src="/storage/{{$user -> user_avatar}}" alt="">
+                @endif
             </div>
             <div class="info">
                 <div class="info__name">

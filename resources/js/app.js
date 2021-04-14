@@ -22,6 +22,7 @@ Vue.use(Vuex);
 Vue.component('news_component', require('./components/NewsComponent.vue').default);
 Vue.component('project-create', require('./components/ProjectCreate.vue').default);
 Vue.component('project-edit', require('./components/ProjectEdit.vue').default);
+Vue.component('user-cropp', require('./components/UserCropp.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

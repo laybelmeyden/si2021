@@ -26,14 +26,14 @@ Route::get('/photos', 'MainController@photos');
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/setting_profile/{id}', 'UserController@setting_profile')->name('setting_user')->middleware('verified');
 Route::put('/setting_profile/{id}', 'UserController@updateCurrentUser')->name('updateCurrentUser')->middleware('verified');
-
+Route::post('/update_user_avatar', 'UserController@updateCurrentUserAvatar')->name('updateCurrentUserAvatar')->middleware('verified');
 //AllUsers
 Route::get('/allUsers', 'UserController@allUsers')->name('allUsers')->middleware('verified');
 Route::get('/allUsers/show/{id}', 'UserController@allUsersShow')->name('allUserShow')->middleware('verified');
 Route::get('/allUsers/edit/{id}', 'UserController@allUsersShowEdit')->name('allUsersShowEdit')->middleware('verified');
 Route::put('/allUsers/edit/{id}', 'UserController@allUsersEdit')->name('allUsersEdit')->middleware('verified');
 Route::delete('/allUsers/delete/{id}', 'UserController@allUsersDelete')->name('allUsersDelete')->middleware('verified');
-
+Route::get('/allUserLogo', 'UserController@allUserLogo');
 //project 
 Route::resource('projects','ProjectController')->middleware('verified');
 Route::post('/createProject', 'ProjectController@createProject')->name('createProject')->middleware('verified');

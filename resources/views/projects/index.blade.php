@@ -46,6 +46,36 @@
                 @endif
             </div>
         </a>
+        <div class="btns__statuses">
+            @if(Auth::user() -> role_id === 1)
+            <div class="item__admin_btn">
+                <button data-bs-toggle="modal" data-bs-target="#staticBackdrop{{$project->id}}" class="btn btn__draft">Черновик</button>
+            </div>
+            <div class="modal fade" id="staticBackdrop{{$project->id}}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Статус черновик уведомление</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="{{ route('draftProject',$project->id) }}" method="POST">
+                                @csrf
+                                @method('PUT')
+                                <div class="form__item">
+                                    <label for="draft__msg">Проект - {{ $project -> project_name }}</label>
+                                    <textarea name="draft__msg" id="draft__msg" rows="10" placeholder="Введите сообщение для отправки пользователю..." required></textarea>
+                                </div>
+                                <div class="item__admin_btn rigth__align">
+                                    <button type="submit" class="btn btn__accepted">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endif
+        </div>
         @endforeach
         @foreach ($projectsModerate as $project)
         <div class="statuses">
@@ -153,6 +183,17 @@
                 @endif
             </div>
         </a>
+        <div class="btns__statuses">
+            @if(Auth::user() -> role_id === 1)
+            <form action="{{ route('acceptedProject',$project->id) }}" method="POST">
+                @csrf
+                @method('PUT')
+                <div class="item__admin_btn">
+                    <button type="submit" class="btn btn__accepted">Принять</button>
+                </div>
+            </form>
+            @endif
+        </div>
         @endforeach
     </div>
 </section>

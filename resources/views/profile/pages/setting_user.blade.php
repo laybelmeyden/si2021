@@ -10,7 +10,7 @@
     <div id="app" class="nav__items">
         <div>
             <h1>МОЙ ПРОФИЛЬ</h1>
-            <form action="{{ route('updateCurrentUser',$user->id) }}" method="POST">
+            <form action="{{ route('updateCurrentUser',$user->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -31,11 +31,11 @@
                         <label for="user_city">Город (место проживания страна/город)</label>
                         <input type="text" name="user_city" id="user_city" value="{{ $user -> user_city}}" class="form-control" placeholder="Москва" required>
                     </div>
+                    <user-cropp></user-cropp>
                     <div class="item">
                         <div class="checkboxes">
-                            <input id="check__itstart" type="checkbox" name="check__itstart"
-                            @if($user -> check__itstart === 'on')
-                                checked
+                            <input id="check__itstart" type="checkbox" name="check__itstart" @if($user -> check__itstart === 'on')
+                            checked
                             @endif
                             /><label class="green-background" for="check__itstart">Участник региональной программы <a href="/">Social Idea 2021 «IT-Start»</a></label>
                         </div>

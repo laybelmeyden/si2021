@@ -86,17 +86,22 @@
                             <a href="{{ route('register') }}">@lang('words.register')</a>
                         </div>
                         @else
-                        <img src="/assets/img/auth_img.svg" alt="">
+                        <div class="mini__logo">
+                            @if(Auth::user() -> user_avatar == null)
+                            <img src="/assets/img/auth_img.svg" alt="">
+                            @else
+                            <img src="/storage/{{Auth::user() -> user_avatar}}" alt="">
+                            @endif
+                        </div>
                         <div>
                             <a href="/home">
-                                {{ Auth::user()->name }}
+                                {{ Auth::user()->user_name }}
                             </a>
-                            <a href="{{ route('logout') }}" 
-                            onclick="event.preventDefault();
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">@lang('words.exit')</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                                @csrf
+                            </form>
                         </div>
                         @endguest
                     </div>
