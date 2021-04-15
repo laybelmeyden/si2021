@@ -12,6 +12,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     @include('profile.css')    
+    <script>
+        const msg = 'Social Idea 2021';
+        const msgTitle = (icon, text) =>{
+            document.querySelector('head title').textContent = text;
+            document.querySelector('link[rel="shortcut icon"]').setAttribute('href', icon);
+        }
+        window.onblur = () =>{
+            setTimeout(()=>{
+                msgTitle('/assets/img/heart.png', 'Возвращайтесь, мы вас ждем !')
+            }, 1000)
+        }
+        window.onfocus = () => {
+            msgTitle('{{asset("assets/img/favicon.ico")}}', msg)
+        }
+    </script>
 </head>
 
 <body>

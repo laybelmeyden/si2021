@@ -904,6 +904,12 @@
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
                     <a href="https://platform.nti.work/"><img loading="lazy" src="assets/img/tnh14VpDMqg.jpg" class="img_partners"></a>
                 </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href=""><img loading="lazy" src="assets/img/logo4444444444444.png" class="img_partners"></a>
+                </div>
+                <div class="col-lg-2 col-md-3 col-3 particul_part">
+                    <a href="https://www.ahstep.ru/"><img loading="lazy" src="assets/img/logostep.svg" class="img_partners"></a>
+                </div>
             </div>
         </div>
     </div>

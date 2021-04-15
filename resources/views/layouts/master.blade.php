@@ -34,6 +34,21 @@
         <div><img src="https://mc.yandex.ru/watch/73770856" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
+    <script>
+        const msg = 'Social Idea 2021';
+        const msgTitle = (icon, text) =>{
+            document.querySelector('head title').textContent = text;
+            document.querySelector('link[rel="shortcut icon"]').setAttribute('href', icon);
+        }
+        window.onblur = () =>{
+            setTimeout(()=>{
+                msgTitle('/assets/img/heart.png', 'Возвращайтесь, мы вас ждем !')
+            }, 1000)
+        }
+        window.onfocus = () => {
+            msgTitle('{{asset("assets/img/favicon.ico")}}', msg)
+        }
+    </script>
 </head>
 
 <body>
