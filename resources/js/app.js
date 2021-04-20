@@ -5,6 +5,8 @@
  */
 import Vue from 'vue'
 import Vuex from 'vuex'
+import vuetify from '../plugins/vuetify'
+import 'vuetify/dist/vuetify.min.css';
 require('./bootstrap');
 window.Vue = require('vue');
 Vue.use(Vuex);
@@ -23,6 +25,7 @@ Vue.component('news_component', require('./components/NewsComponent.vue').defaul
 Vue.component('project-create', require('./components/ProjectCreate.vue').default);
 Vue.component('project-edit', require('./components/ProjectEdit.vue').default);
 Vue.component('user-cropp', require('./components/UserCropp.vue').default);
+Vue.component('expert-project', require('./components/ExpertProject.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -31,4 +34,5 @@ Vue.component('user-cropp', require('./components/UserCropp.vue').default);
 
 const app = new Vue({
     el: '#app',
+    vuetify,
 });

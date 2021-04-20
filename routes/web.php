@@ -42,6 +42,9 @@ Route::get('/showProject', 'ProjectController@showProject')->name('showProject')
 Route::post('/sendProject', 'ProjectController@sendProject')->name('sendProject')->middleware('verified');
 Route::put('project/draftProject/{id}', 'ProjectController@draftProject')->name('draftProject')->middleware('verified');
 Route::put('project/accepted/{id}', 'ProjectController@acceptedProject')->name('acceptedProject')->middleware('verified');
+//experts
+Route::get('/expertsProject', 'ExpertController@expertsProject')->name('expertsProject')->middleware('verified');
+Route::get('/expertsProjectView', 'ExpertController@expertsProjectView')->name('expertsProjectView')->middleware('verified');
 //locale
 Route::get('/locale/{locale}', function ($locale) {
     Session::put('locale',$locale);

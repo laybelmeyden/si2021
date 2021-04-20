@@ -47,6 +47,11 @@
                 Все проекты
                 </div>
             </a>
+            <a href="{{ route('expertsProject') }}">
+                <div id="expertsProject">
+                Привязать проект
+                </div>
+            </a>
             @endif
         </div>
     </div>

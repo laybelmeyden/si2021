@@ -33,7 +33,7 @@ table a:hover{
                     </div>
                     <div class="years__project_date_items">
                         <p>Нижний Новгород</p>
-                        <p>22-23 мая</p>
+                        <p>20-21 мая</p>
                         <p>IT-Школа в г. Нижний Новгород, тематика: экология, инклюзия</p>
                     </div>
                     <div class="years__project_date_items">
@@ -89,8 +89,8 @@ table a:hover{
                         </tr>
                         <tr>
                             <th scope="row">Нижний Новгород</th>
-                            <td>22-23 мая</td>
-                            <td colspan="2"></td>
+                            <td>20-21 мая</td>
+                            <td colspan="2"><a href="https://rusinnovations.timepad.ru/event/1615459/">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
                         </tr>
                         <tr>
                             <th scope="row">Обнинск</th>
