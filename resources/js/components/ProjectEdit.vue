@@ -1246,7 +1246,7 @@ export default {
     },
     sendProject() {
       axios
-        .post("/sendProject", this.peoject)
+        .post("/sendProject", this.project)
         .then((response) => {})
         .catch((error) => {})
         .finally(() => (this.loading = false));
