@@ -41,13 +41,12 @@
             data-bs-parent="#accordionFlushExample"
           >
             <div class="accordion-body">
-              <div>
-                <label for="">Поиск проектов</label>
-                <input type="text" v-model="searchProjectInput" />
-                <div v-for="(project, i) in projectSearch" :key="i">
-                  <p>{{ project.project_name }}</p>
-                  <a @click.prevent="projectLink">Привязать проект</a>
-                </div>
+              поиск проектов <input type="text" v-model="searchProjectInput" />
+              <div v-for="(project, i) in projectSearch" :key="i">
+                {{ project.project_name }}
+                <input type="text" hidden id="user_id" name="user_id" :data-value="expert.id" :value="expert.id">
+                <input type="text" hidden id="project_id" name="project_id"  :data-value="project.id" :value="project.id">
+                <button @click="projectLink(expert.id,project.id)">dss</button>
               </div>
             </div>
           </div>
@@ -60,6 +59,9 @@
 .li__group {
   display: flex;
 }
+input {
+  border: 2px solid black;
+}
 </style>
 <script>
 export default {
@@ -70,16 +72,30 @@ export default {
       experts: [],
       searchExpertInput: "",
       projects: [],
+      expertlink: [],
+      expertProjects: {
+        project_id: '',
+        user_id: ''
+      },
     };
   },
   methods: {
-    projectLink() {
+    projectLink(user_id, project_id) {
+      console.log(user_id, project_id)
+      const formData = new FormData();
+      formData.append("project_id", project_id);
+      formData.append("user_id", user_id);
+      formData.append("_method", "post");
       axios
-        .post("/projectLink", this.peoject)
-        .then((response) => {})
-        .catch((error) => {})
+        .post("/projectLink", formData)
+        .then((response) => {
+          alert("oks");
+        })
+        .catch((error) => {
+          alert("errors");
+        })
         .finally(() => (this.loading = false));
-    },
+    }
   },
   computed: {
     projectSearch() {
@@ -109,6 +125,12 @@ export default {
       .get("/expertsProjectViewProject", this.projects)
       .then((response) => {
         this.projects = response.data;
+      })
+      .finally(() => (this.loading = false));
+    axios
+      .get("/projectLinkView", this.expertlink)
+      .then((response) => {
+        this.expertlink = response.data;
       })
       .finally(() => (this.loading = false));
   },

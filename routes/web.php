@@ -47,6 +47,7 @@ Route::get('/expertsProject', 'ExpertController@expertsProject')->name('expertsP
 Route::get('/expertsProjectView', 'ExpertController@expertsProjectView')->name('expertsProjectView')->middleware('verified');
 Route::get('/expertsProjectViewProject', 'ExpertController@expertsProjectViewProject')->name('expertsProjectViewProject')->middleware('verified');
 Route::post('/projectLink', 'ExpertController@projectLink')->name('projectLink')->middleware('verified');
+Route::get('/projectLinkView', 'ExpertController@projectLinkView')->name('projectLinkView')->middleware('verified');
 //locale
 Route::get('/locale/{locale}', function ($locale) {
     Session::put('locale',$locale);
