@@ -27,6 +27,30 @@ a {
     text-decoration: none !important;
 }
 
+#itstart__banners {
+    height: 200px;
+    width: 100%;
+    background-image: url(assets/img/banner__itsrat.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    .banner__back {
+        p {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 120%;
+            /* or 60px */
+            color: #FFFFFF;
+            width: 100%;
+            padding-left: 44%;
+        }
+    }
+}
+
 .no__vision {
     display: none;
 }
@@ -1235,6 +1259,7 @@ strong {
 #news {
     padding-top: 142px;
     background-color: white;
+    padding-bottom: 80px;
     .news__title {
         font-style: normal;
         font-weight: 300;
@@ -2234,6 +2259,12 @@ strong {
     #all_speakers_pages .speakers_grid {
         display: grid;
         grid-template-columns: 50% 50%;
+    }
+    #itstart__banners {
+        background-position: 37% 100%;
+    }
+    #itstart__banners .banner__back p {
+        font-size: 28px;
     }
     #photos .grid-container div {
         max-height: 200px;

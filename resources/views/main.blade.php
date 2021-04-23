@@ -778,6 +778,15 @@
         <news_component></news_component>
     </div>
 </section>
+<a href="https://youtu.be/S1p8Vmhd-Fs" target="_blank">
+<section id="itstart__banners">
+    <div class="container">
+        <div class="banner__back">
+        <p>Онлайн-трансляция окружных школ IT-Start</p>
+        </div>
+    </div>
+</section>
+</a>
 <section id="photos">
     <div class="container">
         <p>ГаЛЕРЕЯ</p>
