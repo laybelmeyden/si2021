@@ -36,6 +36,11 @@
                 Инструкция заполнения
                 </div>
             </a>
+            <a href="/online">
+                <div id="online">
+                Образовательный курс
+                </div>
+            </a>
             @if(Auth::user() -> role_id === 1)
             <a href="/allUsers">
                 <div id="allUsers">

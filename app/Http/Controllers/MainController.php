@@ -26,6 +26,9 @@ class MainController extends Controller
     public function stats(){
         return view ('statistics');
     }
+    public function online(){
+        return view ('online');
+    }
     public function allspeakers(){
         return view ('allspeakers');
     }

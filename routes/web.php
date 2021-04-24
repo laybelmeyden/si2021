@@ -21,6 +21,7 @@ Route::get('/', 'MainController@index')->name('main');
 Route::get('/statistics', 'MainController@stats')->name('stats');
 Route::get('/allspeakers', 'MainController@allspeakers');
 Route::get('/photos', 'MainController@photos');
+Route::get('/online', 'MainController@online')->middleware('verified');
 
 //profile
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');

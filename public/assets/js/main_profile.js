@@ -28,6 +28,8 @@ navbar_active = () => {
                 splitE === pathSlice ? child_a.classList.toggle('active_href') : false
             } else if (pathSlice == 'expertsProject') {
                 splitE === pathSlice ? child_a.classList.toggle('active_href') : false
+            } else if (pathSlice == 'online') {
+                splitE === pathSlice ? child_a.classList.toggle('active_href') : false
             }
         })
 }
