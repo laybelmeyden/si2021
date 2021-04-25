@@ -778,7 +778,7 @@
         <news_component></news_component>
     </div>
 </section>
-<a href="https://youtu.be/S1p8Vmhd-Fs" target="_blank">
+<a href="https://youtu.be/ctQ7cFI0p3I" target="_blank">
 <section id="itstart__banners">
     <div class="container">
         <div class="banner__back">
