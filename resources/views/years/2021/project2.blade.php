@@ -21,25 +21,25 @@ table a:hover{
             <div class="years__project_sticky">
                 @if(App::isLocale('ru'))
                 <div class="years__project_date">
+                <div class="years__project_date_items">
+                        <p>Обнинск</p>
+                        <p>15-16 мая</p>
+                        <p>г. Обнинск – Хакатон, тематика: «Интернет вещей»</p>
+                    </div>
                     <div class="years__project_date_items">
                         <p>Краснодар</p>
                         <p>17-18 апреля</p>
                         <p>IT-Школа в г. Краснодар, тематика: экология, инклюзия</p>
                     </div>
                     <div class="years__project_date_items">
-                        <p>Рязань</p>
-                        <p>24-25 апреля</p>
-                        <p>IT-Школа в г. Рязань, тематика: экология, инклюзия</p>
-                    </div>
-                    <div class="years__project_date_items">
                         <p>Нижний Новгород</p>
-                        <p>20-21 мая</p>
+                        <p>22-23 мая</p>
                         <p>IT-Школа в г. Нижний Новгород, тематика: экология, инклюзия</p>
                     </div>
                     <div class="years__project_date_items">
-                        <p>Обнинск</p>
-                        <p>15-16 мая</p>
-                        <p>г. Обнинск – Хакатон, тематика: «Интернет вещей»</p>
+                        <p>Рязань</p>
+                        <p>24-25 апреля</p>
+                        <p>IT-Школа в г. Рязань, тематика: экология, инклюзия</p>
                     </div>
                     <div class="years__project_date_items">
                         <p>Санкт-Петербург</p>
@@ -76,6 +76,11 @@ table a:hover{
                         </tr>
                     </thead>
                     <tbody>
+                    <tr>
+                            <th scope="row">Обнинск</th>
+                            <td>15-16 мая</td>
+                            <td colspan="2"><a href="https://leader-id.ru/events/197938">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
+                        </tr>
                         <tr>
                             <th scope="row">Краснодар</th>
                             <td>17-18 апреля</td>
@@ -83,19 +88,14 @@ table a:hover{
                             <td><a href="https://rusinnovations.timepad.ru/event/1588281/">с проживанием</a></td>
                         </tr>
                         <tr>
-                            <th scope="row">Рязань</th>
-                            <td>24-25 апреля</td>
-                            <td colspan="2"><a href="https://leader-id.ru/events/193077">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
-                        </tr>
-                        <tr>
                             <th scope="row">Нижний Новгород</th>
-                            <td>20-21 мая</td>
+                            <td>22-23 мая</td>
                             <td colspan="2"><a href="https://rusinnovations.timepad.ru/event/1615459/">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
                         </tr>
                         <tr>
-                            <th scope="row">Обнинск</th>
-                            <td>15-16 мая</td>
-                            <td colspan="2"><a href="https://leader-id.ru/events/197938">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
+                            <th scope="row">Рязань</th>
+                            <td>24-25 апреля</td>
+                            <td colspan="2"><a href="https://leader-id.ru/events/198703">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
                         </tr>
                         <tr>
                             <th scope="row">Санкт-Петербург</th>
