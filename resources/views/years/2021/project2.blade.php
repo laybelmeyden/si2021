@@ -90,12 +90,12 @@ table a:hover{
                         <tr>
                             <th scope="row">Нижний Новгород</th>
                             <td>22-23 мая</td>
-                            <td colspan="2"><a href="https://rusinnovations.timepad.ru/event/1615459/">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
+                            <td colspan="2"><a href="https://leader-id.ru/events/198703">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
                         </tr>
                         <tr>
                             <th scope="row">Рязань</th>
                             <td>24-25 апреля</td>
-                            <td colspan="2"><a href="https://leader-id.ru/events/198703">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
+                            <td colspan="2"><a href="https://leader-id.ru/events/193077">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
                         </tr>
                         <tr>
                             <th scope="row">Санкт-Петербург</th>
