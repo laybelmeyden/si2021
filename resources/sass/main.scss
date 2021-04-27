@@ -1857,12 +1857,10 @@ strong {
     /* or 21px */
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     width: 280px;
     height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 0 !important;
     &:hover {
         background: #E30510;
         color: white;
