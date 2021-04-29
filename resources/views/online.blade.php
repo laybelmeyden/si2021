@@ -21,6 +21,12 @@
         <p></p>
         </div>
         </div>
+        <div class="online__card">
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/A_4mv8olFkk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="pages__body">
+        <p></p>
+        </div>
+        </div>
     </div>
 </section>
 @endsection

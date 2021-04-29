@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Project;
 use App\Linkexpert;
+use Illuminate\Support\Facades\Auth;
+use League\CommonMark\Extension\Attributes\Node\Attributes;
 
 class ExpertController extends Controller
 {
@@ -25,7 +27,7 @@ class ExpertController extends Controller
     }
     public function expertsProjectViewProject()
     {
-        $projects = Project::all();
+        $projects = Project::get();
 
         return $projects;
     }
@@ -42,6 +44,21 @@ class ExpertController extends Controller
         $expertlink->project_id = $request->project_id;
         $expertlink->save();
 
+        return redirect()->back();
+    }
+    public function expertpageviews(User $id){
+        $currentUser = $id;
+        $currentprojectsdata = Project::all();
+        $currentuserdatalinks = Linkexpert::where('user_id', $currentUser->id)->get();
+        return view ('experts.expertpageviews', compact('id', 'currentuserdatalinks','currentprojectsdata','currentUser'));
+    }
+    public function expertpageviewsDeleted($id)
+    {
+        if (Auth::user()->role_id === 1) {
+            $links = Linkexpert::find($id);
+            $links->delete();
+            return back();
+        }
         return redirect()->back();
     }
 }

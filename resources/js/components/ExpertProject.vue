@@ -9,47 +9,25 @@
           <div class="circle circle-4"></div>
           <div class="circle circle-5"></div>
         </div>
-        <div></div>
+        <div>Загрузка...</div>
       </div>
     </div>
-    <div v-else>
+    <div v-else class="expert__project_container">
       <h1>Привязать проекты</h1>
       <div class="accordion accordion-flush" id="accordionFlushExample">
-        <label for="">Поиск экспертов</label>
-        <input type="text" v-model="searchExpertInput" />
-        <div
-          class="accordion-item"
-          v-for="(expert, i) in searchExpert"
-          :key="i"
-        >
-          <h2 class="accordion-header" :id="`flush-headingOne${expert.id}`">
-            <button
-              class="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              :data-bs-target="`#flush-collapseOne${expert.id}`"
-              aria-expanded="false"
-              :aria-controls="`flush-collapseOne${expert.id}`"
-            >
-              {{ expert.email }}
-            </button>
+        <label for="exp1">Поиск экспертов</label>
+        <input
+          type="text"
+          id="exp1"
+          v-model="searchExpertInput"
+          placeholder="Для поиска введите почту эксперта"
+        />
+        <div class="expert__email" v-for="(expert, i) in searchExpert" :key="i">
+            <a :href="`/expertpageviews/${expert.id}`" target="_blank">
+          <h2>
+              {{ expert.user_name || "Эксперт" }} - {{ expert.email }}
           </h2>
-          <div
-            :id="`flush-collapseOne${expert.id}`"
-            class="accordion-collapse collapse"
-            :aria-labelledby="`flush-headingOne${expert.id}`"
-            data-bs-parent="#accordionFlushExample"
-          >
-            <div class="accordion-body">
-              поиск проектов <input type="text" v-model="searchProjectInput" />
-              <div v-for="(project, i) in projectSearch" :key="i">
-                {{ project.project_name }}
-                <input type="text" hidden id="user_id" name="user_id" :data-value="expert.id" :value="expert.id">
-                <input type="text" hidden id="project_id" name="project_id"  :data-value="project.id" :value="project.id">
-                <button @click="projectLink(expert.id,project.id)">dss</button>
-              </div>
-            </div>
-          </div>
+            </a>
         </div>
       </div>
     </div>
@@ -73,15 +51,10 @@ export default {
       searchExpertInput: "",
       projects: [],
       expertlink: [],
-      expertProjects: {
-        project_id: '',
-        user_id: ''
-      },
     };
   },
   methods: {
     projectLink(user_id, project_id) {
-      console.log(user_id, project_id)
       const formData = new FormData();
       formData.append("project_id", project_id);
       formData.append("user_id", user_id);
@@ -95,7 +68,7 @@ export default {
           alert("errors");
         })
         .finally(() => (this.loading = false));
-    }
+    },
   },
   computed: {
     projectSearch() {

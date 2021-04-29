@@ -26,6 +26,7 @@ Vue.component('project-create', require('./components/ProjectCreate.vue').defaul
 Vue.component('project-edit', require('./components/ProjectEdit.vue').default);
 Vue.component('user-cropp', require('./components/UserCropp.vue').default);
 Vue.component('expert-project', require('./components/ExpertProject.vue').default);
+Vue.component('expert-view', require('./components/expertViews.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
