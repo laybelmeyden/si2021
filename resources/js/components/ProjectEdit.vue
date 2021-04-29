@@ -1232,6 +1232,7 @@ export default {
       this.isSendProjectVisible = false;
     },
     multiSendProject() {
+      this.updateProject();
       this.sendProject();
       window.location.href = "/home";
     },
