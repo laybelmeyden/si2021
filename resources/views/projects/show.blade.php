@@ -402,7 +402,7 @@
                 </tbody>
             </table>
             <h3>Комментарий к проекту</h3>
-            <textarea type="text" id="msg__text" name="msg1" placeholder="Если у вас есть комментарии к проекту, то введите его в это поле"></textarea>
+            <textarea type="text" id="msg__text" name="msg1" placeholder="Если у вас есть комментарии к проекту, то введите его в это поле" value="{{$projectExpertView->msg1}}"></textarea>
             <div>
             <button type="submit">Оценить</button>
             </div>
