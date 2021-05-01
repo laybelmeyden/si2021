@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Project;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 class UserController extends Controller
@@ -49,11 +50,17 @@ class UserController extends Controller
         session()->flash('status_body', 'Ваш профиль был успешно сохранен !');
         return redirect()->back();
     }
+    public function search(Request $request){
+        $search = $request->get('search');
+
+        $users = User::where('email', 'LIKE', '%'.$search.'%')->orWhere('user_name', 'LIKE', '%'.$search.'%')->paginate();
+        return view('profile.allUsers', compact('users'));
+    }
     public function allUsers()
     {
         if (Auth::user()->role_id === 1) {
             $user = Auth::user();
-            $users = User::first()->get();
+            $users = User::first()->paginate(20);
             return view('profile.allUsers', compact('user', 'users'));
         }
         return redirect()->back();
@@ -89,10 +96,10 @@ class UserController extends Controller
             $id->user_city = $request->user_city;
             $id->user_education = $request->user_education;
             $id->user_moreinfo = $request->user_moreinfo;
-
+            $id->role_id = $request->role_id;
             $id->save();
 
-            return redirect('/allUsers');
+            return redirect()->back();
         }
         return redirect()->back();
     }

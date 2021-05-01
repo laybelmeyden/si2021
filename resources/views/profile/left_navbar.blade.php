@@ -20,6 +20,20 @@
                 </div>
             </div>
         </div>
+        @if( Auth::user()->role_id === 3 )
+        <div class="left__navbar_href">
+            <a href="/home">
+                <div id="home">
+                Проекты для оценки
+                </div>
+            </a>
+            <a href="/setting_profile/{{ Auth::user()->id }}">
+                <div id="setting_profile">
+                    Настройки профиля
+                </div>
+            </a>
+        </div>
+        @else
         <div class="left__navbar_href">
             <a href="/home">
                 <div id="home">
@@ -59,5 +73,6 @@
             </a>
             @endif
         </div>
+        @endif
     </div>
 </div>

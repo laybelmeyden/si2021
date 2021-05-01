@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Project;
+use App\Linkexpert;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -27,10 +28,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-
         $user = Auth::user();
         $projects = Project::where('user_id', $user -> id)-> get();
-
-        return view('home', compact('user', 'projects'));
+        $projectsNames = Project::all();
+        $projectsExperts = Linkexpert::where('user_id', $user->id)->get();
+        return view('home', compact('user', 'projects','projectsExperts', 'projectsNames'));
     }
 }

@@ -22,7 +22,7 @@
             type="text"
             id="exp1"
             v-model="searchProjectInput"
-            placeholder="Для поиска введите названиеп проекта"
+            placeholder="Для поиска введите название проекта"
           />
           <div
             v-for="(project, i) in projectSearch"
@@ -45,13 +45,15 @@
               :data-value="project.id"
               :value="project.id"
             />
-            <p>{{ project.project_name }}</p>
+            <div class="add__links">
+              <p>{{ project.project_name }}</p>
             <button
               @click.prevent="projectLink(currentuserdata.id, project.id)"
               id="btn__link_exp"
             >
               Привязать проект
             </button>
+            </div>
           </div>
         </div>
         <div>
@@ -60,7 +62,8 @@
             v-for="(currentuserdatalinks, i) in currentuserdatalinks"
             :key="i"
           >
-            <a :href="`/projects/${projectUrl(currentuserdatalinks)}`">{{
+            <div class="remove__links">
+              <a :href="`/projects/${projectUrl(currentuserdatalinks)}`">{{
               projectName(currentuserdatalinks)
             }}</a>
             <button
@@ -69,6 +72,7 @@
             >
               Удалить
             </button>
+            </div>
           </div>
         </div>
       </div>

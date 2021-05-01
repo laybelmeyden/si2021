@@ -6,6 +6,35 @@
     <div class="profile__left_navbar">
         @include('profile.left_navbar')
     </div>
+    @if( Auth::user()->role_id === 3 )
+    <div class="card__project" id="app">
+        <h1>ПРОЕКТЫ ДЛЯ ОЦЕНКИ</h1>
+        @foreach($projectsExperts as $projectsExpert)
+        <div class="statuses__score">
+            @if($projectsExpert->score1 != null 
+            && $projectsExpert->score2 != null
+            && $projectsExpert->score3 != null
+            && $projectsExpert->score4 != null)
+            <div class="item accepted">
+                Вы оценили этот проект
+            </div>
+            @else
+            <div class="item danger">
+                Вы не оценили этот проект
+            </div>
+            @endif
+        </div>
+        <a href="/projects/{{$projectsExpert->project_id}}">
+        <div class="card__project_show">
+                    <span>Номер проекта {{$projectsExpert -> project_id}}</span>
+                    <p class="project__title">{{$projectsNames[0]->find($projectsExpert -> project_id)->project_name}}</p>
+                    <p  class="project__body">{{ Str::limit($projectsNames[0]->find($projectsExpert -> project_id)->project_body, 300) }}</p>
+            </div>
+        </a>
+        <br><br>
+        @endforeach
+    </div>
+    @else
     <div class="card__project" id="app">
         <h1>МОЙ ПРОЕКТ</h1>
         @if(
@@ -71,5 +100,6 @@
         @endif
         @endif
     </div>
+    @endif
 </section>
 @endsection

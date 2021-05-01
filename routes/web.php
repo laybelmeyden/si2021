@@ -35,6 +35,7 @@ Route::get('/allUsers/edit/{id}', 'UserController@allUsersShowEdit')->name('allU
 Route::put('/allUsers/edit/{id}', 'UserController@allUsersEdit')->name('allUsersEdit')->middleware('verified');
 Route::delete('/allUsers/delete/{id}', 'UserController@allUsersDelete')->name('allUsersDelete')->middleware('verified');
 Route::get('/allUserLogo', 'UserController@allUserLogo');
+Route::get('/search', 'UserController@search');
 //project 
 Route::resource('projects','ProjectController')->middleware('verified');
 Route::post('/createProject', 'ProjectController@createProject')->name('createProject')->middleware('verified');
@@ -44,6 +45,7 @@ Route::post('/sendProject', 'ProjectController@sendProject')->name('sendProject'
 Route::put('project/draftProject/{id}', 'ProjectController@draftProject')->name('draftProject')->middleware('verified');
 Route::put('project/accepted/{id}', 'ProjectController@acceptedProject')->name('acceptedProject')->middleware('verified');
 //experts
+Route::put('/getRoleUser', 'ExpertController@getRoleUser')->name('getRoleUser')->middleware('verified');
 Route::get('/expertsProject', 'ExpertController@expertsProject')->name('expertsProject')->middleware('verified');
 Route::get('/expertsProjectView', 'ExpertController@expertsProjectView')->name('expertsProjectView')->middleware('verified');
 Route::get('/expertsProjectViewProject', 'ExpertController@expertsProjectViewProject')->name('expertsProjectViewProject')->middleware('verified');
@@ -51,6 +53,7 @@ Route::post('/projectLink', 'ExpertController@projectLink')->name('projectLink')
 Route::get('/projectLinkView', 'ExpertController@projectLinkView')->name('projectLinkView')->middleware('verified');
 Route::get('/expertpageviews/{id}', 'ExpertController@expertpageviews')->name('expertpageviews')->middleware('verified');
 Route::post('/expertpageviewsDeleted/{id}', 'ExpertController@expertpageviewsDeleted')->name('expertpageviewsDeleted')->middleware('verified');
+Route::put('/expertRatings/{id}', 'ExpertController@expertRatings')->name('expertRatings')->middleware('verified');
 //locale
 Route::get('/locale/{locale}', function ($locale) {
     Session::put('locale',$locale);

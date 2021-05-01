@@ -360,6 +360,55 @@
             </div>
             @endif
         </section>
+        @if( Auth::user()->role_id === 3 )
+        @foreach($projectExpertViews as $projectExpertView)
+        <h3>Форма оценок для проекта</h3>
+        <form action="{{ route('expertRatings',$projectExpertView->id) }}" method="post" id="score__table">
+            @csrf
+            @method('PUT')
+            <a href="/assets/img/Polozhenie_SI_2.pdf">Положение
+    о проведении XI Международного конкурса социальных проектов с
+    применением цифровых технологий «Social Idea»</a>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Критерий оценки</th>
+                        <th scope="col">Оценка</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Актуальность проблемы, на решение которой направлен проект</td>
+                        <td><input type="number" name="score1" id="" placeholder="Оценка" value="{{$projectExpertView->score1}}"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Бизнес-потенциал идеи/продукта проекта;</td>
+                        <td><input type="number" name="score2" id="" placeholder="Оценка" value="{{$projectExpertView->score2}}"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Масштабируемость и возможность дальнейшего развития проекта в цифровой
+                            экосистеме;</td>
+                        <td><input type="number" name="score3" id="" placeholder="Оценка" value="{{$projectExpertView->score3}}"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Уровень готовности к реализации идеи/продукта;</td>
+                        <td><input type="number" name="score4" id="" placeholder="Оценка" value="{{$projectExpertView->score4}}"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Комментарий к проекту</h3>
+            <textarea type="text" id="msg__text" name="msg1" placeholder="Если у вас есть комментарии к проекту, то введите его в это поле"></textarea>
+            <div>
+            <button type="submit">Оценить</button>
+            </div>
+        </form>
+        @endforeach
+        @endif
         <!-- <div class="btns__statuses">
             @if(Auth::user() -> role_id === 1)
             <form action="{{ route('draftProject',$project->id) }}" method="POST">
@@ -380,7 +429,7 @@
             </form>
             @endif
         </div> -->
-        
+
     </div>
 </section>
 @endsection

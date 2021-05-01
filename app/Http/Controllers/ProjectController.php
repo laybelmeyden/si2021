@@ -9,6 +9,7 @@ use App\Mail\mailDraft;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use App\Linkexpert;
 
 class ProjectController extends Controller
 {
@@ -24,21 +25,23 @@ class ProjectController extends Controller
         $projectsAccepted = Project::where('statuses', 'accepted')->get();
         $projectsModerate = Project::where('statuses', 'moderate')->get();
         $projectsDraft = Project::where('statuses', 'draft')->get();
-        if ($user->role_id === 1){
+        if ($user->role_id === 1) {
             $projectsDraftCount = $projects->where('statuses', 'draft')->count();
             $projectsModerateCount = $projects->where('statuses', 'moderate')->count();
             $projectsAcceptedCount = $projects->where('statuses', 'accepted')->count();
-            return view('projects.index', 
-            compact(
-                'projects',
-                'projectsDraftCount',
-                'projectsModerateCount',
-                'projectsAcceptedCount',
-                'projectsAccepted',
-                'projectsDraft',
-                'projectsModerate',
-            ));
-        }else{
+            return view(
+                'projects.index',
+                compact(
+                    'projects',
+                    'projectsDraftCount',
+                    'projectsModerateCount',
+                    'projectsAcceptedCount',
+                    'projectsAccepted',
+                    'projectsDraft',
+                    'projectsModerate',
+                )
+            );
+        } else {
             return redirect()->back();
         }
     }
@@ -55,7 +58,7 @@ class ProjectController extends Controller
             session()->flash('status_title', 'Ошибка');
             session()->flash('status_body', 'Увас уже есть проект !');
             return redirect()->back();
-        }else{
+        } else {
             return view('projects.create');
         }
     }
@@ -88,8 +91,11 @@ class ProjectController extends Controller
     {
 
         $user = Auth::user();
-        if ($user->role_id === 1){
-            return view('projects.show', compact('project'));
+        if ($user->role_id === 1 || $user->role_id === 3) {
+
+            $projectExpertViews = Linkexpert::where('user_id', $user->id)->where('project_id', $project->id)->get();
+
+            return view('projects.show', compact('project', 'projectExpertViews'));
         }
         if ($project->user_id !== $user->id) {
             session()->flash('status_title', 'Ошибка');
@@ -240,12 +246,12 @@ class ProjectController extends Controller
     {
         $project = Project::find($id);
         $user = User::find($project->user_id);
-        
+
         $project->statuses = 'draft';
         $project->save();
         $msg__experts = request('draft__msg');
-        $to_name='Social Idea 2021';
-        $data = array('email' => $user -> email);
+        $to_name = 'Social Idea 2021';
+        $data = array('email' => $user->email);
         Mail::to($data['email'], $to_name)->send((new mailDraft($msg__experts)));
 
         session()->flash('status_title', 'Успешно');
@@ -257,18 +263,17 @@ class ProjectController extends Controller
     {
         $project = Project::find($id);
         $user = User::find($project->user_id);
-        
+
         $project->statuses = 'accepted';
         $project->save();
 
-        $to_email='socialidea.mts@yandex.ru';
-        $to_name='Social Idea 2021';
-        $data = array('email' => $user -> email);
-          \Mail::send('email.mailAccepted',$data, function($message) use ($to_email,$data, $to_name)
-          {
+        $to_email = 'socialidea.mts@yandex.ru';
+        $to_name = 'Social Idea 2021';
+        $data = array('email' => $user->email);
+        \Mail::send('email.mailAccepted', $data, function ($message) use ($to_email, $data, $to_name) {
             $message->from($to_email);
             $message->to($data['email'], $to_name)->subject('Статус проекта');
-         });
+        });
 
         session()->flash('status_title', 'Успешно');
         session()->flash('status_body', 'Проект принят на конкурс');

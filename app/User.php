@@ -2,9 +2,12 @@
 
 namespace App;
 
+use Composer\DependencyResolver\Request;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Ui\Presets\React;
 
 class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
 {
@@ -36,5 +39,6 @@ class User extends \TCG\Voyager\Models\User implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
 
 }
