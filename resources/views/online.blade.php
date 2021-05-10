@@ -14,7 +14,6 @@
         <p></p>
         </div>
         </div>
-        <br><br>
         <div class="online__card">
         <iframe width="100%" height="500" src="https://www.youtube.com/embed/7R3FPrRdrXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="pages__body">
