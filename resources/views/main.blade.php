@@ -23,10 +23,15 @@
         <h1>SOCIAL IDEA 2021</h1>
         <div id="about__tender"></div>
         <h2>@lang('words.title')</h2>
+        <div class="btns__vebinars">
+        <a class="btn btn-primary btn__si_banners" href="https://disk.yandex.ru/d/9WRSlvX_hX3IpQ" role="button">
+            @lang('words.vebinars')
+        </a>
         <a class="btn btn-primary btn__si_banners" href="/home" role="button">
             @lang('words.participate')
             <img loading="lazy" src="assets/img/right-arrow_si.svg" alt="">
         </a>
+        </div>
     </div>
     <div class="about__tender">
         <p class="ltr">@lang('words.about')</p>
@@ -117,11 +122,11 @@
             </div>
             <div>
                 <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p>Вы хотите получить экспертную оценку от топ-менеджмента и поддержку в реализации?</p>
+                <p>Готовы получить экспертную оценку от топ-менеджмента и поддержку в реализации?</p>
             </div>
             <div>
                 <img loading="lazy" src="assets/img/ok.svg" alt="">
-                <p>Вы хотите пилотировать свой проект в цифровой экосистеме МТС ?</p>
+                <p>Хотите пилотировать свой проект в цифровой экосистеме МТС ?</p>
             </div>
         </div>
         @else

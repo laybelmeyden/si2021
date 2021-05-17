@@ -34,5 +34,6 @@ return [
     'footer_4' => 'Personal Area',
     'footer_5' => 'Ask the organizers a question',
     'remembe' => 'Forgot your password ?',
-    'participate' =>  'participate'
+    'participate' =>  'participate',
+    'vebinars' => 'webinar'
 ];

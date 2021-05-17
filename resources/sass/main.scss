@@ -1867,6 +1867,13 @@ strong {
     }
 }
 
+.btns__vebinars {
+    display: flex;
+    a {
+        margin-right: 20px;
+    }
+}
+
 #auth__form {
     margin-top: 90px;
     margin-bottom: 90px;
