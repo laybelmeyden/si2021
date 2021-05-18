@@ -35,5 +35,5 @@ return [
     'footer_5' => 'Ask the organizers a question',
     'remembe' => 'Forgot your password ?',
     'participate' =>  'participate',
-    'vebinars' => 'webinar'
+    'vebinars' => 'Manual'
 ];

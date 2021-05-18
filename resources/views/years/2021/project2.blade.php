@@ -79,7 +79,7 @@ table a:hover{
                     <tr>
                             <th scope="row">Обнинск</th>
                             <td>15-16 мая</td>
-                            <td colspan="2"><a href="https://leader-id.ru/events/197938">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
+                            <td colspan="2">Мероприятие завершено</td>
                         </tr>
                         <tr>
                             <th scope="row">Краснодар</th>
