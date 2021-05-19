@@ -100,7 +100,7 @@ table a:hover{
                         <tr>
                             <th scope="row">Санкт-Петербург</th>
                             <td>29-30 мая</td>
-                            <td colspan="2"></td>
+                            <td colspan="2"><a href="https://rusinnovations.timepad.ru/event/1647536/">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
                         </tr>
                     </tbody>
                 </table>
