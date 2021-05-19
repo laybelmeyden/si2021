@@ -84,18 +84,17 @@ table a:hover{
                         <tr>
                             <th scope="row">Краснодар</th>
                             <td>17-18 апреля</td>
-                            <td><a href="https://rusinnovations.timepad.ru/event/1588246/">без проживания</a></td>
-                            <td><a href="https://rusinnovations.timepad.ru/event/1588281/">с проживанием</a></td>
+                            <td colspan="2">Мероприятие завершено</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Рязань</th>
+                            <td>24-25 апреля</td>
+                            <td colspan="2">Мероприятие завершено</td>
                         </tr>
                         <tr>
                             <th scope="row">Нижний Новгород</th>
                             <td>22-23 мая</td>
                             <td colspan="2"><a href="https://leader-id.ru/events/198703">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Рязань</th>
-                            <td>24-25 апреля</td>
-                            <td colspan="2"><a href="https://leader-id.ru/events/193077">Регистрация на мероприятие (необходима регистрация аккаунта)</a></td>
                         </tr>
                         <tr>
                             <th scope="row">Санкт-Петербург</th>
