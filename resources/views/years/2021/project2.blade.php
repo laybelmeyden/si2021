@@ -76,11 +76,6 @@ table a:hover{
                         </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                            <th scope="row">Обнинск</th>
-                            <td>15-16 мая</td>
-                            <td colspan="2">Мероприятие завершено</td>
-                        </tr>
                         <tr>
                             <th scope="row">Краснодар</th>
                             <td>17-18 апреля</td>
@@ -89,6 +84,11 @@ table a:hover{
                         <tr>
                             <th scope="row">Рязань</th>
                             <td>24-25 апреля</td>
+                            <td colspan="2">Мероприятие завершено</td>
+                        </tr>
+                    <tr>
+                            <th scope="row">Обнинск</th>
+                            <td>15-16 мая</td>
                             <td colspan="2">Мероприятие завершено</td>
                         </tr>
                         <tr>
