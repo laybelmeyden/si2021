@@ -44,6 +44,7 @@ Route::get('/showProject', 'ProjectController@showProject')->name('showProject')
 Route::post('/sendProject', 'ProjectController@sendProject')->name('sendProject')->middleware('verified');
 Route::put('project/draftProject/{id}', 'ProjectController@draftProject')->name('draftProject')->middleware('verified');
 Route::put('project/accepted/{id}', 'ProjectController@acceptedProject')->name('acceptedProject')->middleware('verified');
+Route::post('project/notificationProject/{id}', 'ProjectController@notificationProject')->name('notificationProject')->middleware('verified');
 //experts
 Route::put('/getRoleUser', 'ExpertController@getRoleUser')->name('getRoleUser')->middleware('verified');
 Route::get('/expertsProject', 'ExpertController@expertsProject')->name('expertsProject')->middleware('verified');

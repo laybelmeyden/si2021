@@ -199,7 +199,7 @@
                                                     <tr>
                                                         <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                             <div style='color:#4d4d4d;font-family:Oxygen, Helvetica neue, sans-serif;font-size:32px;font-weight:700;line-height:37px;text-align:center;'>
-                                                                <!-- Добро пожаловать! -->
+                                                            Приветствуем тебя, дорогой участник!
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -248,11 +248,10 @@
                                                                         <td align='center' style='font-size:0px;padding:10px 25px;word-break:break-word;'>
                                                                             <div style='color:black;font-family:Oxygen, Helvetica neue, sans-serif;font-size:20px;line-height:21px;text-align:left;'>
                                                                                 <span>
-                                                                                    Статус вашего проекта - Принят на конкурс. <br><br>
-                                                                                    Это значит, что Ваш проект был проверен модераторами конкурса и он прошел модерацию.<br><br>
-                                                                                    Результаты можно будет увидеть на сайте 20 июня. 
-                                                                                    <br><br>По всем вопросам - <a href="tel:+79041841764">+79041841764</a> Анастасия, <a href="mailto:socialidea.mts@yandex.ru">socialidea.mts@yandex.ru</a>.ru
-                                                                                    <br><br>Спасибо!
+                                                                                Пишет тебе команда конкурса Social Idea 2021. <br><br> Мы увидели, что твой проект находится в "черновике". <br><br>До окончания сбора заявок осталось буквально пару дней, поэтому мы ждём твой проект на модерации как можно скорее!<br><br> Если у тебя остались какие-то вопросы, то ты можешь уточнить их или по 
+телефону <a href="tel:+79041841764">+79041841764</a> (Анастасия),
+ либо написать их на почту <a href="mailto:socialidea.mts@yandex.ru">socialidea.mts@yandex.ru</a>.
+                                                                                    <br><br>Удачи.  
                                                                                 </span>
                                                                                 <span style='font-weight:700; color: #ff6f6f; font-size: 18px;'>
 

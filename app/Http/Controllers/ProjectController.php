@@ -280,4 +280,23 @@ class ProjectController extends Controller
 
         return redirect()->back();
     }
+    public function notificationProject(Project $project, $id){
+
+        $project = Project::find($id);
+        $user = User::find($project->user_id);
+      
+
+        $to_email = 'socialidea.mts@yandex.ru';
+        $to_name = 'Social Idea 2021';
+        $data = array('email' => $user->email);
+        \Mail::send('email.mailNotifications', $data, function ($message) use ($to_email, $data, $to_name) {
+            $message->from($to_email);
+            $message->to($data['email'], $to_name)->subject('Уведомление проекта');
+        });
+
+        session()->flash('status_title', 'Успешно');
+        session()->flash('status_body', 'Уведомление отправлено');
+
+        return redirect()->back();
+    }
 }

@@ -15,7 +15,7 @@
                 <div id="countdown" class="countdown">
                     <div class="countdown-number">
                         <span class="days countdown-time"></span><br>
-                        <span class="countdown-text">Дней</span>
+                        <span class="countdown-text"> Дней</span>
                     </div>
                 </div>
             </div>
@@ -925,7 +925,7 @@
                     <a href="https://www.ahstep.ru/"><img loading="lazy" src="assets/img/logostep.svg" class="img_partners"></a>
                 </div>
                 <div class="col-lg-2 col-md-3 col-3 particul_part">
-                    <a href="https://www.greenpatrol.ru/ru"><img loading="lazy" src="assets/img/7WNY6eabluk.jpg" class="img_partners"></a>
+                    <a href="https://www.greenpatrol.ru/ru"><img loading="lazy" src="assets/img/cPxqwIv-DEw.jpg" class="img_partners"></a>
                 </div>
             </div>
         </div>

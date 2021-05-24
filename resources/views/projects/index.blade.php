@@ -47,7 +47,7 @@
             </div>
         </a>
         <div class="btns__statuses">
-            @if(Auth::user() -> role_id === 1)
+            @if(Auth::user() -> email === 'trycollens@gmail.com')
             <div class="item__admin_btn">
                 <button data-bs-toggle="modal" data-bs-target="#staticBackdrop{{$project->id}}" class="btn btn__draft">Черновик</button>
             </div>
@@ -190,6 +190,13 @@
                 @method('PUT')
                 <div class="item__admin_btn">
                     <button type="submit" class="btn btn__accepted">Принять</button>
+                </div>
+            </form>
+            <form action="{{ route('notificationProject', $project->id) }}" method="POST">
+                @csrf
+                @method('POST')
+                <div class="item__admin_btn">
+                    <button type="submit" class="btn btn__notification">Уведомление</button>
                 </div>
             </form>
             @endif
