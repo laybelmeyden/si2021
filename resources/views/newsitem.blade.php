@@ -7,7 +7,8 @@
 @section('content')
 </section>
 <section id="years__sections">
-<div class="container">
+    <div class="container">
+        <img src="/storage/{{ $id -> img}}" alt="{{ $id -> img}}" style="padding-bottom:40px; width:100%;">
         @if(App::isLocale('ru'))
         <div class="solo__news">
             <p class="title__years_solo">{{$id -> title_ru}}</p>
@@ -23,7 +24,7 @@
             </p>
         </div>
         @endif
-</div>
+    </div>
 </section>
 
 

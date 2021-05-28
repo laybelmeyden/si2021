@@ -517,13 +517,6 @@
                 </div>
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
-                        <div><img loading="lazy" src="assets/img/speakers/homchenko.jpg" alt="Moskvina_photo.png"></div>
-                        <p class="experts__slide_items_title">Дмитрий Хомченко</p>
-                        <p class="experts__slide_items_body">Вице-президент по информационным технологиям ПАО «МТС»</p>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="experts__slide_items">
                         <div>
                             <img loading="lazy" src="assets/img/speakers/Татьяна Чернышева.jpg" alt="Moskvina_photo.png">
                         </div>
@@ -652,7 +645,7 @@
                             <img loading="lazy" src="assets/img/speakers/People_2.png" alt="Moskvina_photo.png">
                         </div>
                         <p class="experts__slide_items_title">Гурылин Артем</p>
-                        <p class="experts__slide_items_body">руководитель направления по стратегии и анализу продуктов, Кластер "Дэйли бэнкинг» ПАО "МТС""</p>
+                        <p class="experts__slide_items_body">Руководитель управления анализа и отчётности X5 / Альфа-Банк</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
@@ -743,6 +736,60 @@
                         </div>
                         <p class="experts__slide_items_title">Алексеева Олеся</p>
                         <p class="experts__slide_items_body">Директор филиала МТС в Ивановской области</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/nagib.jpg" alt="Mnagib.jpg" style="width:300px;">
+                        </div>
+                        <p class="experts__slide_items_title">Нагибин Андрей</p>
+                        <p class="experts__slide_items_body">Председатель Правления Общероссийской общественной организации "Зелёный патруль"</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/uros.jpg" alt="Mnagib.jpg" style="width:250px;">
+                        </div>
+                        <p class="experts__slide_items_title">Елизавета Уросова</p>
+                        <p class="experts__slide_items_body">Директор бизнес-инкубатора «Ингрия»</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/koval.jpg" alt="Mnagib.jpg" style="width:170px;">
+                        </div>
+                        <p class="experts__slide_items_title">Коваленко Яна</p>
+                        <p class="experts__slide_items_body">Директор проектов Центра цифрового развития АСИ.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/T7aopPt4Bzs.jpg" alt="Mnagib.jpg" style="width:170px;">
+                        </div>
+                        <p class="experts__slide_items_title">Косогорова Ксения</p>
+                        <p class="experts__slide_items_body">Руководитель направления Департамент КСО ПАО «МТС»</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/dkrf_rSquoY.jpg" alt="Mnagib.jpg" style="width:170px;">
+                        </div>
+                        <p class="experts__slide_items_title">Николай Миронов</p>
+                        <p class="experts__slide_items_body">Генеральный директор ООО «АйТуБи»</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/2C0h-lUT26A.jpg" alt="Mnagib.jpg">
+                        </div>
+                        <p class="experts__slide_items_title">Сулейманов Фанис</p>
+                        <p class="experts__slide_items_body">Менеджер по продукту и стратегии Тинькофф</p>
                     </div>
                 </div>
             </div>
