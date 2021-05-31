@@ -10,15 +10,15 @@
             <img loading="lazy" src="assets/img/mts_logo.svg" alt="">
         </div>
         <section class="timer">
-            <p class="main_p3">до конца приема заявок осталось</p>
-            <div id="clockdiv">
+            <p class="main_p3">Прием заявок завершён</p>
+            <!-- <div id="clockdiv">
                 <div id="countdown" class="countdown">
                     <div class="countdown-number">
                         <span class="days countdown-time"></span><br>
                         <span class="countdown-text"> Дней</span>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
         <h1>SOCIAL IDEA 2021</h1>
         <div id="about__tender"></div>

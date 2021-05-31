@@ -31,7 +31,7 @@
                         <label for="user_city">Город (место проживания страна/город)</label>
                         <input type="text" name="user_city" id="user_city" value="{{ $user -> user_city}}" class="form-control" placeholder="Москва" required>
                     </div>
-                    <user-cropp></user-cropp>
+                    <!-- <user-cropp></user-cropp> -->
                     <div class="item">
                         <div class="checkboxes">
                             <input id="check__itstart" type="checkbox" name="check__itstart" @if($user -> check__itstart === 'on')

@@ -49,9 +49,12 @@
         </div>
         @else
         @if($projects -> isEmpty())
-        <a class="btn btn_create_project" href="{{ route('projects.create') }}">
+        <!-- <a class="btn btn_create_project" href="{{ route('projects.create') }}">
             Создать проект <img loading="lazy" src="/assets/img/right-arrow_si.svg" alt="">
-        </a>
+        </a> -->
+        <p class="danger__ends">
+        Прием заявок завершён
+        </p>
         @else
         @foreach ($projects as $project)
         <div class="statuses">

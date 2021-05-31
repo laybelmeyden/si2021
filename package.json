@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "vue-advanced-cropper": "^1.6.0",
         "vuetify": "^2.4.10",
         "vuetify-loader": "^1.7.2",
         "vuex": "^3.6.2"

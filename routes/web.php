@@ -34,7 +34,6 @@ Route::get('/allUsers/show/{id}', 'UserController@allUsersShow')->name('allUserS
 Route::get('/allUsers/edit/{id}', 'UserController@allUsersShowEdit')->name('allUsersShowEdit')->middleware('verified');
 Route::put('/allUsers/edit/{id}', 'UserController@allUsersEdit')->name('allUsersEdit')->middleware('verified');
 Route::delete('/allUsers/delete/{id}', 'UserController@allUsersDelete')->name('allUsersDelete')->middleware('verified');
-Route::get('/allUserLogo', 'UserController@allUserLogo');
 Route::get('/search', 'UserController@search');
 //project 
 Route::resource('projects','ProjectController')->middleware('verified');
@@ -71,8 +70,10 @@ Route::get('/api/news', 'MainController@news');
 Route::get('/news{id}', 'MainController@newssolo');
 
 //mail
+Route::get('/exportUser', 'ExportController@exportUser');
+Route::get('/exportProject', 'ExportController@exportProject');
 
-
+Route::get('/api/allUserLogo', 'UserController@allUserLogo');
 // years
 Route::get('/years2011', 'YearsController@years2011')->name('main11');
 Route::get('/years2011/telekom_hit', 'YearsController@telekom_hit_2011');

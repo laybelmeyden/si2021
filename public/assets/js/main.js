@@ -139,26 +139,26 @@ function getTimeRemaining(endtime) {
     };
 }
 
-function initializeClock(id, endtime) {
-    var clock = document.getElementById(id);
-    var daysSpan = clock.querySelector(".days");
+// function initializeClock(id, endtime) {
+//     var clock = document.getElementById(id);
+//     var daysSpan = clock.querySelector(".days");
 
-    function updateClock() {
-        var t = getTimeRemaining(endtime);
+//     function updateClock() {
+//         var t = getTimeRemaining(endtime);
 
-        if (t.total <= 0) {
-            document.getElementById("clockdiv").className = "hidden";
-            document.getElementById("deadline-messadge").className = "hidden";
-            clearInterval(timeinterval);
-            return true;
-        }
+//         if (t.total <= 0) {
+//             document.getElementById("clockdiv").className = "hidden";
+//             document.getElementById("deadline-messadge").className = "hidden";
+//             clearInterval(timeinterval);
+//             return true;
+//         }
 
-        daysSpan.innerHTML = t.days;
-    }
+//         daysSpan.innerHTML = t.days;
+//     }
 
-    updateClock();
-    var timeinterval = setInterval(updateClock, 1000);
-}
+//     updateClock();
+//     var timeinterval = setInterval(updateClock, 1000);
+// }
 
-var deadline = "June 01 2021 09:00:00 GMT+0300";
-initializeClock("clockdiv", deadline);
+// var deadline = "June 01 2021 09:00:00 GMT+0300";
+// initializeClock("clockdiv", deadline);

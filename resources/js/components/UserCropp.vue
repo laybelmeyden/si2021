@@ -5,7 +5,7 @@
       id="project__form"
       enctype="multipart/form-data"
     >
-    <label for="currenImg">Логотип профиля</label>
+      <label for="currenImg">Логотип профиля</label>
       <div class="btn__file">
         <div class="fileUploadInput">
           <input
@@ -39,6 +39,12 @@
         </div>
       </div>
     </form>
+    <img
+      :src="`/storage/${user.user_avatar}`"
+      class="img-responsive"
+      height="70"
+      width="90"
+    />
   </div>
 </template>
 <style lang="scss" scoped>
@@ -75,7 +81,7 @@
     z-index: 1;
     background: white;
     border-radius: 10px;
-     &:hover{
+    &:hover {
       filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.25));
     }
   }
@@ -102,7 +108,7 @@
     border-radius: 10px;
   }
   .fileUploadInput input {
-        cursor: pointer;
+    cursor: pointer;
     position: relative;
     z-index: 1;
     background: transparent !important;
@@ -116,7 +122,6 @@
     padding: 0;
     height: 50px;
     width: 0;
-
   }
   .fileUploadInput button {
     cursor: pointer;
@@ -186,7 +191,7 @@ export default {
   },
   mounted() {
     axios
-      .get("/allUserLogo", this.user)
+      .get("/api/allUserLogo", this.user)
       .then((response) => {
         this.user = response.data;
       })
