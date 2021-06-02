@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use App\User;
 use App\News;
 use App\Oldnew;
 
@@ -37,14 +38,23 @@ class MainController extends Controller
     }
 
     public function oldnews(){
+        
+        $user = User::where('role_id', '1')->get();
+        $news = Oldnew::orderBy('createdate', 'desc')->paginate(9);
 
-        $news = Oldnew::latest()->get();
-
-        return view ('oldnews', compact('news'));
+        return view ('oldnews', compact('news', 'user'));
     }
     public function oldnews_in(Oldnew $id){
 
         return view ('oldnews_in', compact('id'));
+    }
+    public function oldnews_in_delete($id){
+        if (Auth::user()->role_id === 1) {
+            $news = Oldnew::find($id);
+            $news->delete();
+            return back();
+        }
+        return redirect()->back();
     }
 
 }

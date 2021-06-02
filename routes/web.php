@@ -147,3 +147,4 @@ Route::get('/years2021/it_start_2021', 'YearsController@it_start_2021');
 //oldnews
 Route::get('/oldnews', 'MainController@oldnews');
 Route::get('/oldnews_in_{id}', 'MainController@oldnews_in');
+Route::delete('/oldnews_in_delete/{id}', 'MainController@oldnews_in_delete')->name('oldnews_in_delete');
