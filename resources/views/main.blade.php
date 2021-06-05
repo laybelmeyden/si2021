@@ -830,11 +830,11 @@
         <news_component></news_component>
     </div>
 </section>
-<a href="https://youtu.be/ctQ7cFI0p3I" target="_blank">
+<a href="https://youtu.be/Kg--gYO0eh0" target="_blank">
 <section id="itstart__banners">
     <div class="container">
         <div class="banner__back">
-        <p>Онлайн-трансляция окружных школ IT-Start</p>
+        <p>Научно-практическая конференция &#171;Доступная среда: технологический и образовательный аспекты&#187;</p>
         </div>
     </div>
 </section>
