@@ -792,6 +792,24 @@
                         <p class="experts__slide_items_body">Менеджер по продукту и стратегии Тинькофф</p>
                     </div>
                 </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/Kurinkova_chb.jpg" alt="Mnagib.jpg">
+                        </div>
+                        <p class="experts__slide_items_title">Куринкова Марина</p>
+                        <p class="experts__slide_items_body">Руководитель проектов Департамент корпоративной социальной ответственности</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/E28jhzAijEQ.jpg" alt="Mnagib.jpg">
+                        </div>
+                        <p class="experts__slide_items_title">Подгайная Валентина</p>
+                        <p class="experts__slide_items_body">Технологический скаут MTS StartUp Hub</p>
+                    </div>
+                </div>
             </div>
             <div class="swiper-button-next experts-next"></div>
             <div class="swiper-button-prev experts-prev"></div>
