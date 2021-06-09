@@ -24,6 +24,7 @@ class ProjectController extends Controller
         $projects = Project::all();
         $projectsAccepted = Project::where('statuses', 'accepted')->get();
         $projectsModerate = Project::where('statuses', 'moderate')->get();
+        $projectExpertViews = Linkexpert::all();
         $projectsDraft = Project::where('statuses', 'draft')->get();
         if ($user->role_id === 1) {
             $projectsDraftCount = $projects->where('statuses', 'draft')->count();
@@ -39,11 +40,15 @@ class ProjectController extends Controller
                     'projectsAccepted',
                     'projectsDraft',
                     'projectsModerate',
+                    'projectExpertViews'
                 )
             );
         } else {
             return redirect()->back();
         }
+    }
+    public function currentScore($id){
+
     }
 
     /**

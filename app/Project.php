@@ -32,4 +32,8 @@ class Project extends Model
         'project_main_social_links_2',
         'project_main_social_links_3',
     ];
+    public function project()
+    {
+        return $this->hasMany(Linkexpert::class);
+    }
 }
