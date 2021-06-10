@@ -47,9 +47,6 @@ class ProjectController extends Controller
             return redirect()->back();
         }
     }
-    public function currentScore($id){
-
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -99,8 +96,9 @@ class ProjectController extends Controller
         if ($user->role_id === 1 || $user->role_id === 3) {
 
             $projectExpertViews = Linkexpert::where('user_id', $user->id)->where('project_id', $project->id)->get();
-
-            return view('projects.show', compact('project', 'projectExpertViews'));
+            $projectExpertViewsAll = Linkexpert::where('project_id', $project->id)->get();
+            $allUsers = User::all();
+            return view('projects.show', compact('project', 'projectExpertViews', 'projectExpertViewsAll','allUsers'));
         }
         if ($project->user_id !== $user->id) {
             session()->flash('status_title', 'Ошибка');
@@ -303,5 +301,11 @@ class ProjectController extends Controller
         session()->flash('status_body', 'Уведомление отправлено');
 
         return redirect()->back();
+    }
+    public function updateScore(Request $request){
+
+        // $score_id = $request -> score_id;
+        // $project_id = $request -> project_id;
+        // return $score_id;
     }
 }

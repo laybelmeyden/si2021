@@ -20,16 +20,24 @@
                 @php
                 $score1 = $projectExpertViews->where('project_id', $project->id)->sum('score1');
                 $score2 = $projectExpertViews->where('project_id', $project->id)->sum('score2');
-                $score3 = $projectExpertViews->where('project_id', $project->id)->sum('score2');
-                $score4 = $projectExpertViews->where('project_id', $project->id)->sum('score2');
-                $fullScore = $score1 + $score2 + $score3 + $score4;
-                if($fullScore > 0) echo $fullScore;
+                $score3 = $projectExpertViews->where('project_id', $project->id)->sum('score3');
+                $score4 = $projectExpertViews->where('project_id', $project->id)->sum('score4');
+                $countExperts = $projectExpertViews->where('project_id', $project->id)->count();
+                $fullScore = ($score1 + $score2 + $score3 + $score4);
+                if($fullScore > 0 && $countExperts > 0) echo round($fullScore / $countExperts, $precision = 3);
                 if($fullScore <= 0) echo 'Нет  оценки' ; @endphp </div>
                     @if($project->statuses === 'accepted')
                     <div class="item {{ $project->statuses }}">
                         Принят на конкурс
                     </div>
                     @endif
+            </div>
+            <div id="forms" style="display:none;">
+                <input type="text" id="score_id" name="score_id" value="
+                @if($fullScore > 0 && $countExperts > 0) 
+                {{round($fullScore / $countExperts, $precision = 3)}} 
+                @endif">
+                <input type="text" id="project_id" name="project_id" value="{{$project -> id}}">
             </div>
             <a href="{{ route('projects.show',$project->id) }}">
                 <div class="card__project_show">
@@ -184,4 +192,5 @@
             @endforeach
         </div>
 </section>
+<script src="{{ asset('js/updateScore.js') }}" defer></script>
 @endsection

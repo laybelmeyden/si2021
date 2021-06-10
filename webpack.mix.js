@@ -19,4 +19,5 @@ module.exports = {
 
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/main.scss', 'public/assets/css/main.css')
-    .sass('resources/sass/main_profile.scss', 'public/assets/css/main_profile.css');
+    .sass('resources/sass/main_profile.scss', 'public/assets/css/main_profile.css')
+    .js('resources/js/updateScore.js', 'public/js');

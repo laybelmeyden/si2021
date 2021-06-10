@@ -360,15 +360,15 @@
             </div>
             @endif
         </section>
-        @if( Auth::user()->role_id === 3 )
+        @if( Auth::user()->role_id === 3)
         @foreach($projectExpertViews as $projectExpertView)
         <h3>Форма оценок для проекта</h3>
         <form action="{{ route('expertRatings',$projectExpertView->id) }}" method="post" id="score__table">
             @csrf
             @method('PUT')
             <a href="/assets/img/Polozhenie_SI_2.pdf">Положение
-    о проведении XI Международного конкурса социальных проектов с
-    применением цифровых технологий «Social Idea»</a>
+                о проведении XI Международного конкурса социальных проектов с
+                применением цифровых технологий «Social Idea»</a>
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
@@ -406,9 +406,22 @@
             {{$projectExpertView->msg1}}
             </textarea>
             <div>
-            <button type="submit">Оценить</button>
+                <button type="submit">Оценить</button>
             </div>
         </form>
+        @endforeach
+        @endif
+        @if( Auth::user()->role_id === 1)
+        @foreach($projectExpertViewsAll as $projectExpertView)
+        <div class="score__view">
+        <h3>Оценка от: {{ $allUsers->find($projectExpertView->user_id)->user_name}}</h3>
+        <p>Актуальность проблемы, на решение которой направлен проект - {{$projectExpertView->score1}}</p>
+        <p>Бизнес-потенциал идеи/продукта проекта; - {{$projectExpertView->score2}}</p>
+        <p>Масштабируемость и возможность дальнейшего развития проекта в цифровой экосистеме; - {{$projectExpertView->score3}}</p>
+        <p>Уровень готовности к реализации идеи/продукта; - {{$projectExpertView->score4}}</p>
+        <h3>Комментарий к проекту</h3>
+        <p>{{$projectExpertView->msg1}}</p>
+        </div>
         @endforeach
         @endif
         <!-- <div class="btns__statuses">
