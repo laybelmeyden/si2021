@@ -308,8 +308,9 @@ class ProjectController extends Controller
         $score_id = $request->score_id;
         $scoreExp = explode(',', $score_id);
             foreach ($scoreExp as $value => $si){
+                // dd(+$si);
                 $projectFind = $project->find($projectExp[$value]);
-                $projectFind->other = $si;
+                $projectFind->other = (int)$si;
                 $projectFind->save();
             }
             return back();
