@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/score_update',  'ProjectController@updateScore');
+Route::get('/score_update',  'ApiController@updateScore');

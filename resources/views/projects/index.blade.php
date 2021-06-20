@@ -12,6 +12,7 @@
             Проектов на модерации - {{$projectsModerateCount}}<br>
             Проектов черновиков - {{$projectsDraftCount}}<br>
             Проектов принятых на конкурс - {{$projectsAcceptedCount}}
+            <a href="#forms_update">Отсортировать оценки</a>
         </p>
         @foreach ($projectsAccepted as $project)
         <div class="statuses">
@@ -32,13 +33,6 @@
                     </div>
                     @endif
             </div>
-            <div id="forms" style="display:none;">
-                <input type="text" id="score_id" name="score_id" value="
-                @if($fullScore > 0 && $countExperts > 0) 
-                {{round($fullScore / $countExperts, $precision = 3)}} 
-                @endif">
-                <input type="text" id="project_id" name="project_id" value="{{$project -> id}}">
-            </div>
             <a href="{{ route('projects.show',$project->id) }}">
                 <div class="card__project_show">
                     <span>Номер проекта {{$project -> id}}</span>
@@ -54,6 +48,8 @@
                     @endif
                 </div>
             </a>
+            <span style="display: none;" id="projects__id">{{$project -> id}}</span>
+            <span style="display: none;" id="scores__id">@if($fullScore > 0 && $countExperts > 0){{round($fullScore / $countExperts, $precision = 3)}}@endif</span>
             <div class="btns__statuses">
                 @if(Auth::user() -> email === 'trycollens@gmail.com')
                 <div class="item__admin_btn">
@@ -85,7 +81,7 @@
                 @endif
             </div>
             @endforeach
-            @foreach ($projectsModerate as $project)
+            <!-- @foreach ($projectsModerate as $project)
             <div class="statuses">
                 @if($project->statuses === 'moderate')
                 <div class="item {{ $project->statuses }}">
@@ -147,8 +143,8 @@
                 </form>
                 @endif
             </div>
-            @endforeach
-            @foreach ($projectsDraft as $project)
+            @endforeach -->
+            <!-- @foreach ($projectsDraft as $project)
             <div class="statuses">
                 @if($project->statuses === 'draft')
                 <div class="item {{ $project->statuses }}">
@@ -189,8 +185,37 @@
                 </form>
                 @endif
             </div>
-            @endforeach
+            @endforeach -->
         </div>
 </section>
-<script src="{{ asset('js/updateScore.js') }}" defer></script>
+            <div id="forms_update">
+                <form action="/updateScore" method="POST">
+                    @csrf
+                    @method('POST')
+                    <input type="hidden" id="project_id_other" name="project_id" value="">
+                    <input type="hidden" id="score_id_other" name="score_id" value="@if($fullScore > 0 && $countExperts > 0){{round($fullScore / $countExperts, $precision = 3)}}@endif">
+                    <div class="btns__statuses">
+                        <div class="item__admin_btn" style="width: 100%;">
+                            <button type="submit" class="btn btn__accepted" style="
+                            width: 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;">Обновить оценки</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+<script>
+    const arrId = [];
+    const arrScore = [];
+    const s = document.querySelectorAll('#projects__id').forEach(e => {
+        arrId.push(e.innerHTML)
+    });
+    const ss = document.querySelectorAll('#scores__id').forEach(e => {
+        arrScore.push(e.innerHTML)
+    });
+    const valueA = document.querySelector('#project_id_other').value = arrId;
+    const valueB = document.querySelector('#score_id_other').value = arrScore;
+    const valueA1 = document.querySelector('#project_id_other').placeholder = arrId;
+    const valueB2 = document.querySelector('#score_id_other').placeholder = arrScore
+</script>
 @endsection

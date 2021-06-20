@@ -22,7 +22,7 @@ class ProjectController extends Controller
     {
         $user = Auth::user();
         $projects = Project::all();
-        $projectsAccepted = Project::where('statuses', 'accepted')->get();
+        $projectsAccepted = Project::where('statuses', 'accepted')->orderBy('other', 'desc')->get();
         $projectsModerate = Project::where('statuses', 'moderate')->get();
         $projectExpertViews = Linkexpert::all();
         $projectsDraft = Project::where('statuses', 'draft')->get();
@@ -302,10 +302,16 @@ class ProjectController extends Controller
 
         return redirect()->back();
     }
-    public function updateScore(Request $request){
-
-        // $score_id = $request -> score_id;
-        // $project_id = $request -> project_id;
-        // return $score_id;
+    public function updateScore(Request $request, Project $project){
+        $project_id = $request->project_id;
+        $projectExp = explode(',', $project_id);
+        $score_id = $request->score_id;
+        $scoreExp = explode(',', $score_id);
+            foreach ($scoreExp as $value => $si){
+                $projectFind = $project->find($projectExp[$value]);
+                $projectFind->other = $si;
+                $projectFind->save();
+            }
+            return back();
     }
 }
