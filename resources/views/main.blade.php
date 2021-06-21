@@ -9,8 +9,9 @@
             <img loading="lazy" src="assets/img/si_logo.svg" alt="">
             <img loading="lazy" src="assets/img/mts_logo.svg" alt="">
         </div>
+        <a href="https://socialidea.ru//storage/spisok_finalistov_1.pdf">
         <section class="timer">
-            <p class="main_p3">Прием заявок завершён</p>
+            <p class="main_p3">список финалистов</p>
             <!-- <div id="clockdiv">
                 <div id="countdown" class="countdown">
                     <div class="countdown-number">
@@ -20,6 +21,7 @@
                 </div>
             </div> -->
         </section>
+        </a>
         <h1>SOCIAL IDEA 2021</h1>
         <div id="about__tender"></div>
         <h2>@lang('words.title')</h2>
