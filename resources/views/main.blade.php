@@ -9,7 +9,7 @@
             <img loading="lazy" src="assets/img/si_logo.svg" alt="">
             <img loading="lazy" src="assets/img/mts_logo.svg" alt="">
         </div>
-        <a href="https://socialidea.ru//storage/spisok_finalistov_1.pdf">
+        <a href="https://socialidea.ru//storage/spisok_finalistov_3.pdf">
         <section class="timer">
             <p class="main_p3">список финалистов</p>
             <!-- <div id="clockdiv">
