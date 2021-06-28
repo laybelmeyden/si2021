@@ -79,6 +79,15 @@
                     </div>
                 </div>
                 @endif
+                @if(Auth::user() -> role_id === 1)
+                <form action="{{ route('scoreProjectVisible',$project->id) }}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <div class="item__admin_btn">
+                        <button type="submit" class="btn btn__accepted">Показать оценки</button>
+                    </div>
+                </form>
+                @endif
             </div>
             @endforeach
             <!-- @foreach ($projectsModerate as $project)

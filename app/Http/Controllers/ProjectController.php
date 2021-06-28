@@ -91,15 +91,12 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-
         $user = Auth::user();
-        if ($user->role_id === 1 || $user->role_id === 3) {
 
             $projectExpertViews = Linkexpert::where('user_id', $user->id)->where('project_id', $project->id)->get();
             $projectExpertViewsAll = Linkexpert::where('project_id', $project->id)->get();
             $allUsers = User::all();
             return view('projects.show', compact('project', 'projectExpertViews', 'projectExpertViewsAll','allUsers'));
-        }
         if ($project->user_id !== $user->id) {
             session()->flash('status_title', 'Ошибка');
             session()->flash('status_body', 'У вас нет доступа к этому проекту');
@@ -314,5 +311,26 @@ class ProjectController extends Controller
                 $projectFind->save();
             }
             return back();
+    }
+    public function scoreProjectVisible(Project $project, $id)
+    {
+        $project = Project::find($id);
+        // $user = User::find($project->user_id);
+
+        $project->score__statuses  = 'visible';
+        $project->save();
+
+        // $to_email = 'socialidea.mts@yandex.ru';
+        // $to_name = 'Social Idea 2021';
+        // $data = array('email' => $user->email);
+        // \Mail::send('email.mailAccepted', $data, function ($message) use ($to_email, $data, $to_name) {
+        //     $message->from($to_email);
+        //     $message->to($data['email'], $to_name)->subject('Статус проекта');
+        // });
+
+        session()->flash('status_title', 'Успешно');
+        session()->flash('status_body', 'Оценки видны пользователю');
+
+        return redirect()->back();
     }
 }

@@ -411,19 +411,43 @@
         </form>
         @endforeach
         @endif
-        @if( Auth::user()->role_id === 1)
+        @if($project->score__statuses === 'visible' && Auth::user()->role_id !== 3)
+        <h3>Общая оценка проекта: <span id="projects__score__visible"></span></h3>
         @foreach($projectExpertViewsAll as $projectExpertView)
         <div class="score__view">
         <h3>Оценка от: {{ $allUsers->find($projectExpertView->user_id)->user_name}}</h3>
-        <p>Актуальность проблемы, на решение которой направлен проект - {{$projectExpertView->score1}}</p>
-        <p>Бизнес-потенциал идеи/продукта проекта; - {{$projectExpertView->score2}}</p>
-        <p>Масштабируемость и возможность дальнейшего развития проекта в цифровой экосистеме; - {{$projectExpertView->score3}}</p>
-        <p>Уровень готовности к реализации идеи/продукта; - {{$projectExpertView->score4}}</p>
+        <p>Актуальность проблемы, на решение которой направлен проект - <span>{{$projectExpertView->score1}}</span></p>
+        <p>Бизнес-потенциал идеи/продукта проекта; - <span>{{$projectExpertView->score2}}</span></p>
+        <p>Масштабируемость и возможность дальнейшего развития проекта в цифровой экосистеме; - <span>{{$projectExpertView->score3}}</span></p>
+        <p>Уровень готовности к реализации идеи/продукта; - <span>{{$projectExpertView->score4}}</span></p>
         <h3>Комментарий к проекту</h3>
-        <p>{{$projectExpertView->msg1}}</p>
+        <p>
+        @if(!$projectExpertView->msg1)
+        Эксперт не дал комментариев
+        @else
+        {{$projectExpertView->msg1}}
+        @endif</p>
         </div>
         @endforeach
         @endif
+        <!-- @if( Auth::user()->role_id === 1)
+        @foreach($projectExpertViewsAll as $projectExpertView)
+        <div class="score__view">
+        <h3>Оценка от: {{ $allUsers->find($projectExpertView->user_id)->user_name}}</h3>
+        <p>Актуальность проблемы, на решение которой направлен проект - <span>{{$projectExpertView->score1}}</span></p>
+        <p>Бизнес-потенциал идеи/продукта проекта; - <span>{{$projectExpertView->score2}}</span></p>
+        <p>Масштабируемость и возможность дальнейшего развития проекта в цифровой экосистеме; - <span>{{$projectExpertView->score3}}</span></p>
+        <p>Уровень готовности к реализации идеи/продукта; - <span>{{$projectExpertView->score4}}</span></p>
+        <h3>Комментарий к проекту</h3>
+        <p>
+        @if(!$projectExpertView->msg1)
+        Эксперт не дал комментариев
+        @else
+        {{$projectExpertView->msg1}}
+        @endif</p>
+        </div>
+        @endforeach
+        @endif -->
         <!-- <div class="btns__statuses">
             @if(Auth::user() -> role_id === 1)
             <form action="{{ route('draftProject',$project->id) }}" method="POST">
@@ -447,4 +471,13 @@
 
     </div>
 </section>
+<script>
+const arr = [];
+const projects__score__visible = document.querySelector('#projects__score__visible');
+const score__all = document.querySelectorAll('.score__view');
+const score__length = score__all.length;
+console.log(score__length)
+const score__childs = document.querySelectorAll('.score__view p span').forEach(e => arr.push(+e.innerHTML));
+projects__score__visible.innerHTML = (arr.reduce((acc,e) => acc + e)/score__length).toFixed(2);
+</script>
 @endsection
