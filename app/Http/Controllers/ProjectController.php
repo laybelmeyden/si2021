@@ -308,7 +308,7 @@ class ProjectController extends Controller
                 // dd(+$si);
                 $projectFind = $project->find($projectExp[$value]);
                 $projectFind->other = (int)$si;
-                $projectFind->score__statuses  = 'visible';
+                $projectFind->score__statuses  = null;
                 $projectFind->save();
             }
             return back();
