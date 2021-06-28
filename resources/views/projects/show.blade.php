@@ -430,7 +430,9 @@
         </div>
         @endforeach
         @endif
-        <!-- @if( Auth::user()->role_id === 1)
+
+        @if( Auth::user()->role_id === 1)
+        Видно только администратору, чтобы чистить оценки
         @foreach($projectExpertViewsAll as $projectExpertView)
         <div class="score__view">
         <h3>Оценка от: {{ $allUsers->find($projectExpertView->user_id)->user_name}}</h3>
@@ -447,7 +449,7 @@
         @endif</p>
         </div>
         @endforeach
-        @endif -->
+        @endif
         <!-- <div class="btns__statuses">
             @if(Auth::user() -> role_id === 1)
             <form action="{{ route('draftProject',$project->id) }}" method="POST">
