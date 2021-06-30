@@ -151,3 +151,13 @@ Route::get('/years2021/it_start_2021', 'YearsController@it_start_2021');
 Route::get('/oldnews', 'MainController@oldnews');
 Route::get('/oldnews_in_{id}', 'MainController@oldnews_in');
 Route::delete('/oldnews_in_delete/{id}', 'MainController@oldnews_in_delete')->name('oldnews_in_delete');
+//score
+
+Route::get('/all_score_votes', 'ScoreController@allscoreviews');
+Route::get('/score_vote_add', 'ScoreController@score_vote_add');
+Route::post('/create_votes', 'ScoreController@create_votes');
+Route::post('/create_votes_experts', 'ScoreController@create_votes_experts')->name('create_votes_experts');
+Route::get('/score_view_{id}', 'ScoreController@score_view');
+Route::get('/table_score_vote', 'ScoreController@table_score_vote');
+Route::delete('/table_score_vote/delete/{id}', 'ScoreController@tableDelete')->name('tableDelete');
+Route::post('/updateScore_table', 'ScoreController@updateScore_table')->name('updateScore_table');

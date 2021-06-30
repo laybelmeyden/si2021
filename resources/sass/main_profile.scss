@@ -1304,6 +1304,32 @@ nav {
     }
 }
 
+.main__btns__scores{
+    display: flex;
+    margin-bottom: 90px;
+    #btn__scoress{
+                width: 272px;
+                height: 66px;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: 0.2em;
+                color: #FFFFFF;
+                background: #E30510;
+                border-radius: 60px;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                z-index: 1;
+                text-transform: uppercase;
+                cursor: pointer;
+                flex: 1 1 auto;
+                margin: 0 0px;
+    }
+}
+
 #create_project {
     display: flex;
     #app {

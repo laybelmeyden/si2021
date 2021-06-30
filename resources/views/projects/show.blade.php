@@ -478,7 +478,6 @@ const arr = [];
 const projects__score__visible = document.querySelector('#projects__score__visible');
 const score__all = document.querySelectorAll('.score__view');
 const score__length = score__all.length;
-console.log(score__length)
 const score__childs = document.querySelectorAll('.score__view p span').forEach(e => arr.push(+e.innerHTML));
 projects__score__visible.innerHTML = (arr.reduce((acc,e) => acc + e)/score__length).toFixed(2);
 </script>
