@@ -49,7 +49,7 @@
             padding: 10px;
             margin-bottom: 20px;
         }
-        .prod_name{
+        #prod_name{
             text-align: left !important;
             font-size: 20px;
         }
