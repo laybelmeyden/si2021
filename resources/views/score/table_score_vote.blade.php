@@ -49,6 +49,13 @@
             padding: 10px;
             margin-bottom: 20px;
         }
+        .prod_name{
+            text-align: left !important;
+            font-size: 20px;
+        }
+        #average{
+            font-size: 20px;
+        }
     </style>
 </head>
 
@@ -75,7 +82,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$score -> id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$score -> id}}">
-                        <div>{{$score -> name_project}}</div>
+                        <div id="prod_name">{{$score -> name_project}}</div>
                         <input type="hidden" id="all_score" value="{{$score -> id}}" name="all_score">
                         <div id="average">
                             @php
@@ -145,7 +152,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$score -> id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$score -> id}}">
-                        <div>{{$score -> name_project}}</div>
+                        <div  id="prod_name">{{$score -> name_project}}</div>
                         <input type="hidden" id="all_score" value="{{$score -> id}}" name="all_score">
                         <div id="average">
                             @php
@@ -215,7 +222,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$score -> id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$score -> id}}">
-                        <div>{{$score -> name_project}}</div>
+                        <div  id="prod_name">{{$score -> name_project}}</div>
                         <input type="hidden" id="all_score" value="{{$score -> id}}" name="all_score">
                         <div id="average">
                             @php
@@ -285,7 +292,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$score -> id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$score -> id}}">
-                        <div>{{$score -> name_project}}</div>
+                        <div  id="prod_name">{{$score -> name_project}}</div>
                         <input type="hidden" id="all_score" value="{{$score -> id}}" name="all_score">
                         <div id="average">
                             @php
@@ -355,7 +362,7 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne{{$score -> id}}" aria-expanded="false" aria-controls="flush-collapseOne{{$score -> id}}">
-                        <div>{{$score -> name_project}}</div>
+                        <div  id="prod_name">{{$score -> name_project}}</div>
                         <input type="hidden" id="all_score" value="{{$score -> id}}" name="all_score">
                         <div id="average">
                             @php
