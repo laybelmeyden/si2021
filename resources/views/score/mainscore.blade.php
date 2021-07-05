@@ -25,20 +25,20 @@
         <h1>Оценка проектов</h1>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#inc" type="button" role="tab" aria-controls="inc" aria-selected="true">1.Инклюзия product</button>
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#inc" type="button" role="tab" aria-controls="inc" aria-selected="true">1.Инклюзия (product)</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#inc2" type="button" role="tab" aria-controls="inc2" aria-selected="false">2.Инклюзия idea</button>
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#inc2" type="button" role="tab" aria-controls="inc2" aria-selected="false">2.Инклюзия (idea)</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#inc3" type="button" role="tab" aria-controls="inc3" aria-selected="false">3.Экология product</button>
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#inc3" type="button" role="tab" aria-controls="inc3" aria-selected="false">3.Экология (product и idea)</button>
             </li>
-            <li class="nav-item" role="presentation">
+            <!-- <li class="nav-item" role="presentation">
                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#inc4" type="button" role="tab" aria-controls="inc4" aria-selected="false">4.Экология idea</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#inc5" type="button" role="tab" aria-controls="inc5" aria-selected="false">5.Регион. финалисты</button>
-            </li>
+            </li> -->
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="inc" role="tabpanel" aria-labelledby="home-tab">
@@ -128,7 +128,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="tab-pane fade" id="inc4" role="tabpanel" aria-labelledby="contact-tab">
+            <!-- <div class="tab-pane fade" id="inc4" role="tabpanel" aria-labelledby="contact-tab">
             <div class="cards__body" style="margin-top: 30px;">
                     @foreach($scores4 as $score)
                     <div class="card" style="--cards: 5">
@@ -136,7 +136,7 @@
                             <div>
                                 <a href="/score_view_{{$score->id}}" class="a__white">
                                     <h2>{{ Str::limit($score->name_project, 20, '...') }}</h2>
-                                    <!-- <p class="date">Средний балл {{ $score->score_ball }}</p> -->
+                                    <p class="date">Средний балл {{ $score->score_ball }}</p>
                                     <p>{{ Str::limit($score->body_project, 230, '...') }}</p>
                                 </a>
                             </div>
@@ -156,8 +156,8 @@
                     </div>
                     @endforeach
                 </div>
-            </div>
-            <div class="tab-pane fade" id="inc5" role="tabpanel" aria-labelledby="contact-tab">
+            </div> -->
+            <!-- <div class="tab-pane fade" id="inc5" role="tabpanel" aria-labelledby="contact-tab">
             <div class="cards__body" style="margin-top: 30px;">
                     @foreach($scores5 as $score)
                     <div class="card" style="--cards: 5">
@@ -165,7 +165,7 @@
                             <div>
                                 <a href="/score_view_{{$score->id}}" class="a__white">
                                     <h2>{{ Str::limit($score->name_project, 20, '...') }}</h2>
-                                    <!-- <p class="date">Средний балл {{ $score->score_ball }}</p> -->
+                                    <p class="date">Средний балл {{ $score->score_ball }}</p>
                                     <p>{{ Str::limit($score->body_project, 230, '...') }}</p>
                                 </a>
                             </div>
@@ -185,7 +185,7 @@
                     </div>
                     @endforeach
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     @include('layouts.js')
