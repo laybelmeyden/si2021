@@ -45,18 +45,17 @@
     @include('layouts.preloader')
     @include('profile.alerts')
     <div class="container news__olds-f">
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-               <li>Ошибка заполнения! Пожалуйста, проверьте ваши оценки</li>
-            </ul>
-        </div><br />
-        @endif
         <section id="years__sections" style="margin-top: 90px; margin-bottom: 30px;">
             <div class="container">
                 <div class="solo__news">
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                           <li>Ошибка заполнения! Пожалуйста, проверьте ваши оценки</li>
+                        </ul>
+                    </div><br />
+                    @endif
                     <p class="title__years_solo">Оценка проекта - {{$id -> name_project}}</p>
-
                 </div>
             </div>
         </section>
