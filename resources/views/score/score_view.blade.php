@@ -34,6 +34,9 @@
                 display: flex;
                 flex-direction: column;
             }
+            input[type=number] {
+            width: 100%;
+        }
         }
     </style>
 </head>
