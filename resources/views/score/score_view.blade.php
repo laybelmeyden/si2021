@@ -28,6 +28,13 @@
             text-indent: 30px;
             height: 40px;
         }
+
+        @media screen and (max-width:992px) {
+            tr {
+                display: flex;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
@@ -43,6 +50,13 @@
                 </div>
             </div>
         </section>
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+               <li>Ошибка заполнения! Пожалуйста, проверьте ваши оценки</li>
+            </ul>
+        </div><br />
+        @endif
         <form action="{{ route('create_votes_experts') }}" method="post" id="score__table">
             @csrf
             @method('post')
@@ -50,8 +64,9 @@
             <a href="/assets/img/Polozhenie_SI_2.pdf">Положение
                 о проведении XI Международного конкурса социальных проектов с
                 применением цифровых технологий «Social Idea»</a>
-            <label for=""></label>
-            <input type="text" value="" name="full_name" id="forms__name" placeholder="Введите ваше имя">
+            <br><br>
+            <label for="forms__name">ФИО</label>
+            <input type="text" value="ФИО" name="full_name" id="forms__name" placeholder="Введите ваше имя">
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
@@ -64,23 +79,43 @@
                     <tr>
                         <th scope="row">1</th>
                         <td>Актуальность проблемы, на решение которой направлен проект</td>
-                        <td><input type="number" name="score1" id="" placeholder="0-5" value="" step="0.1" min="0" max="5" pattern="[0-9]{0,5}" required></td>
+                        <td>
+                            <input type="number" class="form-control @error('score1') is-invalid @enderror" name="score1" id="" placeholder="0-5" value="" step="0.1" required>
+                            @error('score1')
+                            <div class="alert alert-danger">Оценка должна быть числом от 0 до 5 и одним знаком после запятой</div>
+                            @enderror
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Бизнес-потенциал идеи/продукта проекта;</td>
-                        <td><input type="number" name="score5" id="" placeholder="0-5" value="" step="0.1" min="0" max="5" pattern="[0-9]{0,5}" required></td>
+                        <td>
+                            <input type="number" class="form-control @error('score5') is-invalid @enderror" name="score5" id="" placeholder="0-5" value="" step="0.1" required>
+                            @error('score5')
+                            <div class="alert alert-danger">Оценка должна быть числом от 0 до 5 и одним знаком после запятой</div>
+                            @enderror
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>Масштабируемость и возможность дальнейшего развития проекта в цифровой
                             экосистеме;</td>
-                        <td><input type="number" name="score3" id="" placeholder="0-5" value="" step="0.1" min="0" max="5" pattern="[0-9]{0,5}" required></td>
+                        <td>
+                            <input type="number" name="score3" class="form-control @error('score3') is-invalid @enderror" id="" placeholder="0-5" value="" step="0.1" required>
+                            @error('score3')
+                            <div class="alert alert-danger">Оценка должна быть числом от 0 до 5 и одним знаком после запятой</div>
+                            @enderror
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">4</th>
                         <td>Уровень готовности к реализации идеи/продукта;</td>
-                        <td><input type="number" name="score4" id="" placeholder="0-5" value="" step="0.1" min="0" max="5" pattern="[0-9]{0,5}" required></td>
+                        <td>
+                            <input type="number" name="score4" class="form-control @error('score4') is-invalid @enderror" id="" placeholder="0-5" value="" step="0.1" required>
+                            @error('score4')
+                            <div class="alert alert-danger">Оценка должна быть числом от 0 до 5 и одним знаком после запятой</div>
+                            @enderror
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -93,10 +128,10 @@
         <script>
             const btn__scoress = document.querySelector('#btn__scoress');
             const full_name = document.querySelector('#forms__name');
-            full_name.addEventListener('change', ()=>{
-                localStorage.setItem('full_name', full_name.value); 
+            full_name.addEventListener('change', () => {
+                localStorage.setItem('full_name', full_name.value);
             })
-            full_name.value = localStorage.full_name;
+            full_name.value = localStorage.full_name || 'Введите вашe ФИО';
         </script>
         @include('layouts.js')
 </body>

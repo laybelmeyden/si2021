@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ScoreController extends Controller
 {
@@ -51,6 +52,12 @@ class ScoreController extends Controller
         return view('score.score_view', compact('id'));
     }
     public function create_votes_experts(Request $request, Voteall $votealls){
+        $request->validate([
+            'score1' => 'required|numeric|between:0,5',
+            'score5' => 'required|numeric|between:0,5',
+            'score3' => 'required|numeric|between:0,5',
+            'score4' => 'required|numeric|between:0,5',
+        ]);
         $votealls = new Voteall;
         $votealls->scorevote_id = $request->scorevote_id;
         $votealls->score1 = $request->score1;
