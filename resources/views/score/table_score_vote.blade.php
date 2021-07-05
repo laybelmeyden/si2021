@@ -77,7 +77,7 @@
             </form>
         </div>
         <div class="accordion accordion-flush" id="accordionFlushExample">
-            <h1>Инклюзия product</h1>
+            <h1>Инклюзия (product)</h1>
             @foreach($scores1 as $score)
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
@@ -147,7 +147,7 @@
                 </div>
             </div>
             @endforeach
-            <h1>Инклюзия idea</h1>
+            <h1>Инклюзия (idea)</h1>
             @foreach($scores2 as $score)
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
@@ -217,7 +217,7 @@
                 </div>
             </div>
             @endforeach
-            <h1>Экология product</h1>
+            <h1>Экология (product и idea)</h1>
             @foreach($scores3 as $score)
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
@@ -287,7 +287,7 @@
                 </div>
             </div>
             @endforeach
-            <h1>Экология idea</h1>
+            <!-- <h1>Экология idea</h1>
             @foreach($scores4 as $score)
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
@@ -356,8 +356,8 @@
                     </div>
                 </div>
             </div>
-            @endforeach
-            <h1>Регион. финалисты</h1>
+            @endforeach -->
+            <!-- <h1>Регион. финалисты</h1>
             @foreach($scores5 as $score)
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
@@ -426,7 +426,7 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @endforeach -->
         </div>
         <script>
             const arrId = [];
