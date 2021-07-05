@@ -40,7 +40,7 @@
             }
 
             #modalflat .modal_alert__container {
-                padding: 30px;
+                padding: 30px !important;
             }
         }
     </style>

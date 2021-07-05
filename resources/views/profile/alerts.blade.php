@@ -1,4 +1,11 @@
 @if (session('status_title'))
+<style>
+  @media screen and (max-width:992px) {
+            #modalflat .modal_alert__container {
+                padding: 30px !important;
+            }
+        }
+</style>
 <div id="modalflat" class="modal_alert">
   <div class="modal_alert__container">
     <h4 class="alert_title">{{ session('status_title') }}</h4>
