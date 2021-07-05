@@ -34,9 +34,14 @@
                 display: flex;
                 flex-direction: column;
             }
+
             input[type=number] {
-            width: 100%;
-        }
+                width: 100%;
+            }
+
+            #modalflat .modal_alert__container {
+                padding: 30px;
+            }
         }
     </style>
 </head>
@@ -51,7 +56,7 @@
                     @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
-                           <li>Ошибка заполнения! Пожалуйста, проверьте ваши оценки</li>
+                            <li>Ошибка заполнения! Пожалуйста, проверьте ваши оценки</li>
                         </ul>
                     </div><br />
                     @endif
