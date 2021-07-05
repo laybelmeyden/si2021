@@ -9,7 +9,7 @@
             <img loading="lazy" src="assets/img/si_logo.svg" alt="">
             <img loading="lazy" src="assets/img/mts_logo.svg" alt="">
         </div>
-        <a href="https://socialidea.ru//storage/938114098.pdf">
+        <a href="https://socialidea.ru//storage/Finalisty_konkursa_Social_Idea_2021.pdf">
         <section class="timer">
             <p class="main_p3">список финалистов</p>
             <!-- <div id="clockdiv">
@@ -819,6 +819,15 @@
                         </div>
                         <p class="experts__slide_items_title">Олеся Носова</p>
                         <p class="experts__slide_items_body">Издатель и шеф-редактор сайта KP.RU.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="experts__slide_items">
+                        <div>
+                            <img loading="lazy" src="assets/img/speakers/9Hr_SeSGzNU.jpg" alt="Mnagib.jpg">
+                        </div>
+                        <p class="experts__slide_items_title">Михринисо Нигматуллина</p>
+                        <p class="experts__slide_items_body">основатель маркетингового & коммуникационного агенства Satou LLC, в Нью Йорке.</p>
                     </div>
                 </div>
             </div>
