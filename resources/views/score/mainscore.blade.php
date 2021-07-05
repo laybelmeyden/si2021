@@ -49,7 +49,7 @@
                             <div>
                                 <a href="/score_view_{{$score->id}}" class="a__white">
                                     <h2>{{ Str::limit($score->name_project, 20, '...') }}</h2>
-                                    <p class="date">Средний балл {{ $score->score_ball }}</p>
+                                    <!-- <p class="date">Средний балл {{ $score->score_ball }}</p> -->
                                     <p>{{ Str::limit($score->body_project, 230, '...') }}</p>
                                 </a>
                             </div>
@@ -78,7 +78,7 @@
                             <div>
                                 <a href="/score_view_{{$score->id}}" class="a__white">
                                     <h2>{{ Str::limit($score->name_project, 20, '...') }}</h2>
-                                    <p class="date">Средний балл {{ $score->score_ball }}</p>
+                                    <!-- <p class="date">Средний балл {{ $score->score_ball }}</p> -->
                                     <p>{{ Str::limit($score->body_project, 230, '...') }}</p>
                                 </a>
                             </div>
@@ -107,7 +107,7 @@
                             <div>
                                 <a href="/score_view_{{$score->id}}" class="a__white">
                                     <h2>{{ Str::limit($score->name_project, 20, '...') }}</h2>
-                                    <p class="date">Средний балл {{ $score->score_ball }}</p>
+                                    <!-- <p class="date">Средний балл {{ $score->score_ball }}</p> -->
                                     <p>{{ Str::limit($score->body_project, 230, '...') }}</p>
                                 </a>
                             </div>
@@ -136,7 +136,7 @@
                             <div>
                                 <a href="/score_view_{{$score->id}}" class="a__white">
                                     <h2>{{ Str::limit($score->name_project, 20, '...') }}</h2>
-                                    <p class="date">Средний балл {{ $score->score_ball }}</p>
+                                    <!-- <p class="date">Средний балл {{ $score->score_ball }}</p> -->
                                     <p>{{ Str::limit($score->body_project, 230, '...') }}</p>
                                 </a>
                             </div>
@@ -165,7 +165,7 @@
                             <div>
                                 <a href="/score_view_{{$score->id}}" class="a__white">
                                     <h2>{{ Str::limit($score->name_project, 20, '...') }}</h2>
-                                    <p class="date">Средний балл {{ $score->score_ball }}</p>
+                                    <!-- <p class="date">Средний балл {{ $score->score_ball }}</p> -->
                                     <p>{{ Str::limit($score->body_project, 230, '...') }}</p>
                                 </a>
                             </div>
