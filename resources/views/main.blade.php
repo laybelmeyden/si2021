@@ -29,8 +29,9 @@
         <a class="btn btn-primary btn__si_banners" href="https://disk.yandex.ru/d/9WRSlvX_hX3IpQ" role="button">
             @lang('words.vebinars')
         </a>
-        <a class="btn btn-primary btn__si_banners" href="/home" role="button">
-            @lang('words.participate')
+        <a class="btn btn-primary btn__si_banners" href="/winners" role="button">
+            <!-- @lang('words.participate') -->
+            Победители
             <img loading="lazy" src="assets/img/right-arrow_si.svg" alt="">
         </a>
         </div>

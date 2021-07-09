@@ -27,6 +27,9 @@ class MainController extends Controller
     public function stats(){
         return view ('statistics');
     }
+    public function winners(){
+        return view ('pages.winners');
+    }
     public function online(){
         return view ('online');
     }
