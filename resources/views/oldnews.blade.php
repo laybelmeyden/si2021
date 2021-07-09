@@ -10,7 +10,14 @@
                 <div class="child">
                     <div>
                     <a href="/oldnews_in_{{$new->id}}" class="a__white">
-                    <h2>{!! Str::limit($new->description, '230') !!}</h2>
+                    <h2>
+                        @php
+                        if(strlen($new->description) <= 0) echo 'Новость от '.Str::before($new->createdate, ' ').' числа';
+                        if(strlen($new->description) > 0) echo Str::limit($new->description, '230');
+                        @endphp
+                        <!-- {!! Str::limit(trim($new->content), '230') !!} -->
+                        <!-- {!! Str::limit($new->description, '230') !!} -->
+                    </h2>
                     <p class="date">{{ Str::before($new->createdate, ' ') }}</p>
                     <p>{!! Str::limit($new->content, '90') !!}</p>
                     </a>
@@ -46,5 +53,6 @@
 </div>
 <script>
     const a = document.querySelectorAll('#news__title').forEach(e => e.innerHTML.replace('</Tit', 'dasdasdasdasd'));
+    const b = document.querySelectorAll('img').forEach(e => e.style.display = 'none');
 </script>
 @endsection
