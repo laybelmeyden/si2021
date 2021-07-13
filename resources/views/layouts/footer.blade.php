@@ -16,6 +16,11 @@
                     <p><a href="https://socialidea.ru//storage/Polozhenie_SI_2.pdf" target="_blank">@lang('words.footer_3')</a></p>
                     <p><a href="/home">@lang('words.footer_4')</a></p>
                 </div>
+                <div class="links__more" style="margin-top: 20px;">
+                <p style="font-size: 22px;"><a href="https://socialidea.ru//storage/polozhenie_o_vyplate_prizov_v_denezhnoy_forme_PAO_MTS.pdf" target="_blank">Положение
+о порядке перечисления денежных средств победителям международного
+конкурса Social idea 2021 </a></p>
+                </div>
                 <div class="links__more_2">
                     <div>
                         <h3>Для партнеров:</h3>
