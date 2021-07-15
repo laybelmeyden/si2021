@@ -13,7 +13,7 @@
             <div>
                 <div class="links__more">
                     <p><a href="https://socialidea.ru//storage/Prezentatsia_partneram_Social_Idea_2.pdf" target="_blank">@lang('words.footer_2')</a></p>
-                    <p><a href="https://socialidea.ru//storage/Polozhenie_SI_2.pdf" target="_blank">@lang('words.footer_3')</a></p>
+                    <p><a href="https://socialidea.ru//storage/Polozhenie_SI_2_kopia.pdf" target="_blank">@lang('words.footer_3')</a></p>
                     <p><a href="/home">@lang('words.footer_4')</a></p>
                 </div>
                 <div class="links__more" style="margin-top: 20px;">
