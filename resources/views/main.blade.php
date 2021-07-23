@@ -396,6 +396,98 @@
         <p class="history__title">@lang('words.history')</p>
         <div class="swiper-container swiper-container-history">
             <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                    <div class="history__slide">
+                        <div class="img__history">
+                            <img loading="lazy" src="assets/img/Access-travel-Fin-0.png" alt="">
+                        </div>
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">Access Travel</p>
+                                <p class="history__item_city">г. Иерусалим</p>
+                                <p class="history__item_nominations">Инклюзия / проект</p>
+                                <p class="history__items_body">
+                                Цифровая инклюзивная платформа для туристов
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="swiper-slide">
+                    <div class="history__slide">
+                        <div class="img__history">
+                            <img loading="lazy" src="assets/img/Bestdawd.png">
+                        </div>
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">Best Route</p>
+                                <p class="history__item_city">г. Томск</p>
+                                <p class="history__item_nominations">Инклюзия / проект</p>
+                                <p class="history__items_body">
+                                Сайт для маломобильных граждан о специально оборудованных транспортных средствах и мобильном, беспрепятственном передвижении по городу
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="swiper-slide">
+                    <div class="history__slide">
+                        <div class="img__history">
+                            <img loading="lazy" src="assets/img/puti213123.png">
+                        </div>
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">Путь к победе</p>
+                                <p class="history__item_city">г. Нижний Новгород</p>
+                                <p class="history__item_nominations">Инклюзия / идея</p>
+                                <p class="history__items_body">
+                                Краудфандинг платформа сбора доната для поездки
+конкретного спортсмена ( с особенностями физического
+развития и без) из регионов РФ на конкретное соревнование
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="swiper-slide">
+                    <div class="history__slide">
+                        <div class="img__history">
+                            <img loading="lazy" src="assets/img/movr1231231.png">
+                        </div>
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">Move4fit</p>
+                                <p class="history__item_city">г. Санкт-Петербург</p>
+                                <p class="history__item_nominations">Инклюзия /  идея</p>
+                                <p class="history__items_body">
+                                Фитнес приложение-конструктор для дошкольников и младших школьников с двигательными нарушениями
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="swiper-slide">
+                    <div class="history__slide">
+                        <div class="img__history">
+                            <img loading="lazy" src="assets/img/tamadwadawd.png">
+                        </div>
+                        <div class="history__items">
+                            <div>
+                                <p class="history__items_title">Планета Тамагочи</p>
+                                <p class="history__item_city">г. Санкт-Петербург</p>
+                                <p class="history__item_nominations">Экология / продукт& проект</p>
+                                <p class="history__items_body">
+                                Приложение, которое демонстрирует влияние пищевых привычек пользователя на нашу планету и изменения их на более экологичные
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="swiper-slide">
                     <div class="history__slide">
                         <div class="img__history">
