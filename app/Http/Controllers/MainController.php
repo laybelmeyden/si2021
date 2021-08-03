@@ -7,12 +7,14 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\News;
 use App\Oldnew;
+use File;
 
 class MainController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $news = News::where('values_op', 'option1')->latest()->limit(1)
-        ->get();
+            ->get();
 
         return view('main', compact('news'));
     }
@@ -21,37 +23,52 @@ class MainController extends Controller
         $newSmalls = News::where('values_op', 'option2')->latest()->paginate(3);
         return $newSmalls;
     }
-    public function newssolo(News $id){
-        return view ('newsitem', compact('id'));
+    public function newssolo(News $id)
+    {
+        return view('newsitem', compact('id'));
     }
-    public function stats(){
-        return view ('statistics');
+    public function stats()
+    {
+        return view('statistics');
     }
-    public function winners(){
-        return view ('profile.pages.winners');
+    public function winners()
+    {
+        return view('profile.pages.winners');
     }
-    public function online(){
-        return view ('online');
+    public function online()
+    {
+        return view('online');
     }
-    public function allspeakers(){
-        return view ('allspeakers');
+    public function allspeakers()
+    {
+        return view('allspeakers');
     }
-    public function photos(){
-        return view ('photos');
+    public function photos()
+    {
+        $result = array();
+        $dirs  = File::Files(public_path('assets/img/light'));
+        foreach ($dirs as $item) {
+            array_push($result, $item->getFilename());
+        }
+
+        return view('photos', compact('result'));
     }
 
-    public function oldnews(){
-        
+    public function oldnews()
+    {
+
         $user = User::where('role_id', '1')->get();
         $news = Oldnew::orderBy('createdate', 'desc')->paginate(9);
 
-        return view ('oldnews', compact('news', 'user'));
+        return view('oldnews', compact('news', 'user'));
     }
-    public function oldnews_in(Oldnew $id){
+    public function oldnews_in(Oldnew $id)
+    {
 
-        return view ('oldnews_in', compact('id'));
+        return view('oldnews_in', compact('id'));
     }
-    public function oldnews_in_delete($id){
+    public function oldnews_in_delete($id)
+    {
         if (Auth::user()->role_id === 1) {
             $news = Oldnew::find($id);
             $news->delete();
@@ -59,5 +76,4 @@ class MainController extends Controller
         }
         return redirect()->back();
     }
-
 }

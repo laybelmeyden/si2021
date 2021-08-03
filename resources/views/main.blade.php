@@ -972,8 +972,8 @@
 </a>
 <section id="photos">
     <div class="container">
-        <p>ГаЛЕРЕЯ</p>
-        <!-- <a href="/photos"> -->
+        <p>ГАЛЕРЕЯ</p>
+        <a href="/photos">
         <div class="grid-container">
             <div>
                 <img src="assets/img/5LB1CtQjEG0.png" alt="">
@@ -991,7 +991,7 @@
                 <img src="assets/img/gQ25jEORyO4 1.png" alt="">
             </div>
         </div>
-        <!-- </a> -->
+        </a>
     </div>
 </section>
 <section id="partners">
