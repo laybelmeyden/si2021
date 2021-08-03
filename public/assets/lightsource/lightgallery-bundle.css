@@ -1310,7 +1310,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .lg-outer .lg-item:not(.lg-start-end-progress) {
-  background: url("../images/loading.gif") no-repeat scroll center center transparent;
+  background: url("../lightsource/images/loading.gif") no-repeat scroll center center transparent;
 }
 
 .lg-outer.lg-css3 .lg-prev-slide,
