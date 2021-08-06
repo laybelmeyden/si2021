@@ -976,19 +976,19 @@
         <a href="/photos">
         <div class="grid-container">
             <div>
-                <img src="assets/img/5LB1CtQjEG0.png" alt="">
+                <img src="assets/img/light/final (28).jpg" alt="assets/img/light/final (68).jpg">
             </div>
             <div>
-                <img src="assets/img/5tVefUWKR8I.png" alt="">
+                <img src="assets/img/light/final (33).jpg" alt="assets/img/light/final (68).jpg">
             </div>
             <div class="photos1">
-                <img src="assets/img/IkV4mZEABp8.png" alt="">
+                <img src="assets/img/light/final (103).jpg" alt="assets/img/light/final (68).jpg">
             </div>
             <div class="photos2">
-                <img src="assets/img/photos/IMG_1270.jpg" alt="">
+                <img src="assets/img/light/final (20).jpg" alt="assets/img/light/final (68).jpg">
             </div>
             <div class="photos3">
-                <img src="assets/img/gQ25jEORyO4 1.png" alt="">
+                <img src="assets/img/light/final (128).jpg" alt="assets/img/light/final (68).jpg">
             </div>
         </div>
         </a>
