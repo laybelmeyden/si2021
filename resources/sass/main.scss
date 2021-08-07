@@ -1620,22 +1620,23 @@ strong {
         .photos1 {
             img {
                 width: 130%;
-                height: 100%;
+                height: auto;
                 margin: -50px 0 0 -150px;
             }
         }
         .photos2 {
             img {
                 width: 130%;
-                height: 100%;
+                height: auto;
                 margin: -120px 0 0 -61px;
             }
         }
         .photos3 {
             img {
                 width: 150%;
-                height: 100%;
+                height: auto;
                 margin: -0px 0 0 -61px;
+                min-height: 100%;
             }
         }
         div {
