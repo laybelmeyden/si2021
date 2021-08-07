@@ -1643,7 +1643,7 @@ strong {
             height: 350px;
             img {
                 transition: 3s;
-                width: fit-content;
+                width: auto;
                 height: 150%;
                 margin: -40px 0 0 -230px;
                 &:hover {
@@ -2613,6 +2613,7 @@ strong {
                 img {
                     width: 100% !important;
                     margin: 0 !important;
+                    height: 100% !important;
                 }
             }
         }
