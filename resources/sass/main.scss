@@ -1726,6 +1726,49 @@ strong {
         padding-bottom: 30px;
         word-break: break-word;
     }
+    .title__winners {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 110%;
+        /* or 53px */
+        padding-bottom: 33px;
+
+        color: #000000;
+    }
+    #tags {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 120%;
+        /* or 19px */
+
+        color: #000000;
+        .color__red {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 120%;
+            /* or 19px */
+
+            text-transform: uppercase;
+
+            color: #e30510;
+        }
+        .color__black {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 120%;
+            /* or 19px */
+
+            color: #000000;
+        }
+    }
     .undotitle__years_solo {
         font-weight: bold;
         font-size: 24px;
@@ -2578,7 +2621,7 @@ strong {
             grid-area: auto;
             img {
                 width: 100% !important;
-                    margin: 0 !important;
+                margin: 0 !important;
             }
         }
         .photos2 {
@@ -2590,7 +2633,7 @@ strong {
             grid-area: auto;
             img {
                 width: 100% !important;
-                    margin: 0 !important;
+                margin: 0 !important;
             }
         }
         .photos3 {
@@ -2598,7 +2641,7 @@ strong {
             grid-area: auto;
             img {
                 width: 100% !important;
-                    margin: 0 !important;
+                margin: 0 !important;
             }
         }
         .grid-container {
