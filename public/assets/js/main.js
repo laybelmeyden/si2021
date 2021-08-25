@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
         pageYOffset >= 134 ? nav__fixed.classList.add('active__small_scroll') : nav__fixed.classList.remove('active__small_scroll')
     }
 })
-var mySwiper = new Swiper('.swiper-container.swiper-container-history', {
+var mySwiper = new Swiper('.swiper.swiper-container-history', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -30,7 +30,7 @@ var mySwiper = new Swiper('.swiper-container.swiper-container-history', {
 
 
 })
-var mySwiper2 = new Swiper('.swiper-container.swiper-container-experts', {
+var mySwiper2 = new Swiper('.swiper.swiper-container-experts', {
         slidesPerView: 1,
         loop: true,
         breakpoints: {

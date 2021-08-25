@@ -394,7 +394,7 @@
 <section id="history">
     <div class="container">
         <p class="history__title">@lang('words.history')</p>
-        <div class="swiper-container swiper-container-history">
+        <div class="swiper swiper-container-history">
             <div class="swiper-wrapper">
             <div class="swiper-slide">
                     <div class="history__slide">
@@ -600,7 +600,7 @@
 <section id="experts">
     <div class="container">
         <p class="experts__title">@lang('words.sovet') <br>МТС "SOCIAL IDEA 2021"</p>
-        <div class="swiper-container swiper-container-experts">
+        <div class="swiper swiper-container-experts">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="experts__slide_items">
