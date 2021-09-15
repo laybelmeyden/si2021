@@ -9,9 +9,9 @@
             <img loading="lazy" src="assets/img/si_logo.svg" alt="">
             <img loading="lazy" src="assets/img/mts_logo.svg" alt="">
         </div>
-        <a href="https://socialidea.ru//storage/Finalisty_konkursa_Social_Idea_2021.pdf">
+        <a href="https://socialidea.ru//storage/kniga_finalistov2021_Final_Final.pdf">
         <section class="timer">
-            <p class="main_p3">список финалистов</p>
+            <p class="main_p3">книга финалистов</p>
             <!-- <div id="clockdiv">
                 <div id="countdown" class="countdown">
                     <div class="countdown-number">
